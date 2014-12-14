@@ -4,14 +4,18 @@
   "description": "Replay hearthstone",
   "author": "Francis Chong <francis@ignition.hk>",
   "scripts": {
-    "start": "node ./node_modules/.bin/nwbuild -r app"
+    "start": "node ./node_modules/.bin/nwbuild -r app",
+    "jsx": "browserify --no-detect-globals --bare -t [ reactify --es6 --target es5 ] lib/app.js > app/app.js"
   },
   "main": "lib/foo.js",
   "keywords": [],
   "dependencies": {
-    "opal": "*"
+    "react": "^0.12.1"
   },
   "devDependencies": {
-    "node-webkit-builder": "^1.0.0"
+    "browserify": "7.0.1",
+    "node-webkit-builder": "^1.0.0",
+    "react-tools": "~>0.12.1",
+    "reactify": "^0.17.1"
   }
 }
