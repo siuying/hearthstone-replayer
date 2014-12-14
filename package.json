@@ -1,0 +1,17 @@
+{
+  "name": "hearthstone-replayer",
+  "version": "0.1.0",
+  "description": "Replay hearthstone",
+  "author": "Francis Chong <francis@ignition.hk>",
+  "scripts": {
+    "start": "node ./node_modules/.bin/nwbuild -r app"
+  },
+  "main": "lib/foo.js",
+  "keywords": [],
+  "dependencies": {
+    "opal": "*"
+  },
+  "devDependencies": {
+    "node-webkit-builder": "^1.0.0"
+  }
+}
