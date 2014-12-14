@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./node_modules/.bin/nwbuild -r app",
     "jsx": "browserify --no-detect-globals --bare -t [ reactify --es6 --target es5 ] lib/app.js > app/app.js",
-    "test": "mocha"
+    "test": "mocha --reporter spec --compilers js:test/compiler.js test/*.js"
   },
   "main": "lib/foo.js",
   "keywords": [],
