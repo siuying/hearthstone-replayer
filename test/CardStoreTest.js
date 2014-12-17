@@ -1,5 +1,5 @@
 var assert = require("assert")
-var CardStore = require("../lib/models/CardStore");
+var CardStore = require("../lib/stores/CardStore");
 
 describe('CardStore', function(){
   describe('#getCardWithId()', function(){
