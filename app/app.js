@@ -53,7 +53,15 @@ module.exports = {
         PLAY: null,
         GRAVEYARD: null,
         SETASIDE: null
-    })
+    }),
+
+    CARD_TYPES: {
+        ENCHANTMENT: "Enchantment",
+        SPELL: "Spell",
+        MINION: "Minion",
+        HERO: "Hero",
+        HERO_POWER: "Hero Power",
+    }
 };
 },{"keymirror":15}],5:[function(require,module,exports){
 var Dispatcher = require('flux').Dispatcher;
@@ -113,14 +121,28 @@ var ZONES = require('../constants/GameConstants').ZONES;
         return this.card == null;
     };
 
-    Entity.prototype.addToDeck=function(player) {"use strict";
-        this.zone = ZONES.DECK;
-        this.player = player;
+    Entity.prototype.attach=function(entity) {"use strict";
+        this.attachments.push(entity);
     };
 
-    Entity.prototype.addToHand=function(player) {"use strict";
+    Entity.prototype.detach=function(entity) {"use strict";
+        this.attachments.delete(entity);
+    };
+
+    Entity.prototype.addToDeck=function() {"use strict";
+        this.zone = ZONES.DECK;
+    };
+
+    Entity.prototype.addToHand=function() {"use strict";
         this.zone = ZONES.HAND;
-        this.player = player;
+    };
+
+    Entity.prototype.play=function() {"use strict";
+        this.zone = ZONES.PLAY;
+    };
+
+    Entity.prototype.discard=function() {"use strict";
+        this.zone = ZONES.GRAVEYARD;
     };
 
 
@@ -130,24 +152,22 @@ var Entity = require('./Entity');
 var Player = require('./Player');
 var CardStore = require('./CardStore');
 var GameEventHandlers = require("./GameEventHandlers");
+var CARD_TYPES = require('../constants/GameConstants').CARD_TYPES;
+var ZONES = require('../constants/GameConstants').ZONES;
+
 var _ = require('lodash');
 
 
     function Game(replay) {"use strict";
-        var game = this;
         this.currentTurnIndex = 0;
         this.replay = replay;
         this.entities = {};
 
         // load players
-        this.players = {}
-        replay.players.map(function(player){
-            var hero = new Entity(player.hero.id, CardStore.getCardWithId(player.hero.card_id));
-            var power = new Entity(player.hero_power.id, CardStore.getCardWithId(player.hero_power.card_id));
-            game.entities[hero.id] = hero;
-            game.entities[power.id] = power;
-            game.players[player.id] = new Player(player.id, player.name, player.first_player, hero, power);
-        });
+        if (replay.players) {
+            this.$Game_loadPlayers(replay.players);
+        }
+
         this.nextTurn();
     }
 
@@ -159,23 +179,25 @@ var _ = require('lodash');
 
         var turn = turns[this.currentTurnIndex];
         var game = this;
-
         if (!turn) {
+            console.warn("turn ${this.currentTurnIndex} not found");
             return false;
         }
 
-        turn.events.forEach(function(event){
+        var result = turn.events.map(function(event){
             var name = event[0];
             var data = event[1];
             var handler = GameEventHandlers[name];
             if (handler) {
-                handler(game, data);
+                return [name, handler(game, data)];
             } else {
                 console.warn("unhandled event: ", name);
+                return [name, null];
             }
         });
+
         this.currentTurnIndex = this.currentTurnIndex + 1;
-        return turn;
+        return result;
     };
 
     Game.prototype.getEntityWithId=function(id) {"use strict";
@@ -183,61 +205,161 @@ var _ = require('lodash');
     };
 
     Game.prototype.getPlayerWithId=function(id) {"use strict";
-        return this.players[id];
+        return this.playersMap[id];
+    };
+
+    Game.prototype.getHandWithPlayerId=function(playerId) {"use strict";
+        return this.entities.map(function(entity){
+            return entity.player.id == playerId && entity.zone == ZONES.HAND;
+        });
+    };
+
+    Game.prototype.getPlayWithPlayerId=function(playerId) {"use strict";
+        return this.entities.map(function(entity){
+            return entity.player.id == playerId && entity.zone == ZONES.PLAY;
+        });
+    };
+
+    Game.prototype.getDeckWithPlayerId=function(playerId) {"use strict";
+        return this.entities.map(function(entity){
+            return entity.player.id == playerId && entity.zone == ZONES.DECK;
+        });
+    };
+
+    Game.prototype.$Game_loadPlayers=function(playersData) {"use strict";
+        var game = this;
+        this.playersMap = {}
+        this.players = playersData.map(function(player){
+            var hero = new Entity(player.hero.id, CardStore.getCardWithId(player.hero.card_id));
+            var power = new Entity(player.hero_power.id, CardStore.getCardWithId(player.hero_power.card_id));
+            game.entities[hero.id] = hero;
+            game.entities[power.id] = power;
+            var player = new Player(player.id, player.name, player.first_player, hero, power);
+            game.playersMap[player.id] = player;
+            return player;
+        });
     };
 ;
 
 module.exports = Game;
-},{"./CardStore":6,"./Entity":7,"./GameEventHandlers":9,"./Player":11,"lodash":16}],9:[function(require,module,exports){
+},{"../constants/GameConstants":4,"./CardStore":6,"./Entity":7,"./GameEventHandlers":9,"./Player":11,"lodash":16}],9:[function(require,module,exports){
 var Entity = require('./Entity');
 var Player = require('./Player');
 var CardStore = require('./CardStore');
 
 var GameEventHandlers = {
     open_card:function(game, options) {
-        var id = options.id;
-        var cardId = options.card_id;
-        var entity = new Entity(id, CardStore.getCardWithId(cardId));
-        game.entities[id] = entity;
+        var card = CardStore.getCardWithId(options.card_id);
+        var entity = new Entity(options.id, card);
+        return game.entities[options.id] = entity;
     },
 
     card_revealed:function(game, options) {
-        var id = options.id;
-        var cardId = options.card_id;
-        var entity = game.getEntityWithId(id);
+        var entity = game.getEntityWithId(options.id);
+        var card = CardStore.getCardWithId(options.card_id);
         if (entity) {
-            entity.card = CardStore.getCardWithId(cardId);
+            entity.card = card;
         } else {
-            entity = new Entity(id, CardStore.getCardWithId(cardId));
+            entity = new Entity(options.id, card);
         }
-        game.entities[id] = entity;
+        return game.entities[options.id] = entity;
     },
 
     card_added_to_deck:function(game, options) {
-        var id = options.id;
-        var cardId = options.card_id;
-        var playerId = options.player_id;
-        var entity = game.getEntityWithId(id);
-        var player = game.getPlayerWithId(playerId);
-        entity.addToDeck(game.getPlayerWithId(playerId));
+        var entity = game.getEntityWithId(options.id);
+        var player = game.getPlayerWithId(options.player_id);
+        var card    = CardStore.getCardWithId(options.card_id);
+        if (player) {
+            entity.player = player;
+        }
+        if (card) {
+            entity.card = card;
+        }
+        entity.addToDeck();
+        return entity;
     },
 
     card_received:function(game, options) {
-        var id = options.id;
-        var cardId = options.card_id;
-        var playerId = options.player_id;
-        var entity = game.getEntityWithId(id);
-        var player = game.getPlayerWithId(playerId);
-        entity.addToHand(game.getPlayerWithId(playerId));
+        var entity = game.getEntityWithId(options.id);
+        var player  = game.getPlayerWithId(options.player_id);
+        var card    = CardStore.getCardWithId(options.card_id);
+        if (player) {
+            entity.player = player;
+        }
+        if (card) {
+            entity.card = card;
+        }
+        entity.addToHand();
+        return entity;
     },
 
-    card_drawn: card_received,
+    card_drawn:function(game, options) {
+        var entity = game.getEntityWithId(options.id);
+        var player  = game.getPlayerWithId(options.player_id);
+        var card    = CardStore.getCardWithId(options.card_id);
+        if (player) {
+            entity.player = player;
+        }
+        if (card) {
+            entity.card = card;
+        }
+        entity.addToHand();
+        return entity;
+    },
 
-    // card_attached(game, options) {
-    //     target      = entity_with_id(target_id)
-    //     attachment  = entity_with_id(attachment_id)
-    //     target.attach(attachment)
-    // }
+    attached:function(game, options) {
+        var attachment = game.getEntityWithId(options.id);
+        var target = game.getEntityWithId(options.target);
+        target.attach(attachment);
+        return target;
+    },
+
+    damage:function(game, options) {
+        var target = game.getEntityWithId(options.id);
+        var amount = options.amount;
+        target.damaged = amount;
+        return target;
+    },
+
+    card_played:function(game, options) {
+        var entity = game.getEntityWithId(options.id);
+        var player  = game.getPlayerWithId(options.player_id);
+        var card    = CardStore.getCardWithId(options.card_id);
+        if (player) {
+            entity.player = player;
+        }
+        if (card) {
+            entity.card = card;
+        }
+        entity.play();
+        return entity;
+    },
+
+    card_discarded:function(game, options) {
+        var entity = game.getEntityWithId(options.id);
+        entity.discard();
+        return entity;
+    },
+
+    card_destroyed:function(game, options) {
+        var entity = game.getEntityWithId(options.id);
+        entity.discard();
+        return entity;
+    },
+
+    card_put_in_play:function(game, options) {
+        var entity  = game.getEntityWithId(options.id);
+        var player  = game.getPlayerWithId(options.player_id);
+        var card    = CardStore.getCardWithId(options.card_id);
+        if (player) {
+            entity.player = player;
+        }
+        if (card) {
+            entity.card = card;
+        }
+        entity.play();
+        return entity;
+    }
 };
 
 module.exports = GameEventHandlers;
