@@ -1,10 +1,12 @@
-var assert = require("assert")
+var expect = require("expect.js");
 var Entity = require("../lib/stores/Entity");
 var Game = require("../lib/stores/Game");
 
 describe('Game', function(){
   describe('#getPlayerWithId()', function(){
-    it('should return player', function(){
+    var game;
+
+    before(function(){
         var data = {players: [{
           "id": 2,
           "name": "zardeine",
@@ -31,14 +33,17 @@ describe('Game', function(){
             "card_id": "DS1h_292"
           }
         }]};
-        var game = new Game(data);
+        game = new Game(data);
+    });
+
+    it('should return player', function(){
         var player1 = game.getPlayerWithId(1);
-        assert.equal(player1.name, "siuying");
-        assert.equal(player1.heroClass(), "Hunter");
+        expect(player1.name).to.equal("siuying");
+        expect(player1.heroClass()).to.equal("Hunter");
 
         var player2 = game.getPlayerWithId(2);
-        assert.equal(player2.name, "zardeine");
-        assert.equal(player2.heroClass(), "Hunter");
+        expect(player2.name).to.equal("zardeine");
+        expect(player2.heroClass()).to.equal("Hunter");
     })
   })
 })
