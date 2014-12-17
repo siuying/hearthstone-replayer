@@ -162,46 +162,40 @@ var _ = require('lodash');
         this.currentTurnIndex = 0;
         this.replay = replay;
         this.entities = {};
+        this.eventListeners = [GameEventHandlers]
 
         // load players
         if (replay.players) {
             this.$Game_loadPlayers(replay.players);
         }
 
-        this.nextTurn();
+        // load next turn
+        var game = this;
+        this.replay.turns.forEach(function(turn){
+            console.log("process turn #", turn.number)
+            game.currentTurnIndex = turn.number;
+            turn.events.map(function(event){
+                var name = event[0];
+                var data = event[1];
+
+                game.eventListeners.forEach(function(l){
+                    var handler = l[name];
+                    console.log(name, data)
+                    if (handler) {
+                        handler(game, data);
+                    }                
+                });
+            });
+        });
     }
 
-    Game.prototype.nextTurn=function() {"use strict";
-        var turns = this.replay.turns;
-        if (!turns) {
-            return false;
-        }
-
-        var turn = turns[this.currentTurnIndex];
-        var game = this;
-        if (!turn) {
-            console.warn("turn ${this.currentTurnIndex} not found");
-            return false;
-        }
-
-        var result = turn.events.map(function(event){
-            var name = event[0];
-            var data = event[1];
-            var handler = GameEventHandlers[name];
-            if (handler) {
-                return [name, handler(game, data)];
-            } else {
-                console.warn("unhandled event: ", name);
-                return [name, null];
-            }
-        });
-
-        this.currentTurnIndex = this.currentTurnIndex + 1;
-        return result;
-    };
-
     Game.prototype.getEntityWithId=function(id) {"use strict";
-        return this.entities[id];
+        var entity = this.entities[id];
+        if (!entity) {
+            entity = new Entity(id, null);
+            this.entities[id] = entity;
+        }
+        return entity;
     };
 
     Game.prototype.getPlayerWithId=function(id) {"use strict";
@@ -247,7 +241,11 @@ var Entity = require('./Entity');
 var Player = require('./Player');
 var CardStore = require('./CardStore');
 
+// Game event handlers that update model data
 var GameEventHandlers = {
+    next_turn:function(game, events) {
+    },
+
     open_card:function(game, options) {
         var card = CardStore.getCardWithId(options.card_id);
         var entity = new Entity(options.id, card);
@@ -257,10 +255,8 @@ var GameEventHandlers = {
     card_revealed:function(game, options) {
         var entity = game.getEntityWithId(options.id);
         var card = CardStore.getCardWithId(options.card_id);
-        if (entity) {
+        if (card) {
             entity.card = card;
-        } else {
-            entity = new Entity(options.id, card);
         }
         return game.entities[options.id] = entity;
     },
