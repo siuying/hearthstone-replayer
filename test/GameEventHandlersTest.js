@@ -99,10 +99,10 @@ describe('GameEventHandlers', function(){
     })
   })
 
-  describe("#damage()", function(){
+  describe("#damaged()", function(){
     it('should set damage on target', function(){
         GameEventHandlers.open_card(game, {id: 57, card_id: "FP1_028"});
-        GameEventHandlers.damage(game, {id: 57, amount: 2});
+        GameEventHandlers.damaged(game, {id: 57, amount: 2});
 
         var target = game.getEntityWithId(57);
         expect(target.damaged).to.equal(2);
@@ -119,6 +119,38 @@ describe('GameEventHandlers', function(){
         expect(entity.zone).equal(ZONES.PLAY);
     })
   })
+
+  describe("#card_reshuffled", function(){
+    it('should return card to deck', function(){
+        GameEventHandlers.open_card(game, {id: 6, card_id: null});
+        GameEventHandlers.card_received(game, {id: 6, player_id: 1, card_id: null});
+        GameEventHandlers.card_reshuffled(game, {id: 6, player_id: 1, card_id: null});
+
+        var entity = game.getEntityWithId(6);
+        expect(entity.player).equal(game.getPlayerWithId(1));
+        expect(entity.zone).equal(ZONES.DECK);
+    })
+  })
+
+  describe("#card_returned", function(){
+    it('should return card to hand', function(){
+        GameEventHandlers.open_card(game, {id: 57, card_id: "CS2_101"});
+        GameEventHandlers.card_returned(game, {id: 57, player_id: 2, card_id: "CS2_101"});
+
+        var entity = game.getEntityWithId(57);
+        expect(entity.player).equal(game.getPlayerWithId(2));
+        expect(entity.zone).equal(ZONES.HAND);
+    })
+
+    it('should reset damage', function(){
+        GameEventHandlers.open_card(game, {id: 57, card_id: "CS2_101"});
+        GameEventHandlers.damaged(game, {id: 57, amount: 1});
+        GameEventHandlers.card_returned(game, {id: 57, player_id: 2, card_id: "CS2_101"});
+
+        var entity = game.getEntityWithId(57);
+        expect(entity.damaged).to.equal(0);
+    })
+  });
 
   describe("#card_discarded()", function(){
     it('should moved to graveyard', function(){
@@ -148,5 +180,13 @@ describe('GameEventHandlers', function(){
         expect(entity.zone).equal(ZONES.PLAY);
     })
   })
-  
+
+  describe("#card_setaside()", function(){
+    it('should set aside', function(){
+        GameEventHandlers.card_setaside(game, {id: 57, player_id: 2, card_id: "CS2_101"});
+        var entity = game.getEntityWithId(57);
+        expect(entity.card.id).equal("CS2_101");
+        expect(entity.zone).equal(ZONES.SETASIDE);
+    })
+  })
 })

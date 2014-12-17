@@ -145,6 +145,15 @@ var ZONES = require('../constants/GameConstants').ZONES;
         this.zone = ZONES.GRAVEYARD;
     };
 
+    Entity.prototype.setaside=function() {"use strict";
+        this.zone = ZONES.SETASIDE;
+    };
+
+    Entity.prototype.reset=function() {"use strict";
+        this.damaged = 0;
+        this.attachments = [];
+    };
+
 
 module.exports = Entity;
 },{"../constants/GameConstants":4,"keymirror":15}],8:[function(require,module,exports){
@@ -169,24 +178,30 @@ var _ = require('lodash');
             this.$Game_loadPlayers(replay.players);
         }
 
-        // load next turn
-        var game = this;
-        this.replay.turns.forEach(function(turn){
-            console.log("process turn #", turn.number)
-            game.currentTurnIndex = turn.number;
-            turn.events.map(function(event){
-                var name = event[0];
-                var data = event[1];
+        // load turns
+        if (this.replay.turns) {
+            var game = this;
+            this.replay.turns.forEach(function(turn){
+                console.log("process turn #", turn.number)
+                game.currentTurnIndex = turn.number;
 
-                game.eventListeners.forEach(function(l){
-                    var handler = l[name];
-                    console.log(name, data)
-                    if (handler) {
-                        handler(game, data);
-                    }                
+                turn.events.map(function(event){
+                    var name = event[0];
+                    var data = event[1];
+
+                    game.eventListeners.forEach(function(l){
+                        var handler = l[name];
+                        console.log(name, data)
+                        if (handler) {
+                            handler(game, data);
+                        } else {
+                            console.log("UNSUPPORTED: ", name)
+                        }
+                    });
                 });
             });
-        });
+        }
+
     }
 
     Game.prototype.getEntityWithId=function(id) {"use strict";
@@ -310,7 +325,7 @@ var GameEventHandlers = {
         return target;
     },
 
-    damage:function(game, options) {
+    damaged:function(game, options) {
         var target = game.getEntityWithId(options.id);
         var amount = options.amount;
         target.damaged = amount;
@@ -331,6 +346,36 @@ var GameEventHandlers = {
         return entity;
     },
 
+    card_reshuffled:function(game, options) {
+        var entity = game.getEntityWithId(options.id);
+        var player  = game.getPlayerWithId(options.player_id);
+        var card    = CardStore.getCardWithId(options.card_id);
+        if (player) {
+            entity.player = player;
+        }
+        if (card) {
+            entity.card = card;
+        }
+        entity.addToDeck();
+        entity.reset();
+        return entity;
+    },
+
+    card_returned:function(game, options) {
+        var entity = game.getEntityWithId(options.id);
+        var player  = game.getPlayerWithId(options.player_id);
+        var card    = CardStore.getCardWithId(options.card_id);
+        if (player) {
+            entity.player = player;
+        }
+        if (card) {
+            entity.card = card;
+        }
+        entity.addToHand();
+        entity.reset();
+        return entity;
+    },
+
     card_discarded:function(game, options) {
         var entity = game.getEntityWithId(options.id);
         entity.discard();
@@ -340,6 +385,20 @@ var GameEventHandlers = {
     card_destroyed:function(game, options) {
         var entity = game.getEntityWithId(options.id);
         entity.discard();
+        return entity;
+    },
+
+    card_setaside:function(game, options) {
+        var entity  = game.getEntityWithId(options.id);
+        var player  = game.getPlayerWithId(options.player_id);
+        var card    = CardStore.getCardWithId(options.card_id);
+        if (player) {
+            entity.player = player;
+        }
+        if (card) {
+            entity.card = card;
+        }
+        entity.setaside();
         return entity;
     },
 
