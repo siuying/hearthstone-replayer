@@ -4,7 +4,7 @@ var ReplayerApp = require('./components/ReplayerApp');
 
 React.render(React.createElement(ReplayerApp, null), document.getElementById('content'));
 
-},{"./components/ReplayerApp":3,"react":159}],2:[function(require,module,exports){
+},{"./components/ReplayerApp":3,"react":162}],2:[function(require,module,exports){
 var React = require('react');
 
 var Player = React.createClass({displayName: 'Player',
@@ -19,7 +19,7 @@ var Player = React.createClass({displayName: 'Player',
 });
 
 module.exports = Player;
-},{"react":159}],3:[function(require,module,exports){
+},{"react":162}],3:[function(require,module,exports){
 var React = require('react');
 var PlayerView = require('./PlayerView');
 var GameStore = require('../stores/GameStore');
@@ -39,7 +39,7 @@ var ReplayerApp = React.createClass({displayName: 'ReplayerApp',
 });
 
 module.exports = ReplayerApp;
-},{"../stores/GameStore":8,"./PlayerView":2,"react":159}],4:[function(require,module,exports){
+},{"../stores/GameStore":9,"./PlayerView":2,"react":162}],4:[function(require,module,exports){
 var Dispatcher = require('flux').Dispatcher;
 var assign = require('object-assign');
 
@@ -54,7 +54,7 @@ var AppDispatcher = assign(new Dispatcher(), {
 
 module.exports = AppDispatcher;
 
-},{"flux":10,"object-assign":13}],5:[function(require,module,exports){
+},{"flux":11,"object-assign":16}],5:[function(require,module,exports){
 // imported from hearthstonejson.com
 var _HearthstoneAllCardsSets = {"Basic":[{"id":"GAME_004","name":"AFK","type":"Enchantment","text":"Your turns are shorter."},{"id":"EX1_066","name":"Acidic Swamp Ooze","type":"Minion","faction":"Alliance","rarity":"Common","cost":2,"attack":3,"health":2,"text":"<b>Battlecry:</b> Destroy your opponent's weapon.","flavor":"Oozes love Flamenco.  Don't ask.","artist":"Chris Rahn","collectible":true,"howToGetGold":"Unlocked at Rogue Level 57.","mechanics":["Battlecry"]},{"id":"CS2_041","name":"Ancestral Healing","type":"Spell","faction":"Neutral","rarity":"Free","cost":0,"text":"Restore a minion to full Health and give it <b>Taunt</b>.","flavor":"I personally prefer some non-ancestral right-the-heck-now healing, but maybe that is just me.","artist":"Dan Scott","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 15."},{"id":"CS2_041e","name":"Ancestral Infusion","type":"Enchantment","text":"Taunt.","playerClass":"Shaman","mechanics":["Taunt"]},{"id":"HERO_09","name":"Anduin Wrynn","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Priest"},{"id":"NEW1_031","name":"Animal Companion","type":"Spell","rarity":"Common","cost":3,"text":"Summon a random Beast Companion.","flavor":"You could summon Misha, Leokk, or Huffer!  Huffer is more trouble than he's worth.","artist":"Wei Wang","collectible":true,"playerClass":"Hunter","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 45."},{"id":"CS2_025","name":"Arcane Explosion","type":"Spell","faction":"Neutral","rarity":"Free","cost":2,"text":"Deal $1 damage to all enemy minions.","flavor":"This spell is much better than Arcane Implosion.","artist":"Howard Lyon","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 28."},{"id":"CS2_023","name":"Arcane Intellect","type":"Spell","faction":"Neutral","rarity":"Free","cost":3,"text":"Draw 2 cards.","flavor":"Playing this card makes you SMARTER.  And let's face it: we could all stand to be a little smarter.","artist":"Dave Berggren","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 15."},{"id":"EX1_277","name":"Arcane Missiles","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Deal $3 damage randomly split among enemy characters.","flavor":"You'd think you'd be able to control your missiles a little better since you're a powerful mage and all.","artist":"Warren Mahy","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 32.","mechanics":["ImmuneToSpellpower"]},{"id":"DS1_185","name":"Arcane Shot","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Deal $2 damage.","flavor":"Magi conjured arcane arrows to sell to hunters, until hunters learned just enough magic to do it themselves.  The resulting loss of jobs sent Stormwind into a minor recession.","artist":"Luca Zontini","collectible":true,"playerClass":"Hunter","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 32."},{"id":"CS2_112","name":"Arcanite Reaper","type":"Weapon","faction":"Neutral","rarity":"Common","cost":5,"attack":5,"durability":2,"flavor":"No… actually you should fear the Reaper.","artist":"Stefan Kopinski","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 51."},{"id":"CS2_155","name":"Archmage","type":"Minion","faction":"Alliance","rarity":"Common","cost":6,"attack":4,"health":7,"text":"<b>Spell Damage +1</b>","flavor":"You earn the title of Archmage when you can destroy anyone who calls you on it.","artist":"Steve Ellis","collectible":true,"howToGetGold":"Unlocked at Mage Level 57.","mechanics":["Spellpower"]},{"id":"CS2_102","name":"Armor Up!","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\nGain 2 Armor.","playerClass":"Warrior"},{"id":"CS2_080","name":"Assassin's Blade","type":"Weapon","faction":"Neutral","rarity":"Common","cost":5,"attack":3,"durability":4,"flavor":"Guaranteed to have been owned by a real assassin.   Certificate of authenticity included.","artist":"Brian Huang","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 32."},{"id":"CS2_076","name":"Assassinate","type":"Spell","faction":"Neutral","rarity":"Free","cost":5,"text":"Destroy an enemy minion.","flavor":"If you don't want to be assassinated, move to the Barrens and change your name. Good luck!","artist":"Glenn Rane","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 47."},{"id":"GAME_002","name":"Avatar of the Coin","type":"Minion","rarity":"Free","cost":0,"attack":1,"health":1,"text":"<i>You lost the coin flip, but gained a friend.</i>"},{"id":"CS2_072","name":"Backstab","type":"Spell","faction":"Neutral","rarity":"Free","cost":0,"text":"Deal $2 damage to an undamaged minion.","flavor":"It's funny how often yelling \"Look over there!\" gets your opponent to turn around.","artist":"Michael Sutfin","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 36."},{"id":"EX1_399e","name":"Berserking","type":"Enchantment","text":"This minion has increased Attack."},{"id":"CS2_092","name":"Blessing of Kings","type":"Spell","faction":"Neutral","rarity":"Common","cost":4,"text":"Give a minion +4/+4. <i>(+4 Attack/+4 Health)</i>","flavor":"Given the number of kings who have been assassinated, are you sure you want their blessing?","artist":"Lucas Graciano","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 49."},{"id":"CS2_092e","name":"Blessing of Kings","type":"Enchantment","text":"+4/+4.","playerClass":"Paladin"},{"id":"CS2_087","name":"Blessing of Might","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Give a minion +3 Attack.","flavor":"\"As in, you MIGHT want to get out of my way.\" - Toad Mackle, recently buffed.","artist":"Zoltan Boros","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 45."},{"id":"CS2_087e","name":"Blessing of Might","type":"Enchantment","faction":"Neutral","text":"+3 Attack.","playerClass":"Paladin"},{"id":"CS2_172","name":"Bloodfen Raptor","type":"Minion","faction":"Horde","rarity":"Free","cost":2,"attack":3,"health":2,"flavor":"\"Kill 30 raptors.\" - Hemet Nesingwary","artist":"Dan Brereton","collectible":true,"race":"Beast","howToGetGold":"Unlocked at Hunter Level 57."},{"id":"CS2_046e","name":"Bloodlust","type":"Enchantment","text":"+3 Attack this turn.","playerClass":"Shaman","mechanics":["OneTurnEffect"]},{"id":"CS2_046","name":"Bloodlust","type":"Spell","faction":"Neutral","rarity":"Common","cost":5,"text":"Give your minions +3 Attack this turn.","flavor":"blaarghghLLGHRHARAAHAHHH!!","artist":"Luca Zontini","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 40."},{"id":"CS2_173","name":"Bluegill Warrior","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":1,"text":"<b>Charge</b>","flavor":"He just wants a hug.   A sloppy... slimy... hug.","artist":"Jakub Kasper","collectible":true,"race":"Murloc","howToGetGold":"Unlocked at Paladin Level 53.","mechanics":["Charge"]},{"id":"CS2_boar","name":"Boar","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":1,"health":1,"race":"Beast"},{"id":"CS2_187","name":"Booty Bay Bodyguard","type":"Minion","faction":"Horde","rarity":"Common","cost":5,"attack":5,"health":4,"text":"<b>Taunt</b>","flavor":"You can hire him... until someone offers him enough gold to turn on you.","artist":"Matt Cavotta","collectible":true,"howToGetGold":"Unlocked at Shaman Level 55.","mechanics":["Taunt"]},{"id":"CS2_200","name":"Boulderfist Ogre","type":"Minion","rarity":"Free","cost":6,"attack":6,"health":7,"flavor":"\"ME HAVE GOOD STATS FOR THE COST\"","artist":"Brian Despain","collectible":true,"howToGetGold":"Unlocked at Warlock Level 51."},{"id":"CS2_103","name":"Charge","type":"Spell","faction":"Neutral","rarity":"Free","cost":3,"text":"Give a friendly minion +2 Attack and <b>Charge</b>.","flavor":"\"Guys! Guys! Slow down!\" - some kind of non-warrior minion","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 23."},{"id":"EX1_084e","name":"Charge","type":"Enchantment","text":"This minion has <b>Charge</b>.","playerClass":"Warrior"},{"id":"DS1_178e","name":"Charge","type":"Enchantment","text":"Tundra Rhino grants <b>Charge</b>.","playerClass":"Hunter"},{"id":"CS2_103e2","name":"Charge","type":"Enchantment","text":"+2 Attack and <b>Charge</b>.","playerClass":"Warrior"},{"id":"CS2_182","name":"Chillwind Yeti","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":4,"health":5,"flavor":"He always dreamed of coming down from the mountains and opening a noodle shop, but he never got the nerve.","artist":"Mauro Cascioli","collectible":true,"howToGetGold":"Unlocked at Warrior Level 55."},{"id":"CS2_005o","name":"Claw","type":"Enchantment","text":"+2 Attack this turn.","playerClass":"Druid","mechanics":["OneTurnEffect"]},{"id":"CS2_005","name":"Claw","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Give your hero +2 Attack this turn and 2 Armor.","flavor":"The claw decides who will stay and who will go.","artist":"Dany Orizio","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 32."},{"id":"CS2_017o","name":"Claws","type":"Enchantment","text":"Your hero has +1 Attack this turn.","playerClass":"Druid","mechanics":["OneTurnEffect"]},{"id":"CS2_114","name":"Cleave","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Deal $2 damage to two random enemy minions.","flavor":"Hey you two…could you stand next to each other for a second…","artist":"Phroilan Gardner","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 40."},{"id":"EX1_019e","name":"Cleric's Blessing","type":"Enchantment","text":"+1/+1.","playerClass":"Priest"},{"id":"GAME_003","name":"Coin's Vengeance","type":"Enchantment","text":"Going second makes your first minion stronger."},{"id":"GAME_003e","name":"Coin's Vengence","type":"Enchantment","text":"Going second makes your first minion stronger."},{"id":"CS2_093","name":"Consecration","type":"Spell","faction":"Neutral","rarity":"Common","cost":4,"text":"Deal $2 damage to all enemies.","flavor":"Consecrated ground glows with Holy energy.  But it smells a little, too.","artist":"Vance Kovacs","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 43."},{"id":"CS2_201","name":"Core Hound","type":"Minion","rarity":"Common","cost":7,"attack":9,"health":5,"flavor":"You don’t tame a Core Hound. You just train it to eat someone else before it eats you.","artist":"E.M. Gist","collectible":true,"race":"Beast","howToGetGold":"Unlocked at Hunter Level 51."},{"id":"CS2_063","name":"Corruption","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Choose an enemy minion. At the start of your turn, destroy it.","flavor":"It starts with stealing a pen from work, and before you know it, BOOM!  Corrupted!","artist":"Wayne Reynolds","collectible":true,"playerClass":"Warlock","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 32."},{"id":"CS2_063e","name":"Corruption","type":"Enchantment","text":"At the start of the corrupting player's turn, destroy this minion.","playerClass":"Warlock"},{"id":"CS2_083b","name":"Dagger Mastery","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\nEquip a 1/2 Dagger.","playerClass":"Rogue"},{"id":"EX1_582","name":"Dalaran Mage","type":"Minion","faction":"Neutral","rarity":"Common","cost":3,"attack":1,"health":4,"text":"<b>Spell Damage +1</b>","flavor":"You don't see a lot of Dalaran warriors.","artist":"Jim Nelson","collectible":true,"howToGetGold":"Unlocked at Mage Level 59.","mechanics":["Spellpower"]},{"id":"DS1_055","name":"Darkscale Healer","type":"Minion","faction":"Neutral","rarity":"Common","cost":5,"attack":4,"health":5,"text":"<b>Battlecry:</b> Restore 2 Health to all friendly characters.","flavor":"Healing is just something she does in her free time.  It's more of a hobby really.","artist":"Jesper Ejsing","collectible":true,"howToGetGold":"Unlocked at Priest Level 55.","mechanics":["Battlecry"]},{"id":"CS2_074e","name":"Deadly Poison","type":"Enchantment","text":"+2 Attack."},{"id":"CS2_074","name":"Deadly Poison","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Give your weapon +2 Attack.","flavor":"Rogues guard the secrets to poison-making carefully, lest magi start incorporating poison into their spells.  Poisonbolt? Rain of Poison?  Poison Elemental?  Nobody wants that.","artist":"Trevor Jacobs","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 43."},{"id":"CS2_236e","name":"Divine Spirit","type":"Enchantment","text":"This minion has double Health.","playerClass":"Priest"},{"id":"CS2_236","name":"Divine Spirit","type":"Spell","rarity":"Common","cost":2,"text":"Double a minion's Health.","flavor":"Double the trouble. Double the fun!","artist":"Jim Pavelec","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 28."},{"id":"EX1_025","name":"Dragonling Mechanic","type":"Minion","faction":"Alliance","rarity":"Common","cost":4,"attack":2,"health":4,"text":"<b>Battlecry:</b> Summon a 2/1 Mechanical Dragonling.","flavor":"She is still working on installing the rocket launcher add-on for Mr. Bitey.","artist":"Warren Mahy","collectible":true,"howToGetGold":"Unlocked at Mage Level 53.","mechanics":["Battlecry"]},{"id":"CS2_061","name":"Drain Life","type":"Spell","faction":"Neutral","rarity":"Free","cost":3,"text":"Deal $2 damage. Restore #2 Health to your hero.","flavor":"\"I've just sucked one year of your life away.\"","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Warlock","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 45."},{"id":"CS2_064","name":"Dread Infernal","type":"Minion","faction":"Neutral","rarity":"Common","cost":6,"attack":6,"health":6,"text":"<b>Battlecry:</b> Deal 1 damage to ALL other characters.","flavor":"\"INFERNOOOOOOOOOO!\" - Jaraxxus, Eredar Lord of the Burning Legion","artist":"Zoltan & Gabor","collectible":true,"race":"Demon","playerClass":"Warlock","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 23.","mechanics":["Battlecry"]},{"id":"CS2_189","name":"Elven Archer","type":"Minion","faction":"Horde","rarity":"Common","cost":1,"attack":1,"health":1,"text":"<b>Battlecry:</b> Deal 1 damage.","flavor":"Don't bother asking her out on a date.  She'll shoot you down.","artist":"Steve Prescott","collectible":true,"howToGetGold":"Unlocked at Druid Level 57.","mechanics":["Battlecry"]},{"id":"CS2_122e","name":"Enhanced","type":"Enchantment","text":"Raid Leader is granting this minion +1 Attack."},{"id":"CS2_013t","name":"Excess Mana","type":"Spell","cost":0,"text":"Draw a card. <i>(You can only have 10 Mana in your tray.)</i>","playerClass":"Druid"},{"id":"CS2_108","name":"Execute","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Destroy a damaged enemy minion.","flavor":"It's okay, he deserved it.","artist":"Dany Orizio","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 47."},{"id":"NEW1_033o","name":"Eye In The Sky","type":"Enchantment","text":"Leokk is granting this minion +1 Attack.","playerClass":"Hunter"},{"id":"EX1_129","name":"Fan of Knives","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"Deal $1 damage to all enemy minions. Draw a card.","flavor":"I wouldn't say I LOVE knives, but I'm definitely a fan.","artist":"Andrew Robinson","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 29."},{"id":"CS2_106","name":"Fiery War Axe","type":"Weapon","faction":"Neutral","rarity":"Free","cost":2,"attack":3,"durability":2,"flavor":"During times of tranquility and harmony, this weapon was called by its less popular name, Chilly Peace Axe.","artist":"Lucas Graciano","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 49."},{"id":"CS2_042","name":"Fire Elemental","type":"Minion","faction":"Neutral","rarity":"Common","cost":6,"attack":6,"health":5,"text":"<b>Battlecry:</b> Deal 3 damage.","flavor":"He can never take a bath. Ewww.","artist":"Ralph Horsley","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 49.","mechanics":["Battlecry"]},{"id":"CS2_029","name":"Fireball","type":"Spell","faction":"Neutral","rarity":"Free","cost":4,"text":"Deal $6 damage.","flavor":"This spell is useful for burning things.  If you're looking for spells that toast things, or just warm them a little, you're in the wrong place.","artist":"Ralph Horsley","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 44."},{"id":"CS2_034","name":"Fireblast","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\nDeal 1 damage.","playerClass":"Mage"},{"id":"CS2_032","name":"Flamestrike","type":"Spell","faction":"Neutral","rarity":"Common","cost":7,"text":"Deal $4 damage to all enemy minions.","flavor":"When the ground is on fire, you should <i>not</i> stop, drop, and roll.","artist":"Romain De Santi","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 51."},{"id":"EX1_565o","name":"Flametongue","type":"Enchantment","text":"+2 Attack from Flametongue Totem.","playerClass":"Shaman"},{"id":"EX1_565","name":"Flametongue Totem","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":0,"health":3,"text":"Adjacent minions have +2 Attack.","inPlayText":"Flametongue","flavor":"Totemsmiths like to use the rarest woods for their totems.  There are even rumors of totems made of Ironbark Protectors.","artist":"Jonathan Ryder","collectible":true,"race":"Totem","playerClass":"Shaman","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 43.","mechanics":["AdjacentBuff","Aura"]},{"id":"hexfrog","name":"Frog","type":"Minion","faction":"Neutral","rarity":"Common","attack":0,"health":1,"text":"<b>Taunt</b>","race":"Beast","mechanics":["Taunt"],"cost":0},{"id":"CS2_026","name":"Frost Nova","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"<b>Freeze</b> all enemy minions.","flavor":"Hey man, that's cold.  Literally and metaphorically.","artist":"Josh Tallman","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 23.","mechanics":["Freeze"]},{"id":"CS2_037","name":"Frost Shock","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Deal $1 damage to an enemy character and <b>Freeze</b> it.","flavor":"FROST SHOCK!","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 32.","mechanics":["Freeze"]},{"id":"CS2_024","name":"Frostbolt","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Deal $3 damage to a character and <b>Freeze</b> it.","flavor":"It is customary to yell \"Chill out!\" or \"Freeze!\" or \"Ice ice, baby!\" when you play this card.","artist":"Steve Ellis","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 40.","mechanics":["Freeze"]},{"id":"CS2_226e","name":"Frostwolf Banner","type":"Enchantment","text":"Increased stats."},{"id":"CS2_121","name":"Frostwolf Grunt","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":2,"text":"<b>Taunt</b>","flavor":"Grunting is what his father did and his father before that.   It's more than just a job.","artist":"Richie Marella","collectible":true,"howToGetGold":"Unlocked at Shaman Level 57.","mechanics":["Taunt"]},{"id":"CS2_226","name":"Frostwolf Warlord","type":"Minion","faction":"Horde","rarity":"Common","cost":5,"attack":4,"health":4,"text":"<b>Battlecry:</b> Gain +1/+1 for each other friendly minion on the battlefield.","inPlayText":"Warlord","flavor":"The Frostwolves are locked in combat with the Stormpike Expedition over control of Alterac Valley.  Every attempt at peace-talks has ended with Captain Galvangar killing the mediator.","artist":"James Ryman","collectible":true,"howToGetGold":"Unlocked at Shaman Level 53.","mechanics":["Battlecry"]},{"id":"DS1_175o","name":"Furious Howl","type":"Enchantment","text":"This Beast has +1 Attack from Timber Wolf.","playerClass":"Hunter"},{"id":"HERO_01","name":"Garrosh Hellscream","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Warrior"},{"id":"CS2_147","name":"Gnomish Inventor","type":"Minion","faction":"Alliance","rarity":"Common","cost":4,"attack":2,"health":4,"text":"<b>Battlecry:</b> Draw a card.","flavor":"She's never quite sure what she's making, she just knows it's AWESOME!","artist":"Court Jones","collectible":true,"howToGetGold":"Unlocked at Priest Level 57.","mechanics":["Battlecry"]},{"id":"CS1_042","name":"Goldshire Footman","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":1,"health":2,"text":"<b>Taunt</b>","flavor":"If 1/2 minions are all that is defending Goldshire, you would think it would have been overrun years ago.","artist":"Donato Giancola","collectible":true,"howToGetGold":"Unlocked at Paladin Level 57.","mechanics":["Taunt"]},{"id":"EX1_508","name":"Grimscale Oracle","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":1,"health":1,"text":"ALL other Murlocs have +1 Attack.","inPlayText":"Argalagblbl","flavor":"These are the brainy murlocs.  It turns out that doesn’t mean much.","artist":"Phil Saunders","collectible":true,"race":"Murloc","howToGetGold":"Unlocked at Warlock Level 53.","mechanics":["Aura"]},{"id":"CS2_088","name":"Guardian of Kings","type":"Minion","faction":"Neutral","rarity":"Common","cost":7,"attack":5,"health":6,"text":"<b>Battlecry:</b> Restore 6 Health to your hero.","flavor":"Holy beings from the beyond are so cliché!","artist":"E.M. Gist","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 47.","mechanics":["Battlecry"]},{"id":"HERO_07","name":"Gul'dan","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Warlock"},{"id":"EX1_399","name":"Gurubashi Berserker","type":"Minion","faction":"Neutral","rarity":"Common","cost":5,"attack":2,"health":7,"text":"Whenever this minion takes damage, gain +3 Attack.","flavor":"No Pain, No Gain.","artist":"Alex Horley Orlandelli","collectible":true,"howToGetGold":"Unlocked at Warlock Level 57."},{"id":"CS2_094","name":"Hammer of Wrath","type":"Spell","faction":"Neutral","rarity":"Free","cost":4,"text":"Deal $3 damage.\nDraw a card.","flavor":"A good paladin has many tools.  Hammer of Wrath, Pliers of Vengeance, Hacksaw of Justice, etc.","artist":"Efrem Palacios","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 32."},{"id":"EX1_371","name":"Hand of Protection","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Give a minion <b>Divine Shield</b>.","flavor":"This spell has been renamed so many times, even paladins don’t know what it should be called anymore.","artist":"Clint Langley","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 23."},{"id":"NEW1_009","name":"Healing Totem","type":"Minion","rarity":"Free","cost":1,"attack":0,"health":2,"text":"At the end of your turn, restore 1 Health to all friendly minions.","race":"Totem","playerClass":"Shaman"},{"id":"CS2_007","name":"Healing Touch","type":"Spell","faction":"Neutral","rarity":"Free","cost":3,"text":"Restore #8 Health.","flavor":"8 Health, no waiting.","artist":"Cyril Van Der Haegen","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 15."},{"id":"CS2_062","name":"Hellfire","type":"Spell","faction":"Neutral","rarity":"Free","cost":4,"text":"Deal $3 damage to ALL characters.","flavor":"It's spells like these that make it hard for Warlocks to get decent help.","artist":"Chippy","collectible":true,"playerClass":"Warlock","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 49."},{"id":"CS2_105e","name":"Heroic Strike","type":"Enchantment","text":"+4 Attack this turn.","playerClass":"Warrior","mechanics":["OneTurnEffect"]},{"id":"CS2_105","name":"Heroic Strike","type":"Spell","faction":"Neutral","rarity":"Free","cost":2,"text":"Give your hero +4 Attack this turn.","flavor":"Really, if you're a hero, this is <i>every</i> strike.","artist":"Jonboy Meyers","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 15."},{"id":"EX1_246","name":"Hex","type":"Spell","faction":"Neutral","rarity":"Free","cost":3,"text":"Transform a minion into a 0/1 Frog with <b>Taunt</b>.","flavor":"If you Hex a Murloc... it really isn't much of a change, is it?","artist":"Steve Hui","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 47."},{"id":"EX1_246e","name":"Hexxed","type":"Enchantment","text":"This minion has been transformed!","playerClass":"Shaman","mechanics":["Morph"]},{"id":"CS2_089","name":"Holy Light","type":"Spell","faction":"Neutral","rarity":"Free","cost":2,"text":"Restore #6 Health.","flavor":"If you are often bathed in Holy Light, you should consider wearing sunscreen.","artist":"Zoltan & Gabor","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 15."},{"id":"CS1_112","name":"Holy Nova","type":"Spell","faction":"Neutral","rarity":"Common","cost":5,"text":"Deal $2 damage to all enemies. Restore #2 Health to all friendly characters.","flavor":"If the Holy Light forsakes you, good luck casting this spell.  Also, you're probably a jerk.","artist":"Luca Zontini","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 45."},{"id":"CS1_130","name":"Holy Smite","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Deal $2 damage.","flavor":"It doesn't matter how pious you are.  Everyone needs a good smiting now and again.","artist":"Steve Ellis","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 23."},{"id":"DS1_070","name":"Houndmaster","type":"Minion","faction":"Neutral","rarity":"Free","cost":4,"attack":4,"health":3,"text":"<b>Battlecry:</b> Give a friendly Beast +2/+2 and <b>Taunt</b>.","inPlayText":"Beastmaster","flavor":"\"Who let the dogs out?\" he asks.  It's rhetorical.","artist":"Dan Brereton","collectible":true,"playerClass":"Hunter","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 28.","mechanics":["Battlecry"]},{"id":"NEW1_034","name":"Huffer","type":"Minion","rarity":"Common","cost":3,"attack":4,"health":2,"text":"<b>Charge</b>","race":"Beast","playerClass":"Hunter","mechanics":["Charge"]},{"id":"EX1_360e","name":"Humility","type":"Enchantment","faction":"Neutral","text":"Attack has been changed to 1.","playerClass":"Paladin"},{"id":"EX1_360","name":"Humility","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Change a minion's Attack to 1.","flavor":"This card makes something really damp.  Oh wait.  That's \"Humidity.\"","artist":"Daren Bader","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 28."},{"id":"CS2_084e","name":"Hunter's Mark","type":"Enchantment","text":"This minion has 1 Health.","playerClass":"Hunter"},{"id":"CS2_084","name":"Hunter's Mark","type":"Spell","faction":"Neutral","rarity":"Common","cost":0,"text":"Change a minion's Health to 1.","flavor":"Never play 'Hide and Go Seek' with a Hunter.","artist":"Jimmy Lo","collectible":true,"playerClass":"Hunter","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 40."},{"id":"EX1_169","name":"Innervate","type":"Spell","faction":"Neutral","rarity":"Free","cost":0,"text":"Gain 2 Mana Crystals this turn only.","flavor":"Some druids still have flashbacks from strangers yelling \"Innervate me!!\" at them.","artist":"Doug Alexander","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 36."},{"id":"CS2_232","name":"Ironbark Protector","type":"Minion","faction":"Neutral","rarity":"Common","cost":8,"attack":8,"health":8,"text":"<b>Taunt</b>","flavor":"I <i>dare</i> you to attack Darnassus.","artist":"Dave Allsop","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 49.","mechanics":["Taunt"]},{"id":"CS2_141","name":"Ironforge Rifleman","type":"Minion","faction":"Alliance","rarity":"Common","cost":3,"attack":2,"health":2,"text":"<b>Battlecry:</b> Deal 1 damage.","flavor":"\"Ready! Aim! Drink!\"","artist":"Tooth","collectible":true,"howToGetGold":"Unlocked at Mage Level 55.","mechanics":["Battlecry"]},{"id":"CS2_125","name":"Ironfur Grizzly","type":"Minion","faction":"Neutral","rarity":"Common","cost":3,"attack":3,"health":3,"text":"<b>Taunt</b>","flavor":"\"Bear Carcass 1/10\"","artist":"Lars Grant-West","collectible":true,"race":"Beast","howToGetGold":"Unlocked at Hunter Level 59.","mechanics":["Taunt"]},{"id":"HERO_08","name":"Jaina Proudmoore","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Mage"},{"id":"EX1_539","name":"Kill Command","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"Deal $3 damage. If you have a Beast, deal $5 damage instead.","flavor":"\"Kill!\", he commanded.","artist":"Gabe from Penny Arcade","collectible":true,"playerClass":"Hunter","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 49."},{"id":"CS2_142","name":"Kobold Geomancer","type":"Minion","faction":"Horde","rarity":"Common","cost":2,"attack":2,"health":2,"text":"<b>Spell Damage +1</b>","flavor":"In the old days, Kobolds were the finest candle merchants in the land. Then they got pushed too far...","artist":"Gabor Szikszai","collectible":true,"howToGetGold":"Unlocked at Warlock Level 59.","mechanics":["Spellpower"]},{"id":"NEW1_011","name":"Kor'kron Elite","type":"Minion","rarity":"Common","cost":4,"attack":4,"health":3,"text":"<b>Charge</b>","flavor":"The Kor'kron are the elite forces of Garrosh Hellscream. Let's just say you don't want to run into these guys while wearing a blue tabard.","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 44.","mechanics":["Charge"]},{"id":"NEW1_033","name":"Leokk","type":"Minion","rarity":"Common","cost":3,"attack":2,"health":4,"text":"Other friendly minions have +1 Attack.","race":"Beast","playerClass":"Hunter"},{"id":"CS1h_001","name":"Lesser Heal","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\nRestore 2 Health.","playerClass":"Priest"},{"id":"CS2_056","name":"Life Tap","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\nDraw a card and take 2 damage.","playerClass":"Warlock"},{"id":"CS2_091","name":"Light's Justice","type":"Weapon","faction":"Neutral","rarity":"Free","cost":1,"attack":1,"durability":4,"flavor":"Prince Malchezaar was a collector of rare weapons. He'd animate them and have them dance for him.","artist":"Glenn Rane","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 36."},{"id":"CS2_162","name":"Lord of the Arena","type":"Minion","faction":"Alliance","rarity":"Common","cost":6,"attack":6,"health":5,"text":"<b>Taunt</b>","flavor":"He used to be a 2100+ rated arena player, but that was years ago and nobody can get him to shut up about it.","artist":"E.M. Gist","collectible":true,"howToGetGold":"Unlocked at Priest Level 59.","mechanics":["Taunt"]},{"id":"GAME_001","name":"Luck of the Coin","type":"Enchantment","text":"Going second grants you increased Health."},{"id":"CS2_118","name":"Magma Rager","type":"Minion","rarity":"Free","cost":3,"attack":5,"health":1,"flavor":"He likes to think he is powerful, but pretty much anyone can solo Molten Core now.","artist":"Matt Gaser","collectible":true,"howToGetGold":"Unlocked at Shaman Level 51."},{"id":"HERO_06","name":"Malfurion Stormrage","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Druid"},{"id":"CS2_009","name":"Mark of the Wild","type":"Spell","faction":"Neutral","rarity":"Free","cost":2,"text":"Give a minion <b>Taunt</b> and +2/+2.<i> (+2 Attack/+2 Health)</i>","flavor":"Not to be confused with Jim of the Wild.","artist":"Brad Vancata","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 28."},{"id":"CS2_009e","name":"Mark of the Wild","type":"Enchantment","text":"This minion has +2/+2 and <b>Taunt</b>.","playerClass":"Druid"},{"id":"DS1_070o","name":"Master's Presence","type":"Enchantment","text":"+2/+2 and <b>Taunt</b>.","playerClass":"Hunter"},{"id":"EX1_025t","name":"Mechanical Dragonling","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":2,"health":1,"race":"Mech"},{"id":"CS2_222o","name":"Might of Stormwind","type":"Enchantment","text":"Has +1/+1."},{"id":"DS1_233","name":"Mind Blast","type":"Spell","faction":"Neutral","rarity":"Free","cost":2,"text":"Deal $5 damage to the enemy hero.","flavor":"This spell blasts you directly in the MIND.","artist":"Dave Allsop","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 15."},{"id":"CS1_113","name":"Mind Control","type":"Spell","faction":"Neutral","rarity":"Common","cost":10,"text":"Take control of an enemy minion.","flavor":"Nominated as \"Spell Most Likely to Make Your Opponent Punch the Wall.\"","artist":"Sean O’Daniels","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 49."},{"id":"CS1_113e","name":"Mind Control","type":"Enchantment","faction":"Neutral","rarity":"Common","text":"This minion has switched controllers.","playerClass":"Priest"},{"id":"CS2_003","name":"Mind Vision","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Put a copy of a random card in your opponent's hand into your hand.","flavor":"I see what you did there.","artist":"Michael Komarck","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 32."},{"id":"CS2_mirror","name":"Mirror Image","type":"Minion","faction":"Neutral","rarity":"Common","cost":0,"attack":0,"health":2,"text":"<b>Taunt</b>","playerClass":"Mage","mechanics":["Taunt"]},{"id":"CS2_027","name":"Mirror Image","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Summon two 0/2 minions with <b>Taunt</b>.","flavor":"Oh hey it's Mirror Image! !egamI rorriM s'ti yeh hO","artist":"Jim Nelson","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 36."},{"id":"NEW1_032","name":"Misha","type":"Minion","rarity":"Common","cost":3,"attack":4,"health":4,"text":"<b>Taunt</b>","race":"Beast","playerClass":"Hunter","mechanics":["Taunt"]},{"id":"EX1_508o","name":"Mlarggragllabl!","type":"Enchantment","text":"This Murloc has +1 Attack."},{"id":"CS2_008","name":"Moonfire","type":"Spell","faction":"Neutral","rarity":"Common","cost":0,"text":"Deal $1 damage.","flavor":"\"Cast Moonfire, and never stop.\" - How to Be a Druid, Chapter 5, Section 3","artist":"Richard Wright","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 40."},{"id":"EX1_302","name":"Mortal Coil","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Deal $1 damage to a minion. If that kills it, draw a card.","flavor":"If your spells look like horrifying skulls, let's be honest, you should get to draw some cards.","artist":"Matt Gaser","collectible":true,"playerClass":"Warlock","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 43."},{"id":"DS1_183","name":"Multi-Shot","type":"Spell","faction":"Neutral","rarity":"Free","cost":4,"text":"Deal $3 damage to two random enemy minions.","flavor":"You see, it's all about <i>throughput</i>.","artist":"Benjamin Zhang","collectible":true,"playerClass":"Hunter","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 36."},{"id":"CS2_168","name":"Murloc Raider","type":"Minion","faction":"Alliance","rarity":"Free","cost":1,"attack":2,"health":1,"flavor":"Mrrraggglhlhghghlgh, mrgaaag blarrghlgaahahl mrgggg glhalhah a bghhll graggmgmg Garrosh mglhlhlh mrghlhlhl!!","artist":"Dan Scott","collectible":true,"race":"Murloc","howToGetGold":"Unlocked at Priest Level 51."},{"id":"EX1_506a","name":"Murloc Scout","type":"Minion","faction":"Neutral","rarity":"Common","cost":0,"attack":1,"health":1,"race":"Murloc"},{"id":"EX1_506","name":"Murloc Tidehunter","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":1,"text":"<b>Battlecry:</b> Summon a 1/1 Murloc Scout.","flavor":"\"Death will rise, from the tides!\"","artist":"Dan Scott","collectible":true,"race":"Murloc","howToGetGold":"Unlocked at Rogue Level 53.","mechanics":["Battlecry"]},{"id":"GAME_006","name":"NOOOOOOOOOOOO","type":"Spell","cost":2,"text":"Somehow, the card you USED to have has been deleted.  Here, have this one instead!","flavor":"Even your flavor text has been deleted. Dang."},{"id":"EX1_593","name":"Nightblade","type":"Minion","faction":"Neutral","rarity":"Free","cost":5,"attack":4,"health":4,"text":"<b>Battlecry: </b>Deal 3 damage to the enemy hero.","flavor":"Your face is the place you'd probably least like a dagger, and where rogues are most likely to deliver them.","artist":"Raymond Swanland","collectible":true,"howToGetGold":"Unlocked at Druid Level 53.","mechanics":["Battlecry"]},{"id":"CS2_235","name":"Northshire Cleric","type":"Minion","rarity":"Free","cost":1,"attack":1,"health":3,"text":"Whenever a minion is healed, draw a card.","flavor":"They help the downtrodden and distressed.  Also they sell cookies.","artist":"Terese Nielsen","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 40.","mechanics":["HealTarget"]},{"id":"EX1_015","name":"Novice Engineer","type":"Minion","faction":"Alliance","rarity":"Free","cost":2,"attack":1,"health":1,"text":"<b>Battlecry:</b> Draw a card.","flavor":"\"Half of this class will not graduate… since they'll have been turned to chickens.\" - Tinkmaster Overspark, teaching Gizmos 101.","artist":"Karl Richardson","collectible":true,"howToGetGold":"Unlocked at Druid Level 59.","mechanics":["Battlecry"]},{"id":"CS2_119","name":"Oasis Snapjaw","type":"Minion","rarity":"Free","cost":4,"attack":2,"health":7,"flavor":"His dreams of flying and breathing fire like his idol will never be realized.","artist":"Ittoku","collectible":true,"race":"Beast","howToGetGold":"Unlocked at Druid Level 51."},{"id":"CS2_197","name":"Ogre Magi","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":4,"health":4,"text":"<b>Spell Damage +1</b>","flavor":"Training Ogres in the art of spellcasting is a questionable decision.","artist":"James Ryman","collectible":true,"howToGetGold":"Unlocked at Warlock Level 55.","mechanics":["Spellpower"]},{"id":"CS2_022e","name":"Polymorph","type":"Enchantment","faction":"Neutral","rarity":"Common","text":"This minion has been transformed into a 1/1 Sheep.","playerClass":"Mage","mechanics":["Morph"]},{"id":"CS2_022","name":"Polymorph","type":"Spell","faction":"Neutral","rarity":"Free","cost":4,"text":"Transform a minion into a 1/1 Sheep.","flavor":"There was going to be a pun in this flavor text, but it just came out baa-d.","artist":"Vance Kovacs","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 47."},{"id":"CS2_004","name":"Power Word: Shield","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Give a minion +2 Health.\nDraw a card.","flavor":"Sure the extra protection is nice, but the shield really reduces visibility.","artist":"Jessica Jung","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 47."},{"id":"CS2_004e","name":"Power Word: Shield","type":"Enchantment","text":"+2 Health.","playerClass":"Priest"},{"id":"CS2_122","name":"Raid Leader","type":"Minion","rarity":"Free","cost":3,"attack":2,"health":2,"text":"Your other minions have +1 Attack.","inPlayText":"Lead","flavor":"\"That's a 50 DKP minus!\"","artist":"Phill Gonzales","collectible":true,"howToGetGold":"Unlocked at Warrior Level 57.","mechanics":["Aura"]},{"id":"CS2_196","name":"Razorfen Hunter","type":"Minion","faction":"Horde","rarity":"Common","cost":3,"attack":2,"health":3,"text":"<b>Battlecry:</b> Summon a 1/1 Boar.","flavor":"Someone did mess with Tuskerr once.  ONCE.","artist":"Clint Langley","collectible":true,"howToGetGold":"Unlocked at Hunter Level 55.","mechanics":["Battlecry"]},{"id":"CS2_213","name":"Reckless Rocketeer","type":"Minion","faction":"Horde","rarity":"Free","cost":6,"attack":5,"health":2,"text":"<b>Charge</b>","flavor":"One Insane Rocketeer.   One Rocket full of Explosives.   Infinite Fun.","artist":"John Polidora","collectible":true,"howToGetGold":"Unlocked at Shaman Level 59.","mechanics":["Charge"]},{"id":"CS2_101","name":"Reinforce","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\nSummon a 1/1 Silver Hand Recruit.","playerClass":"Paladin"},{"id":"HERO_05","name":"Rexxar","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Hunter"},{"id":"CS2_120","name":"River Crocolisk","type":"Minion","rarity":"Free","cost":2,"attack":2,"health":3,"flavor":"Edward \"Lefty\" Smith tried to make luggage out of a river crocolisk once.","artist":"Daren Bader","collectible":true,"race":"Beast","howToGetGold":"Unlocked at Druid Level 55."},{"id":"CS2_045e","name":"Rockbiter Weapon","type":"Enchantment","text":"This character has +3 Attack this turn.","playerClass":"Shaman","mechanics":["OneTurnEffect"]},{"id":"CS2_045","name":"Rockbiter Weapon","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Give a friendly character +3 Attack this turn.","flavor":"This would be real handy if your enemy is made of rock.","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 36."},{"id":"NEW1_003","name":"Sacrificial Pact","type":"Spell","rarity":"Common","cost":0,"text":"Destroy a Demon. Restore #5 Health to your hero.","flavor":"This is the reason that Demons never really become friends with Warlocks.","artist":"Jim Nelson","collectible":true,"playerClass":"Warlock","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 15."},{"id":"EX1_581","name":"Sap","type":"Spell","faction":"Neutral","rarity":"Free","cost":2,"text":"Return an enemy minion to your opponent's hand.","flavor":"Rogues love sappy movies.","artist":"Scott Altmann","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 40."},{"id":"CS2_011","name":"Savage Roar","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"Give your characters +2 Attack this turn.","flavor":"What do they roar? Nobody can quite tell, but it sounds like \"Elephant Macho Breeze\".  It's probably not that, though.","artist":"Grace Liu","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 43."},{"id":"CS2_011o","name":"Savage Roar","type":"Enchantment","text":"+2 Attack this turn.","playerClass":"Druid","mechanics":["OneTurnEffect"]},{"id":"CS2_050","name":"Searing Totem","type":"Minion","faction":"Neutral","rarity":"Free","cost":1,"attack":1,"health":1,"race":"Totem","playerClass":"Shaman"},{"id":"CS2_179","name":"Sen'jin Shieldmasta","type":"Minion","faction":"Horde","rarity":"Free","cost":4,"attack":3,"health":5,"text":"<b>Taunt</b>","flavor":"Sen'jin Villiage is nice, if you like trolls and dust.","artist":"Brian Despain","collectible":true,"howToGetGold":"Unlocked at Rogue Level 59.","mechanics":["Taunt"]},{"id":"CS2_057","name":"Shadow Bolt","type":"Spell","faction":"Neutral","rarity":"Free","cost":3,"text":"Deal $4 damage to a minion.","flavor":"It’s a Bolt.   Its made out of Shadow.   What more do you need to know!","artist":"Dave Allsop","collectible":true,"playerClass":"Warlock","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 47."},{"id":"EX1_622","name":"Shadow Word: Death","type":"Spell","rarity":"Common","cost":3,"text":"Destroy a minion with an Attack of 5 or more.","flavor":"If you miss, it leaves a lightning-bolt-shaped scar on your target.","artist":"Raymond Swanland","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 43."},{"id":"CS2_234","name":"Shadow Word: Pain","type":"Spell","rarity":"Free","cost":2,"text":"Destroy a minion with 3 or less Attack.","flavor":"A step up from a spell cast by many beginning acolytes: \"Shadow Word: Annoy\".","artist":"Raymond Swanland","collectible":true,"playerClass":"Priest","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 36."},{"id":"CS2_017","name":"Shapeshift","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\n+1 Attack this turn.\n+1 Armor.","playerClass":"Druid"},{"id":"CS2_083e","name":"Sharpened","type":"Enchantment","text":"+1 Attack this turn.","playerClass":"Rogue","mechanics":["OneTurnEffect"]},{"id":"EX1_019","name":"Shattered Sun Cleric","type":"Minion","faction":"Neutral","rarity":"Common","cost":3,"attack":3,"health":2,"text":"<b>Battlecry:</b> Give a friendly minion +1/+1.","flavor":"They always have a spare flask of Sunwell Energy Drink™!","artist":"Doug Alexander","collectible":true,"howToGetGold":"Unlocked at Priest Level 53.","mechanics":["Battlecry"]},{"id":"CS2_tk1","name":"Sheep","type":"Minion","faction":"Neutral","rarity":"Common","attack":1,"health":1,"race":"Beast","cost":0},{"id":"EX1_606","name":"Shield Block","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"Gain 5 Armor.\nDraw a card.","flavor":"Shields were invented because Face Block is USELESS.","artist":"Michael Komarck","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 28."},{"id":"EX1_278","name":"Shiv","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Deal $1 damage. Draw a card.","flavor":"Rogues are experts at SHIV-al-ry.","artist":"Alex Garner","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 45."},{"id":"CS2_101t","name":"Silver Hand Recruit","type":"Minion","rarity":"Free","cost":1,"attack":1,"health":1,"playerClass":"Paladin"},{"id":"CS2_127","name":"Silverback Patriarch","type":"Minion","faction":"Horde","rarity":"Common","cost":3,"attack":1,"health":4,"text":"<b>Taunt</b>","flavor":"He likes to act like he's in charge, but the silverback matriarch actually runs things.","artist":"Daren Bader","collectible":true,"race":"Beast","howToGetGold":"Unlocked at Warrior Level 53.","mechanics":["Taunt"]},{"id":"CS2_075","name":"Sinister Strike","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Deal $3 damage to the enemy hero.","flavor":"There's something about this strike that just feels off.  Sinister, even.","artist":"Frank Cho","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 15."},{"id":"skele11","name":"Skeleton","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":1,"health":1,"text":"<b></b>"},{"id":"EX1_308","name":"Soulfire","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Deal $4 damage. Discard a random card.","flavor":"Are you lighting a soul on fire? Or burning someone with your OWN soul? This seems like an important distinction.","artist":"Raymond Swanland","collectible":true,"playerClass":"Warlock","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 28."},{"id":"CS2_077","name":"Sprint","type":"Spell","faction":"Neutral","rarity":"Common","cost":7,"text":"Draw 4 cards.","flavor":"Rogues are not good joggers.","artist":"James Zhang","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 10.","howToGetGold":"Unlocked at Level 49."},{"id":"EX1_173","name":"Starfire","type":"Spell","faction":"Neutral","rarity":"Common","cost":6,"text":"Deal $5 damage.\nDraw a card.","flavor":"Balance is important to druids.  This card is perfectly balanced.","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 45."},{"id":"CS2_237","name":"Starving Buzzard","type":"Minion","rarity":"Common","cost":5,"attack":3,"health":2,"text":"Whenever you summon a Beast, draw a card.","inPlayText":"Soaring","flavor":"If you feed him, he loses his whole <i>identity</i>.","artist":"Bernie Kang","collectible":true,"race":"Beast","playerClass":"Hunter","howToGet":"Unlocked at Level 4.","howToGetGold":"Unlocked at Level 47."},{"id":"DS1h_292","name":"Steady Shot","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\nDeal 2 damage to the enemy hero.","playerClass":"Hunter"},{"id":"CS2_051","name":"Stoneclaw Totem","type":"Minion","faction":"Neutral","rarity":"Free","cost":1,"attack":0,"health":2,"text":"<b>Taunt</b>","race":"Totem","playerClass":"Shaman","mechanics":["Taunt"]},{"id":"CS2_171","name":"Stonetusk Boar","type":"Minion","faction":"Neutral","rarity":"Free","cost":1,"attack":1,"health":1,"text":"<b>Charge</b>","flavor":"This card is boaring.","artist":"Howard Lyon","collectible":true,"race":"Beast","howToGetGold":"Unlocked at Hunter Level 53.","mechanics":["Charge"]},{"id":"CS2_150","name":"Stormpike Commando","type":"Minion","faction":"Alliance","rarity":"Common","cost":5,"attack":4,"health":2,"text":"<b>Battlecry:</b> Deal 2 damage.","flavor":"The Stormpike Commandos are demolition experts.  They also bake a mean cupcake.","artist":"Kev Walker","collectible":true,"howToGetGold":"Unlocked at Paladin Level 51.","mechanics":["Battlecry"]},{"id":"CS2_222","name":"Stormwind Champion","type":"Minion","faction":"Alliance","rarity":"Common","cost":7,"attack":6,"health":6,"text":"Your other minions have +1/+1.","inPlayText":"For the Alliance!","flavor":"When Deathwing assaulted the capital, this soldier was the only member of his squad to survive. Now he's all bitter and stuff.","artist":"Doug Alexander","collectible":true,"howToGetGold":"Unlocked at Paladin Level 59.","mechanics":["Aura"]},{"id":"CS2_131","name":"Stormwind Knight","type":"Minion","faction":"Alliance","rarity":"Common","cost":4,"attack":2,"health":5,"text":"<b>Charge</b>","flavor":"They're still embarassed about \"The Deathwing Incident\".","artist":"Ladronn","collectible":true,"howToGetGold":"Unlocked at Paladin Level 55.","mechanics":["Charge"]},{"id":"EX1_306","name":"Succubus","type":"Minion","faction":"Neutral","rarity":"Free","cost":2,"attack":4,"health":3,"text":"<b>Battlecry:</b> Discard a random card.","flavor":"Warlocks have it pretty good.","artist":"Matt Dixon","collectible":true,"race":"Demon","playerClass":"Warlock","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 40.","mechanics":["Battlecry"]},{"id":"CS2_012","name":"Swipe","type":"Spell","faction":"Neutral","rarity":"Common","cost":4,"text":"Deal $4 damage to an enemy and $1 damage to all other enemies.","flavor":"When a bear rears back and extends his arms, he's about to Swipe!  ... or hug.","artist":"Sean O’Daniels","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 47."},{"id":"GAME_005","name":"The Coin","type":"Spell","text":"Gain 1 Mana Crystal this turn only."},{"id":"GAME_005e","name":"The Coin","type":"Enchantment"},{"id":"HERO_02","name":"Thrall","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Shaman"},{"id":"DS1_175","name":"Timber Wolf","type":"Minion","faction":"Neutral","rarity":"Free","cost":1,"attack":1,"health":1,"text":"Your other Beasts have +1 Attack.","flavor":"Other beasts totally dig hanging out with timber wolves.","artist":"Malcolm Davis","collectible":true,"race":"Beast","playerClass":"Hunter","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 23.","mechanics":["Aura"]},{"id":"CS2_049","name":"Totemic Call","type":"Hero Power","faction":"Neutral","rarity":"Free","cost":2,"text":"<b>Hero Power</b>\nSummon a random Totem.","playerClass":"Shaman"},{"id":"EX1_244e","name":"Totemic Might","type":"Enchantment","text":"+2 Health.","playerClass":"Shaman"},{"id":"EX1_244","name":"Totemic Might","type":"Spell","faction":"Neutral","rarity":"Common","cost":0,"text":"Give your Totems +2 Health.","flavor":"Totem-stomping is no longer recommended.","artist":"Trent Kaniuga","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 28."},{"id":"DS1_184","name":"Tracking","type":"Spell","faction":"Neutral","rarity":"Free","cost":1,"text":"Look at the top three cards of your deck. Draw one and discard the others.","flavor":"For the person who just cannot decide what card to put into a deck!","artist":"Mauro Cascioli","collectible":true,"playerClass":"Hunter","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 15."},{"id":"CS2_097","name":"Truesilver Champion","type":"Weapon","faction":"Neutral","rarity":"Common","cost":4,"attack":4,"durability":2,"text":"Whenever your hero attacks, restore 2 Health to it.","flavor":"It Slices, it Dices. You can cut a tin can with it. (But you wouldn't want to.)","artist":"Ryan Sook","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked at Level 2.","howToGetGold":"Unlocked at Level 40."},{"id":"DS1_178","name":"Tundra Rhino","type":"Minion","faction":"Neutral","rarity":"Common","cost":5,"attack":2,"health":5,"text":"Your Beasts have <b>Charge</b>.","flavor":"Tundra rhinos are often mistaken for kodos.  Or am I mistaken?","artist":"Lars Grant-West","collectible":true,"race":"Beast","playerClass":"Hunter","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 43."},{"id":"HERO_04","name":"Uther Lightbringer","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Paladin"},{"id":"HERO_03","name":"Valeera Sanguinar","type":"Hero","faction":"Neutral","rarity":"Free","health":30,"collectible":true,"playerClass":"Rogue"},{"id":"NEW1_004","name":"Vanish","type":"Spell","rarity":"Common","cost":6,"text":"Return all minions to their owner's hand.","artist":"Sean O’Daniels","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 23."},{"id":"CS2_065","name":"Voidwalker","type":"Minion","faction":"Neutral","rarity":"Free","cost":1,"attack":1,"health":3,"text":"<b>Taunt</b>","flavor":"No relation to \"The Voidsteppers\", the popular Void-based dance troupe.","artist":"Alex Horley Orlandelli","collectible":true,"race":"Demon","playerClass":"Warlock","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 36.","mechanics":["Taunt"]},{"id":"EX1_011","name":"Voodoo Doctor","type":"Minion","faction":"Horde","rarity":"Free","cost":1,"attack":2,"health":1,"text":"<b>Battlecry:</b> Restore 2 Health.","flavor":"Voodoo is an oft-misunderstood art. But it <i>is</i> art.","artist":"Karl Richardson","collectible":true,"howToGetGold":"Unlocked at Rogue Level 55.","mechanics":["Battlecry"]},{"id":"CS2_186","name":"War Golem","type":"Minion","faction":"Neutral","rarity":"Common","cost":7,"attack":7,"health":7,"flavor":"Golems are not afraid, but for some reason they still run when you cast Fear on them.  Instinct, maybe?  A desire to blend in?","artist":"Dave Kendall","collectible":true,"howToGetGold":"Unlocked at Rogue Level 51."},{"id":"EX1_084","name":"Warsong Commander","type":"Minion","faction":"Neutral","rarity":"Free","cost":3,"attack":2,"health":3,"text":"Whenever you summon a minion with 3 or less Attack, give it <b>Charge</b>.","flavor":"The Warsong clan is <i>such drama</i>. It's really not worth it to become a commander.","artist":"Wei Wang","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 36."},{"id":"CS2_033","name":"Water Elemental","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":3,"health":6,"text":"<b>Freeze</b> any character damaged by this minion.","inPlayText":"Frostbolt","flavor":"Don't summon a water elemental at a party.  It'll dampen the mood.","artist":"John Avon","collectible":true,"playerClass":"Mage","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 49.","mechanics":["Freeze"]},{"id":"EX1_400","name":"Whirlwind","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Deal $1 damage to ALL minions.","flavor":"The way to tell seasoned warriors from novice ones: the novices yell \"wheeeee\" while whirlwinding.","artist":"Jonboy Meyers","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked at Level 6.","howToGetGold":"Unlocked at Level 32."},{"id":"CS2_082","name":"Wicked Knife","type":"Weapon","faction":"Neutral","rarity":"Free","cost":1,"attack":1,"durability":2,"playerClass":"Rogue"},{"id":"CS2_013","name":"Wild Growth","type":"Spell","faction":"Neutral","rarity":"Free","cost":2,"text":"Gain an empty Mana Crystal.","flavor":"Grow your own mana crystals with this Mana Crystal Growth Kit, only 39.99!","artist":"James Ryman","collectible":true,"playerClass":"Druid","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 23."},{"id":"CS2_039","name":"Windfury","type":"Spell","faction":"Neutral","rarity":"Free","cost":2,"text":"Give a minion <b>Windfury</b>.","flavor":"Windfury is like Earthfury and Firefury, but more light and airy.","artist":"Justin Sweet","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 1.","howToGetGold":"Unlocked at Level 23."},{"id":"EX1_587","name":"Windspeaker","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":3,"health":3,"text":"<b>Battlecry:</b> Give a friendly minion <b>Windfury</b>.","flavor":"Is there anything worse than a Windspeaker with halitosis?","artist":"Vance Kovacs","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked at Level 8.","howToGetGold":"Unlocked at Level 45.","mechanics":["Battlecry"]},{"id":"CS2_124","name":"Wolfrider","type":"Minion","faction":"Horde","rarity":"Free","cost":3,"attack":3,"health":1,"text":"<b>Charge</b>","flavor":"Orcish raiders ride wolves because they are well adapted to harsh environments, and because they are soft and cuddly.","artist":"Dany Orizio","collectible":true,"howToGetGold":"Unlocked at Warrior Level 59.","mechanics":["Charge"]},{"id":"CS2_052","name":"Wrath of Air Totem","type":"Minion","faction":"Neutral","rarity":"Free","cost":1,"attack":0,"health":2,"text":"<b>Spell Damage +1</b>","race":"Totem","playerClass":"Shaman","mechanics":["Spellpower"]}],"Classic":[{"id":"CS2_188o","name":"'Inspired'","type":"Enchantment","text":"This minion has +2 Attack this turn.","mechanics":["OneTurnEffect"]},{"id":"EX1_097","name":"Abomination","type":"Minion","faction":"Neutral","rarity":"Rare","cost":5,"attack":4,"health":4,"text":"<b>Taunt</b>. <b>Deathrattle:</b> Deal 2 damage to ALL characters.","flavor":"Abominations enjoy Fresh Meat and long walks on the beach.","artist":"Alex Horley Orlandelli","collectible":true,"mechanics":["Deathrattle","Taunt"]},{"id":"CS2_188","name":"Abusive Sergeant","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":2,"health":1,"text":"<b>Battlecry:</b> Give a minion +2 Attack this turn.","flavor":"ADD ME TO YOUR DECK, MAGGOT!","artist":"Luca Zontini","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_007","name":"Acolyte of Pain","type":"Minion","rarity":"Common","cost":3,"attack":1,"health":3,"text":"Whenever this minion takes damage, draw a card.","flavor":"He trained when he was younger to be an acolyte of joy, but things didn’t work out like he thought they would.","artist":"Dave Kendall","collectible":true},{"id":"NEW1_010","name":"Al'Akir the Windlord","type":"Minion","rarity":"Legendary","cost":8,"attack":3,"health":5,"text":"<b>Windfury, Charge, Divine Shield, Taunt</b>","flavor":"He is the weakest of the four Elemental Lords.  And the other three don't let him forget it.","artist":"Raymond Swanland","collectible":true,"elite":true,"playerClass":"Shaman","mechanics":["Charge","Divine Shield","Taunt","Windfury"]},{"id":"EX1_006","name":"Alarm-o-Bot","type":"Minion","rarity":"Rare","cost":3,"attack":0,"health":3,"text":"At the start of your turn, swap this minion with a random one in your hand.","flavor":"WARNING.  WARNING.  WARNING.","artist":"Sean O’Daniels","collectible":true,"race":"Mech"},{"id":"EX1_382","name":"Aldor Peacekeeper","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":3,"health":3,"text":"<b>Battlecry:</b> Change an enemy minion's Attack to 1.","flavor":"The Aldor hate two things: the Scryers and smooth jazz.","artist":"Dany Orizio","collectible":true,"playerClass":"Paladin","mechanics":["Battlecry"]},{"id":"EX1_561","name":"Alexstrasza","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":9,"attack":8,"health":8,"text":"<b>Battlecry:</b> Set a hero's remaining Health to 15.","flavor":"Alexstrasza the Life-Binder brings life and hope to everyone.  Except Deathwing.  And Malygos.  And Nekros.","artist":"Raymond Swanland","collectible":true,"elite":true,"race":"Dragon","mechanics":["Battlecry"]},{"id":"EX1_561e","name":"Alexstrasza's Fire","type":"Enchantment","text":"Health set to 15."},{"id":"EX1_393","name":"Amani Berserker","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":3,"text":"<b>Enrage:</b> +3 Attack","flavor":"If an Amani berserker asks \"Joo lookin' at me?!\", the correct response is \"Nah, mon\".","artist":"Chippy","collectible":true,"mechanics":["Enrage"]},{"id":"CS2_038e","name":"Ancestral Spirit","type":"Enchantment","text":"<b>Deathrattle:</b> Resummon this minion.","playerClass":"Shaman"},{"id":"CS2_038","name":"Ancestral Spirit","type":"Spell","faction":"Neutral","rarity":"Rare","cost":2,"text":"Give a minion \"<b>Deathrattle:</b> Resummon this minion.\"","flavor":"It was just a flesh wound.","artist":"Zoltan & Gabor","collectible":true,"playerClass":"Shaman"},{"id":"EX1_057","name":"Ancient Brewmaster","type":"Minion","faction":"Alliance","rarity":"Common","cost":4,"attack":5,"health":4,"text":"<b>Battlecry:</b> Return a friendly minion from the battlefield to your hand.","flavor":"Most pandaren say his brew tastes like yak.  But apparently that's a compliment.","artist":"Bernie Kang","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_584","name":"Ancient Mage","type":"Minion","faction":"Neutral","rarity":"Rare","cost":4,"attack":2,"health":5,"text":"<b>Battlecry:</b> Give adjacent minions <b>Spell Damage +1</b>.","flavor":"Sometimes he forgets and just wanders into someone else's game.","artist":"Howard Lyon","collectible":true,"mechanics":["Battlecry"]},{"id":"NEW1_008b","name":"Ancient Secrets","type":"Spell","text":"Restore 5 Health.","playerClass":"Druid"},{"id":"NEW1_008a","name":"Ancient Teachings","type":"Spell","text":"Draw 2 cards.","playerClass":"Druid"},{"id":"EX1_045","name":"Ancient Watcher","type":"Minion","faction":"Alliance","rarity":"Rare","cost":2,"attack":4,"health":5,"text":"Can't Attack.","flavor":"Why do its eyes seem to follow you as you walk by?","artist":"Richard Wright","collectible":true},{"id":"NEW1_008","name":"Ancient of Lore","type":"Minion","rarity":"Epic","cost":7,"attack":5,"health":5,"text":"<b>Choose One -</b> Draw 2 cards; or Restore 5 Health.","flavor":"Go ahead, carve your initials in him.","artist":"Patrik Hjelm","collectible":true,"playerClass":"Druid"},{"id":"EX1_178","name":"Ancient of War","type":"Minion","faction":"Neutral","rarity":"Epic","cost":7,"attack":5,"health":5,"text":"<b>Choose One</b> -\n+5 Attack; or +5 Health and <b>Taunt</b>.","flavor":"Young Night Elves love to play \"Who can get the Ancient of War to Uproot?\"  You lose if you get crushed to death.","artist":"Sean O’Daniels","collectible":true,"playerClass":"Druid"},{"id":"EX1_009","name":"Angry Chicken","type":"Minion","rarity":"Rare","cost":1,"attack":1,"health":1,"text":"<b>Enrage:</b> +5 Attack.","flavor":"There is no beast more frightening (or ridiculous) than a fully enraged chicken.","artist":"Mike Sass","collectible":true,"race":"Beast","mechanics":["Enrage"]},{"id":"EX1_398","name":"Arathi Weaponsmith","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":3,"health":3,"text":"<b>Battlecry:</b> Equip a 2/2 weapon.","flavor":"50% off fist weapons, limited time only!","artist":"Samwise","collectible":true,"playerClass":"Warrior","mechanics":["Battlecry"]},{"id":"EX1_089","name":"Arcane Golem","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":4,"health":2,"text":"<b>Charge</b>. <b>Battlecry:</b> Give your opponent a Mana Crystal.","flavor":"Having Arcane golems at home really classes up the place, and as a bonus they are great conversation pieces.","artist":"Sedhayu Ardian","collectible":true,"mechanics":["Battlecry","Charge"]},{"id":"EX1_559","name":"Archmage Antonidas","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":7,"attack":5,"health":7,"text":"Whenever you cast a spell, add a 'Fireball' spell to your hand.","inPlayText":"Grand Magus","flavor":"Antonidas was the Grand Magus of the Kirin Tor, and Jaina's mentor.  This was a big step up from being Grand Magus of Jelly Donuts.","artist":"Wayne Reynolds","collectible":true,"elite":true,"playerClass":"Mage"},{"id":"EX1_067","name":"Argent Commander","type":"Minion","faction":"Neutral","rarity":"Rare","cost":6,"attack":4,"health":2,"text":"<b>Charge</b>, <b>Divine Shield</b>","flavor":"The Argent Dawn stands vigilant against the Scourge, as well as people who cut in line at coffee shops.","artist":"James Ryman","collectible":true,"mechanics":["Charge","Divine Shield"]},{"id":"EX1_362","name":"Argent Protector","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":2,"text":"<b>Battlecry:</b> Give a friendly minion <b>Divine Shield</b>.","flavor":"\"I'm not saying you can dodge fireballs.  I'm saying with this shield, you won't have to.\"","artist":"Doug Alexander","collectible":true,"playerClass":"Paladin","mechanics":["Battlecry"]},{"id":"EX1_008","name":"Argent Squire","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":1,"health":1,"text":"<b>Divine Shield</b>","flavor":"\"I solemnly swear to uphold the Light, purge the world of darkness, and to eat only burritos.\" - The Argent Dawn Oath","artist":"Zoltan & Gabor","collectible":true,"mechanics":["Divine Shield"]},{"id":"EX1_402","name":"Armorsmith","type":"Minion","faction":"Neutral","rarity":"Rare","cost":2,"attack":1,"health":4,"text":"Whenever a friendly minion takes damage, gain 1 Armor.","inPlayText":"Smithing","flavor":"She accepts guild funds for repairs!","artist":"Greg Hildebrandt","collectible":true,"playerClass":"Warrior"},{"id":"EX1_383t","name":"Ashbringer","type":"Weapon","rarity":"Legendary","cost":5,"attack":5,"durability":3,"playerClass":"Paladin"},{"id":"EX1_591","name":"Auchenai Soulpriest","type":"Minion","faction":"Neutral","rarity":"Rare","cost":4,"attack":3,"health":5,"text":"Your cards and powers that restore Health now deal damage instead.","flavor":"The Auchenai know the end is coming, but they're not sure when.","artist":"Doug Alexander","collectible":true,"playerClass":"Priest","mechanics":["Aura"]},{"id":"EX1_384","name":"Avenging Wrath","type":"Spell","faction":"Neutral","rarity":"Epic","cost":6,"text":"Deal $8 damage randomly split among enemy characters.","flavor":"Wham! Wham! Wham! Wham! Wham! Wham! Wham! Wham!","artist":"Alex Garner","collectible":true,"playerClass":"Paladin","mechanics":["ImmuneToSpellpower"]},{"id":"EX1_284","name":"Azure Drake","type":"Minion","faction":"Neutral","rarity":"Rare","cost":5,"attack":4,"health":4,"text":"<b>Spell Damage +1</b>. <b>Battlecry:</b> Draw a card.","flavor":"They initially planned to be the Beryl or Cerulean drakes, but those felt a tad too pretentious.","artist":"Ben Zhang","collectible":true,"race":"Dragon","mechanics":["Battlecry","Spellpower"]},{"id":"EX1_110t","name":"Baine Bloodhoof","type":"Minion","rarity":"Legendary","cost":4,"attack":4,"health":5,"elite":true},{"id":"EX1_014te","name":"Bananas","type":"Enchantment","text":"Has +1/+1."},{"id":"EX1_014t","name":"Bananas","type":"Spell","cost":1,"text":"Give a minion +1/+1."},{"id":"EX1_320","name":"Bane of Doom","type":"Spell","faction":"Neutral","rarity":"Epic","cost":5,"text":"Deal $2 damage to a character. If that kills it, summon a random Demon.","flavor":"My advice to you is to avoid Doom, if possible.","artist":"Raymond Swanland","collectible":true,"playerClass":"Warlock"},{"id":"EX1_249","name":"Baron Geddon","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":7,"attack":7,"health":5,"text":"At the end of your turn, deal 2 damage to ALL other characters.","flavor":"Baron Geddon was Ragnaros's foremost lieutenant, until he got FIRED.","artist":"Ian Ameling","collectible":true,"elite":true},{"id":"EX1_398t","name":"Battle Axe","type":"Weapon","cost":1,"attack":2,"durability":2,"playerClass":"Warrior"},{"id":"EX1_392","name":"Battle Rage","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Draw a card for each damaged friendly character.","flavor":"\"You won't like me when I'm angry.\"","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Warrior"},{"id":"EX1_165b","name":"Bear Form","type":"Spell","faction":"Neutral","rarity":"Common","text":"+2 Health and <b>Taunt</b>.","playerClass":"Druid"},{"id":"EX1_604o","name":"Berserk","type":"Enchantment","text":"Increased Attack.","playerClass":"Warrior"},{"id":"EX1_549","name":"Bestial Wrath","type":"Spell","faction":"Neutral","rarity":"Epic","cost":1,"text":"Give a friendly Beast +2 Attack and <b>Immune</b> this turn.","flavor":"The seething wrath is just beneath the surface.  Beneath that is wild abandon, followed by slight annoyance.","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Hunter"},{"id":"EX1_549o","name":"Bestial Wrath","type":"Enchantment","text":"+2 Attack and <b>Immune</b> this turn.","playerClass":"Hunter","mechanics":["OneTurnEffect"]},{"id":"EX1_126","name":"Betrayal","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Force an enemy minion to deal its damage to the minions next to it.","flavor":"Everyone has a price. Gnomes, for example, can be persuaded by stuffed animals and small amounts of chocolate.","artist":"Lucas Graciano","collectible":true,"playerClass":"Rogue"},{"id":"EX1_005","name":"Big Game Hunter","type":"Minion","rarity":"Epic","cost":3,"attack":4,"health":2,"text":"<b>Battlecry:</b> Destroy a minion with an Attack of 7 or more.","flavor":"Mere devilsaurs no longer excite him.  Soon he'll be trying to catch Onyxia with only a dull Krol Blade.","artist":"Chris Seaman","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_570","name":"Bite","type":"Spell","faction":"Neutral","rarity":"Rare","cost":4,"text":"Give your hero +4 Attack this turn and 4 Armor.","flavor":"Chew your food!","artist":"Tom Baxa","collectible":true,"playerClass":"Druid"},{"id":"EX1_570e","name":"Bite","type":"Enchantment","text":"+4 Attack this turn.","mechanics":["OneTurnEffect"]},{"id":"CS2_233","name":"Blade Flurry","type":"Spell","faction":"Neutral","rarity":"Rare","cost":2,"text":"Destroy your weapon and deal its damage to all enemies.","flavor":"\"Look, it's not just about waving daggers around really fast.  It's a lot more complicated than that.\" - Shan, Rogue Trainer","artist":"Hideaki Takamura","collectible":true,"playerClass":"Rogue","mechanics":["AffectedBySpellPower"]},{"id":"EX1_509e","name":"Blarghghl","type":"Enchantment","text":"Increased Attack."},{"id":"EX1_355e","name":"Blessed Champion","type":"Enchantment","text":"This minion's Attack has been doubled.","playerClass":"Paladin"},{"id":"EX1_355","name":"Blessed Champion","type":"Spell","rarity":"Rare","cost":5,"text":"Double a minion's Attack.","flavor":"This card causes double the trouble AND double the fun.","artist":"Tyler Walpole","collectible":true,"playerClass":"Paladin"},{"id":"EX1_363","name":"Blessing of Wisdom","type":"Spell","rarity":"Common","cost":1,"text":"Choose a minion. Whenever it attacks, draw a card.","flavor":"Apparently with wisdom comes the knowledge that you should probably be attacking every turn.","artist":"Chippy","collectible":true,"playerClass":"Paladin"},{"id":"EX1_363e","name":"Blessing of Wisdom","type":"Enchantment","text":"When this minion attacks, the player who blessed it draws a card.","playerClass":"Paladin"},{"id":"EX1_363e2","name":"Blessing of Wisdom","type":"Enchantment","text":"When this minion attacks, the enemy player draws a card.","playerClass":"Paladin"},{"id":"CS2_028","name":"Blizzard","type":"Spell","faction":"Neutral","rarity":"Rare","cost":6,"text":"Deal $2 damage to all enemy minions and <b>Freeze</b> them.","flavor":"This spell can be very Entertaining.","artist":"Chris Seaman","collectible":true,"playerClass":"Mage","mechanics":["Freeze"]},{"id":"EX1_323w","name":"Blood Fury","type":"Weapon","cost":3,"attack":3,"durability":8,"playerClass":"Warlock"},{"id":"CS2_059","name":"Blood Imp","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":0,"health":1,"text":"<b>Stealth</b>. At the end of your turn, give another random friendly minion +1 Health.","inPlayText":"Blood Pact","flavor":"Imps are content to hide and viciously taunt everyone nearby.","artist":"Bernie Kang","collectible":true,"race":"Demon","playerClass":"Warlock","mechanics":["Stealth"]},{"id":"EX1_590","name":"Blood Knight","type":"Minion","faction":"Neutral","rarity":"Epic","cost":3,"attack":3,"health":3,"text":"<b>Battlecry:</b> All minions lose <b>Divine Shield</b>. Gain +3/+3 for each Shield lost.","flavor":"The Blood Knights get their holy powers from the Sunwell, which you should NOT bathe in.","artist":"Trent Kaniuga","collectible":true,"mechanics":["Battlecry"]},{"id":"CS2_059o","name":"Blood Pact","type":"Enchantment","text":"Increased Health.","playerClass":"Warlock"},{"id":"EX1_012","name":"Bloodmage Thalnos","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":2,"attack":1,"health":1,"text":"<b>Spell Damage +1</b>. <b>Deathrattle:</b> Draw a card.","flavor":"He's in charge of the Annual Scarlet Monastery Blood Drive!","artist":"Alex Horley Orlandelli","collectible":true,"elite":true,"mechanics":["Deathrattle","Spellpower"]},{"id":"EX1_411e","name":"Bloodrage","type":"Enchantment","text":"No durability loss.","playerClass":"Warrior"},{"id":"NEW1_025","name":"Bloodsail Corsair","type":"Minion","rarity":"Rare","cost":1,"attack":1,"health":2,"text":"<b>Battlecry:</b> Remove 1 Durability from your opponent's weapon.","flavor":"Every pirate uses the same four digits to access Automated Gold Dispensers.  It's called the \"Pirate's Code\".","artist":"Randy Gallegos","collectible":true,"race":"Pirate","mechanics":["Battlecry"]},{"id":"NEW1_018","name":"Bloodsail Raider","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":3,"text":"<b>Battlecry:</b> Gain Attack equal to the Attack of your weapon.","flavor":"\"I only plunder on days that end in 'y'.\"","artist":"Jim Nelson","collectible":true,"race":"Pirate","mechanics":["Battlecry"]},{"id":"NEW1_025e","name":"Bolstered","type":"Enchantment","text":"Increased Health."},{"id":"EX1_407","name":"Brawl","type":"Spell","faction":"Neutral","rarity":"Epic","cost":5,"text":"Destroy all minions except one. <i>(chosen randomly)</i>","flavor":"Do you know the first rule of Brawl Club?","artist":"Wayne Reynolds","collectible":true,"playerClass":"Warrior"},{"id":"EX1_091","name":"Cabal Shadow Priest","type":"Minion","faction":"Neutral","rarity":"Epic","cost":6,"attack":4,"health":5,"text":"<b>Battlecry:</b> Take control of an enemy minion that has 2 or less Attack.","flavor":"You never know who may be secretly working for the Cabal....","artist":"Chippy","collectible":true,"playerClass":"Priest","mechanics":["Battlecry"]},{"id":"EX1_110","name":"Cairne Bloodhoof","type":"Minion","faction":"Alliance","rarity":"Legendary","cost":6,"attack":4,"health":5,"text":"<b>Deathrattle:</b> Summon a 4/5 Baine Bloodhoof.","flavor":"Cairne was killed by Garrosh, so... don't put this guy in a Warrior deck.  It's pretty insensitive.","artist":"Wayne Reynolds","collectible":true,"elite":true,"mechanics":["Deathrattle"]},{"id":"tt_004o","name":"Cannibalize","type":"Enchantment","text":"Increased Attack."},{"id":"NEW1_024","name":"Captain Greenskin","type":"Minion","rarity":"Legendary","cost":5,"attack":5,"health":4,"text":"<b>Battlecry:</b> Give your weapon +1/+1.","flavor":"He was <i>this close</i> to piloting a massive juggernaut into Stormwind Harbor. If it weren't for those pesky kids!","artist":"Dan Scott","collectible":true,"elite":true,"race":"Pirate","mechanics":["Battlecry"]},{"id":"EX1_165a","name":"Cat Form","type":"Spell","faction":"Neutral","rarity":"Common","text":"<b>Charge</b>","playerClass":"Druid"},{"id":"EX1_573","name":"Cenarius","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":9,"attack":5,"health":8,"text":"<b>Choose One</b> - Give your other minions +2/+2; or Summon two 2/2 Treants with <b>Taunt</b>.","inPlayText":"Demigod","flavor":"Yes, he's a demigod. No, he doesn't need to wear a shirt.","artist":"Alex Horley Orlandelli","collectible":true,"elite":true,"playerClass":"Druid"},{"id":"EX1_621","name":"Circle of Healing","type":"Spell","rarity":"Common","cost":0,"text":"Restore #4 Health to ALL minions.","flavor":"It isn't really a circle.","artist":"Daarken","collectible":true,"playerClass":"Priest"},{"id":"CS2_073e","name":"Cold Blood","type":"Enchantment","text":"+2 Attack.","playerClass":"Rogue"},{"id":"CS2_073","name":"Cold Blood","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Give a minion +2 Attack. <b>Combo:</b> +4 Attack instead.","flavor":"\"I'm cold blooded, check it and see!\"","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"CS2_073e2","name":"Cold Blood","type":"Enchantment","text":"+4 Attack.","playerClass":"Rogue"},{"id":"EX1_050","name":"Coldlight Oracle","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":2,"health":2,"text":"<b>Battlecry:</b> Each player draws 2 cards.","flavor":"They can see the future.   In that future both players draw more cards.   Spoooky.","artist":"Steve Prescott","collectible":true,"race":"Murloc","mechanics":["Battlecry"]},{"id":"EX1_103","name":"Coldlight Seer","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":2,"health":3,"text":"<b>Battlecry:</b> Give ALL other Murlocs +2 Health.","flavor":"The Coldlight murlocs reside in the darkest pits of the Abyssal Depths.  So no, there's no getting away from murlocs.","artist":"Arthur Gimaldinov","collectible":true,"race":"Murloc","mechanics":["Battlecry"]},{"id":"NEW1_036e2","name":"Commanding Shout","type":"Enchantment","text":"Your minions can't be reduced below 1 Health this turn.","playerClass":"Warrior","mechanics":["OneTurnEffect"]},{"id":"NEW1_036","name":"Commanding Shout","type":"Spell","rarity":"Rare","cost":2,"text":"Your minions can't be reduced below 1 Health this turn. Draw a card.","flavor":"\"Shout! Shout! Let it all out!\" - Advice to warriors-in-training","artist":"Wayne Reynolds","collectible":true,"playerClass":"Warrior"},{"id":"NEW1_036e","name":"Commanding Shout","type":"Enchantment","text":"Can't be reduced below 1 Health this turn.","playerClass":"Warrior","mechanics":["OneTurnEffect"]},{"id":"EX1_128","name":"Conceal","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Give your minions <b>Stealth</b> until your next turn.","flavor":"Rogues conceal everything but their emotions.  You can't get 'em to shut up about feelings.","artist":"Steve Hui","collectible":true,"playerClass":"Rogue"},{"id":"EX1_128e","name":"Concealed","type":"Enchantment","text":"Stealthed until your next turn.","playerClass":"Rogue"},{"id":"EX1_275","name":"Cone of Cold","type":"Spell","faction":"Neutral","rarity":"Common","cost":4,"text":"<b>Freeze</b> a minion and the minions next to it, and deal $1 damage to them.","flavor":"Magi of the Kirin Tor were casting Cubes of Cold for many years before Cones came into fashion some 90 years ago.","artist":"Leo Che","collectible":true,"playerClass":"Mage","mechanics":["Freeze"]},{"id":"EX1_304e","name":"Consume","type":"Enchantment","text":"Increased stats.","playerClass":"Warlock"},{"id":"EX1_287","name":"Counterspell","type":"Spell","faction":"Neutral","rarity":"Rare","cost":3,"text":"<b>Secret:</b> When your opponent casts a spell, <b>Counter</b> it.","flavor":"What's the difference between a mage playing with Counterspell and a mage who isn't?  The mage who isn't is getting Pyroblasted in the face.","artist":"Jason Chan","collectible":true,"playerClass":"Mage","mechanics":["Secret"]},{"id":"EX1_059","name":"Crazed Alchemist","type":"Minion","faction":"Neutral","rarity":"Rare","cost":2,"attack":2,"health":2,"text":"<b>Battlecry:</b> Swap the Attack and Health of a minion.","flavor":"\"You'll <i>love</i> my new recipe!\" he says... especially if you're not happy with your current number of limbs.","artist":"Tom Fleming","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_603","name":"Cruel Taskmaster","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":2,"text":"<b>Battlecry:</b> Deal 1 damage to a minion and give it +2 Attack.","flavor":"\"I'm going to need you to come in on Sunday.\" - Cruel Taskmaster","artist":"Phroilan Gardner","collectible":true,"playerClass":"Warrior","mechanics":["Battlecry"]},{"id":"EX1_595","name":"Cult Master","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":4,"health":2,"text":"Whenever one of your other minions dies, draw a card.","inPlayText":"Cultist","flavor":"She may be an evil cult master, but she still calls her parents once a week.","artist":"Raymond Swanland","collectible":true},{"id":"skele21","name":"Damaged Golem","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":2,"health":1,"race":"Mech"},{"id":"EX1_334e","name":"Dark Command","type":"Enchantment","text":"This minion has switched controllers this turn.","playerClass":"Priest"},{"id":"EX1_046","name":"Dark Iron Dwarf","type":"Minion","faction":"Alliance","rarity":"Common","cost":4,"attack":4,"health":4,"text":"<b>Battlecry:</b> Give a minion +2 Attack this turn.","flavor":"Guardians of Dark Iron Ore.  Perhaps the most annoying ore, given where you have to forge it.","artist":"Scott Hampton","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_617","name":"Deadly Shot","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"Destroy a random enemy minion.","flavor":"Accuracy is not a highly valued trait among the mok'nathal.  Deadliness is near the top, though.","artist":"Steve Prescott","collectible":true,"playerClass":"Hunter"},{"id":"NEW1_030","name":"Deathwing","type":"Minion","rarity":"Legendary","cost":10,"attack":12,"health":12,"text":"<b>Battlecry:</b> Destroy all other minions and discard your hand.","flavor":"Once a noble dragon known as Neltharion, Deathwing lost his mind and shattered Azeroth before finally being defeated.  Daddy issues?","artist":"Bernie Kang","collectible":true,"elite":true,"race":"Dragon","mechanics":["Battlecry"]},{"id":"EX1_130a","name":"Defender","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":2,"health":1,"playerClass":"Paladin"},{"id":"EX1_093","name":"Defender of Argus","type":"Minion","faction":"Alliance","rarity":"Rare","cost":4,"attack":2,"health":3,"text":"<b>Battlecry:</b> Give adjacent minions +1/+1 and <b>Taunt</b>.","flavor":"You wouldn’t think that Argus would need this much defending.  But it does.","artist":"Alex Horley Orlandelli","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_131t","name":"Defias Bandit","type":"Minion","faction":"Neutral","cost":1,"attack":2,"health":1,"playerClass":"Rogue"},{"id":"EX1_131","name":"Defias Ringleader","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":2,"text":"<b>Combo:</b> Summon a 2/1 Defias Bandit.","flavor":"He stole the deed to town years ago, so technically the town <i>is</i> his. He just calls people Scrub to be mean.","artist":"Dany Orizio","collectible":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"EX1_573ae","name":"Demigod's Favor","type":"Enchantment","faction":"Neutral","text":"+2/+2.","playerClass":"Druid"},{"id":"EX1_573a","name":"Demigod's Favor","type":"Spell","faction":"Neutral","text":"Give your other minions +2/+2.","playerClass":"Druid"},{"id":"EX1_102","name":"Demolisher","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":1,"health":4,"text":"At the start of your turn, deal 2 damage to a random enemy.","inPlayText":"Catapult","flavor":"Laying siege isn't fun for anyone.  It's not even all that effective, now that everyone has a flying mount.","artist":"Raymond Swanland","collectible":true,"race":"Mech"},{"id":"EX1_596","name":"Demonfire","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Deal $2 damage to a minion. If it’s a friendly Demon, give it +2/+2 instead.","flavor":"Demonfire is like regular fire except for IT NEVER STOPS BURNING HELLLPPP","artist":"Ben Wootten","collectible":true,"playerClass":"Warlock"},{"id":"EX1_596e","name":"Demonfire","type":"Enchantment","faction":"Neutral","rarity":"Common","cost":0,"text":"This Demon has +2/+2.","playerClass":"Warlock"},{"id":"EX1_161o","name":"Demoralizing Roar","type":"Enchantment","text":"This minion has -3 Attack this turn.","playerClass":"Druid","mechanics":["OneTurnEffect"]},{"id":"EX1_tk29","name":"Devilsaur","type":"Minion","faction":"Neutral","rarity":"Common","cost":5,"attack":5,"health":5,"race":"Beast"},{"id":"EX1_162","name":"Dire Wolf Alpha","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":2,"text":"Adjacent minions have +1 Attack.","inPlayText":"Alpha Dog","flavor":"We are pretty excited about the upcoming release of Dire Wolf Beta, just repost this sign for a chance at a key.","artist":"John Dickenson","collectible":true,"race":"Beast","mechanics":["AdjacentBuff","Aura"]},{"id":"EX1_166b","name":"Dispel","type":"Spell","faction":"Neutral","text":"<b>Silence</b> a minion.","playerClass":"Druid","mechanics":["Silence"]},{"id":"EX1_349","name":"Divine Favor","type":"Spell","faction":"Neutral","rarity":"Rare","cost":3,"text":"Draw cards until you have as many in hand as your opponent.","flavor":"This is not just a favor, but a divine one, like helping someone move a couch with a fold out bed!","artist":"Lucas Graciano","collectible":true,"playerClass":"Paladin"},{"id":"EX1_310","name":"Doomguard","type":"Minion","faction":"Neutral","rarity":"Rare","cost":5,"attack":5,"health":7,"text":"<b>Charge</b>. <b>Battlecry:</b> Discard two random cards.","flavor":"Summoning a doomguard is risky. <i>Someone</i> is going to die.","artist":"Lucas Graciano","collectible":true,"race":"Demon","playerClass":"Warlock","mechanics":["Battlecry","Charge"]},{"id":"EX1_567","name":"Doomhammer","type":"Weapon","faction":"Neutral","rarity":"Epic","cost":5,"attack":2,"durability":8,"text":"<b>Windfury, Overload:</b> (2)","flavor":"Orgrim Doomhammer gave this legendary weapon to Thrall.  His name is a total coincidence.","artist":"John Polidora","collectible":true,"playerClass":"Shaman","mechanics":["Windfury"]},{"id":"NEW1_021","name":"Doomsayer","type":"Minion","rarity":"Epic","cost":2,"attack":0,"health":7,"text":"At the start of your turn, destroy ALL minions.","flavor":"He's almost been right so many times. He was <i>sure</i> it was coming during the Cataclysm.","artist":"Alex Horley Orlandelli","collectible":true},{"id":"NEW1_022","name":"Dread Corsair","type":"Minion","rarity":"Common","cost":4,"attack":3,"health":3,"text":"<b>Taunt.</b> Costs (1) less per Attack of your weapon.","flavor":"\"Yarrrr\" is a pirate word that means \"Greetings, milord.\"","artist":"Trent Kaniuga","collectible":true,"race":"Pirate","mechanics":["Taunt"]},{"id":"DREAM_04","name":"Dream","type":"Spell","cost":0,"text":"Return a minion to its owner's hand.","playerClass":"Dream"},{"id":"EX1_165t2","name":"Druid of the Claw","type":"Minion","rarity":"Common","cost":5,"attack":4,"health":6,"text":"<b>Taunt</b>","race":"Beast","playerClass":"Druid","mechanics":["Taunt"]},{"id":"EX1_165","name":"Druid of the Claw","type":"Minion","faction":"Neutral","rarity":"Common","cost":5,"attack":4,"health":4,"text":"<b>Choose One -</b> <b>Charge</b>; or +2 Health and <b>Taunt</b>.","flavor":"Cat or Bear?  Cat or Bear?!  I just cannot CHOOSE!","artist":"Luca Zontini","collectible":true,"playerClass":"Druid"},{"id":"EX1_165t1","name":"Druid of the Claw","type":"Minion","rarity":"Common","cost":5,"attack":4,"health":4,"text":"<b>Charge</b>","race":"Beast","playerClass":"Druid","mechanics":["Charge"]},{"id":"EX1_243","name":"Dust Devil","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":3,"health":1,"text":"<b>Windfury</b>. <b>Overload:</b> (2)","flavor":"Westfall is full of dust devils. And buzzards. And crazed golems. And pirates. Why does anyone live here?","artist":"Raymond Swanland","collectible":true,"playerClass":"Shaman","mechanics":["Windfury"]},{"id":"EX1_536","name":"Eaglehorn Bow","type":"Weapon","rarity":"Rare","cost":3,"attack":3,"durability":2,"text":"Whenever a friendly <b>Secret</b> is revealed, gain +1 Durability.","flavor":"First Lesson: Put the pointy end in the other guy.","artist":"Cyril Van Der Haegen","collectible":true,"playerClass":"Hunter"},{"id":"EX1_250","name":"Earth Elemental","type":"Minion","faction":"Neutral","rarity":"Epic","cost":5,"attack":7,"health":8,"text":"<b>Taunt</b>. <b>Overload:</b> (3)","flavor":"Nothing beats rock.","artist":"Dan Scott","collectible":true,"playerClass":"Shaman","mechanics":["Taunt"]},{"id":"EX1_245","name":"Earth Shock","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"<b>Silence</b> a minion, then deal $1 damage to it.","flavor":"Earth Shock? Shouldn't it be \"Azeroth Shock\"?","artist":"Kevin Chin","collectible":true,"playerClass":"Shaman","mechanics":["Silence"]},{"id":"CS2_117","name":"Earthen Ring Farseer","type":"Minion","rarity":"Common","cost":3,"attack":3,"health":3,"text":"<b>Battlecry:</b> Restore 3 Health.","flavor":"He can see really far, and he doesn't use a telescope like those filthy pirates.","artist":"Alex Horley Orlandelli","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_613","name":"Edwin VanCleef","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":3,"attack":2,"health":2,"text":"<b>Combo:</b> Gain +2/+2 for each card played earlier this turn.","flavor":"He led the Stonemasons in the reconstruction of Stormwind, and when the nobles refused to pay, he founded the Defias Brotherhood to, well, <i>deconstruct</i> Stormwind.","artist":"Efrem Palacios","collectible":true,"elite":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"EX1_004e","name":"Elune's Grace","type":"Enchantment","text":"Increased Health."},{"id":"DREAM_03","name":"Emerald Drake","type":"Minion","cost":4,"attack":7,"health":6,"race":"Dragon","playerClass":"Dream"},{"id":"EX1_170","name":"Emperor Cobra","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":2,"health":3,"text":"Destroy any minion damaged by this minion.","inPlayText":"Fanged","flavor":"The Sholazar Basin is home to a lot of really horrible things. If you're going to visit, wear bug spray.  And plate armor.","artist":"Lars Grant-West","collectible":true,"race":"Beast","mechanics":["Poisonous"]},{"id":"EX1_055o","name":"Empowered","type":"Enchantment","text":"Mana Addict has increased Attack.","mechanics":["OneTurnEffect"]},{"id":"EX1_619e","name":"Equality","type":"Enchantment","text":"Health changed to 1.","playerClass":"Paladin"},{"id":"EX1_619","name":"Equality","type":"Spell","faction":"Neutral","rarity":"Rare","cost":2,"text":"Change the Health of ALL minions to 1.","flavor":"We are all special unique snowflakes... with 1 Health.","artist":"Michal Ivan","collectible":true,"playerClass":"Paladin"},{"id":"NEW1_037e","name":"Equipped","type":"Enchantment","text":"Increased Attack.","collectible":false},{"id":"EX1_274","name":"Ethereal Arcanist","type":"Minion","rarity":"Rare","cost":4,"attack":3,"health":3,"text":"If you control a <b>Secret</b> at the end of your turn, gain +2/+2.","flavor":"The ethereals are wrapped in cloth to give form to their non-corporeal bodies. Also because it's nice and soft.","artist":"Michael Komarck","collectible":true,"elite":false,"playerClass":"Mage"},{"id":"EX1_124","name":"Eviscerate","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Deal $2 damage. <b>Combo:</b> Deal $4 damage instead.","flavor":"There is a high cost to Eviscerating your opponent:  It takes a long time to get blood stains out of leather armor.","artist":"Ariel Olivetti","collectible":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"EX1_059e","name":"Experiments!","type":"Enchantment","text":"Attack and Health have been swapped by Crazed Alchemist."},{"id":"EX1_537","name":"Explosive Shot","type":"Spell","faction":"Neutral","rarity":"Rare","cost":5,"text":"Deal $5 damage to a minion and $2 damage to adjacent ones.","flavor":"Pull the pin, count to 5, then shoot.  Then duck.","artist":"Tom Baxa","collectible":true,"playerClass":"Hunter"},{"id":"EX1_610","name":"Explosive Trap","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"<b>Secret:</b> When your hero is attacked, deal $2 damage to all enemies.","flavor":"It traps your food AND cooks it for you!","artist":"Brandon Kitkouski","collectible":true,"playerClass":"Hunter","mechanics":["Secret"]},{"id":"EX1_132","name":"Eye for an Eye","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"<b>Secret:</b> When your hero takes damage, deal that much damage to the enemy hero.","flavor":"Justice sometimes takes the form of a closed fist into a soft cheek.","artist":"James Ryman","collectible":true,"playerClass":"Paladin","mechanics":["Secret"]},{"id":"EX1_564","name":"Faceless Manipulator","type":"Minion","faction":"Neutral","rarity":"Epic","cost":5,"attack":3,"health":3,"text":"<b>Battlecry:</b> Choose a minion and become a copy of it.","flavor":"The Faceless Ones are servants of Yogg-Saron, and they feed on fear. Right now they are feeding on your fear of accidentally disenchanting all your good cards.","artist":"Raymond Swanland","collectible":true,"mechanics":["Battlecry"]},{"id":"NEW1_023","name":"Faerie Dragon","type":"Minion","rarity":"Common","cost":2,"attack":3,"health":2,"text":"Can't be targeted by spells or Hero Powers.","flavor":"Adorable.  Immune to Magic.  Doesn't pee on the rug.  The perfect pet!","artist":"Samwise","collectible":true,"race":"Dragon"},{"id":"CS2_053e","name":"Far Sight","type":"Enchantment","text":"One of your cards costs (3) less.","artist":"Lars Grant-West","playerClass":"Shaman"},{"id":"CS2_053","name":"Far Sight","type":"Spell","faction":"Neutral","rarity":"Epic","cost":3,"text":"Draw a card. That card costs (3) less.","flavor":"Drek'thar can't see, but he can <i>see</i>. You know what I mean? It's ok if you don't.","artist":"Lars Grant-West","collectible":true,"playerClass":"Shaman"},{"id":"EX1_301","name":"Felguard","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":3,"health":5,"text":"<b>Taunt</b>. <b>Battlecry:</b> Destroy one of your Mana Crystals.","flavor":"Yes, he'll fight for you.  BUT HE'S NOT GOING TO LIKE IT.","artist":"John Polidora","collectible":true,"race":"Demon","playerClass":"Warlock","mechanics":["Battlecry","Taunt"]},{"id":"CS1_069","name":"Fen Creeper","type":"Minion","faction":"Alliance","rarity":"Common","cost":5,"attack":3,"health":6,"text":"<b>Taunt</b>","flavor":"He used to be called Bog Beast, but it confused people because he wasn't an actual beast.   Boom, New Name!","artist":"Monica Langlois","collectible":true,"mechanics":["Taunt"]},{"id":"EX1_248","name":"Feral Spirit","type":"Spell","faction":"Neutral","rarity":"Rare","cost":3,"text":"Summon two 2/3 Spirit Wolves with <b>Taunt</b>. <b>Overload:</b> (2)","flavor":"Spirit wolves are like regular wolves with pom-poms.","artist":"Clint Langley","collectible":true,"playerClass":"Shaman"},{"id":"EX1_finkle","name":"Finkle Einhorn","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":2,"attack":3,"health":3,"elite":true},{"id":"EX1_319","name":"Flame Imp","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":3,"health":2,"text":"<b>Battlecry:</b> Deal 3 damage to your hero.","flavor":"Imps like being on fire.  They just do.","artist":"Alex Horley Orlandelli","collectible":true,"race":"Demon","playerClass":"Warlock","mechanics":["Battlecry"]},{"id":"EX1_614t","name":"Flame of Azzinoth","type":"Minion","cost":1,"attack":2,"health":1},{"id":"EX1_544","name":"Flare","type":"Spell","faction":"Neutral","rarity":"Rare","cost":2,"text":"All minions lose <b>Stealth</b>. Destroy all enemy <b>Secrets</b>. Draw a card.","flavor":"Not only does it reveal your enemies, but it's also great for parties!","artist":"Tyler Walpole","collectible":true,"playerClass":"Hunter"},{"id":"tt_004","name":"Flesheating Ghoul","type":"Minion","faction":"Neutral","rarity":"Common","cost":3,"attack":2,"health":3,"text":"Whenever a minion dies, gain +1 Attack.","inPlayText":"Cannibalism","flavor":"'Flesheating' is an unfair name.  It's just that there's not really much else for him to eat.","artist":"Alex Horley Orlandelli","collectible":true},{"id":"EX1_571","name":"Force of Nature","type":"Spell","faction":"Neutral","rarity":"Epic","cost":6,"text":"Summon three 2/2 Treants with <b>Charge</b> that die at the end of the turn.","flavor":"\"I think I'll just nap under these trees. Wait... AAAAAHHH!\" - Blinkfizz, the Unfortunate Gnome","artist":"Trevor Jacobs","collectible":true,"playerClass":"Druid"},{"id":"EX1_251","name":"Forked Lightning","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Deal $2 damage to 2 random enemy minions. <b>Overload:</b> (2)","flavor":"If you combine it with Spooned Lightning and Knived Lightning, you have the full dining set.","artist":"Ralph Horsley","collectible":true,"playerClass":"Shaman"},{"id":"EX1_611","name":"Freezing Trap","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"<b>Secret:</b> When an enemy minion attacks, return it to its owner's hand and it costs (2) more.","flavor":"\"Dang, that's cold.\" - appropriate response to Freezing Trap, or a mean joke.","artist":"Matt Gaser","collectible":true,"playerClass":"Hunter","mechanics":["Secret"]},{"id":"EX1_283","name":"Frost Elemental","type":"Minion","faction":"Neutral","rarity":"Common","cost":6,"attack":5,"health":5,"text":"<b>Battlecry:</b> <b>Freeze</b> a character.","flavor":"When a Water elemental and an Ice elemental love each other VERY much...","artist":"Dan Scott","collectible":true,"mechanics":["Battlecry","Freeze"]},{"id":"EX1_604","name":"Frothing Berserker","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":2,"health":4,"text":"Whenever a minion takes damage, gain +1 Attack.","inPlayText":"Berserk","flavor":"He used to work as an accountant before he tried his hand at Berserkering.","artist":"Simon Bisley","collectible":true,"playerClass":"Warrior"},{"id":"NEW1_017e","name":"Full Belly","type":"Enchantment","text":"+2/+2.  Full of Murloc."},{"id":"CS2_181e","name":"Full Strength","type":"Enchantment","text":"This minion has +2 Attack."},{"id":"EX1_095","name":"Gadgetzan Auctioneer","type":"Minion","faction":"Neutral","rarity":"Rare","cost":6,"attack":4,"health":4,"text":"Whenever you cast a spell, draw a card.","inPlayText":"Auctioning","flavor":"He used to run the black market auction house, but there was just too much violence and he had to move.","artist":"Matt Dixon","collectible":true},{"id":"DS1_188","name":"Gladiator's Longbow","type":"Weapon","faction":"Neutral","rarity":"Epic","cost":7,"attack":5,"durability":2,"text":"Your hero is <b>Immune</b> while attacking.","flavor":"The longbow allows shots to be fired from farther away and is useful for firing on particularly odorous targets.","artist":"Peter C. Lee","collectible":true,"playerClass":"Hunter"},{"id":"NEW1_040t","name":"Gnoll","type":"Minion","cost":2,"attack":2,"health":2,"text":"<b>Taunt</b>","mechanics":["Taunt"]},{"id":"EX1_411","name":"Gorehowl","type":"Weapon","faction":"Neutral","rarity":"Epic","cost":7,"attack":7,"durability":1,"text":"Attacking a minion costs 1 Attack instead of 1 Durability.","flavor":"Grommash Hellscream's famous axe.  Somehow this ended up in Prince Malchezaar's possession.  Quite the mystery!","artist":"Zoltan & Gabor","collectible":true,"playerClass":"Warrior"},{"id":"NEW1_024o","name":"Greenskin's Command","type":"Enchantment","text":"+1/+1."},{"id":"EX1_414","name":"Grommash Hellscream","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":8,"attack":4,"health":9,"text":"<b>Charge</b>\n<b>Enrage:</b> +6 Attack","flavor":"Grommash drank the tainted blood of Mannoroth, dooming the orcs to green skin and red eyes!  Maybe not his best decision.","artist":"Glenn Rane","collectible":true,"elite":true,"playerClass":"Warrior","mechanics":["Charge","Enrage"]},{"id":"NEW1_038o","name":"Growth","type":"Enchantment","text":"Gruul is growing..."},{"id":"NEW1_038","name":"Gruul","type":"Minion","rarity":"Legendary","cost":8,"attack":7,"health":7,"text":"At the end of each turn, gain +1/+1 .","inPlayText":"Growth","flavor":"He's Gruul \"the Dragonkiller\".  He just wanted to cuddle them… he never meant to…","artist":"Kev Walker","collectible":true,"elite":true},{"id":"EX1_093e","name":"Hand of Argus","type":"Enchantment","text":"+1/+1 and <b>Taunt</b>."},{"id":"EX1_558","name":"Harrison Jones","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":5,"attack":5,"health":4,"text":"<b>Battlecry:</b> Destroy your opponent's weapon and draw cards equal to its Durability.","flavor":"“That belongs in the Hall of Explorers!”","artist":"Matt Dixon","collectible":true,"elite":true,"mechanics":["Battlecry"]},{"id":"EX1_556","name":"Harvest Golem","type":"Minion","faction":"Neutral","rarity":"Common","cost":3,"attack":2,"health":3,"text":"<b>Deathrattle:</b> Summon a 2/1 Damaged Golem.","flavor":"\"Overheat threshold exceeded. System failure. Wheat clog in port two. Shutting down.\"","artist":"Brian Despain","collectible":true,"race":"Mech","mechanics":["Deathrattle"]},{"id":"EX1_137","name":"Headcrack","type":"Spell","faction":"Neutral","rarity":"Rare","cost":3,"text":"Deal $2 damage to the enemy hero. <b>Combo:</b> Return this to your hand next turn.","flavor":"When all else fails, nothing beats a swift whack upside the head.","artist":"James Zhang","collectible":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"EX1_409t","name":"Heavy Axe","type":"Weapon","cost":1,"attack":1,"durability":3,"playerClass":"Warrior"},{"id":"NEW1_040","name":"Hogger","type":"Minion","rarity":"Legendary","cost":6,"attack":4,"health":4,"text":"At the end of your turn, summon a 2/2 Gnoll with <b>Taunt</b>.","flavor":"Hogger is super powerful. If you kill him, it's because he <i>let</i> you.","artist":"Laurel D. Austin","collectible":true,"elite":true},{"id":"EX1_624","name":"Holy Fire","type":"Spell","rarity":"Rare","cost":6,"text":"Deal $5 damage. Restore #5 Health to your hero.","flavor":"Often followed by Holy Smokes!","artist":"Miguel Coimbra","collectible":true,"playerClass":"Priest"},{"id":"EX1_365","name":"Holy Wrath","type":"Spell","faction":"Neutral","rarity":"Rare","cost":5,"text":"Draw a card and deal damage equal to its cost.","flavor":"C'mon Molten Giant!!","artist":"Justin Sweet","collectible":true,"playerClass":"Paladin"},{"id":"EX1_538t","name":"Hound","type":"Minion","cost":1,"attack":1,"health":1,"text":"<b>Charge</b>","race":"Beast","playerClass":"Hunter","mechanics":["Charge"]},{"id":"EX1_043e","name":"Hour of Twilight","type":"Enchantment","text":"Increased Health."},{"id":"NEW1_017","name":"Hungry Crab","type":"Minion","rarity":"Epic","cost":1,"attack":1,"health":2,"text":"<b>Battlecry:</b> Destroy a Murloc and gain +2/+2.","flavor":"Murloc.  It's what's for dinner.","artist":"Jaemin Kim","collectible":true,"race":"Beast","mechanics":["Battlecry"]},{"id":"EX1_534t","name":"Hyena","type":"Minion","rarity":"Rare","cost":2,"attack":2,"health":2,"artist":"Andrew Robinson","race":"Beast","playerClass":"Hunter"},{"id":"EX1_tk33","name":"INFERNO!","type":"Hero Power","faction":"Neutral","cost":2,"text":"<b>Hero Power</b>\nSummon a 6/6 Infernal.","playerClass":"Warlock"},{"id":"EX1_289","name":"Ice Barrier","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"<b>Secret:</b> When your hero is attacked, gain 8 Armor.","flavor":"This is Rank 1.  Rank 2 is Chocolate Milk Barrier.","artist":"Alex Garner","collectible":true,"playerClass":"Mage","mechanics":["Secret"]},{"id":"EX1_295","name":"Ice Block","type":"Spell","faction":"Neutral","rarity":"Epic","cost":3,"text":"<b>Secret:</b> When your hero takes fatal damage, prevent it and become <b>Immune</b> this turn.","flavor":"Ice is nice, and will suffice!","artist":"Carl Frank","collectible":true,"playerClass":"Mage","mechanics":["Secret"]},{"id":"EX1_295o","name":"Ice Block","type":"Enchantment","text":"Your hero is <b>Immune</b> this turn.","playerClass":"Mage","mechanics":["OneTurnEffect"]},{"id":"CS2_031","name":"Ice Lance","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"<b>Freeze</b> a character. If it was already <b>Frozen</b>, deal $4 damage instead.","flavor":"The trick is not to break the lance.  Otherwise, you have \"Ice Pieces.\"  Ice Pieces aren't as effective.","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Mage","mechanics":["Freeze"]},{"id":"EX1_614","name":"Illidan Stormrage","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":6,"attack":7,"health":5,"text":"Whenever you play a card, summon a 2/1 Flame of Azzinoth.","flavor":"Illidan's brother, Malfurion, imprisoned him beneath Hyjal for 10,000 years.  Stormrages are not good at letting go of grudges.","artist":"Alex Horley Orlandelli","collectible":true,"elite":true,"race":"Demon"},{"id":"EX1_598","name":"Imp","type":"Minion","faction":"Neutral","rarity":"Rare","cost":1,"attack":1,"health":1,"race":"Demon"},{"id":"EX1_597","name":"Imp Master","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":1,"health":5,"text":"At the end of your turn, deal 1 damage to this minion and summon a 1/1 Imp.","inPlayText":"Imp Master","flavor":"She would enjoy the job a lot more if she just could get the imps to QUIT BITING HER.","artist":"Mark Gibbons","collectible":true},{"id":"EX1_tk34","name":"Infernal","type":"Minion","faction":"Neutral","rarity":"Common","cost":6,"attack":6,"health":6,"race":"Demon","playerClass":"Warlock"},{"id":"EX1_623e","name":"Infusion","type":"Enchantment","text":"+3 Health.","playerClass":"Priest"},{"id":"CS2_181","name":"Injured Blademaster","type":"Minion","faction":"Horde","rarity":"Rare","cost":3,"attack":4,"health":7,"text":"<b>Battlecry:</b> Deal 4 damage to HIMSELF.","inPlayText":"Weakened","flavor":"He claims it is an old war wound, but we think he just cut himself shaving.","artist":"Samwise","collectible":true,"mechanics":["Battlecry"]},{"id":"CS1_129e","name":"Inner Fire","type":"Enchantment","text":"This minion's Attack is equal to its Health.","playerClass":"Priest"},{"id":"CS1_129","name":"Inner Fire","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Change a minion's Attack to be equal to its Health.","flavor":"Good idea: Buffing your minions.  Bad idea: Starting a conversation in the Barrens.","artist":"Steve Prescott","collectible":true,"playerClass":"Priest"},{"id":"EX1_607e","name":"Inner Rage","type":"Enchantment","text":"+2 Attack.","playerClass":"Warrior"},{"id":"EX1_607","name":"Inner Rage","type":"Spell","faction":"Neutral","rarity":"Common","cost":0,"text":"Deal $1 damage to a minion and give it +2 Attack.","flavor":"They're only smiling on the outside.","artist":"Slawomir Maniak","collectible":true,"playerClass":"Warrior"},{"id":"CS2_203","name":"Ironbeak Owl","type":"Minion","faction":"Horde","rarity":"Common","cost":2,"attack":2,"health":1,"text":"<b>Battlecry:</b> <b>Silence</b> a minion.","flavor":"Their wings are silent but their screech is... whatever the opposite of silent is.","artist":"Trevor Jacobs","collectible":true,"race":"Beast","mechanics":["Battlecry"]},{"id":"EX1_017","name":"Jungle Panther","type":"Minion","faction":"Horde","rarity":"Common","cost":3,"attack":4,"health":2,"text":"<b>Stealth</b>","flavor":"Stranglethorn is a beautiful place to visit, but you wouldn't want to live there.","artist":"Jaemin Kim","collectible":true,"race":"Beast","mechanics":["Stealth"]},{"id":"EX1_366e","name":"Justice Served","type":"Enchantment","text":"Has +1/+1.","playerClass":"Paladin"},{"id":"EX1_166","name":"Keeper of the Grove","type":"Minion","faction":"Neutral","rarity":"Rare","cost":4,"attack":2,"health":4,"text":"<b>Choose One</b> - Deal 2 damage; or <b>Silence</b> a minion.","flavor":"These guys just show up and start Keeping your Groves without even asking.","artist":"Gabor Szikszai","collectible":true,"playerClass":"Druid"},{"id":"EX1_080o","name":"Keeping Secrets","type":"Enchantment","text":"Increased stats."},{"id":"NEW1_005","name":"Kidnapper","type":"Minion","rarity":"Epic","cost":6,"attack":5,"health":3,"text":"<b>Combo:</b> Return a minion to its owner's hand.","flavor":"He just wants people to see his vacation photos.","artist":"Dave Allsop","collectible":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"NEW1_029t","name":"Kill Millhouse!","type":"Enchantment","rarity":"Legendary","text":"Spells cost (0) this turn!"},{"id":"EX1_543","name":"King Krush","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":9,"attack":8,"health":8,"text":"<b>Charge</b>","flavor":"The best defense against King Krush is to have someone you don’t like standing in front of you.","artist":"Alex Horley Orlandelli","collectible":true,"elite":true,"race":"Beast","playerClass":"Hunter","mechanics":["Charge"]},{"id":"EX1_014","name":"King Mukla","type":"Minion","rarity":"Legendary","cost":3,"attack":5,"health":5,"text":"<b>Battlecry:</b> Give your opponent 2 Bananas.","flavor":"King Mukla wanders Jaguero Isle, searching for love.","artist":"Sunny Gho","collectible":true,"elite":true,"race":"Beast","mechanics":["Battlecry"]},{"id":"EX1_612","name":"Kirin Tor Mage","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":4,"health":3,"text":"<b>Battlecry:</b> The next <b>Secret</b> you play this turn costs (0).","flavor":"The Kirin Tor reside in the floating city of Dalaran.  How do you make a Dalaran float?  Two scoops of ice cream, one scoop of Dalaran.","artist":"Popo Wei","collectible":true,"playerClass":"Mage","mechanics":["Battlecry"]},{"id":"NEW1_019","name":"Knife Juggler","type":"Minion","rarity":"Rare","cost":2,"attack":3,"health":2,"text":"After you summon a minion, deal 1 damage to a random enemy.","inPlayText":"Juggler","flavor":"Ambitious Knife Jugglers sometimes graduate to Bomb Jugglers.    They never last long enough to make it onto a card though.","artist":"Matt Cavotta","collectible":true},{"id":"DREAM_01","name":"Laughing Sister","type":"Minion","cost":3,"attack":3,"health":5,"text":"Can't be targeted by spells or Hero Powers.","inPlayText":"Quick","playerClass":"Dream"},{"id":"EX1_241","name":"Lava Burst","type":"Spell","faction":"Neutral","rarity":"Rare","cost":3,"text":"Deal $5 damage. <b>Overload:</b> (2)","flavor":"It's like an ocean of liquid magma in your mouth!","artist":"Dan Scott","collectible":true,"playerClass":"Shaman"},{"id":"EX1_354","name":"Lay on Hands","type":"Spell","faction":"Neutral","rarity":"Epic","cost":8,"text":"Restore #8 Health. Draw 3 cards.","flavor":"A grammatically awkward life saver.","artist":"Raymond Swanland","collectible":true,"playerClass":"Paladin"},{"id":"EX1_160b","name":"Leader of the Pack","type":"Spell","faction":"Neutral","text":"Give your minions +1/+1.","playerClass":"Druid"},{"id":"EX1_160be","name":"Leader of the Pack","type":"Enchantment","text":"+1/+1","playerClass":"Druid"},{"id":"EX1_116","name":"Leeroy Jenkins","type":"Minion","faction":"Alliance","rarity":"Legendary","cost":5,"attack":6,"health":2,"text":"<b>Charge</b>. <b>Battlecry:</b> Summon two 1/1 Whelps for your opponent.","flavor":"At least he has Angry Chicken.","artist":"Gabe from Penny Arcade","collectible":true,"elite":true,"mechanics":["Battlecry","Charge"]},{"id":"EX1_029","name":"Leper Gnome","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":2,"health":1,"text":"<b>Deathrattle:</b> Deal 2 damage to the enemy hero.","flavor":"He really just wants to be your friend, but the constant rejection is starting to really get to him.","artist":"Glenn Rane","collectible":true,"mechanics":["Deathrattle"]},{"id":"EX1_044e","name":"Level Up!","type":"Enchantment","text":"Increased Attack and Health."},{"id":"EX1_238","name":"Lightning Bolt","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Deal $3 damage. <b>Overload:</b> (1)","flavor":"Lightning Bolt! Lightning Bolt! Lightning Bolt!","artist":"Daarken","collectible":true,"playerClass":"Shaman"},{"id":"EX1_259","name":"Lightning Storm","type":"Spell","faction":"Neutral","rarity":"Rare","cost":3,"text":"Deal $2-$3 damage to all enemy minions. <b>Overload:</b> (2)","flavor":"An umbrella won't be effective, I'm afraid.","artist":"Christopher Moeller","collectible":true,"playerClass":"Shaman"},{"id":"EX1_335","name":"Lightspawn","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":0,"health":5,"text":"This minion's Attack is always equal to its Health.","flavor":"Spawn of the Light? Or Pawn of the Lights?","artist":"Daarken","collectible":true,"playerClass":"Priest"},{"id":"EX1_001","name":"Lightwarden","type":"Minion","rarity":"Rare","cost":1,"attack":1,"health":2,"text":"Whenever a character is healed, gain +2 Attack.","flavor":"She’s smaller than her sisters Mediumwarden and Heavywarden.","artist":"Erik Ko","collectible":true},{"id":"EX1_341","name":"Lightwell","type":"Minion","faction":"Neutral","rarity":"Rare","cost":2,"attack":0,"health":5,"text":"At the start of your turn, restore 3 Health to a damaged friendly character.","inPlayText":"Healing","flavor":"It isn't clear if people ignore the Lightwell, or if it is just invisible.","artist":"Blizzard Entertainment","collectible":true,"playerClass":"Priest"},{"id":"EX1_096","name":"Loot Hoarder","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"health":1,"text":"<b>Deathrattle:</b> Draw a card.","flavor":"Always roll need.","artist":"Jim Nelson","collectible":true,"mechanics":["Deathrattle"]},{"id":"EX1_323","name":"Lord Jaraxxus","type":"Minion","rarity":"Legendary","cost":9,"attack":3,"health":15,"text":"<b>Battlecry:</b> Destroy your hero and replace it with Lord Jaraxxus.","flavor":"\"TRIFLING GNOME! YOUR ARROGANCE WILL BE YOUR UNDOING!!!!\"","artist":"Alex Horley Orlandelli","collectible":true,"elite":true,"race":"Demon","playerClass":"Warlock","mechanics":["Battlecry"]},{"id":"EX1_323h","name":"Lord Jaraxxus","type":"Hero","faction":"Neutral","rarity":"Legendary","cost":0,"attack":0,"health":15,"race":"Demon","playerClass":"Warlock"},{"id":"EX1_100","name":"Lorewalker Cho","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":2,"attack":0,"health":4,"text":"Whenever a player casts a spell, put a copy into the other player’s hand.","inPlayText":"Meditate","flavor":"Lorewalker Cho archives and shares tales from the land of Pandaria, but his favorite story is the one where Joey and Phoebe go on a road trip.","artist":"Mark Zug","collectible":true,"elite":true},{"id":"EX1_082","name":"Mad Bomber","type":"Minion","faction":"Alliance","rarity":"Common","cost":2,"attack":3,"health":2,"text":"<b>Battlecry:</b> Deal 3 damage randomly split between all other characters.","flavor":"He's not really all that crazy, he is just not as careful with explosives as he should be.","artist":"Mike Sass","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_563","name":"Malygos","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":9,"attack":4,"health":12,"text":"<b>Spell Damage +5</b>","flavor":"Malygos hates it when mortals use magic.  He gets so mad!","artist":"Michael Komarck","collectible":true,"elite":true,"race":"Dragon","mechanics":["Spellpower"]},{"id":"EX1_055","name":"Mana Addict","type":"Minion","faction":"Alliance","rarity":"Rare","cost":2,"attack":1,"health":3,"text":"Whenever you cast a spell, gain +2 Attack this turn.","inPlayText":"Addicted","flavor":"She’s trying to kick the habit, but still takes some mana whenever she has a stressful day.","artist":"Hideaki Takamura","collectible":true},{"id":"NEW1_012o","name":"Mana Gorged","type":"Enchantment","text":"Increased attack.","playerClass":"Mage"},{"id":"EX1_575","name":"Mana Tide Totem","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":0,"health":3,"text":"At the end of your turn, draw a card.","flavor":"It is said that some shaman can say \"Floatin' totem\" 10 times, fast.","artist":"Scott Altmann","collectible":true,"race":"Totem","playerClass":"Shaman"},{"id":"EX1_616","name":"Mana Wraith","type":"Minion","faction":"Neutral","rarity":"Rare","cost":2,"attack":2,"health":2,"text":"ALL minions cost (1) more.","flavor":"They come out at night to eat leftover mana crystals. \"Mmmmmm,\" they say.","artist":"Luca Zontini","collectible":true,"mechanics":["Aura"]},{"id":"NEW1_012","name":"Mana Wyrm","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":3,"text":"Whenever you cast a spell, gain +1 Attack.","inPlayText":"Gorging","flavor":"These wyrms feed on arcane energies, and while they are generally considered a nuisance rather than a real threat, you really shouldn't leave them alone with a bucket of mana.","artist":"Blizzard Cinematics","collectible":true,"playerClass":"Mage"},{"id":"EX1_155be","name":"Mark of Nature","type":"Enchantment","text":"This minion has +4 Health and <b>Taunt</b>.","playerClass":"Druid"},{"id":"EX1_155","name":"Mark of Nature","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"<b>Choose One</b> - Give a minion +4 Attack; or +4 Health and <b>Taunt</b>.","flavor":"Druids call it the \"Mark of Nature.\"  Everyone else calls it \"needing a bath.\"","artist":"Clint Langley","collectible":true,"playerClass":"Druid"},{"id":"EX1_155b","name":"Mark of Nature","type":"Spell","faction":"Neutral","text":"+4 Health and <b>Taunt</b>.","playerClass":"Druid"},{"id":"EX1_155a","name":"Mark of Nature","type":"Spell","faction":"Neutral","text":"+4 Attack.","playerClass":"Druid"},{"id":"EX1_155ae","name":"Mark of Nature","type":"Enchantment","text":"This minion has +4 Attack.","playerClass":"Druid"},{"id":"EX1_626","name":"Mass Dispel","type":"Spell","rarity":"Rare","cost":4,"text":"<b>Silence</b> all enemy minions. Draw a card.","flavor":"It dispels buffs, powers, hopes, and dreams.","artist":"Sean O'Daniels","collectible":true,"playerClass":"Priest","mechanics":["Silence"]},{"id":"NEW1_037","name":"Master Swordsmith","type":"Minion","rarity":"Rare","cost":2,"attack":1,"health":3,"text":"At the end of your turn, give another random friendly minion +1 Attack.","inPlayText":"Smithing","flavor":"He's currently trying to craft a \"flail-axe\", but all the other swordsmiths say it can't be done.","artist":"E.M. Gist","collectible":true},{"id":"NEW1_014","name":"Master of Disguise","type":"Minion","rarity":"Rare","cost":4,"attack":4,"health":4,"text":"<b>Battlecry:</b> Give a friendly minion <b>Stealth</b>.","flavor":"She's actually a male tauren.  People don't call him \"Master of Disguise\" for nothing.","artist":"Ron Spencer","collectible":true,"playerClass":"Rogue","mechanics":["Battlecry"]},{"id":"NEW1_029","name":"Millhouse Manastorm","type":"Minion","rarity":"Legendary","cost":2,"attack":4,"health":4,"text":"<b>Battlecry:</b> Enemy spells cost (0) next turn.","flavor":"\"I'm gonna light you up, sweetcheeks!\"","artist":"Jim Nelson","collectible":true,"elite":true,"mechanics":["Battlecry"]},{"id":"EX1_085","name":"Mind Control Tech","type":"Minion","faction":"Alliance","rarity":"Rare","cost":3,"attack":3,"health":3,"text":"<b>Battlecry:</b> If your opponent has 4 or more minions, take control of one at random.","flavor":"Mind Control technology is getting better, but that's not saying much.","artist":"Leo Che","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_tk31","name":"Mind Controlling","type":"Enchantment","faction":"Neutral","rarity":"Common","playerClass":"Priest","mechanics":["Summoned"]},{"id":"EX1_625t2","name":"Mind Shatter","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nDeal 3 damage.","playerClass":"Priest"},{"id":"EX1_625t","name":"Mind Spike","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nDeal 2 damage.","playerClass":"Priest"},{"id":"EX1_345","name":"Mindgames","type":"Spell","faction":"Neutral","rarity":"Epic","cost":4,"text":"Put a copy of a random minion from your opponent's deck into the battlefield.","flavor":"Sometimes it feels like this is all a game.","artist":"Zoltan & Gabor","collectible":true,"playerClass":"Priest"},{"id":"EX1_294","name":"Mirror Entity","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"<b>Secret:</b> When your opponent plays a minion, summon a copy of it.","flavor":"\"You go first.\" - Krush'gor the Behemoth, to his pet boar.","artist":"Raven Mimura","collectible":true,"playerClass":"Mage","mechanics":["Secret"]},{"id":"EX1_533","name":"Misdirection","type":"Spell","faction":"Neutral","rarity":"Rare","cost":2,"text":"<b>Secret:</b> When a character attacks your hero, instead he attacks another random character.","flavor":"Sometimes it's as simple as putting on a fake mustache and pointing at someone else.","artist":"Daren Bader","collectible":true,"playerClass":"Hunter","mechanics":["Secret"]},{"id":"EX1_396","name":"Mogu'shan Warden","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":1,"health":7,"text":"<b>Taunt</b>","flavor":"All these guys ever do is talk about the Thunder King.   BOOOORRRINNG!","artist":"Cole Eastburn","collectible":true,"mechanics":["Taunt"]},{"id":"EX1_620","name":"Molten Giant","type":"Minion","rarity":"Epic","cost":20,"attack":8,"health":8,"text":"Costs (1) less for each damage your hero has taken.","flavor":"He gets terrible heartburn.  BECAUSE HE IS FULL OF LAVA.","artist":"Glenn Rane","collectible":true},{"id":"EX1_166a","name":"Moonfire","type":"Spell","faction":"Neutral","text":"Deal 2 damage.","playerClass":"Druid"},{"id":"EX1_408","name":"Mortal Strike","type":"Spell","faction":"Neutral","rarity":"Rare","cost":4,"text":"Deal $4 damage. If you have 12 or less Health, deal $6 instead.","flavor":"\"If you only use one ability, use Mortal Strike.\" - The Warrior Code, Line 6","artist":"Zoltan & Gabor","collectible":true,"playerClass":"Warrior"},{"id":"EX1_105","name":"Mountain Giant","type":"Minion","faction":"Neutral","rarity":"Epic","cost":12,"attack":8,"health":8,"text":"Costs (1) less for each other card in your hand.","flavor":"His mother said that he was just big boned.","artist":"Samwise","collectible":true},{"id":"EX1_507e","name":"Mrgglaargl!","type":"Enchantment","text":"Murloc Warleader is granting +2/+1."},{"id":"EX1_103e","name":"Mrghlglhal","type":"Enchantment","text":"+2 Health."},{"id":"EX1_509","name":"Murloc Tidecaller","type":"Minion","faction":"Neutral","rarity":"Rare","cost":1,"attack":1,"health":2,"text":"Whenever a Murloc is summoned, gain +1 Attack.","flavor":"This guy gets crazy strong at family reunions.","artist":"Jaemin Kim","collectible":true,"race":"Murloc"},{"id":"EX1_507","name":"Murloc Warleader","type":"Minion","faction":"Neutral","rarity":"Epic","cost":3,"attack":3,"health":3,"text":"ALL other Murlocs have +2/+1.","flavor":"Do Murlocs ever get tired of making the same old sound?  Nope!  Mrglglrglglglglglglgl!","artist":"Tim McBurnie","collectible":true,"race":"Murloc","mechanics":["Aura"]},{"id":"EX1_557","name":"Nat Pagle","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":2,"attack":0,"health":4,"text":"At the start of your turn, you have a 50% chance to draw an extra card.","inPlayText":"Fishing","flavor":"Nat Pagle, Azeroth's premier fisherman!  He invented the Auto-Angler 3000, the Extendo-Pole 3000, and the Lure-o-matic 2099 (still in testing).","artist":"Steve Prescott","collectible":true,"elite":true},{"id":"EX1_161","name":"Naturalize","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Destroy a minion. Your opponent draws 2 cards.","flavor":"Another one bites the dust.","artist":"Leo Che","collectible":true,"playerClass":"Druid"},{"id":"EX1_411e2","name":"Needs Sharpening","type":"Enchantment","text":"Decreased Attack.","playerClass":"Warrior"},{"id":"DREAM_05","name":"Nightmare","type":"Spell","cost":0,"text":"Give a minion +5/+5. At the start of your next turn, destroy it.","playerClass":"Dream"},{"id":"DREAM_05e","name":"Nightmare","type":"Enchantment","text":"This minion has +5/+5, but will be destroyed soon."},{"id":"EX1_130","name":"Noble Sacrifice","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"<b>Secret:</b> When an enemy attacks, summon a 2/1 Defender as the new target.","flavor":"We will always remember you, \"Defender!\"","artist":"Zoltan & Gabor","collectible":true,"playerClass":"Paladin","mechanics":["Secret"]},{"id":"EX1_164b","name":"Nourish","type":"Spell","faction":"Neutral","text":"Draw 3 cards.","playerClass":"Druid"},{"id":"EX1_164a","name":"Nourish","type":"Spell","faction":"Neutral","text":"Gain 2 Mana Crystals.","playerClass":"Druid"},{"id":"EX1_164","name":"Nourish","type":"Spell","faction":"Neutral","rarity":"Rare","cost":5,"text":"<b>Choose One</b> - Gain 2 Mana Crystals; or Draw 3 cards.","flavor":"Druids take nourishment from many things: the power of nature, the songbird's chirp, a chocolate cake.","artist":"Terese Nielsen","collectible":true,"playerClass":"Druid"},{"id":"EX1_560","name":"Nozdormu","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":9,"attack":8,"health":8,"text":"Players only have 15 seconds to take their turns.","inPlayText":"Aspect of Time","flavor":"Time to write some flavor text.","artist":"James Ryman","collectible":true,"elite":true,"race":"Dragon"},{"id":"EX1_562","name":"Onyxia","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":9,"attack":8,"health":8,"text":"<b>Battlecry:</b> Summon 1/1 Whelps until your side of the battlefield is full.","flavor":"Onyxia long manipulated the Stormwind Court by disguising herself as Lady Katrana Prestor.   You would have thought that the giant wings and scales would have been a giveaway.","artist":"Dany Orizio","collectible":true,"elite":true,"race":"Dragon","mechanics":["Battlecry"]},{"id":"EX1_258e","name":"Overloading","type":"Enchantment","text":"Increased stats.","playerClass":"Shaman"},{"id":"EX1_160t","name":"Panther","type":"Minion","rarity":"Common","cost":2,"attack":3,"health":2,"race":"Beast","playerClass":"Druid"},{"id":"EX1_522","name":"Patient Assassin","type":"Minion","faction":"Neutral","rarity":"Epic","cost":2,"attack":1,"health":1,"text":"<b>Stealth</b>. Destroy any minion damaged by this minion.","inPlayText":"Sharpening","flavor":"He’s not really that patient. It just takes a while for someone to walk by that he can actually reach.","artist":"Ben Olson","collectible":true,"playerClass":"Rogue","mechanics":["Poisonous","Stealth"]},{"id":"EX1_133","name":"Perdition's Blade","type":"Weapon","faction":"Neutral","rarity":"Rare","cost":3,"attack":2,"durability":2,"text":"<b>Battlecry:</b> Deal 1 damage. <b>Combo:</b> Deal 2 instead.","flavor":"Perdition's Blade is Ragnaros's back-up weapon while Sulfuras is in the shop.","artist":"Daren Bader","collectible":true,"playerClass":"Rogue","mechanics":["Battlecry","Combo"]},{"id":"EX1_076","name":"Pint-Sized Summoner","type":"Minion","faction":"Alliance","rarity":"Rare","cost":2,"attack":2,"health":2,"text":"The first minion you play each turn costs (1) less.","inPlayText":"Ritual","flavor":"She's quite jealous of the Gallon-Sized Summoner.","artist":"Ron Spears","collectible":true,"mechanics":["Aura"]},{"id":"EX1_313","name":"Pit Lord","type":"Minion","faction":"Neutral","rarity":"Epic","cost":4,"attack":5,"health":6,"text":"<b>Battlecry:</b> Deal 5 damage to your hero.","flavor":"Mannoroth, Magtheridon, and Brutallus may be dead, but it turns out there are a LOT of pit lords.","artist":"Glenn Rane","collectible":true,"race":"Demon","playerClass":"Warlock","mechanics":["Battlecry"]},{"id":"EX1_316","name":"Power Overwhelming","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Give a friendly minion +4/+4 until end of turn. Then, it dies. Horribly.","flavor":"We cannot even describe how horrible the death is.  It's CRAZY bad!  Maybe worse than that.  Just don't do it.","artist":"Tom Baxa","collectible":true,"playerClass":"Warlock"},{"id":"EX1_316e","name":"Power Overwhelming","type":"Enchantment","faction":"Neutral","text":"This minion has +4/+4, but will die a horrible death at the end of the turn.","playerClass":"Warlock"},{"id":"EX1_612o","name":"Power of the Kirin Tor","type":"Enchantment","text":"Your next Secret costs (0).","playerClass":"Mage","mechanics":["OneTurnEffect"]},{"id":"EX1_160","name":"Power of the Wild","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"<b>Choose One</b> - Give your minions +1/+1; or Summon a 3/2 Panther.","flavor":"Never look a panther in the eye.  Or is it 'Always look a panther in the eye'?  Well, it's one of those.","artist":"Steve Tappin","collectible":true,"playerClass":"Druid"},{"id":"EX1_145o","name":"Preparation","type":"Enchantment","text":"The next spell you cast this turn costs (3) less.","playerClass":"Rogue","mechanics":["OneTurnEffect"]},{"id":"EX1_145","name":"Preparation","type":"Spell","faction":"Neutral","rarity":"Epic","cost":0,"text":"The next spell you cast this turn costs (3) less.","flavor":"\"Be Prepared\" - Rogue Motto","artist":"Clint Langley","collectible":true,"playerClass":"Rogue"},{"id":"EX1_583","name":"Priestess of Elune","type":"Minion","faction":"Neutral","rarity":"Common","cost":6,"attack":5,"health":4,"text":"<b>Battlecry:</b> Restore 4 Health to your hero.","flavor":"If she threatens to \"moon\" you, it's not what you think.","artist":"Dan Scott","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_350","name":"Prophet Velen","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":7,"attack":7,"health":7,"text":"Double the damage and healing of your spells and Hero Power.","flavor":"He's been exiled from his home, and all his brothers turned evil, but otherwise he doesn't have a lot to complain about.","artist":"Wei Wang","collectible":true,"elite":true,"playerClass":"Priest"},{"id":"EX1_279","name":"Pyroblast","type":"Spell","faction":"Neutral","rarity":"Epic","cost":10,"text":"Deal $10 damage.","flavor":"Take the time for an evil laugh after you draw this card.","artist":"Luca Zontini","collectible":true,"playerClass":"Mage"},{"id":"EX1_044","name":"Questing Adventurer","type":"Minion","faction":"Alliance","rarity":"Rare","cost":3,"attack":2,"health":2,"text":"Whenever you play a card, gain +1/+1.","inPlayText":"Questing","flavor":"\"Does anyone have some extra Boar Pelts?\"","artist":"Attila Adorjany","collectible":true},{"id":"EX1_412","name":"Raging Worgen","type":"Minion","faction":"Neutral","rarity":"Common","cost":3,"attack":3,"health":3,"text":"<b>Enrage:</b> <b>Windfury</b> and +1 Attack","flavor":"If he's raging now, just wait until he gets nerfed.","artist":"Alex Horley Orlandelli","collectible":true,"mechanics":["Enrage"]},{"id":"EX1_298","name":"Ragnaros the Firelord","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":8,"attack":8,"health":8,"text":"Can't Attack. At the end of your turn, deal 8 damage to a random enemy.","flavor":"Ragnaros was summoned by the Dark Iron dwarves, who were eventually enslaved by the Firelord.  Summoning Ragnaros often doesn’t work out the way you want it to.","artist":"Greg Staples","collectible":true,"elite":true},{"id":"CS2_104e","name":"Rampage","type":"Enchantment","text":"+3/+3.","playerClass":"Warrior"},{"id":"CS2_104","name":"Rampage","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Give a damaged minion +3/+3.","flavor":"Minion get ANGRY.   Minion SMASH!","artist":"Jonboy Meyers","collectible":true,"playerClass":"Warrior"},{"id":"CS2_161","name":"Ravenholdt Assassin","type":"Minion","faction":"Alliance","rarity":"Rare","cost":7,"attack":7,"health":5,"text":"<b>Stealth</b>","flavor":"Just mail him a package with a name and 10,000 gold.  He'll take care of the rest.","artist":"Ralph Horsley","collectible":true,"mechanics":["Stealth"]},{"id":"EX1_274e","name":"Raw Power!","type":"Enchantment","text":"Increased stats.","playerClass":"Mage"},{"id":"EX1_136","name":"Redemption","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"<b>Secret:</b> When one of your minions dies, return it to life with 1 Health.","flavor":"I am not sure how you get demptioned the first time.  It’s a mystery!","artist":"Ittoku","collectible":true,"playerClass":"Paladin","mechanics":["Secret"]},{"id":"EX1_379e","name":"Repentance","type":"Enchantment","text":"Health reduced to 1.","playerClass":"Paladin"},{"id":"EX1_379","name":"Repentance","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"<b>Secret:</b> When your opponent plays a minion, reduce its Health to 1.","flavor":"Repentance often comes in the moment before obliteration. Curious.","artist":"Gonzalo Ordonez","collectible":true,"playerClass":"Paladin","mechanics":["Secret"]},{"id":"EX1_178ae","name":"Rooted","type":"Enchantment","text":"+5 Health and <b>Taunt</b>.","playerClass":"Druid"},{"id":"EX1_178a","name":"Rooted","type":"Spell","faction":"Neutral","text":"+5 Health and <b>Taunt</b>.","playerClass":"Druid"},{"id":"EX1_134","name":"SI:7 Agent","type":"Minion","faction":"Neutral","rarity":"Rare","cost":3,"attack":3,"health":3,"text":"<b>Combo:</b> Deal 2 damage.","flavor":"The agents of SI:7 are responsible for Stormwind's covert activities.  Their duties include espionage, assassination, and throwing surprise birthday parties for the royal family.","artist":"Chris Moeller","collectible":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"EX1_578","name":"Savagery","type":"Spell","faction":"Neutral","rarity":"Rare","cost":1,"text":"Deal damage equal to your hero's Attack to a minion.","flavor":"It is true that some druids are savage, but others still enjoy a quiet moment and a spot of tea.","artist":"Dave Rapoza","collectible":true,"playerClass":"Druid","mechanics":["AffectedBySpellPower"]},{"id":"EX1_534","name":"Savannah Highmane","type":"Minion","rarity":"Rare","cost":6,"attack":6,"health":5,"text":"<b>Deathrattle:</b> Summon two 2/2 Hyenas.","inPlayText":"Master","flavor":"In the jungle, the mighty jungle, the lion gets slowly consumed by hyenas.","artist":"Milivoj Ceran","collectible":true,"race":"Beast","playerClass":"Hunter","mechanics":["Deathrattle"]},{"id":"EX1_020","name":"Scarlet Crusader","type":"Minion","faction":"Alliance","rarity":"Common","cost":3,"attack":3,"health":1,"text":"<b>Divine Shield</b>","flavor":"Never wash your whites with a Scarlet Crusader.","artist":"Gonzalo Ordonez","collectible":true,"mechanics":["Divine Shield"]},{"id":"EX1_531","name":"Scavenging Hyena","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":2,"text":"Whenever a friendly Beast dies, gain +2/+1.","inPlayText":"Scavenging","flavor":"Hyenas prefer the bones of kodos or windserpents, but they'll eat pretty much anything.  Even Brussels sprouts.","artist":"Jim Nelson","collectible":true,"race":"Beast","playerClass":"Hunter"},{"id":"EX1_586","name":"Sea Giant","type":"Minion","faction":"Neutral","rarity":"Epic","cost":10,"attack":8,"health":8,"text":"Costs (1) less for each other minion on the battlefield.","flavor":"See?  Giant.","artist":"Svetlin Velinov","collectible":true},{"id":"EX1_080","name":"Secretkeeper","type":"Minion","faction":"Alliance","rarity":"Rare","cost":1,"attack":1,"health":2,"text":"Whenever a <b>Secret</b> is played, gain +1/+1.","inPlayText":"Firey","flavor":"She promises not to tell anyone about that thing you did last night with that one person.","artist":"Gonzalo Ordonez","collectible":true},{"id":"EX1_317","name":"Sense Demons","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"Put 2 random Demons from your deck into your hand.","flavor":"Generally demons are pretty obvious and you don’t need a spell to sense them.","artist":"Raven Mimura","collectible":true,"playerClass":"Warlock"},{"id":"EX1_334","name":"Shadow Madness","type":"Spell","faction":"Neutral","rarity":"Rare","cost":4,"text":"Gain control of an enemy minion with 3 or less Attack until end of turn.","flavor":"You can rationalize it all you want, it's still a mean thing to do.","artist":"Mark Gibbons","collectible":true,"playerClass":"Priest"},{"id":"EX1_345t","name":"Shadow of Nothing","type":"Minion","rarity":"Epic","cost":0,"attack":0,"health":1,"text":"Mindgames whiffed! Your opponent had no minions!","playerClass":"Priest"},{"id":"EX1_303","name":"Shadowflame","type":"Spell","faction":"Neutral","rarity":"Rare","cost":4,"text":"Destroy a friendly minion and deal its Attack damage to all enemy minions.","flavor":"Start with a powerful minion and stir in Shadowflame and you have a good time!","artist":"Dave Kendall","collectible":true,"playerClass":"Warlock","mechanics":["AffectedBySpellPower"]},{"id":"EX1_625","name":"Shadowform","type":"Spell","rarity":"Epic","cost":3,"text":"Your Hero Power becomes 'Deal 2 damage'. If already in Shadowform: 3 damage.","flavor":"If a bright light shines on a priest in Shadowform… do they cast a shadow?","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Priest"},{"id":"EX1_590e","name":"Shadows of M'uru","type":"Enchantment","rarity":"Common","text":"This minion has consumed Divine Shields and has increased Attack and Health."},{"id":"EX1_144","name":"Shadowstep","type":"Spell","faction":"Neutral","rarity":"Common","cost":0,"text":"Return a friendly minion to your hand. It costs (2) less.","flavor":"Rogue dance troops will sometimes Shadowstep away at the end of a performance.  Crowds love it.","artist":"Graven Tung","collectible":true,"playerClass":"Rogue"},{"id":"EX1_573b","name":"Shan'do's Lesson","type":"Spell","faction":"Neutral","text":"Summon two 2/2 Treants with <b>Taunt</b>.","playerClass":"Druid"},{"id":"CS2_221e","name":"Sharp!","type":"Enchantment","text":"+2 Attack from Spiteful Smith."},{"id":"CS2_146o","name":"Sharpened","type":"Enchantment","text":"+1 Durability."},{"id":"EX1_410","name":"Shield Slam","type":"Spell","faction":"Neutral","rarity":"Epic","cost":1,"text":"Deal 1 damage to a minion for each Armor you have.","flavor":"\"What is a better weapon? The sharp one your enemies expect, or the blunt one they ignore?\" - The Art of Warrior, Chapter 9","artist":"Raymond Swanland","collectible":true,"playerClass":"Warrior","mechanics":["AffectedBySpellPower"]},{"id":"EX1_405","name":"Shieldbearer","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":0,"health":4,"text":"<b>Taunt</b>","flavor":"Have you seen the size of the shields in this game??  This is no easy job.","artist":"Carl Critchlow","collectible":true,"mechanics":["Taunt"]},{"id":"EX1_332","name":"Silence","type":"Spell","faction":"Neutral","rarity":"Common","cost":0,"text":"<b>Silence</b> a minion.","flavor":"Reserved for enemy spellcasters, evil liches from beyond the grave, and karaoke nights at the Grim Guzzler.","artist":"Zoltan & Gabor","collectible":true,"playerClass":"Priest","mechanics":["Silence"]},{"id":"CS2_151","name":"Silver Hand Knight","type":"Minion","faction":"Alliance","rarity":"Common","cost":5,"attack":4,"health":4,"text":"<b>Battlecry:</b> Summon a 2/2 Squire.","flavor":"It's good to be a knight.   Less so to be one's squire.","artist":"Matt Starbuck","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_023","name":"Silvermoon Guardian","type":"Minion","faction":"Horde","rarity":"Common","cost":4,"attack":3,"health":3,"text":"<b>Divine Shield</b>","flavor":"The first time they tried to guard Silvermoon against the scourge, it didn’t go so well…","artist":"Phroilan Gardner","collectible":true,"mechanics":["Divine Shield"]},{"id":"EX1_309","name":"Siphon Soul","type":"Spell","faction":"Neutral","rarity":"Rare","cost":6,"text":"Destroy a minion. Restore #3 Health to your hero.","flavor":"You probably should avoid siphoning your own soul.  You might create some kind of weird infinite loop.","artist":"Tyler Walpole","collectible":true,"playerClass":"Warlock"},{"id":"EX1_391","name":"Slam","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Deal $2 damage to a minion. If it survives, draw a card.","flavor":"\"Dun da dun, dun da dun\": if you've heard an ogre sing this, it's too late.","artist":"E.M. Gist","collectible":true,"playerClass":"Warrior"},{"id":"EX1_554t","name":"Snake","type":"Minion","faction":"Neutral","rarity":"Common","cost":0,"attack":1,"health":1,"race":"Beast","playerClass":"Hunter"},{"id":"EX1_554","name":"Snake Trap","type":"Spell","faction":"Neutral","rarity":"Epic","cost":2,"text":"<b>Secret:</b> When one of your minions is attacked, summon three 1/1 Snakes.","flavor":"Why did it have to be snakes?","artist":"Bernie Kang","collectible":true,"playerClass":"Hunter","mechanics":["Secret"]},{"id":"EX1_609","name":"Snipe","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"<b>Secret:</b> When your opponent plays a minion, deal $4 damage to it.","flavor":"A great sniper hits the spot.  Just like a delicious flank of boar. Mmmmm.","artist":"Lorenzo Minaca","collectible":true,"playerClass":"Hunter","mechanics":["Secret"]},{"id":"EX1_608","name":"Sorcerer's Apprentice","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":3,"health":2,"text":"Your spells cost (1) less.","flavor":"Apprentices are great for bossing around.  \"Conjure me some mana buns! And a coffee!  Make that a mana coffee!\"","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Mage","mechanics":["Aura"]},{"id":"EX1_158","name":"Soul of the Forest","type":"Spell","faction":"Neutral","rarity":"Common","cost":4,"text":"Give your minions \"<b>Deathrattle:</b> Summon a 2/2 Treant.\"","flavor":"\"Reforestation\" is suddenly a terrifying word.","artist":"Markus Erdt","collectible":true,"playerClass":"Druid"},{"id":"EX1_158e","name":"Soul of the Forest","type":"Enchantment","text":"Deathrattle: Summon a 2/2 Treant.","playerClass":"Druid"},{"id":"NEW1_027","name":"Southsea Captain","type":"Minion","rarity":"Epic","cost":3,"attack":3,"health":3,"text":"Your other Pirates have +1/+1.","flavor":"When he saves enough plunder, he's going to commission an enormous captain's hat.  He has hat envy.","artist":"Ken Steacy","collectible":true,"race":"Pirate","mechanics":["Aura"]},{"id":"CS2_146","name":"Southsea Deckhand","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":2,"health":1,"text":"Has <b>Charge</b> while you have a weapon equipped.","flavor":"Pirates are into this new fad called \"Planking\".","artist":"Dan Brereton","collectible":true,"race":"Pirate"},{"id":"tt_010a","name":"Spellbender","type":"Minion","rarity":"Epic","attack":1,"health":3,"playerClass":"Mage","cost":0},{"id":"tt_010","name":"Spellbender","type":"Spell","faction":"Neutral","rarity":"Epic","cost":3,"text":"<b>Secret:</b> When an enemy casts a spell on a minion, summon a 1/3 as the new target.","flavor":"While it's fun to intercept enemy lightning bolts, a spellbender much prefers to intercept opposing Marks of the Wild.  It just feels meaner.  And blood elves... well, they're a little mean.","artist":"Gonzalo Ordonez","collectible":true,"playerClass":"Mage","mechanics":["Secret"]},{"id":"EX1_048","name":"Spellbreaker","type":"Minion","faction":"Horde","rarity":"Common","cost":4,"attack":4,"health":3,"text":"<b>Battlecry:</b> <b>Silence</b> a minion.","flavor":"Spellbreakers can rip enchantments from magic-wielders.  The process is painless and can be performed on an outpatient basis.","artist":"Matt Cavotta","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_tk11","name":"Spirit Wolf","type":"Minion","faction":"Neutral","rarity":"Rare","cost":2,"attack":2,"health":3,"text":"<b>Taunt</b>","playerClass":"Shaman","mechanics":["Taunt"]},{"id":"CS2_221","name":"Spiteful Smith","type":"Minion","faction":"Horde","rarity":"Common","cost":5,"attack":4,"health":6,"text":"<b>Enrage:</b> Your weapon has +2 Attack.","inPlayText":"Summoning","flavor":"She'll craft you a sword, but you'll need to bring her 5 Steel Ingots, 3 Motes of Earth, and the scalp of her last customer.","artist":"Justin Sweet","collectible":true,"mechanics":["Enrage"]},{"id":"CS2_152","name":"Squire","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":2,"health":2},{"id":"EX1_tk28","name":"Squirrel","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":1,"health":1,"race":"Beast"},{"id":"NEW1_041","name":"Stampeding Kodo","type":"Minion","rarity":"Rare","cost":5,"attack":3,"health":5,"text":"<b>Battlecry:</b> Destroy a random enemy minion with 2 or less Attack.","flavor":"This Kodo is so big that he can stampede by <i>himself</i>.","artist":"Daren Bader","collectible":true,"race":"Beast","mechanics":["Battlecry"]},{"id":"EX1_382e","name":"Stand Down!","type":"Enchantment","text":"Attack changed to 1.","playerClass":"Paladin"},{"id":"NEW1_007a","name":"Starfall","type":"Spell","text":"Deal $2 damage to all enemy minions.","playerClass":"Druid"},{"id":"NEW1_007b","name":"Starfall","type":"Spell","text":"Deal $5 damage to a minion.","playerClass":"Druid"},{"id":"NEW1_007","name":"Starfall","type":"Spell","rarity":"Rare","cost":5,"text":"<b>Choose One -</b> Deal $5 damage to a minion; or $2 damage to all enemy minions.","flavor":"Is the sky falling?  Yes.  Yes it is.","artist":"Richard Wright","collectible":true,"playerClass":"Druid"},{"id":"EX1_247","name":"Stormforged Axe","type":"Weapon","faction":"Neutral","rarity":"Common","cost":2,"attack":2,"durability":3,"text":"<b>Overload:</b> (1)","flavor":"Yo, that's a nice axe.","artist":"Nate Bowden","collectible":true,"playerClass":"Shaman"},{"id":"EX1_028","name":"Stranglethorn Tiger","type":"Minion","faction":"Alliance","rarity":"Common","cost":5,"attack":5,"health":5,"text":"<b>Stealth</b>","flavor":"The wonderful thing about tigers is tigers are wonderful things!","artist":"Alex Horley Orlandelli","collectible":true,"race":"Beast","mechanics":["Stealth"]},{"id":"EX1_162o","name":"Strength of the Pack","type":"Enchantment","text":"Dire Wolf Alpha is granting +1 Attack to this minion."},{"id":"EX1_160a","name":"Summon a Panther","type":"Spell","faction":"Neutral","text":"Summon a 3/2 Panther.","playerClass":"Druid"},{"id":"EX1_315","name":"Summoning Portal","type":"Minion","faction":"Neutral","rarity":"Common","cost":4,"attack":0,"health":4,"text":"Your minions cost (2) less, but not less than (1).","inPlayText":"Summoning","flavor":"NOT LESS THAN 1!  Don't get any ideas!","artist":"Tyler Walpole","collectible":true,"playerClass":"Warlock","mechanics":["Aura"]},{"id":"EX1_058","name":"Sunfury Protector","type":"Minion","faction":"Alliance","rarity":"Rare","cost":2,"attack":2,"health":3,"text":"<b>Battlecry:</b> Give adjacent minions <b>Taunt</b>.","flavor":"She carries a shield, but only so she can give it to someone she can stand behind.","artist":"James Ryman","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_032","name":"Sunwalker","type":"Minion","faction":"Alliance","rarity":"Rare","cost":6,"attack":4,"health":5,"text":"<b>Taunt</b>. <b>Divine Shield</b>","flavor":"She doesn’t ACTUALLY walk on the Sun.  It's just a name.  Don’t worry!","artist":"Andrea Uderzo","collectible":true,"mechanics":["Divine Shield","Taunt"]},{"id":"EX1_366","name":"Sword of Justice","type":"Weapon","faction":"Neutral","rarity":"Epic","cost":3,"attack":1,"durability":5,"text":"Whenever you summon a minion, give it +1/+1 and this loses 1 Durability.","flavor":"I dub you Sir Loin of Beef!","artist":"Efrem Palacios","collectible":true,"playerClass":"Paladin"},{"id":"EX1_016","name":"Sylvanas Windrunner","type":"Minion","rarity":"Legendary","cost":6,"attack":5,"health":5,"text":"<b>Deathrattle:</b> Take control of a random enemy minion.","flavor":"Sylvanas was turned into the Banshee Queen by Arthas, but he probably should have just killed her because it just pissed her off.","artist":"Glenn Rane","collectible":true,"elite":true,"mechanics":["Deathrattle"]},{"id":"EX1_390","name":"Tauren Warrior","type":"Minion","faction":"Neutral","rarity":"Common","cost":3,"attack":2,"health":3,"text":"<b>Taunt</b>. <b>Enrage:</b> +3 Attack","flavor":"Tauren Warrior: Champion of Mulgore, Slayer of Quilboar, Rider of Thunderbluff Elevators.","artist":"Paul Warzecha","collectible":true,"mechanics":["Enrage","Taunt"]},{"id":"EX1_584e","name":"Teachings of the Kirin Tor","type":"Enchantment","text":"<b>Spell Damage +1</b>."},{"id":"EX1_046e","name":"Tempered","type":"Enchantment","text":"+2 Attack this turn.","mechanics":["OneTurnEffect"]},{"id":"EX1_623","name":"Temple Enforcer","type":"Minion","rarity":"Common","cost":6,"attack":6,"health":6,"text":"<b>Battlecry:</b> Give a friendly minion +3 Health.","flavor":"He also moonlights Thursday nights as a bouncer at the Pig and Whistle Tavern.","artist":"Daren Bader","collectible":true,"playerClass":"Priest","mechanics":["Battlecry"]},{"id":"EX1_577","name":"The Beast","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":6,"attack":9,"health":7,"text":"<b>Deathrattle:</b> Summon a 3/3 Finkle Einhorn for your opponent.","flavor":"He lives in Blackrock Mountain.  He eats Gnomes.  That's pretty much it.","artist":"Glenn Rane","collectible":true,"elite":true,"race":"Beast","mechanics":["Deathrattle"]},{"id":"EX1_002","name":"The Black Knight","type":"Minion","rarity":"Legendary","cost":6,"attack":4,"health":5,"text":"<b>Battlecry:</b> Destroy an enemy minion with <b>Taunt</b>.","flavor":"He was sent by the Lich King to disrupt the Argent Tournament.   We can pretty much mark that a failure.","artist":"Alex Horley Orlandelli","collectible":true,"elite":true,"mechanics":["Battlecry"]},{"id":"EX1_339","name":"Thoughtsteal","type":"Spell","faction":"Neutral","rarity":"Common","cost":3,"text":"Copy 2 cards from your opponent's deck and put them into your hand.","flavor":"\"What do you get when you cast Thoughtsteal on an Orc?  Nothing!\" - Tauren joke","artist":"Alex Garner","collectible":true,"playerClass":"Priest"},{"id":"EX1_021","name":"Thrallmar Farseer","type":"Minion","faction":"Horde","rarity":"Common","cost":3,"attack":2,"health":3,"text":"<b>Windfury</b>","flavor":"He's stationed in the Hellfire Peninsula, but he's hoping for a reassignment closer to Orgrimmar, or really anywhere the ground is less on fire.","artist":"Efrem Palacios","collectible":true,"mechanics":["Windfury"]},{"id":"EX1_083","name":"Tinkmaster Overspark","type":"Minion","faction":"Alliance","rarity":"Legendary","cost":3,"attack":3,"health":3,"text":"<b>Battlecry:</b> Transform another random minion into a 5/5 Devilsaur or a 1/1 Squirrel.","flavor":"Tinkmaster Overspark nearly lost his Tinker's license after the Great Ironforge Squirrel Stampede of '09.","artist":"Tom Baxa","collectible":true,"elite":true,"mechanics":["Battlecry"]},{"id":"EX1_383","name":"Tirion Fordring","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":8,"attack":6,"health":6,"text":"<b>Divine Shield</b>. <b>Taunt</b>. <b>Deathrattle:</b> Equip a 5/3 Ashbringer.","flavor":"If you haven't heard the Tirion Fordring theme song, it's because it doesn't exist.","artist":"Brom","collectible":true,"elite":true,"playerClass":"Paladin","mechanics":["Deathrattle","Divine Shield","Taunt"]},{"id":"EX1_611e","name":"Trapped","type":"Enchantment","text":"Will be <b>Frozen</b> again at the start of the next turn.","playerClass":"Hunter"},{"id":"EX1_tk9","name":"Treant","type":"Minion","faction":"Neutral","rarity":"Common","cost":1,"attack":2,"health":2,"text":"<b>Charge</b>.  At the end of the turn, destroy this minion.","playerClass":"Druid","mechanics":["Charge"]},{"id":"EX1_573t","name":"Treant","type":"Minion","cost":1,"attack":2,"health":2,"text":"<b>Taunt</b>","playerClass":"Druid","mechanics":["Taunt"]},{"id":"EX1_158t","name":"Treant","type":"Minion","faction":"Neutral","cost":1,"attack":2,"health":2,"playerClass":"Druid"},{"id":"NEW1_018e","name":"Treasure Crazed","type":"Enchantment","text":"Increased Attack."},{"id":"EX1_043","name":"Twilight Drake","type":"Minion","faction":"Neutral","rarity":"Rare","cost":4,"attack":4,"health":1,"text":"<b>Battlecry:</b> Gain +1 Health for each card in your hand.","flavor":"Twilight drakes feed on Mystical Energy.  And Tacos.","artist":"Jaemin Kim","collectible":true,"race":"Dragon","mechanics":["Battlecry"]},{"id":"EX1_312","name":"Twisting Nether","type":"Spell","faction":"Neutral","rarity":"Epic","cost":8,"text":"Destroy all minions.","flavor":"The Twisting Nether is a formless place of magic and illusion and destroyed minions.","artist":"Dave Allsop","collectible":true,"playerClass":"Warlock"},{"id":"EX1_258","name":"Unbound Elemental","type":"Minion","faction":"Neutral","rarity":"Common","cost":3,"attack":2,"health":4,"text":"Whenever you play a card with <b>Overload</b>, gain +1/+1.","flavor":"Unlike bound elementals, Unbound ones really enjoy a night on the town.","artist":"Matt Gaser","collectible":true,"playerClass":"Shaman"},{"id":"EX1_538","name":"Unleash the Hounds","type":"Spell","rarity":"Common","cost":3,"text":"For each enemy minion, summon a 1/1 Hound with <b>Charge</b>.","flavor":"You must read the name of this card out loud each time you play it.","artist":"Linggar Bramanty","collectible":true,"playerClass":"Hunter"},{"id":"EX1_409","name":"Upgrade!","type":"Spell","faction":"Neutral","rarity":"Rare","cost":1,"text":"If you have a weapon, give it +1/+1. Otherwise equip a 1/3 weapon.","flavor":"Easily worth 50 DKP.","artist":"Matt Cavotta","collectible":true,"playerClass":"Warrior"},{"id":"EX1_536e","name":"Upgraded","type":"Enchantment","text":"Increased Durability.","playerClass":"Hunter"},{"id":"EX1_409e","name":"Upgraded","type":"Enchantment","text":"+1 Attack and +1 Durability.","playerClass":"Warrior"},{"id":"EX1_178b","name":"Uproot","type":"Spell","faction":"Neutral","text":"+5 Attack.","playerClass":"Druid"},{"id":"EX1_178be","name":"Uprooted","type":"Enchantment","text":"+5 Attack.","playerClass":"Druid"},{"id":"EX1_613e","name":"VanCleef's Vengeance","type":"Enchantment","text":"This minion has increased Attack and Health.","playerClass":"Rogue"},{"id":"EX1_594","name":"Vaporize","type":"Spell","faction":"Neutral","rarity":"Rare","cost":3,"text":"<b>Secret:</b> When a minion attacks your hero, destroy it.","flavor":"Rumor has it that Deathwing brought about the Cataclysm after losing a game to this card.  We may never know the truth.","artist":"Raymond Swanland","collectible":true,"playerClass":"Mage","mechanics":["Secret"]},{"id":"CS2_227","name":"Venture Co. Mercenary","type":"Minion","faction":"Horde","rarity":"Common","cost":5,"attack":7,"health":6,"text":"Your minions cost (3) more.","inPlayText":"Power","flavor":"No Job is too big.  No fee is too big.","artist":"John Polidora","collectible":true,"mechanics":["Aura"]},{"id":"NEW1_026t","name":"Violet Apprentice","type":"Minion","cost":0,"attack":1,"health":1},{"id":"NEW1_026","name":"Violet Teacher","type":"Minion","rarity":"Rare","cost":4,"attack":3,"health":5,"text":"Whenever you cast a spell, summon a 1/1 Violet Apprentice.","flavor":"If you don't pay attention, you may be turned into a pig.  And then you get your name on the board.","artist":"James Ryman","collectible":true},{"id":"EX1_304","name":"Void Terror","type":"Minion","rarity":"Rare","cost":3,"attack":3,"health":3,"text":"<b>Battlecry:</b> Destroy the minions on either side of this minion and gain their Attack and Health.","flavor":"If you put this into your deck, you WILL lose the trust of your other minions.","artist":"Alexander Alexandrov","collectible":true,"race":"Demon","playerClass":"Warlock","mechanics":["Battlecry"]},{"id":"EX1_001e","name":"Warded","type":"Enchantment","text":"Increased Attack."},{"id":"EX1_531e","name":"Well Fed","type":"Enchantment","text":"Increased Attack and Health.","playerClass":"Hunter"},{"id":"ds1_whelptoken","name":"Whelp","type":"Minion","faction":"Neutral","cost":1,"attack":1,"health":1,"race":"Dragon"},{"id":"EX1_116t","name":"Whelp","type":"Minion","cost":1,"attack":1,"health":1,"race":"Dragon"},{"id":"EX1_603e","name":"Whipped Into Shape","type":"Enchantment","text":"+2 Attack.","playerClass":"Warrior"},{"id":"NEW1_020","name":"Wild Pyromancer","type":"Minion","rarity":"Rare","cost":2,"attack":3,"health":2,"text":"After you cast a spell, deal 1 damage to ALL minions.","flavor":"BOOM BABY BOOM!  BAD IS GOOD!  DOWN WITH GOVERNMENT!","artist":"Alex Horley Orlandelli","collectible":true},{"id":"EX1_033","name":"Windfury Harpy","type":"Minion","faction":"Alliance","rarity":"Common","cost":6,"attack":4,"health":5,"text":"<b>Windfury</b>","flavor":"Harpies are not pleasant sounding.  That's the nicest I can put it.","artist":"Luke Mancini","collectible":true,"mechanics":["Windfury"]},{"id":"CS2_231","name":"Wisp","type":"Minion","faction":"Neutral","rarity":"Common","cost":0,"attack":1,"health":1,"flavor":"If you hit an Eredar Lord with enough Wisps, it will explode.   But why?","artist":"Malcolm Davis","collectible":true},{"id":"EX1_010","name":"Worgen Infiltrator","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":2,"health":1,"text":"<b>Stealth</b>","flavor":"If you want to stop a worgen from infiltrating, just yell, \"No! Bad boy!\"","artist":"Raymond Swanland","collectible":true,"mechanics":["Stealth"]},{"id":"EX1_317t","name":"Worthless Imp","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":1,"text":"<i>You are out of demons! At least there are always imps...</i>","race":"Demon","playerClass":"Warlock"},{"id":"EX1_154b","name":"Wrath","type":"Spell","faction":"Neutral","text":"Deal $1 damage to a minion. Draw a card.","playerClass":"Druid"},{"id":"EX1_154a","name":"Wrath","type":"Spell","faction":"Neutral","text":"Deal $3 damage to a minion.","playerClass":"Druid"},{"id":"EX1_154","name":"Wrath","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"<b>Choose One</b> - Deal $3 damage to a minion; or $1 damage and draw a card.","flavor":"The talk around the Ratchet Inn is that this card is too good and should be a Legendary.","artist":"Raymond Swanland","collectible":true,"playerClass":"Druid"},{"id":"NEW1_027e","name":"Yarrr!","type":"Enchantment","text":"Southsea Captain is granting +1/+1."},{"id":"CS2_169","name":"Young Dragonhawk","type":"Minion","faction":"Horde","rarity":"Common","cost":1,"attack":1,"health":1,"text":"<b>Windfury</b>","flavor":"They were the inspiration for the championship Taurenball team: The Dragonhawks.","artist":"Greg Hildebrandt","collectible":true,"race":"Beast","mechanics":["Windfury"]},{"id":"EX1_004","name":"Young Priestess","type":"Minion","rarity":"Rare","cost":1,"attack":2,"health":1,"text":"At the end of your turn, give another random friendly minion +1 Health.","flavor":"She can't wait to learn Power Word: Fortitude Rank 2.","artist":"Vance Kovacs","collectible":true},{"id":"EX1_049","name":"Youthful Brewmaster","type":"Minion","faction":"Alliance","rarity":"Common","cost":2,"attack":3,"health":2,"text":"<b>Battlecry:</b> Return a friendly minion from the battlefield to your hand.","flavor":"His youthful enthusiasm doesn’t always equal excellence in his brews.   Don’t drink the Mogu Stout!","artist":"Wei Wang","collectible":true,"mechanics":["Battlecry"]},{"id":"EX1_572","name":"Ysera","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":9,"attack":4,"health":12,"text":"At the end of your turn, draw a Dream Card.","flavor":"Ysera rules the Emerald Dream.  Which is some kind of green-mirror-version of the real world, or something?","artist":"Gabor Szikszai","collectible":true,"elite":true,"race":"Dragon"},{"id":"DREAM_02","name":"Ysera Awakens","type":"Spell","cost":2,"text":"Deal $5 damage to all characters except Ysera.","playerClass":"Dream"}],"Credits":[{"id":"CRED_15","name":"Andy Brock","type":"Minion","rarity":"Legendary","cost":1,"attack":1,"health":3,"text":"Can't be <b>Silenced. Divine Shield, Stealth.</b>","elite":true},{"id":"CRED_08","name":"Ben Brode","type":"Minion","rarity":"Legendary","cost":3,"attack":4,"health":1,"text":"Your volume can't be reduced below maximum.","elite":true},{"id":"CRED_09","name":"Ben Thompson","type":"Minion","rarity":"Legendary","cost":6,"attack":4,"health":7,"text":"<b>Battlecry:</b> Draw some cards. With a pen.","elite":true},{"id":"CRED_03","name":"Bob Fitch","type":"Minion","rarity":"Legendary","cost":3,"attack":2,"health":4,"text":"<b>Super Taunt</b> <i>(EVERY character must attack this minion.)</i>","elite":true},{"id":"CRED_13","name":"Brian Schwab","type":"Minion","rarity":"Legendary","cost":10,"attack":10,"health":10,"text":"At the end of your turn, give a random minion +1 Attack.","elite":true},{"id":"CRED_06","name":"Derek Sakamoto","type":"Minion","rarity":"Legendary","cost":1,"attack":3,"health":1,"text":"<i>The notorious Footclapper.</i>","elite":true},{"id":"CRED_02","name":"Eric Dodds","type":"Minion","rarity":"Legendary","cost":6,"attack":5,"health":5,"text":"<b>Battlecry:</b> Summon a 2/2 Pirate and destroy all Ninjas.","elite":true},{"id":"CRED_16","name":"Hamilton Chu","type":"Minion","rarity":"Legendary","cost":7,"attack":9,"health":5,"text":"<i>Was successfully NOT part of the problem! ...most of the time.</i>","elite":true},{"id":"CRED_01","name":"Jason Chayes","type":"Minion","rarity":"Legendary","cost":6,"attack":7,"health":6,"text":"<b>Enrage:</b> Just kidding! He never Enrages.","elite":true},{"id":"CRED_11","name":"Jay Baxter","type":"Minion","rarity":"Legendary","cost":4,"attack":1,"health":4,"text":"<b>Battlecry:</b> Summon FIVE random Inventions.","elite":true},{"id":"CRED_05","name":"Kyle Harrison","type":"Minion","rarity":"Legendary","cost":3,"attack":5,"health":4,"text":"<i>3 for a 5/4? That's a good deal!</i>","elite":true},{"id":"CRED_10","name":"Michael Schweitzer","type":"Minion","rarity":"Legendary","cost":2,"attack":2,"health":2,"text":"<b>C-C-C-COMBO:</b> Destroy a minion.","elite":true},{"id":"CRED_12","name":"Rachelle Davis","type":"Minion","rarity":"Legendary","cost":2,"attack":1,"health":2,"text":"<b>Battlecry:</b> Draw TWO cards. <i>She's not a novice engineer.</i>","elite":true},{"id":"CRED_17","name":"Rob Pardo","type":"Minion","rarity":"Legendary","cost":9,"attack":9,"health":9,"text":"You can't start a game without this minion in your deck.","elite":true},{"id":"CRED_04","name":"Steven Gabriel","type":"Minion","rarity":"Legendary","cost":1,"attack":3,"health":3,"text":"<b>Battlecry:</b> Summon a frothy beverage.","elite":true},{"id":"CRED_14","name":"Yong Woo","type":"Minion","rarity":"Legendary","cost":5,"attack":3,"health":2,"text":"Your other minions have +3 Attack and <b>Charge</b>.","elite":true},{"id":"CRED_07","name":"Zwick","type":"Minion","rarity":"Legendary","cost":2,"attack":2,"health":2,"text":"<b>Battlecry:</b> Complain about bacon prices.","elite":true}],"Curse of Naxxramas":[{"id":"NAX1h_01","name":"Anub'Rekhan","type":"Hero","health":45},{"id":"NAX1_01","name":"Anub'Rekhan","type":"Hero","health":30},{"id":"FP1_026","name":"Anub'ar Ambusher","type":"Minion","rarity":"Common","cost":4,"attack":5,"health":5,"text":"<b>Deathrattle:</b> Return a random friendly minion to your hand.","flavor":"Originally he was called \"Anub'ar Guy who bounces a guy back to your hand\", but it lacked a certain zing.","artist":"Nate Bowden","collectible":true,"playerClass":"Rogue","howToGet":"Unlocked by completing the Rogue Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Rogue Class Challenge in Naxxramas.","mechanics":["Deathrattle"]},{"id":"FP1_020","name":"Avenge","type":"Spell","rarity":"Common","cost":1,"text":"<b>Secret:</b> When one of your minions dies, give a random friendly minion +3/+2.","flavor":"Several paladins have joined together to deliver justice under the name \"Justice Force.\"  Their lawyer talked them out of calling themselves the Justice League.","artist":"Zoltan & Gabor","collectible":true,"playerClass":"Paladin","howToGet":"Unlocked by completing the Paladin Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Paladin Class Challenge in Naxxramas.","mechanics":["Secret"]},{"id":"NAX9_01","name":"Baron Rivendare","type":"Hero","health":7},{"id":"NAX9_01H","name":"Baron Rivendare","type":"Hero","health":14},{"id":"FP1_031","name":"Baron Rivendare","type":"Minion","rarity":"Legendary","cost":4,"attack":1,"health":7,"text":"Your minions trigger their <b>Deathrattles</b> twice.","flavor":"There used to be five Horsemen but one of them left because a job opened up in the deadmines and the benefits were better.","artist":"Ralph Horsley","collectible":true,"elite":true,"howToGet":"Unlocked by completing the Military Quarter.","howToGetGold":"Can be crafted after completing the Military Quarter.","mechanics":["Aura"]},{"id":"NAX15_04H","name":"Chains","type":"Hero Power","cost":8,"text":"<b>Hero Power</b>\nTake control of a random enemy minion."},{"id":"NAX15_04","name":"Chains","type":"Hero Power","cost":8,"text":"<b>Hero Power</b>\nTake control of a random enemy minion until end of turn."},{"id":"FP1_005e","name":"Consume","type":"Enchantment","text":"Increased stats."},{"id":"FP1_029","name":"Dancing Swords","type":"Minion","rarity":"Common","cost":3,"attack":4,"health":4,"text":"<b>Deathrattle:</b> Your opponent draws a card.","flavor":"They like to dance to reggae.","artist":"Jon McConnell","collectible":true,"howToGet":"Unlocked by defeating Instructor Razuvious in the Military Quarter.","howToGetGold":"Can be crafted after defeating Instructor Razuvious in the Military Quarter.","mechanics":["Deathrattle"]},{"id":"FP1_023","name":"Dark Cultist","type":"Minion","rarity":"Common","cost":3,"attack":3,"health":4,"text":"<b>Deathrattle:</b> Give a random friendly minion +3 Health.","flavor":"The Cult of the Damned has found it's best not to mention their name when recruiting new cultists.","artist":"Phroilan Gardner","collectible":true,"playerClass":"Priest","howToGet":"Unlocked by completing the Priest Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Priest Class Challenge in Naxxramas.","mechanics":["Deathrattle"]},{"id":"FP1_028e","name":"Darkness Calls","type":"Enchantment","text":"Increased stats."},{"id":"FP1_021","name":"Death's Bite","type":"Weapon","rarity":"Common","cost":4,"attack":4,"durability":2,"text":"<b>Deathrattle:</b> Deal 1 damage to all minions.","flavor":"\"Take a bite outta Death.\" - McScruff the Deathlord","artist":"Jim Nelson","collectible":true,"playerClass":"Warrior","howToGet":"Unlocked by completing the Warrior Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Warrior Class Challenge in Naxxramas.","mechanics":["Deathrattle"]},{"id":"NAX6_03","name":"Deathbloom","type":"Spell","cost":4,"text":"Deal $5 damage to a minion. Summon a Spore."},{"id":"FP1_006","name":"Deathcharger","type":"Minion","cost":1,"attack":2,"health":3,"text":"<b>Charge. Deathrattle:</b> Deal 3 damage to your hero.","mechanics":["Charge","Deathrattle"]},{"id":"FP1_009","name":"Deathlord","type":"Minion","rarity":"Rare","cost":3,"attack":2,"health":8,"text":"<b>Taunt. Deathrattle:</b> Your opponent puts a minion from their deck into the battlefield.","flavor":"\"Rise from your grave!\" - Kel'Thuzad","artist":"Ben Olson","collectible":true,"howToGet":"Unlocked by defeating The Four Horsemen in the Military Quarter.","howToGetGold":"Can be crafted after defeating The Four Horsemen in the Military Quarter.","mechanics":["Deathrattle","Taunt"]},{"id":"NAX12_02e","name":"Decimate","type":"Enchantment","text":"Health changed to 1."},{"id":"NAX12_02","name":"Decimate","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nChange the Health of all minions to 1."},{"id":"NAX12_02H","name":"Decimate","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nChange the Health of enemy minions to 1."},{"id":"FP1_018","name":"Duplicate","type":"Spell","rarity":"Common","cost":3,"text":"<b>Secret:</b> When a friendly minion dies, put 2 copies of it into your hand.","flavor":"The one time when duping cards won't get your account banned!","artist":"Alex Garner","collectible":true,"playerClass":"Mage","howToGet":"Unlocked by completing the Mage Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Mage Class Challenge in Naxxramas.","mechanics":["Secret"]},{"id":"FP1_003","name":"Echoing Ooze","type":"Minion","rarity":"Epic","cost":2,"attack":1,"health":2,"text":"<b>Battlecry:</b> Summon an exact copy of this minion at the end of the turn.","flavor":"OOZE... Ooze... Ooze... (ooze...)","artist":"Eric Browning","collectible":true,"howToGet":"Unlocked by defeating Sapphiron in the Frostwyrm Lair.","howToGetGold":"Can be crafted after defeating Sapphiron in the Frostwyrm Lair.","mechanics":["Battlecry"]},{"id":"NAX12_04e","name":"Enrage","type":"Enchantment","text":"+6 Attack this turn.","mechanics":["OneTurnEffect"]},{"id":"NAX12_04","name":"Enrage","type":"Spell","cost":3,"text":"Give your hero +6 Attack this turn."},{"id":"NAX5_02H","name":"Eruption","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nDeal 3 damage to the left-most enemy minion."},{"id":"NAX5_02","name":"Eruption","type":"Hero Power","cost":1,"text":"<b>Hero Power</b>\nDeal 2 damage to the left-most enemy minion."},{"id":"NAX12_03e","name":"Extra Teeth","type":"Enchantment","text":"Increased Attack."},{"id":"NAX11_03","name":"Fallout Slime","type":"Minion","cost":1,"attack":2,"health":2},{"id":"NAX13_04H","name":"Feugen","type":"Minion","rarity":"Legendary","cost":5,"attack":4,"health":7,"elite":true},{"id":"FP1_015","name":"Feugen","type":"Minion","rarity":"Legendary","cost":5,"attack":4,"health":7,"text":"<b>Deathrattle:</b> If Stalagg also died this game, summon Thaddius.","flavor":"Feugen is sad because everyone likes Stalagg better.","artist":"Dany Orizio","collectible":true,"elite":true,"howToGet":"Unlocked by completing the Construct Quarter.","howToGetGold":"Can be crafted after completing the Construct Quarter.","mechanics":["Deathrattle"]},{"id":"NAX15_02","name":"Frost Blast","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nDeal 2 damage to the enemy hero and <b>Freeze</b> it.","mechanics":["Freeze"]},{"id":"NAX15_02H","name":"Frost Blast","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nDeal 3 damage to the enemy hero and <b>Freeze</b> it.","mechanics":["Freeze"]},{"id":"NAX14_02","name":"Frost Breath","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nDestroy all enemy minions that aren't <b>Frozen</b>."},{"id":"NAX14_03","name":"Frozen Champion","type":"Minion","cost":5,"attack":2,"health":10,"text":"Permanently Frozen.  Adjacent minions are Immune to Frost Breath.","mechanics":["Aura"]},{"id":"NAX6_03te","name":"Fungal Growth","type":"Enchantment","text":"Increased Attack."},{"id":"NAX12_01H","name":"Gluth","type":"Hero","health":45},{"id":"NAX12_01","name":"Gluth","type":"Hero","health":30},{"id":"NAX8_01","name":"Gothik the Harvester","type":"Hero","health":30},{"id":"NAX8_01H","name":"Gothik the Harvester","type":"Hero","health":45},{"id":"NAX2_01H","name":"Grand Widow Faerlina","type":"Hero","health":45},{"id":"NAX2_01","name":"Grand Widow Faerlina","type":"Hero","health":30},{"id":"NAX11_01H","name":"Grobbulus","type":"Hero","health":45},{"id":"NAX11_01","name":"Grobbulus","type":"Hero","health":30},{"id":"NAX15_03t","name":"Guardian of Icecrown","type":"Minion","cost":4,"attack":5,"health":5,"text":"<b>Taunt</b>","mechanics":["Taunt"]},{"id":"NAX15_03n","name":"Guardian of Icecrown","type":"Minion","cost":4,"attack":3,"health":3,"text":"<b>Taunt</b>","mechanics":["Taunt"]},{"id":"NAX8_02","name":"Harvest","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nDraw a card."},{"id":"NAX8_02H","name":"Harvest","type":"Hero Power","cost":1,"text":"<b>Hero Power</b>\nDraw a card. Gain a Mana Crystal."},{"id":"NAX10_03H","name":"Hateful Strike","type":"Hero Power","cost":4,"text":"<b>Hero Power</b>\nDestroy a minion."},{"id":"NAX10_03","name":"Hateful Strike","type":"Hero Power","cost":4,"text":"<b>Hero Power</b>\nDestroy a minion."},{"id":"FP1_002","name":"Haunted Creeper","type":"Minion","rarity":"Common","cost":2,"attack":1,"health":2,"text":"<b>Deathrattle:</b> Summon two 1/1 Spectral Spiders.","flavor":"Arachnofauxbia: Fear of fake spiders.","artist":"Jeremy Cranford","collectible":true,"race":"Beast","howToGet":"Unlocked by defeating Anub'Rekhan in the Arachnid Quarter.","howToGetGold":"Can be crafted after defeating Anub'Rekhan in the Arachnid Quarter.","mechanics":["Deathrattle"]},{"id":"NAX5_01","name":"Heigan the Unclean","type":"Hero","health":30,"playerClass":"Warlock"},{"id":"NAX5_01H","name":"Heigan the Unclean","type":"Hero","health":45,"playerClass":"Warlock"},{"id":"NAX10_02","name":"Hook","type":"Weapon","cost":3,"attack":5,"durability":8,"text":"<b>Deathrattle:</b> Put this weapon into your hand.","mechanics":["Deathrattle"]},{"id":"NAX10_02H","name":"Hook","type":"Weapon","cost":3,"attack":4,"durability":8,"text":"<b>Windfury</b>\n<b>Deathrattle:</b> Put this weapon into your hand.","mechanics":["Deathrattle","Windfury"]},{"id":"NAX7_01H","name":"Instructor Razuvious","type":"Hero","health":55},{"id":"NAX7_01","name":"Instructor Razuvious","type":"Hero","health":40},{"id":"NAX15_01He","name":"Interloper!","type":"Enchantment"},{"id":"NAX15_01e","name":"Interloper!","type":"Enchantment"},{"id":"NAX12_03","name":"Jaws","type":"Weapon","cost":1,"attack":1,"durability":5,"text":"Whenever a minion with <b>Deathrattle</b> dies, gain +2 Attack."},{"id":"NAX12_03H","name":"Jaws","type":"Weapon","cost":1,"attack":3,"durability":5,"text":"Whenever a minion with <b>Deathrattle</b> dies, gain +2 Attack."},{"id":"NAX15_01H","name":"Kel'Thuzad","type":"Hero","health":45},{"id":"NAX15_01","name":"Kel'Thuzad","type":"Hero","health":30},{"id":"FP1_013","name":"Kel'Thuzad","type":"Minion","rarity":"Legendary","cost":8,"attack":6,"health":8,"text":"At the end of each turn, summon all friendly minions that died this turn.","flavor":"Kel'Thuzad could not resist the call of the Lich King.   Even when it's just a robo-call extolling the Lich King's virtues.","artist":"Chris Robinson","collectible":true,"elite":true,"howToGet":"Unlocked by defeating every boss in Naxxramas!","howToGetGold":"Can be crafted after defeating every boss in Naxxramas!"},{"id":"NAX9_02H","name":"Lady Blaumeux","type":"Minion","cost":3,"attack":2,"health":7,"text":"Your hero is <b>Immune</b>.","elite":true},{"id":"NAX9_02","name":"Lady Blaumeux","type":"Minion","cost":3,"attack":1,"health":7,"text":"Your hero is <b>Immune</b>.","elite":true},{"id":"NAX6_01H","name":"Loatheb","type":"Hero","health":99},{"id":"NAX6_01","name":"Loatheb","type":"Hero","health":75},{"id":"FP1_030","name":"Loatheb","type":"Minion","rarity":"Legendary","cost":5,"attack":5,"health":5,"text":"<b>Battlecry:</b> Enemy spells cost (5) more next turn.","flavor":"Loatheb used to be a simple Bog Beast.  This is why we need stricter regulations on mining and agriculture.","artist":"Samwise","collectible":true,"elite":true,"howToGet":"Unlocked by completing the Plague Quarter.","howToGetGold":"Can be crafted after completing the Plague Quarter.","mechanics":["Battlecry"]},{"id":"NAX1_05","name":"Locust Swarm","type":"Spell","cost":7,"text":"Deal $3 damage to all enemy minions. Restore #3 Health to your hero."},{"id":"FP1_004","name":"Mad Scientist","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":2,"text":"<b>Deathrattle:</b> Put a <b>Secret</b> from your deck into the battlefield.","flavor":"His mother wanted him to be a mage or a warlock, but noooooooo, he had to go and be a scientist like his father.","artist":"James Ryman","collectible":true,"howToGet":"Unlocked by defeating Grobbulus in the Construct Quarter.","howToGetGold":"Can be crafted after defeating Grobbulus in the Construct Quarter.","mechanics":["Deathrattle"]},{"id":"NAX3_01H","name":"Maexxna","type":"Hero","health":45},{"id":"FP1_010","name":"Maexxna","type":"Minion","rarity":"Legendary","cost":6,"attack":2,"health":8,"text":"Destroy any minion damaged by this minion.","flavor":"Maexxna gets super mad when people introduce her as \"Maxina\" or \"Maxxy\".","artist":"Howard Lyon","collectible":true,"elite":true,"race":"Beast","howToGet":"Unlocked by completing the Arachnid Quarter.","howToGetGold":"Can be crafted after completing the Arachnid Quarter.","mechanics":["Poisonous"]},{"id":"NAX3_01","name":"Maexxna","type":"Hero","health":30},{"id":"NAX9_07e","name":"Mark of the Horsemen","type":"Enchantment","text":"+1/+1."},{"id":"NAX9_07","name":"Mark of the Horsemen","type":"Spell","cost":5,"text":"Give your minions and your weapon +1/+1."},{"id":"NAX7_04H","name":"Massive Runeblade","type":"Weapon","cost":3,"attack":10,"durability":2,"text":"Deals double damage to heroes."},{"id":"NAX7_04","name":"Massive Runeblade","type":"Weapon","cost":3,"attack":5,"durability":2,"text":"Deals double damage to heroes."},{"id":"NAX7_05","name":"Mind Control Crystal","type":"Spell","cost":1,"text":"Activate the Crystal to control the Understudies!"},{"id":"NAX5_03","name":"Mindpocalypse","type":"Spell","cost":2,"text":"Both players draw 2 cards and gain a Mana Crystal."},{"id":"NAX15_05","name":"Mr. Bigglesworth","type":"Minion","rarity":"Legendary","cost":0,"attack":1,"health":1,"text":"<i>This is Kel'Thuzad's kitty.</i>","elite":true,"race":"Beast"},{"id":"NAX11_04","name":"Mutating Injection","type":"Spell","cost":3,"text":"Give a minion +4/+4 and <b>Taunt</b>."},{"id":"NAX11_04e","name":"Mutating Injection","type":"Enchantment","text":"+4/+4 and <b>Taunt</b>."},{"id":"NAXM_001","name":"Necroknight","type":"Minion","cost":4,"attack":5,"health":6,"text":"<b>Deathrattle:</b> Destroy the minions next to this one as well.","mechanics":["Deathrattle"]},{"id":"NAX6_02","name":"Necrotic Aura","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nDeal 3 damage to the enemy hero."},{"id":"NAX6_02H","name":"Necrotic Aura","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nDeal 3 damage to the enemy hero."},{"id":"FP1_030e","name":"Necrotic Aura","type":"Enchantment","text":"Your spells cost (5) more this turn."},{"id":"NAX3_03","name":"Necrotic Poison","type":"Spell","cost":2,"text":"Destroy a minion."},{"id":"FP1_017","name":"Nerub'ar Weblord","type":"Minion","rarity":"Common","cost":2,"attack":1,"health":4,"text":"Minions with <b>Battlecry</b> cost (2) more.","flavor":"Weblords spend all day making giant trampoline parks.","artist":"Alex Horley Orlandelli","collectible":true,"howToGet":"Unlocked by defeating Grand Widow Faerlina in the Arachnid Quarter.","howToGetGold":"Can be crafted after defeating Grand Widow Faerlina in the Arachnid Quarter.","mechanics":["Aura"]},{"id":"NAX1h_03","name":"Nerubian","type":"Minion","cost":2,"attack":4,"health":4},{"id":"NAX1_03","name":"Nerubian","type":"Minion","cost":2,"attack":3,"health":1},{"id":"FP1_007t","name":"Nerubian","type":"Minion","rarity":"Rare","cost":3,"attack":4,"health":4},{"id":"FP1_007","name":"Nerubian Egg","type":"Minion","rarity":"Rare","cost":2,"attack":0,"health":2,"text":"<b>Deathrattle:</b> Summon a 4/4 Nerubian.","flavor":"Eggs are a good source of protein and Nerubians.","artist":"Justin Thavirat","collectible":true,"howToGet":"Unlocked by defeating Maexxna in the Arachnid Quarter.","howToGetGold":"Can be crafted after defeating Maexxna in the Arachnid Quarter.","mechanics":["Deathrattle"]},{"id":"NAX4_01","name":"Noth the Plaguebringer","type":"Hero","health":30,"playerClass":"Mage"},{"id":"NAX4_01H","name":"Noth the Plaguebringer","type":"Hero","health":45,"playerClass":"Mage"},{"id":"NAX10_01","name":"Patchwerk","type":"Hero","health":30},{"id":"NAX10_01H","name":"Patchwerk","type":"Hero","health":45},{"id":"NAX4_05","name":"Plague","type":"Spell","cost":6,"text":"Destroy all non-Skeleton minions."},{"id":"NAX11_02","name":"Poison Cloud","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nDeal 1 damage to all minions. If any die, summon a slime."},{"id":"NAX11_02H","name":"Poison Cloud","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nDeal 2 damage to all enemies. If any die, summon a slime."},{"id":"FP1_019","name":"Poison Seeds","type":"Spell","rarity":"Common","cost":4,"text":"Destroy all minions and summon 2/2 Treants to replace them.","flavor":"\"Poisonseed Bagel\" is the least popular bagel at McTiggin's Druidic Bagel Emporium.","artist":"Brian Despain","collectible":true,"playerClass":"Druid","howToGet":"Unlocked by completing the Druid Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Druid Class Challenge in Naxxramas."},{"id":"NAX13_02e","name":"Polarity","type":"Enchantment","text":"Attack and Health swapped."},{"id":"NAX13_02","name":"Polarity Shift","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nSwap the Attack and Health of all minions."},{"id":"FP1_023e","name":"Power of the Ziggurat","type":"Enchantment","text":"+3 Health.","playerClass":"Priest"},{"id":"NAX14_04","name":"Pure Cold","type":"Spell","cost":5,"text":"Deal $8 damage to the enemy hero, and <b>Freeze</b> it.","mechanics":["Freeze"]},{"id":"NAX2_03","name":"Rain of Fire","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nFire a missile for each card in your opponent's hand.","mechanics":["ImmuneToSpellpower"]},{"id":"NAX2_03H","name":"Rain of Fire","type":"Hero Power","cost":1,"text":"<b>Hero Power</b>\nFire a missile for each card in your opponent's hand.","mechanics":["ImmuneToSpellpower"]},{"id":"NAX4_04","name":"Raise Dead","type":"Hero Power","cost":0,"text":"<b>Passive Hero Power</b>\nWhenever an enemy dies, raise a 1/1 Skeleton."},{"id":"NAX4_04H","name":"Raise Dead","type":"Hero Power","cost":0,"text":"<b>Passive Hero Power</b>\nWhenever an enemy dies, raise a 5/5 Skeleton."},{"id":"FP1_025","name":"Reincarnate","type":"Spell","rarity":"Common","cost":2,"text":"Destroy a minion, then return it to life with full Health.","flavor":"It's like birth, except you're an adult and you were just dead a second ago.","artist":"Dan Scott","collectible":true,"playerClass":"Shaman","howToGet":"Unlocked by completing the Shaman Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Shaman Class Challenge in Naxxramas."},{"id":"NAX9_05H","name":"Runeblade","type":"Weapon","cost":3,"attack":2,"durability":3,"text":"Has +6 Attack if the other Horsemen are dead."},{"id":"NAX9_05","name":"Runeblade","type":"Weapon","cost":3,"attack":1,"durability":3,"text":"Has +3 Attack if the other Horsemen are dead."},{"id":"NAX14_01H","name":"Sapphiron","type":"Hero","health":45},{"id":"NAX14_01","name":"Sapphiron","type":"Hero","health":30},{"id":"FP1_005","name":"Shade of Naxxramas","type":"Minion","rarity":"Epic","cost":3,"attack":2,"health":2,"text":"<b>Stealth.</b> At the start of your turn, gain +1/+1.","flavor":"The Shades of Naxxramas <i>hate</i> the living. They even have a slur they use to refer them: <i>Livers</i>.","artist":"Ittoku Seta","collectible":true,"howToGet":"Unlocked by defeating Kel'Thuzad in the Frostwyrm Lair.","howToGetGold":"Can be crafted after defeating Kel'Thuzad in the Frostwyrm Lair.","mechanics":["Stealth"]},{"id":"NAX9_04","name":"Sir Zeliek","type":"Minion","cost":3,"attack":1,"health":7,"text":"Your hero is <b>Immune</b>.","elite":true},{"id":"NAX9_04H","name":"Sir Zeliek","type":"Minion","cost":3,"attack":2,"health":7,"text":"Your hero is <b>Immune</b>.","elite":true},{"id":"NAXM_002","name":"Skeletal Smith","type":"Minion","cost":3,"attack":4,"health":3,"text":"<b>Deathrattle:</b> Destroy your opponent's weapon.","mechanics":["Deathrattle"]},{"id":"NAX4_03H","name":"Skeleton","type":"Minion","cost":5,"attack":5,"health":5},{"id":"NAX4_03","name":"Skeleton","type":"Minion","cost":1,"attack":1,"health":1},{"id":"NAX1_04","name":"Skitter","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nSummon a 3/1 Nerubian."},{"id":"NAX1h_04","name":"Skitter","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nSummon a 4/4 Nerubian."},{"id":"NAX15_04a","name":"Slave of Kel'Thuzad","type":"Enchantment","text":"MINE!"},{"id":"FP1_012t","name":"Slime","type":"Minion","cost":1,"attack":1,"health":2,"text":"<b>Taunt</b>","mechanics":["Taunt"]},{"id":"FP1_012","name":"Sludge Belcher","type":"Minion","rarity":"Rare","cost":5,"attack":3,"health":5,"text":"<b>Taunt.\nDeathrattle:</b> Summon a 1/2 Slime with <b>Taunt</b>.","flavor":"DO NOT GIVE HIM A ROOT BEER.","artist":"Nate Bowden","collectible":true,"howToGet":"Unlocked by defeating Loatheb in the Plague Quarter.","howToGetGold":"Can be crafted after defeating Loatheb in the Plague Quarter.","mechanics":["Deathrattle","Taunt"]},{"id":"FP1_008","name":"Spectral Knight","type":"Minion","rarity":"Common","cost":5,"attack":4,"health":6,"text":"Can't be targeted by spells or Hero Powers.","flavor":"What do Faerie Dragons and Spectral Knights have in common?  They both love pasta!","artist":"Chris Rahn","collectible":true,"howToGet":"Unlocked by defeating Gothik the Harvester in the Military Quarter.","howToGetGold":"Can be crafted after defeating Gothik the Harvester in the Military Quarter."},{"id":"NAX8_05t","name":"Spectral Rider","type":"Minion","cost":5,"attack":0,"health":6,"text":"At the start of your turn, deal 1 damage to your hero."},{"id":"FP1_002t","name":"Spectral Spider","type":"Minion","cost":1,"attack":1,"health":1},{"id":"NAX8_03t","name":"Spectral Trainee","type":"Minion","cost":1,"attack":0,"health":2,"text":"At the start of your turn, deal 1 damage to your hero."},{"id":"NAX8_04t","name":"Spectral Warrior","type":"Minion","cost":3,"attack":0,"health":4,"text":"At the start of your turn, deal 1 damage to your hero."},{"id":"NAX6_03t","name":"Spore","type":"Minion","cost":0,"attack":0,"health":1,"text":"<b>Deathrattle:</b> Give all enemy minions +8 Attack.","mechanics":["Deathrattle"]},{"id":"NAX6_04","name":"Sporeburst","type":"Spell","cost":1,"text":"Deal $1 damage to all enemy minions. Summon a Spore."},{"id":"NAX13_05H","name":"Stalagg","type":"Minion","rarity":"Legendary","cost":5,"attack":7,"health":4,"elite":true},{"id":"FP1_014","name":"Stalagg","type":"Minion","rarity":"Legendary","cost":5,"attack":7,"health":4,"text":"<b>Deathrattle:</b> If Feugen also died this game, summon Thaddius.","flavor":"Stalagg want to write own flavor text.  \"STALAGG AWESOME!\"","artist":"Dany Orizio","collectible":true,"elite":true,"howToGet":"Unlocked by completing the Construct Quarter.","howToGetGold":"Can be crafted after completing the Construct Quarter.","mechanics":["Deathrattle"]},{"id":"FP1_027","name":"Stoneskin Gargoyle","type":"Minion","rarity":"Common","cost":3,"attack":1,"health":4,"text":"At the start of your turn, restore this minion to full Health.","flavor":"Stoneskin Gargoyles love freeze tag.","artist":"Matt Smith","collectible":true,"howToGet":"Unlocked by defeating Noth the Plaguebringer in the Plague Quarter.","howToGetGold":"Can be crafted after defeating Noth the Plaguebringer in the Plague Quarter."},{"id":"NAX13_03","name":"Supercharge","type":"Spell","cost":2,"text":"Give your minions +2 Health."},{"id":"NAX13_03e","name":"Supercharged","type":"Enchantment","text":"+2 Health."},{"id":"NAX13_01H","name":"Thaddius","type":"Hero","health":45},{"id":"NAX13_01","name":"Thaddius","type":"Hero","health":30},{"id":"FP1_014t","name":"Thaddius","type":"Minion","rarity":"Legendary","cost":10,"attack":11,"health":11,"elite":true},{"id":"NAX9_03H","name":"Thane Korth'azz","type":"Minion","cost":3,"attack":2,"health":7,"text":"Your hero is <b>Immune</b>.","elite":true},{"id":"NAX9_03","name":"Thane Korth'azz","type":"Minion","cost":3,"attack":1,"health":7,"text":"Your hero is <b>Immune</b>.","elite":true},{"id":"FP1_019t","name":"Treant","type":"Minion","cost":1,"attack":2,"health":2,"playerClass":"Druid"},{"id":"NAX7_03","name":"Unbalancing Strike","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nDeal 3 damage."},{"id":"NAX7_03H","name":"Unbalancing Strike","type":"Hero Power","cost":1,"text":"<b>Hero Power</b>\nDeal 4 damage."},{"id":"NAX7_02","name":"Understudy","type":"Minion","cost":2,"attack":0,"health":7,"text":"<b>Taunt</b>","mechanics":["Taunt"]},{"id":"FP1_028","name":"Undertaker","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":2,"text":"Whenever you summon a minion with <b>Deathrattle</b>, gain +1/+1.","flavor":"In a world where you can run to a spirit healer and resurrect yourself, Undertakers do pretty light business.","artist":"Jonboy Meyers","collectible":true,"howToGet":"Unlocked by defeating Patchwerk in the Construct Quarter.","howToGetGold":"Can be crafted after defeating Patchwerk in the Construct Quarter."},{"id":"NAX9_06","name":"Unholy Shadow","type":"Hero Power","cost":5,"text":"<b>Hero Power</b>\nDraw 2 cards."},{"id":"NAX8_05","name":"Unrelenting Rider","type":"Minion","cost":6,"attack":5,"health":6,"text":"<b>Deathrattle:</b> Summon a Spectral Rider for your opponent.","mechanics":["Deathrattle"]},{"id":"NAX8_03","name":"Unrelenting Trainee","type":"Minion","cost":1,"attack":2,"health":2,"text":"<b>Deathrattle:</b> Summon a Spectral Trainee for your opponent.","mechanics":["Deathrattle"]},{"id":"NAX8_04","name":"Unrelenting Warrior","type":"Minion","cost":3,"attack":3,"health":4,"text":"<b>Deathrattle:</b> Summon a Spectral Warrior for your opponent.","mechanics":["Deathrattle"]},{"id":"FP1_024","name":"Unstable Ghoul","type":"Minion","rarity":"Common","cost":2,"attack":1,"health":3,"text":"<b>Taunt</b>. <b>Deathrattle:</b> Deal 1 damage to all minions.","flavor":"Filling your Ghouls with Rocket Fuel is all the rage at Necromancer school.","artist":"Mike Nicholson","collectible":true,"howToGet":"Unlocked by defeating Heigan the Unclean in the Plague Quarter.","howToGetGold":"Can be crafted after defeating Heigan the Unclean in the Plague Quarter.","mechanics":["Deathrattle","Taunt"]},{"id":"FP1_020e","name":"Vengeance","type":"Enchantment","text":"+3/+2.","playerClass":"Paladin"},{"id":"FP1_022","name":"Voidcaller","type":"Minion","rarity":"Common","cost":4,"attack":3,"health":4,"text":"<b>Deathrattle:</b> Put a random Demon from your hand into the battlefield.","flavor":"\"Void!  Here, void!  Here, buddy!\"","artist":"Robb Shoberg","collectible":true,"race":"Demon","playerClass":"Warlock","howToGet":"Unlocked by completing the Warlock Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Warlock Class Challenge in Naxxramas.","mechanics":["Deathrattle"]},{"id":"FP1_016","name":"Wailing Soul","type":"Minion","rarity":"Rare","cost":4,"attack":3,"health":5,"text":"<b>Battlecry: Silence</b> your other minions.","flavor":"This soul just <i>wails</i> on you. Dang, soul, let up already.","artist":"Glenn Rane","collectible":true,"howToGet":"Unlocked by defeating Thaddius in the Construct Quarter.","howToGetGold":"Can be crafted after defeating Thaddius in the Construct Quarter.","mechanics":["Battlecry"]},{"id":"NAX3_02","name":"Web Wrap","type":"Hero Power","cost":3,"text":"<b>Hero Power</b>\nReturn a random enemy minion to your opponent's hand."},{"id":"NAX3_02H","name":"Web Wrap","type":"Hero Power","cost":0,"text":"<b>Hero Power</b>\nReturn 2 random enemy minions to your opponent's hand."},{"id":"FP1_011","name":"Webspinner","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":1,"text":"<b>Deathrattle:</b> Add a random Beast card to your hand.","flavor":"Spider cocoons are like little piñatas!","artist":"Dan Brereton","collectible":true,"race":"Beast","playerClass":"Hunter","howToGet":"Unlocked by completing the Hunter Class Challenge in Naxxramas.","howToGetGold":"Can be crafted after completing the Hunter Class Challenge in Naxxramas.","mechanics":["Deathrattle"]},{"id":"NAX2_05","name":"Worshipper","type":"Minion","cost":3,"attack":1,"health":4,"text":"Your hero has +1 Attack on your turn.","mechanics":["Aura"]},{"id":"NAX2_05H","name":"Worshipper","type":"Minion","cost":3,"attack":2,"health":4,"text":"Your hero has +3 Attack on your turn.","mechanics":["Aura"]},{"id":"FP1_001","name":"Zombie Chow","type":"Minion","rarity":"Common","cost":1,"attack":2,"health":3,"text":"<b>Deathrattle:</b> Restore 5 Health to the enemy hero.","flavor":"Zombie.  It's what's for dinner.","artist":"E. M. Gist","collectible":true,"howToGet":"Unlocked by defeating Gluth in the Construct Quarter.","howToGetGold":"Can be crafted after defeating Gluth in the Construct Quarter.","mechanics":["Deathrattle"]}],"Debug":[{"id":"XXX_048","name":"-1 Durability","type":"Spell","rarity":"Common","cost":0,"text":"Give a player's weapon -1 Durability."},{"id":"XXX_055","name":"1000 Stats","type":"Spell","cost":0,"text":"Give a Minion +1000/+1000"},{"id":"XXX_055e","name":"1000 Stats Enchant","type":"Enchantment"},{"id":"XXX_095","name":"AI Buddy - All Charge!","type":"Minion","cost":0,"attack":1,"health":1,"text":"Spawn into play to give all minions <b>Charge</b>."},{"id":"XXX_096","name":"AI Buddy - Damage Own Hero 5","type":"Minion","cost":0,"attack":1,"health":1,"text":"Spawn into play to smack your own hero for 5."},{"id":"XXX_097","name":"AI Buddy - Destroy Minions","type":"Minion","cost":0,"attack":1,"health":1,"durability":0,"text":"Spawn into play to destroy all minions."},{"id":"XXX_098","name":"AI Buddy - No Deck/Hand","type":"Minion","cost":0,"attack":1,"health":1,"durability":0,"text":"Spawn into play to destroy the AI's Hand and Deck."},{"id":"XXX_099","name":"AI Helper Buddy","type":"Minion","cost":0,"attack":1,"health":1,"durability":0,"text":"Get the AI ready for testing.","elite":false},{"id":"XXX_053","name":"Armor","type":"Spell","cost":0,"text":"Give your Hero +100 Armor"},{"id":"XXX_039","name":"Become Hogger","type":"Spell","cost":0,"text":"Become Hogger for Video Recording."},{"id":"XXX_012","name":"Bounce","type":"Spell","rarity":"Common","cost":0,"text":"Return a minion to its owner's hand."},{"id":"XXX_006","name":"Break Weapon","type":"Spell","rarity":"Common","cost":0,"text":"Destroy a hero's weapon."},{"id":"XXX_015","name":"Crash","type":"Spell","rarity":"Common","cost":0,"text":"Crash the game."},{"id":"XXX_001","name":"Damage 1","type":"Spell","rarity":"Common","cost":0,"text":"Deal 1 damage.","mechanics":["ImmuneToSpellpower"]},{"id":"XXX_002","name":"Damage 5","type":"Spell","rarity":"Common","cost":0,"text":"Deal 5 damage.","mechanics":["ImmuneToSpellpower"]},{"id":"XXX_024","name":"Damage Reflector","type":"Minion","rarity":"Common","cost":0,"attack":3,"health":10,"text":"Whenever this minion takes damage, deal 1 damage to ALL other characters."},{"id":"XXX_020","name":"Damage all but 1","type":"Spell","rarity":"Common","cost":0,"text":"Set the Health of a character to 1.","mechanics":["ImmuneToSpellpower"]},{"id":"XXX_005","name":"Destroy","type":"Spell","rarity":"Common","cost":0,"text":"Destroy a minion or hero."},{"id":"XXX_023","name":"Destroy All Heroes","type":"Spell","rarity":"Common","cost":0,"text":"Destroy all heroes."},{"id":"XXX_018","name":"Destroy All Minions","type":"Spell","rarity":"Common","cost":0,"text":"Destroy all minions."},{"id":"XXX_047","name":"Destroy Deck","type":"Spell","rarity":"Common","cost":0,"text":"Delete an opponent's deck"},{"id":"XXX_041","name":"Destroy Hero Power","type":"Spell","rarity":"Common","cost":0,"text":"Destroy a player's Hero Power."},{"id":"XXX_057","name":"Destroy Secrets","type":"Spell","cost":0,"text":"Choose a hero. Destroy all <b>Secrets</b> controlled by that hero."},{"id":"XXX_050","name":"Destroy a Mana Crystal","type":"Spell","rarity":"Common","cost":0,"text":"Pick a player and destroy one of his Mana Crystals."},{"id":"XXX_049","name":"Destroy all Mana","type":"Spell","rarity":"Common","cost":0,"text":"Destroy all of a player's Mana Crystals."},{"id":"XXX_013","name":"Discard","type":"Spell","rarity":"Common","cost":0,"text":"Choose a hero.  That hero's controller discards his hand."},{"id":"XXX_025","name":"Do Nothing","type":"Spell","rarity":"Common","cost":0,"text":"This does nothing."},{"id":"XXX_017","name":"Draw 3 Cards","type":"Spell","rarity":"Common","cost":0,"text":"Draw 3 cards."},{"id":"XXX_009e","name":"Empty Enchant","type":"Enchantment","rarity":"Common","text":"This enchantment does nothing."},{"id":"XXX_026","name":"Enable Emotes","type":"Spell","rarity":"Common","cost":0,"text":"Enable emotes for your VS.AI game. (not in tutorials, though)"},{"id":"XXX_007","name":"Enable for Attack","type":"Spell","rarity":"Common","cost":0,"text":"Give a character Charge and make him able to attack!"},{"id":"XXX_009","name":"Enchant","type":"Spell","rarity":"Common","cost":0,"text":"Enchant a minion with an empty enchant."},{"id":"XXX_046","name":"Force AI to Use Hero Power","type":"Spell","rarity":"Common","cost":0,"text":"Force the AI to use their Hero Power every turn from now on."},{"id":"XXX_022","name":"Free Cards","type":"Spell","rarity":"Common","cost":0,"text":"Your cards cost (0) for the rest of the game."},{"id":"XXX_022e","name":"Free Cards","type":"Enchantment","text":"Your cards cost (0) for the rest of the game."},{"id":"XXX_008","name":"Freeze","type":"Spell","rarity":"Common","cost":0,"text":"<b>Freeze</b> a character.","mechanics":["Freeze"]},{"id":"XXX_052","name":"Grant Mega-Windfury","type":"Spell","rarity":"Common","cost":0,"text":"Give a minion <b>Mega-Windfury</b>."},{"id":"XXX_044","name":"Hand Swapper Minion","type":"Minion","rarity":"Common","cost":0,"attack":5,"health":5,"text":"<b>Battlecry:</b> Discard 3 cards, then draw 3 cards."},{"id":"XXX_042","name":"Hand to Deck","type":"Spell","rarity":"Common","cost":0,"text":"Shuffle a player's hand into his deck."},{"id":"XXX_040","name":"Hogger","type":"Hero","health":10,"playerClass":"Warrior"},{"id":"XXX_051","name":"Make Immune","type":"Spell","rarity":"Common","cost":0,"text":"Permanently make a character <b>Immune</b>."},{"id":"XXX_014","name":"Mill 10","type":"Spell","rarity":"Common","cost":0,"text":"Put 10 cards from a hero's deck into his graveyard."},{"id":"XXX_043","name":"Mill 30","type":"Spell","rarity":"Common","cost":0,"text":"Put 30 cards from a hero's deck into his graveyard."},{"id":"XXX_019","name":"Molasses","type":"Spell","rarity":"Common","text":"You can take as long as you want on your turn."},{"id":"XXX_029","name":"Opponent Concede","type":"Spell","cost":0,"text":"Force your opponent to concede."},{"id":"XXX_030","name":"Opponent Disconnect","type":"Spell","rarity":"Common","cost":0,"text":"Force your opponnet to disconnect."},{"id":"XXX_003","name":"Restore 1","type":"Spell","rarity":"Common","cost":0,"text":"Restore 1 Health to a character."},{"id":"XXX_004","name":"Restore 5","type":"Spell","rarity":"Common","cost":0,"text":"Restore 5 Health to a character."},{"id":"XXX_021","name":"Restore All Health","type":"Spell","rarity":"Common","cost":0,"text":"Restore all Health to a character."},{"id":"XXX_028","name":"Reveal Hand","type":"Spell","rarity":"Common"},{"id":"XXX_027","name":"Server Crash","type":"Spell","text":"Crash the Server.  DON'T BE A FOOL."},{"id":"XXX_010","name":"Silence - debug","type":"Spell","rarity":"Common","cost":0,"text":"Remove all enchantments and powers from a minion."},{"id":"XXX_056","name":"Silence Destroy","type":"Spell","cost":0,"text":"Silence and Destroy ALL Minions."},{"id":"XXX_016","name":"Snake Ball","type":"Spell","cost":0,"text":"Summon five 1/1 snakes."},{"id":"XXX_045","name":"Steal Card","type":"Spell","rarity":"Common","cost":0,"text":"Steal a random card from your opponent."},{"id":"XXX_011","name":"Summon a random Secret","type":"Spell","rarity":"Common","cost":0,"text":"Summon a secret from your deck."},{"id":"XXX_054","name":"Weapon Buff","type":"Spell","cost":0,"text":"Give your Weapon +100/+100"},{"id":"XXX_054e","name":"Weapon Buff Enchant","type":"Enchantment"}],"Goblins vs Gnomes":[{"id":"GVG_029","name":"Ancestor's Call","type":"Spell","rarity":"Epic","cost":4,"text":"Put a random minion from each player's hand into the battlefield.","flavor":"\"Hey! Ancestors!\" - Ancestor's call","artist":"Dan Scott","collectible":true,"playerClass":"Shaman"},{"id":"GVG_077","name":"Anima Golem","type":"Minion","rarity":"Epic","cost":6,"attack":9,"health":9,"text":"At the end of each turn, destroy this minion if it's your only one.","flavor":"The Dark Animus is evil and mysterious and huge and unable to write sentences that utilize proper grammar.","artist":"Josh Harris","collectible":true,"race":"Mech","playerClass":"Warlock"},{"id":"GVG_085","name":"Annoy-o-Tron","type":"Minion","rarity":"Common","cost":2,"attack":1,"health":2,"text":"<b>Taunt</b>\n<b>Divine Shield</b>","flavor":"The inventor of the Annoy-o-Tron was immediately expelled from Tinkerschool, Tinkertown, and was eventually exiled from the Eastern Kingdoms altogether.","artist":"Matt Dixon","collectible":true,"race":"Mech","mechanics":["Divine Shield","Taunt"]},{"id":"GVG_030","name":"Anodized Robo Cub","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":2,"text":"<b>Taunt</b>. <b>Choose One -</b>\n+1 Attack; or +1 Health.","flavor":"It's adorable! AND OH MY GOODNESS WHY IS IT EATING MY FACE","artist":"Eva Widermann","collectible":true,"elite":false,"race":"Mech","playerClass":"Druid","mechanics":["Taunt"]},{"id":"GVG_069","name":"Antique Healbot","type":"Minion","rarity":"Common","cost":5,"attack":3,"health":3,"text":"<b>Battlecry:</b> Restore 8 Health to your hero.","flavor":"They don't make 'em like they used to! (Because of explosions, mostly.)","artist":"Jesper Esjing","collectible":true,"race":"Mech","mechanics":["Battlecry"]},{"id":"GVG_091","name":"Arcane Nullifier X-21","type":"Minion","rarity":"Rare","cost":4,"attack":2,"health":5,"text":"<b>Taunt</b>\nCan't be targeted by spells or Hero Powers.","flavor":"There was some hard talk between gnome magi and engineers about inventing this mech.","artist":"Zero Yue","collectible":true,"race":"Mech","mechanics":["Taunt"]},{"id":"GVG_086e","name":"Armor Plated","type":"Enchantment","text":"Increased Attack.","playerClass":"Warrior"},{"id":"PART_001e","name":"Armor Plating","type":"Enchantment","text":"+1 Health."},{"id":"PART_001","name":"Armor Plating","type":"Spell","cost":1,"text":"Give a minion +1 Health.","artist":"Nutchapol Thitinunthakorn"},{"id":"GVG_030a","name":"Attack Mode","type":"Spell","text":"+1 Attack.","playerClass":"Druid"},{"id":"GVG_030ae","name":"Attack Mode","type":"Enchantment","text":"+1 Attack.","playerClass":"Druid"},{"id":"GVG_119","name":"Blingtron 3000","type":"Minion","rarity":"Legendary","cost":5,"attack":3,"health":4,"text":"<b>Battlecry:</b> Equip a random weapon for each player.","flavor":"PREPARE PARTY SERVOS FOR IMMEDIATE DEPLOYMENT.","artist":"Jomaro Kindred","collectible":true,"elite":true,"race":"Mech","mechanics":["Battlecry"]},{"id":"GVG_063","name":"Bolvar Fordragon","type":"Minion","rarity":"Legendary","cost":5,"attack":1,"health":7,"text":"Whenever a friendly minion dies while this is in your hand, gain +1 Attack.","flavor":"Spoiler alert: Bolvar gets melted and then sits on an ice throne and everyone forgets about him.","artist":"Tooth","collectible":true,"elite":true,"playerClass":"Paladin"},{"id":"GVG_099","name":"Bomb Lobber","type":"Minion","rarity":"Rare","cost":5,"attack":3,"health":3,"text":"<b>Battlecry:</b> Deal 4 damage to a random enemy minion.","flavor":"He lobbies Orgrimmar daily on behalf of bombs.","artist":"Luca Zontini","collectible":true,"mechanics":["Battlecry"]},{"id":"GVG_110t","name":"Boom Bot","type":"Minion","cost":1,"attack":1,"health":1,"text":"<b>Deathrattle</b>: Deal 1-4 damage to a random enemy.","race":"Mech","mechanics":["Deathrattle"]},{"id":"GVG_050","name":"Bouncing Blade","type":"Spell","rarity":"Epic","cost":3,"text":"Deal $1 damage to a random minion. Repeat until a minion dies.","flavor":"Only goblins would think this was a good idea. Even they are starting to have their doubts.","artist":"Andrew Hou","collectible":true,"playerClass":"Warrior"},{"id":"GVG_100e","name":"Brow Furrow","type":"Enchantment","text":"Increased stats.","playerClass":"Warlock"},{"id":"GVG_068","name":"Burly Rockjaw Trogg","type":"Minion","rarity":"Common","cost":4,"attack":3,"health":5,"text":"Whenever your opponent casts a spell, gain +2 Attack.","flavor":"He's burly because he does CrossFit.","artist":"Chris Rahn","collectible":true},{"id":"GVG_056t","name":"Burrowing Mine","type":"Spell","cost":0,"text":"When you draw this, it explodes. You take 10 damage and draw a card.","artist":"Chris Seaman","playerClass":"Warrior","mechanics":["ImmuneToSpellpower"]},{"id":"GVG_017","name":"Call Pet","type":"Spell","rarity":"Rare","cost":2,"text":"Draw a card.\nIf it's a Beast, it costs (4) less.","flavor":"Real hunters tame hungry crabs.","artist":"E.M. Gist","collectible":true,"playerClass":"Hunter"},{"id":"GVG_092t","name":"Chicken","type":"Minion","cost":1,"attack":1,"health":1,"race":"Beast"},{"id":"PART_004e","name":"Cloaked","type":"Enchantment","text":"Stealthed until your next turn."},{"id":"GVG_121","name":"Clockwork Giant","type":"Minion","rarity":"Epic","cost":12,"attack":8,"health":8,"text":"Costs (1) less for each card in your opponent's hand.","flavor":"He and Mountain Giant don't get along.","artist":"Dan Scott","collectible":true,"race":"Mech"},{"id":"GVG_082","name":"Clockwork Gnome","type":"Minion","rarity":"Common","cost":1,"attack":2,"health":1,"text":"<b>Deathrattle:</b> Add a <b>Spare Part</b> card to your hand.","flavor":"Clockwork gnomes are always asking what time it is.","artist":"Matt Dixon","collectible":true,"race":"Mech","mechanics":["Deathrattle"]},{"id":"GVG_062","name":"Cobalt Guardian","type":"Minion","rarity":"Rare","cost":5,"attack":6,"health":3,"text":"Whenever you summon a Mech, gain <b>Divine Shield</b>.","flavor":"Guardians used to be built out of Adamantium, but production got moved to Gadgetzan and Cobalt was cheap.","artist":"Jim Nelson","collectible":true,"race":"Mech","playerClass":"Paladin"},{"id":"GVG_073","name":"Cobra Shot","type":"Spell","rarity":"Common","cost":5,"text":"Deal $3 damage to a minion and the enemy hero.","flavor":"\"Cobra Shot\" hurts way, way, way more than \"Cobra Cuddle.\"","artist":"Howard Lyon","collectible":true,"playerClass":"Hunter"},{"id":"GVG_059","name":"Coghammer","type":"Weapon","rarity":"Epic","cost":3,"attack":2,"durability":3,"text":"<b>Battlecry:</b> Give a random friendly minion <b>Divine Shield</b> and <b>Taunt</b>.","flavor":"So you ripped this out of a machine, carved some runes on it, stuck it on a handle, and now it's a weapon of great divine power? Seems legit.","artist":"Danny Orizio","collectible":true,"playerClass":"Paladin","mechanics":["Battlecry"]},{"id":"GVG_013","name":"Cogmaster","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":2,"text":"Has +2 Attack while you have a Mech.","flavor":"After a while, you don't see the cogs and sprockets. All you see is a robot, a spider tank, a deathray...","artist":"Trent Kaniuga","collectible":true,"mechanics":["Aura"]},{"id":"GVG_024","name":"Cogmaster's Wrench","type":"Weapon","rarity":"Epic","cost":3,"attack":1,"durability":3,"text":"Has +2 Attack while you have a Mech.","flavor":"For tightening cogs and smashin' troggs!","artist":"Richard Wright","collectible":true,"playerClass":"Rogue","mechanics":["Aura"]},{"id":"GVG_038","name":"Crackle","type":"Spell","rarity":"Common","cost":2,"text":"Deal $3-$6 damage. <b>Overload: (1)</b>","flavor":"Snap! This card! Pop!","artist":"Warren Mahy","collectible":true,"playerClass":"Shaman"},{"id":"GVG_052","name":"Crush","type":"Spell","rarity":"Epic","cost":7,"text":"Destroy a minion. If you have a damaged minion, this costs (4) less.","flavor":"Using this card on your enemies is one of the best things in life, according to some barbarians.","artist":"Michael Sutfin","collectible":true,"playerClass":"Warrior"},{"id":"GVG_041","name":"Dark Wispers","type":"Spell","rarity":"Epic","cost":6,"text":"<b>Choose One -</b> Summon 5 Wisps; or Give a minion +5/+5 and <b>Taunt</b>.","flavor":"Don't worry; we fired the person who named this card.","artist":"Trent Kaniuga","collectible":true,"playerClass":"Druid"},{"id":"GVG_041b","name":"Dark Wispers","type":"Spell","text":"Summon 5 Wisps.","playerClass":"Druid"},{"id":"GVG_041a","name":"Dark Wispers","type":"Spell","text":"+5/+5 and <b>Taunt</b>.","playerClass":"Druid"},{"id":"GVG_041c","name":"Dark Wispers","type":"Enchantment","text":"+5/+5 and <b>Taunt</b>.","playerClass":"Druid"},{"id":"GVG_015","name":"Darkbomb","type":"Spell","rarity":"Common","cost":2,"text":"Deal $3 damage.","flavor":"If you're looking to make an \"Emo\" deck, this card is perfect!","artist":"Jeff Haynie","collectible":true,"playerClass":"Warlock"},{"id":"GVG_019","name":"Demonheart","type":"Spell","rarity":"Epic","cost":5,"text":"Deal $5 damage to a minion.  If it's a friendly Demon, give it +5/+5 instead.","flavor":"Virtually every member of the pro demon lobby is a warlock. Weird.","artist":"Kerem Beyit","collectible":true,"playerClass":"Warlock"},{"id":"GVG_019e","name":"Demonheart","type":"Enchantment","text":"+5/+5.","playerClass":"Warlock"},{"id":"GVG_110","name":"Dr. Boom","type":"Minion","rarity":"Legendary","cost":7,"attack":7,"health":7,"text":"<b>Battlecry</b>: Summon two 1/1 Boom Bots. <i>WARNING: Bots may explode.</i>","flavor":"MARVEL AT HIS MIGHT!","artist":"Alex Garner","collectible":true,"elite":true,"mechanics":["Battlecry"]},{"id":"GVG_080t","name":"Druid of the Fang","type":"Minion","cost":5,"attack":7,"health":7,"artist":"Massive Black","race":"Beast","playerClass":"Druid"},{"id":"GVG_080","name":"Druid of the Fang","type":"Minion","rarity":"Common","cost":5,"attack":4,"health":4,"text":"<b>Battlecry:</b> If you have a Beast, transform this minion into a 7/7.","flavor":"The Druids of the Fang live in the Wailing Caverns. They wear cool snake shirts and tell snake jokes and say \"bro\" a lot.","artist":"Brandon Kitkouski","collectible":true,"playerClass":"Druid","mechanics":["Battlecry"]},{"id":"GVG_066","name":"Dunemaul Shaman","type":"Minion","rarity":"Rare","cost":4,"attack":5,"health":4,"text":"<b>Windfury, Overload: (1)</b>\n50% chance to attack the wrong enemy.","flavor":"He just closes his eyes and goes for it. Raarararrrarar!","artist":"José Ladrönn","collectible":true,"playerClass":"Shaman","mechanics":["Windfury"]},{"id":"GVG_005","name":"Echo of Medivh","type":"Spell","rarity":"Epic","cost":4,"text":"Put a copy of each friendly minion into your hand.","flavor":"Medivh's echo haunts Karazhan, eternally cheating at chess and <i>Hearthstone</i>.","artist":"Alex Garner","collectible":true,"playerClass":"Mage"},{"id":"PART_005","name":"Emergency Coolant","type":"Spell","cost":1,"text":"<b>Freeze</b> a minion.","artist":"Peerasak Senalai","mechanics":["Freeze"]},{"id":"GVG_107","name":"Enhance-o Mechano","type":"Minion","rarity":"Epic","cost":4,"attack":3,"health":2,"text":"<b>Battlecry:</b> Give your other minions <b>Windfury</b>, <b>Taunt</b>, or <b>Divine Shield</b>.\n<i>(at random)</i>","flavor":"His enhancements are gluten free!","artist":"Zoltan Boros","collectible":true,"race":"Mech","mechanics":["Battlecry"]},{"id":"GVG_076","name":"Explosive Sheep","type":"Minion","rarity":"Common","cost":2,"attack":1,"health":1,"text":"<b>Deathrattle:</b> Deal 2 damage to all minions.","flavor":"How is this supposed to work?  Your enemies think, \"<i>Hey!</i> Cute sheep!\" and run over to cuddle it?","artist":"Ralph Horsley","collectible":true,"race":"Mech","mechanics":["Deathrattle"]},{"id":"GVG_023a","name":"Extra Sharp","type":"Enchantment","text":"+1 Attack."},{"id":"GVG_026","name":"Feign Death","type":"Spell","rarity":"Epic","cost":2,"text":"Trigger all <b>Deathrattles</b> on your minions.","flavor":"The hardest part about doing a \"Feign Death\" convincingly is learning how to make the right smell. It takes a lot of commitment.","artist":"Luca Zontini","collectible":true,"playerClass":"Hunter"},{"id":"GVG_020","name":"Fel Cannon","type":"Minion","rarity":"Rare","cost":4,"attack":3,"health":5,"text":"At the end of your turn, deal 2 damage to a non-Mech minion.","flavor":"The box says, \"New and improved, with 200% more fel!\"","artist":"Matt Gaser","collectible":true,"race":"Mech","playerClass":"Warlock"},{"id":"GVG_016","name":"Fel Reaver","type":"Minion","rarity":"Epic","cost":5,"attack":8,"health":8,"text":"Whenever your opponent plays a card, discard the top 3 cards of your deck.","flavor":"So reaver. Much fel. Wow.","artist":"Zoltan & Gabor","collectible":true,"race":"Mech"},{"id":"PART_004","name":"Finicky Cloakfield","type":"Spell","cost":1,"text":"Give a friendly minion <b>Stealth</b> until your next turn.","artist":"Nutchapol Thitinunthakorn"},{"id":"GVG_007","name":"Flame Leviathan","type":"Minion","rarity":"Legendary","cost":7,"attack":7,"health":7,"text":"When you draw this, deal 2 damage to all characters.","flavor":"Mimiron likes to take the Flame Leviathan out on some sweet joyrides.","artist":"Aleksi Briclot","collectible":true,"elite":true,"race":"Mech","playerClass":"Mage"},{"id":"GVG_001","name":"Flamecannon","type":"Spell","rarity":"Common","cost":2,"text":"Deal $4 damage to a random enemy minion.","flavor":"Calling something a flamecannon really doesn't do much to distinguish it from other goblin devices.","artist":"Mauricio Herrera","collectible":true,"playerClass":"Mage"},{"id":"GVG_100","name":"Floating Watcher","type":"Minion","rarity":"Common","cost":5,"attack":4,"health":4,"text":"Whenever your hero takes damage on your turn, gain +2/+2.","flavor":"\"Evil Eye Watcher of Doom\" was the original name, but marketing felt it was a bit too aggressive.","artist":"Todd Lockwood","collectible":true,"race":"Demon","playerClass":"Warlock"},{"id":"GVG_084","name":"Flying Machine","type":"Minion","rarity":"Common","cost":3,"attack":1,"health":4,"text":"<b>Windfury</b>","flavor":"To operate, this contraption needs a hula doll on the dashboard. Otherwise it's just a “falling machine.”","artist":"Matt Dixon","collectible":true,"race":"Mech","mechanics":["Windfury"]},{"id":"GVG_113","name":"Foe Reaper 4000","type":"Minion","rarity":"Legendary","cost":8,"attack":6,"health":9,"text":"Also damages the minions next to whomever he attacks.","flavor":"Foe reaping is really not so different from harvest reaping, at the end of the day.","artist":"James Ryman","collectible":true,"elite":true,"race":"Mech"},{"id":"GVG_079","name":"Force-Tank MAX","type":"Minion","rarity":"Common","cost":8,"attack":7,"health":7,"text":"<b>Divine Shield</b>","flavor":"There is a factory in Tanaris for crafting force-tanks, but it only ever made two, because of cost overruns.","artist":"Nutchapol Thitinunthakorn","collectible":true,"race":"Mech","mechanics":["Divine Shield"]},{"id":"GVG_049","name":"Gahz'rilla","type":"Minion","rarity":"Legendary","cost":7,"attack":6,"health":9,"text":"Whenever this minion takes damage, double its Attack.","flavor":"The Sen'jin High football team is The Gahz'rillas.","artist":"Raymond Swanland","collectible":true,"elite":true,"race":"Beast","playerClass":"Hunter"},{"id":"GVG_028t","name":"Gallywix's Coin","type":"Spell","cost":0,"text":"Gain 1 Mana Crystal this turn only.\n<i>(Won't trigger Gallywix.)</i>"},{"id":"GVG_117","name":"Gazlowe","type":"Minion","rarity":"Legendary","cost":6,"attack":3,"health":6,"text":"Whenever you cast a 1-mana spell, add a random Mech to your hand.","flavor":"Gazlowe was voted \"Most Likely to Explode\" in high school.","artist":"Luke Mancini","collectible":true,"elite":true},{"id":"GVG_032b","name":"Gift of Cards","type":"Spell","text":"Each player draws a card.","playerClass":"Druid"},{"id":"GVG_032a","name":"Gift of Mana","type":"Spell","text":"Give each player a Mana Crystal.","playerClass":"Druid"},{"id":"GVG_081","name":"Gilblin Stalker","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":3,"text":"<b>Stealth</b>","flavor":"\"Shhh, I think I hear something.\"\n\n\"Ah, it's probably nothing.\" - Every Henchman","artist":"Seamus Gallagher","collectible":true,"mechanics":["Stealth"]},{"id":"GVG_043e","name":"Glaivezooka","type":"Enchantment","text":"+1 Attack.","playerClass":"Hunter"},{"id":"GVG_043","name":"Glaivezooka","type":"Weapon","rarity":"Common","cost":2,"attack":2,"durability":2,"text":"<b>Battlecry:</b> Give a random friendly minion +1 Attack.","flavor":"For the times when a regular bazooka just isn't enough.","artist":"Gino Whitehall","collectible":true,"playerClass":"Hunter","mechanics":["Battlecry"]},{"id":"GVG_098","name":"Gnomeregan Infantry","type":"Minion","rarity":"Common","cost":3,"attack":1,"health":4,"text":"<b>Charge</b>\n<b>Taunt</b>","flavor":"The gnomes are valiant and ready to return to their irradiated, poorly ventilated homeland!","artist":"Zoltan & Gabor","collectible":true,"mechanics":["Charge","Taunt"]},{"id":"GVG_092","name":"Gnomish Experimenter","type":"Minion","rarity":"Rare","cost":3,"attack":3,"health":2,"text":"<b>Battlecry:</b> Draw a card. If it's a minion, transform it into a Chicken.","flavor":"He's legitimately surprised every time he turns himself into a chicken.","artist":"Jesper Esjing","collectible":true,"mechanics":["Battlecry"]},{"id":"GVG_023","name":"Goblin Auto-Barber","type":"Minion","rarity":"Common","cost":2,"attack":3,"health":2,"text":"<b>Battlecry</b>: Give your weapon +1 Attack.","flavor":"This guy is excellent at adjusting your haircut and/or height.","artist":"Zolton Boros","collectible":true,"race":"Mech","playerClass":"Rogue","mechanics":["Battlecry"]},{"id":"GVG_004","name":"Goblin Blastmage","type":"Minion","rarity":"Rare","cost":4,"attack":5,"health":4,"text":"<b>Battlecry:</b> If you have a Mech, deal 4 damage randomly split among all enemies.","flavor":"If you can't find a bomb to throw, just pick up any goblin invention and throw that.","artist":"Glenn Rane","collectible":true,"playerClass":"Mage","mechanics":["Battlecry"]},{"id":"GVG_095","name":"Goblin Sapper","type":"Minion","rarity":"Rare","cost":3,"attack":2,"health":4,"text":"Has +4 Attack while your opponent has 6 or more cards in hand.","flavor":"He’s not such a binge exploder anymore. These days, he only explodes socially.","artist":"Jesper Esjing","collectible":true,"mechanics":["Aura"]},{"id":"GVG_021e","name":"Grasp of Mal'Ganis","type":"Enchantment","text":"Mal'Ganis is granting +2/+2.","playerClass":"Warlock"},{"id":"GVG_032","name":"Grove Tender","type":"Minion","rarity":"Rare","cost":3,"attack":2,"health":4,"text":"<b>Choose One -</b> Give each player a Mana Crystal; or Each player draws a card.","flavor":"Likes: Hiking and the great outdoors. Dislikes: Goblin shredders and sandals. (Can’t find any that fit!).","artist":"Chris Rahn","collectible":true,"playerClass":"Druid"},{"id":"GVG_104a","name":"HERE, TAKE BUFF.","type":"Enchantment","text":"+2/+2."},{"id":"GVG_120","name":"Hemet Nesingwary","type":"Minion","rarity":"Legendary","cost":5,"attack":6,"health":3,"text":"<b>Battlecry:</b> Destroy a Beast.","flavor":"It's hard to make a living as a hunter in a world where beasts instantly reappear minutes after you kill them.","artist":"Ralph Horsley","collectible":true,"elite":true,"mechanics":["Battlecry"]},{"id":"GVG_104","name":"Hobgoblin","type":"Minion","rarity":"Epic","cost":3,"attack":2,"health":3,"text":"Whenever you play a 1-Attack minion, give it +2/+2.","flavor":"Hobgoblins are meeting next week to discuss union benefits.  First on the list: dental plan.","artist":"Laurel D. Austin","collectible":true},{"id":"GVG_089","name":"Illuminator","type":"Minion","rarity":"Rare","cost":3,"attack":2,"health":4,"text":"If you control a <b>Secret</b> at the end of your turn, restore 4 health to your hero.","flavor":"\"LUMOS!\" is not what they yell. What do you think this is, Hogwarts?","artist":"Jim Nelson","collectible":true},{"id":"GVG_045t","name":"Imp","type":"Minion","cost":1,"attack":1,"health":1,"race":"Demon","playerClass":"Warlock"},{"id":"GVG_045","name":"Imp-losion","type":"Spell","rarity":"Rare","cost":4,"text":"Deal $2-$4 damage to a minion. Summon a 1/1 Imp for each damage dealt.","flavor":"The shrapnel is waaaaay worse than the explosion.","artist":"Jaemin Kim","collectible":true,"playerClass":"Warlock"},{"id":"GVG_056","name":"Iron Juggernaut","type":"Minion","rarity":"Legendary","cost":6,"attack":6,"health":5,"text":"<b>Battlecry:</b> Shuffle a Mine into your opponent's deck. When drawn, it explodes for 10 damage.","flavor":"The Iron Juggernaut guards Orgrimmar and has just earned the \"Employee of the Month\" award!","artist":"Raymond Swanland","collectible":true,"elite":true,"race":"Mech","playerClass":"Warrior","mechanics":["Battlecry"]},{"id":"GVG_027","name":"Iron Sensei","type":"Minion","rarity":"Rare","cost":3,"attack":2,"health":2,"text":"At the end of your turn, give another friendly Mech +2/+2.","flavor":"Mechs like learning from him because he really speaks their language.\n\n0110100001101001","artist":"Brian Despain","collectible":true,"race":"Mech","playerClass":"Rogue"},{"id":"GVG_027e","name":"Ironed Out","type":"Enchantment","text":"Increased stats.","playerClass":"Rogue"},{"id":"GVG_094","name":"Jeeves","type":"Minion","rarity":"Rare","cost":4,"attack":1,"health":4,"text":"At the end of each player's turn, that player draws until they have 3 cards.","flavor":"This robot is a lean, mean, butlerin' machine.","artist":"Matt Dixon","collectible":true,"race":"Mech"},{"id":"GVG_106","name":"Junkbot","type":"Minion","rarity":"Epic","cost":5,"attack":1,"health":5,"text":"Whenever a friendly Mech dies, gain +2/+2.","flavor":"One bot's junk is another bot's AWESOME UPGRADE!","artist":"Zoltan Boros","collectible":true,"race":"Mech"},{"id":"GVG_106e","name":"Junked Up","type":"Enchantment","text":"Increased stats."},{"id":"GVG_074","name":"Kezan Mystic","type":"Minion","rarity":"Rare","cost":4,"attack":4,"health":3,"text":"<b>Battlecry:</b> Take control of a random enemy <b>Secret</b>.","flavor":"They pretend to be wise and enlightened, but they mostly just hate to be left out of a secret.","artist":"Jakub Kasper","collectible":true,"mechanics":["Battlecry"]},{"id":"GVG_046","name":"King of Beasts","type":"Minion","rarity":"Rare","cost":5,"attack":2,"health":6,"text":"<b>Taunt</b>. <b>Battlecry:</b> Gain +1 Attack for each other Beast you have.","flavor":"He never sleeps.  Not even in the mighty jungle.","artist":"Seamus Gallagher","collectible":true,"race":"Beast","playerClass":"Hunter","mechanics":["Battlecry","Taunt"]},{"id":"GVG_012","name":"Light of the Naaru","type":"Spell","rarity":"Rare","cost":1,"text":"Restore #3 Health. If the target is still damaged, summon a Lightwarden.","flavor":"\"Light it up!\" - Command given to both Lightwardens and Goblins holding Flamecannons.","artist":"Jesper Ejsing","collectible":true,"playerClass":"Priest"},{"id":"GVG_008","name":"Lightbomb","type":"Spell","rarity":"Epic","cost":6,"text":"Deal damage to each minion equal to its Attack.","flavor":"This is what happens when you allow goblins to be priests.","artist":"Luca Zontini","collectible":true,"playerClass":"Priest","mechanics":["AffectedBySpellPower"]},{"id":"GVG_097","name":"Lil' Exorcist","type":"Minion","rarity":"Rare","cost":3,"attack":2,"health":3,"text":"<b>Taunt</b>\n<b>Battlecry:</b> Gain +1/+1 for each enemy <b>Deathrattle</b> minion.","flavor":"Warlocks have the town exorcist on speed dial in case they unleash the wrong demon.","artist":"Jim Nelson","collectible":true,"mechanics":["Battlecry","Taunt"]},{"id":"GVG_071","name":"Lost Tallstrider","type":"Minion","rarity":"Common","cost":4,"attack":5,"health":4,"flavor":"The message, \"If found, please return to Mulgore,\" is tattooed on his rear.","artist":"Benjamin Zhang","collectible":true,"race":"Beast"},{"id":"GVG_090","name":"Madder Bomber","type":"Minion","rarity":"Rare","cost":5,"attack":5,"health":4,"text":"<b>Battlecry:</b> Deal 6 damage randomly split between all other characters.","flavor":"Dang, Bomber, calm down.","artist":"Alex Horley Orlandelli","collectible":true,"mechanics":["Battlecry"]},{"id":"GVG_021","name":"Mal'Ganis","type":"Minion","rarity":"Legendary","cost":9,"attack":9,"health":7,"text":"Your other Demons have +2/+2.\nYour hero is <b>Immune</b>.","flavor":"Mal'Ganis doesn't like being betrayed, so if you discard him, watch out.","artist":"Wayne Reynolds","collectible":true,"elite":true,"race":"Demon","playerClass":"Warlock","mechanics":["Aura"]},{"id":"GVG_035","name":"Malorne","type":"Minion","rarity":"Legendary","cost":7,"attack":9,"health":7,"text":"<b>Deathrattle:</b> Shuffle this minion into your deck.","flavor":"When Malorne isn't mauling hordes of demons, he enjoys attending parties, though he prefers to go stag.","artist":"Oliver Chipping","collectible":true,"elite":true,"race":"Beast","playerClass":"Druid","mechanics":["Deathrattle"]},{"id":"GVG_034","name":"Mech-Bear-Cat","type":"Minion","rarity":"Rare","cost":6,"attack":7,"health":6,"text":"Whenever this minion takes damage, add a <b>Spare Part</b> card to your hand.","flavor":"Crushes buildings with his BEAR hands.","artist":"Trent Kaniuga","collectible":true,"race":"Mech","playerClass":"Druid"},{"id":"GVG_078","name":"Mechanical Yeti","type":"Minion","rarity":"Common","cost":4,"attack":4,"health":5,"text":"<b>Deathrattle:</b> Give each player a <b>Spare Part.</b>","flavor":"The yetis of Chillwind Point are a source of both inspiration and savage beatings.","artist":"Chris Seaman","collectible":true,"race":"Mech","mechanics":["Deathrattle"]},{"id":"GVG_006","name":"Mechwarper","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":3,"text":"Your Mechs cost (1) less.","flavor":"Mechs that summon mechs? What's next? Donuts that summon donuts? Mmmmm.","artist":"Phil Saunders","collectible":true,"race":"Mech","mechanics":["Aura"]},{"id":"GVG_116","name":"Mekgineer Thermaplugg","type":"Minion","rarity":"Legendary","cost":9,"attack":9,"health":7,"text":"Whenever an enemy minion dies, summon a Leper Gnome.","flavor":"He was obsessed with explosives until he discovered knitting. Now he yells, “SWEATERS! MORE SWEATERS!”","artist":"Trent Kaniuga","collectible":true,"elite":true,"race":"Mech"},{"id":"GVG_067a","name":"Metabolized Magic","type":"Enchantment","text":"Increased Attack.","mechanics":["Aura"]},{"id":"GVG_068a","name":"Metabolized Magic","type":"Enchantment","text":"Increased Attack.","mechanics":["Aura"]},{"id":"GVG_048e","name":"Metal Teeth","type":"Enchantment","text":"+2 Attack.","playerClass":"Hunter"},{"id":"GVG_048","name":"Metaltooth Leaper","type":"Minion","rarity":"Rare","cost":3,"attack":3,"health":3,"text":"<b>Battlecry</b>: Give your other Mechs +2 Attack.","flavor":"Don't leave them out in the rain. In Un'Goro Crater there is a whole colony of rust-tooth leapers.","artist":"Hideaki Takamura","collectible":true,"race":"Mech","playerClass":"Hunter","mechanics":["Battlecry"]},{"id":"GVG_103","name":"Micro Machine","type":"Minion","rarity":"Common","cost":2,"attack":1,"health":2,"text":"At the start of each turn, gain +1 Attack.","flavor":"This card is the real thing.","artist":"Skan Srisuwan","collectible":true,"race":"Mech"},{"id":"GVG_102e","name":"Might of Tinkertown","type":"Enchantment","text":"+1/+1."},{"id":"GVG_049e","name":"Might of Zul'Farrak","type":"Enchantment","text":"Multiplying Attack.","playerClass":"Hunter"},{"id":"GVG_111","name":"Mimiron's Head","type":"Minion","rarity":"Legendary","cost":5,"attack":4,"health":5,"text":"At the start of your turn, if you have at least 3 Mechs, destroy them all and form V-07-TR-0N.","flavor":"Do not push the big red button!","artist":"Trent Kaniuga","collectible":true,"elite":true,"race":"Mech"},{"id":"GVG_109","name":"Mini-Mage","type":"Minion","rarity":"Epic","cost":4,"attack":4,"health":1,"text":"<b>Stealth</b>\n<b>Spell Damage +1</b>","flavor":"He is sometimes found hiding in the treasure chest in the Gurubashi Arena.","artist":"Ben Olson","collectible":true,"mechanics":["Spellpower","Stealth"]},{"id":"GVG_018","name":"Mistress of Pain","type":"Minion","rarity":"Rare","cost":2,"attack":1,"health":4,"text":"Whenever this minion deals damage, restore that much Health to your hero.","flavor":"Her sister is the Mistress of Pane who sells windows and shower doors.","artist":"Carl Critchlow","collectible":true,"race":"Demon","playerClass":"Warlock"},{"id":"GVG_112","name":"Mogor the Ogre","type":"Minion","rarity":"Legendary","cost":6,"attack":7,"health":6,"text":"All minions have a 50% chance to attack the wrong enemy.","flavor":"Mogor helped reopen the Dark Portal once. You know you're in trouble when you have to rely on an ogre.","artist":"Michal Ivan","collectible":true,"elite":true},{"id":"GVG_061","name":"Muster for Battle","type":"Spell","rarity":"Rare","cost":3,"text":"Summon three 1/1 Silver Hand Recruits. Equip a 1/4 Weapon.","flavor":"\"I'm bringing the guacamole!\" – One of the most successful (yet rare) Silver Hand rallying cries","artist":"Mike Hayes","collectible":true,"playerClass":"Paladin"},{"id":"GVG_042","name":"Neptulon","type":"Minion","rarity":"Legendary","cost":7,"attack":7,"health":7,"text":"<b>Battlecry:</b> Add 4 random Murlocs to your hand. <b>Overload: (3)</b>","flavor":"Neptulon is \"The Tidehunter\". He’s one of the four elemental lords. And he and Ragnaros get together and make really amazing saunas.","artist":"Ruan Jia","collectible":true,"elite":true,"playerClass":"Shaman","mechanics":["Battlecry"]},{"id":"GVG_065","name":"Ogre Brute","type":"Minion","rarity":"Common","cost":3,"attack":4,"health":4,"text":"50% chance to attack the wrong enemy.","flavor":"Ogres have really terrible short-term chocolate.","artist":"Vinod Rams","collectible":true},{"id":"GVG_088","name":"Ogre Ninja","type":"Minion","rarity":"Rare","cost":5,"attack":6,"health":6,"text":"<b>Stealth</b>\n50% chance to attack the wrong enemy.","flavor":"He didn't have the grades to get into ninja school, but his dad pulled some strings.","artist":"Samwise","collectible":true,"playerClass":"Rogue","mechanics":["Stealth"]},{"id":"GVG_054","name":"Ogre Warmaul","type":"Weapon","rarity":"Common","cost":3,"attack":4,"durability":2,"text":"50% chance to attack the wrong enemy.","flavor":"Simple, misguided, and incredibly dangerous. You know, like most things ogre.","artist":"Richard Wright","collectible":true,"playerClass":"Warrior"},{"id":"GVG_025","name":"One-eyed Cheat","type":"Minion","rarity":"Rare","cost":2,"attack":4,"health":1,"text":"Whenever you summon a Pirate, gain <b>Stealth</b>.","flavor":"When pirates say there is no \"Eye\" in \"team,\" they are very literal about it.","artist":"Danny Beck","collectible":true,"race":"Pirate","playerClass":"Rogue"},{"id":"GVG_123e","name":"Overclocked","type":"Enchantment","text":"Spell Damage +2.","playerClass":"Mage","mechanics":["Spellpower"]},{"id":"GVG_096","name":"Piloted Shredder","type":"Minion","rarity":"Common","cost":4,"attack":4,"health":3,"text":"<b>Deathrattle:</b> Summon a random 2-Cost minion.","flavor":"Once upon a time, only goblins piloted shredders. These days, everyone from Doomsayer to Lorewalker Cho seems to ride one.","artist":"Dan Scott","collectible":true,"race":"Mech","mechanics":["Deathrattle"]},{"id":"GVG_105","name":"Piloted Sky Golem","type":"Minion","rarity":"Epic","cost":6,"attack":6,"health":4,"text":"<b>Deathrattle:</b> Summon a random 4-Cost minion.","flavor":"The pinnacle of goblin engineering. Includes an espresso machine and foot massager.","artist":"Michael Phillippi","collectible":true,"race":"Mech","mechanics":["Deathrattle"]},{"id":"GVG_076a","name":"Pistons","type":"Enchantment","text":"Increased Attack."},{"id":"GVG_036e","name":"Powered","type":"Enchantment","text":"+2/+2.","playerClass":"Shaman"},{"id":"GVG_036","name":"Powermace","type":"Weapon","rarity":"Rare","cost":3,"attack":3,"durability":2,"text":"<b>Deathrattle</b>: Give a random friendly Mech +2/+2.","flavor":"People assume that shamans control the elements, but really, they have to ask them stuff and the elements are like, \"Yeah ok, sure.\"","artist":"Zoltan and Gabor","collectible":true,"playerClass":"Shaman","mechanics":["Deathrattle"]},{"id":"GVG_064","name":"Puddlestomper","type":"Minion","rarity":"Common","cost":2,"attack":3,"health":2,"flavor":"He pays homage to Morgl, the great murloc oracle! (Who doesn't??)","artist":"Jaemin Kim","collectible":true,"race":"Murloc"},{"id":"GVG_101e","name":"Pure","type":"Enchantment","text":"Increased Stats.","playerClass":"Paladin"},{"id":"GVG_060","name":"Quartermaster","type":"Minion","rarity":"Epic","cost":5,"attack":2,"health":5,"text":"<b>Battlecry:</b> Give your Silver Hand Recruits +2/+2.","flavor":"His specialty? Dividing things into four pieces.","artist":"Phroilan Gardner","collectible":true,"playerClass":"Paladin","mechanics":["Battlecry"]},{"id":"GVG_108","name":"Recombobulator","type":"Minion","rarity":"Epic","cost":2,"attack":3,"health":2,"text":"<b>Battlecry:</b> Transform a friendly minion into a random minion with the same Cost.","flavor":"For when you didn’t combobulate quite right the first time around.","artist":"Ben Olson","collectible":true,"mechanics":["Battlecry"]},{"id":"GVG_031","name":"Recycle","type":"Spell","rarity":"Rare","cost":6,"text":"Shuffle an enemy minion into your opponent's deck.","flavor":"Druidic recycling involves putting plastics in one bin and enemy minions in another bin.","artist":"Brandon Kitkouski","collectible":true,"playerClass":"Druid"},{"id":"GVG_069a","name":"Repairs!","type":"Enchantment","text":"+4 Health.","playerClass":"Priest"},{"id":"GVG_063a","name":"Retribution","type":"Enchantment","text":"Increased Attack"},{"id":"PART_006","name":"Reversing Switch","type":"Spell","cost":1,"text":"Swap a minion's Attack and Health.","artist":"Nutthapon Petthai"},{"id":"PART_003","name":"Rusty Horn","type":"Spell","cost":1,"text":"Give a minion <b>Taunt</b>.","artist":"Peerasak Senalai"},{"id":"GVG_047","name":"Sabotage","type":"Spell","rarity":"Epic","cost":4,"text":"Destroy a random enemy minion. <b>Combo</b>: And your opponent's weapon.","flavor":"Rogues can't stand it. They know you planned it! They are going to set you straight!","artist":"Dave Allsop","collectible":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"GVG_070","name":"Salty Dog","type":"Minion","rarity":"Common","cost":5,"attack":7,"health":4,"flavor":"He's recently recovered from being a \"scurvy dog.\"","artist":"Alex Horley Orlandelli","collectible":true,"race":"Pirate"},{"id":"GVG_101","name":"Scarlet Purifier","type":"Minion","rarity":"Rare","cost":3,"attack":4,"health":3,"text":"<b>Battlecry</b>: Deal 2 damage to all minions with <b>Deathrattle</b>.","flavor":"The Scarlet Crusade is doing market research to find out if the \"Mauve Crusade\" would be better received.","artist":"Anton Zemskov","collectible":true,"playerClass":"Paladin","mechanics":["Battlecry"]},{"id":"GVG_055","name":"Screwjank Clunker","type":"Minion","rarity":"Rare","cost":4,"attack":2,"health":5,"text":"<b>Battlecry</b>: Give a friendly Mech +2/+2.","flavor":"If it breaks, just kick it a couple of times while yelling \"Durn thing!\"","artist":"Jesper Esjing","collectible":true,"race":"Mech","playerClass":"Warrior","mechanics":["Battlecry"]},{"id":"GVG_055e","name":"Screwy Jank","type":"Enchantment","text":"+2/+2.","playerClass":"Warrior"},{"id":"GVG_057","name":"Seal of Light","type":"Spell","rarity":"Common","cost":2,"text":"Restore #4 Health to your hero and gain +2 Attack this turn.","flavor":"The walrus of Light restores EIGHT Health.","artist":"Jason Chan","collectible":true,"playerClass":"Paladin","mechanics":["ImmuneToSpellpower"]},{"id":"GVG_057a","name":"Seal of Light","type":"Enchantment","text":"+2 Attack this turn.","mechanics":["OneTurnEffect"]},{"id":"GVG_009","name":"Shadowbomber","type":"Minion","rarity":"Epic","cost":1,"attack":2,"health":1,"text":"<b>Battlecry:</b> Deal 3 damage to each hero.","flavor":"Shadowbomber does her job, but she's kind of phoning it in at this point.","artist":"Matt Dixon","collectible":true,"playerClass":"Priest","mechanics":["Battlecry"]},{"id":"GVG_072","name":"Shadowboxer","type":"Minion","rarity":"Rare","cost":2,"attack":2,"health":3,"text":"Whenever a character is healed, deal 1 damage to a random enemy.","flavor":"Punching is its primary function. Also, its secondary function.","artist":"Dan Scott","collectible":true,"race":"Mech","playerClass":"Priest"},{"id":"GVG_014a","name":"Shadowed","type":"Enchantment","text":"Health was swapped.","playerClass":"Priest"},{"id":"GVG_058","name":"Shielded Minibot","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":2,"text":"<b>Divine Shield</b>","flavor":"He chooses to believe what he is programmed to believe!","artist":"Raymond Swanland","collectible":true,"race":"Mech","playerClass":"Paladin","mechanics":["Divine Shield"]},{"id":"GVG_053","name":"Shieldmaiden","type":"Minion","rarity":"Rare","cost":6,"attack":5,"health":5,"text":"<b>Battlecry:</b> Gain 5 Armor.","flavor":"She has three shieldbearers in her party to supply her with back ups when she gets low on durability.","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Warrior","mechanics":["Battlecry"]},{"id":"GVG_075","name":"Ship's Cannon","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":3,"text":"Whenever you summon a Pirate, deal 2 damage to a random enemy.","flavor":"If you hear someone yell, \"Cannonball!\" you're about to get wet. Or crushed.","artist":"Warren Mahy","collectible":true},{"id":"GVG_011a","name":"Shrink Ray","type":"Enchantment","text":"-2 Attack this turn.","mechanics":["OneTurnEffect"]},{"id":"GVG_011","name":"Shrinkmeister","type":"Minion","rarity":"Common","cost":2,"attack":3,"health":2,"text":"<b>Battlecry:</b> Give a minion -2 Attack this turn.","flavor":"After the debacle of the Gnomish World Enlarger, gnomes are wary of size-changing inventions.","artist":"Jim Nelson","collectible":true,"playerClass":"Priest","mechanics":["Battlecry"]},{"id":"GVG_086","name":"Siege Engine","type":"Minion","rarity":"Rare","cost":5,"attack":5,"health":5,"text":"Whenever you gain Armor, give this minion +1 Attack.","flavor":"Wintergrasp Keep's only weakness!","artist":"Zero Yue","collectible":true,"race":"Mech","playerClass":"Warrior"},{"id":"GVG_040","name":"Siltfin Spiritwalker","type":"Minion","rarity":"Epic","cost":4,"attack":2,"health":5,"text":"Whenever another friendly Murloc dies, draw a card. <b>Overload</b>: (1)","flavor":"The elements respond to anyone who calls them for a worthy cause, even if you call them by yelling, \"MRGHRGLGLGL!\"","artist":"Clint Langley","collectible":true,"race":"Murloc","playerClass":"Shaman"},{"id":"GVG_114","name":"Sneed's Old Shredder","type":"Minion","rarity":"Legendary","cost":8,"attack":5,"health":7,"text":"<b>Deathrattle:</b> Summon a random legendary minion.","flavor":"When Sneed was defeated in the Deadmines, his shredder was sold at auction to an anonymous buyer. (Probably Hogger.)","artist":"Christopher Moeller","collectible":true,"elite":true,"race":"Mech","mechanics":["Deathrattle"]},{"id":"GVG_002","name":"Snowchugger","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":3,"text":"<b>Freeze</b> any character damaged by this minion.","flavor":"Do the slow chant when he waddles by: \"Chug! Chug! Chug!\"","artist":"Gabor Szikszai","collectible":true,"race":"Mech","playerClass":"Mage","mechanics":["Freeze"]},{"id":"GVG_123","name":"Soot Spewer","type":"Minion","rarity":"Rare","cost":3,"attack":3,"health":3,"text":"<b>Spell Damage +1</b>","flavor":"The inventor of the goblin shredder is involved in several patent disputes with the inventor of the soot spewer.","artist":"Phil Saunders","collectible":true,"race":"Mech","playerClass":"Mage","mechanics":["Spellpower"]},{"id":"GVG_044","name":"Spider Tank","type":"Minion","rarity":"Common","cost":3,"attack":3,"health":4,"flavor":"\"What if we put guns on it?\" -Fizzblitz, staring at the spider-transportation-machine","artist":"Dany Orizio","collectible":true,"race":"Mech"},{"id":"GVG_087","name":"Steamwheedle Sniper","type":"Minion","rarity":"Epic","cost":2,"attack":2,"health":3,"text":"Your Hero Power can target minions.","flavor":"Goblins seldom have the patience for sniping. Most prefer lobbing explosives.","artist":"Jun Kang","collectible":true,"playerClass":"Hunter"},{"id":"GVG_067","name":"Stonesplinter Trogg","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":3,"text":"Whenever your opponent casts a spell, gain +1 Attack.","flavor":"The only thing worse than smelling troggs is listening to their poetry.","artist":"Peet Cooper","collectible":true},{"id":"PART_006a","name":"Switched","type":"Enchantment","text":"Attack and Health have been swapped by Reversing Switch."},{"id":"GVG_030be","name":"Tank Mode","type":"Enchantment","text":"+1 Health.","playerClass":"Druid"},{"id":"GVG_030b","name":"Tank Mode","type":"Spell","text":"+1 Health.","playerClass":"Druid"},{"id":"GVG_093","name":"Target Dummy","type":"Minion","rarity":"Rare","cost":0,"attack":0,"health":2,"text":"<b>Taunt</b>","flavor":"The engineering equivalent of a \"Kick Me\" sticker.","artist":"Matt Dixon","collectible":true,"race":"Mech","mechanics":["Taunt"]},{"id":"GVG_046e","name":"The King","type":"Enchantment","text":"Increased Attack.","playerClass":"Hunter"},{"id":"PART_002","name":"Time Rewinder","type":"Spell","cost":1,"text":"Return a friendly minion to your hand.","artist":"Nutthapon Petthai"},{"id":"GVG_022","name":"Tinker's Sharpsword Oil","type":"Spell","rarity":"Common","cost":4,"text":"Give your weapon +3 Attack. <b>Combo:</b> Give a random friendly minion +3 Attack.","flavor":"\"Get ready to strike oil!\" - Super-cheesy battle cry","artist":"Den","collectible":true,"playerClass":"Rogue","mechanics":["Combo"]},{"id":"GVG_022a","name":"Tinker's Sharpsword Oil","type":"Enchantment","text":"+3 Attack."},{"id":"GVG_022b","name":"Tinker's Sharpsword Oil","type":"Enchantment","text":"+3 Attack."},{"id":"GVG_102","name":"Tinkertown Technician","type":"Minion","rarity":"Common","cost":3,"attack":3,"health":3,"text":"<b>Battlecry:</b> If you have a Mech, gain +1/+1 and add a <b>Spare Part</b> to your hand.","flavor":"Won't you take me to... Tinkertown?","artist":"Gabor Szikszai","collectible":true,"mechanics":["Battlecry"]},{"id":"GVG_115","name":"Toshley","type":"Minion","rarity":"Legendary","cost":6,"attack":5,"health":7,"text":"<b>Battlecry and Deathrattle:</b> Add a <b>Spare Part</b> card to your hand.","flavor":"Something about power converters.","artist":"Zoltan & Gabor","collectible":true,"elite":true,"mechanics":["Battlecry","Deathrattle"]},{"id":"GVG_028","name":"Trade Prince Gallywix","type":"Minion","rarity":"Legendary","cost":6,"attack":5,"health":8,"text":"Whenever your opponent casts a spell, gain a copy of it and give them a Coin.","flavor":"Gallywix believes in supply and demand. He supplies the beatings and demands you pay up!","artist":"Wei Wang","collectible":true,"elite":true,"playerClass":"Rogue"},{"id":"GVG_033","name":"Tree of Life","type":"Spell","rarity":"Epic","cost":9,"text":"Restore all characters to full Health.","flavor":"Healing: It grows on trees!","artist":"Steve Prescott","collectible":true,"playerClass":"Druid"},{"id":"GVG_118","name":"Troggzor the Earthinator","type":"Minion","rarity":"Legendary","cost":7,"attack":6,"health":6,"text":"Whenever your opponent casts a spell, summon a Burly Rockjaw Trogg.","flavor":"He keeps earthinating the countryside despite attempts to stop him.","artist":"Mike Sass","collectible":true,"elite":true},{"id":"GVG_003","name":"Unstable Portal","type":"Spell","rarity":"Rare","cost":2,"text":"Add a random minion to your hand. It costs (3) less.","flavor":"The denizens of Azeroth have no idea how much work goes into stabilizing portals.  We spend like 30% of GDP on portal upkeep.","artist":"Sean O'Daniels","collectible":true,"playerClass":"Mage"},{"id":"GVG_083","name":"Upgraded Repair Bot","type":"Minion","rarity":"Rare","cost":5,"attack":5,"health":5,"text":"<b>Battlecry:</b> Give a friendly Mech +4 Health.","flavor":"It's the same as the previous generation but they slapped the word \"upgraded\" on it to sell it for double.","artist":"Nutchapol Thitinunthakorn","collectible":true,"race":"Mech","playerClass":"Priest","mechanics":["Battlecry"]},{"id":"GVG_111t","name":"V-07-TR-0N","type":"Minion","rarity":"Legendary","cost":8,"attack":4,"health":8,"text":"<b>Charge</b>\n<b>Mega-Windfury</b> <i>(Can attack four times a turn.)</i>","artist":"Chris Seaman","elite":true,"race":"Mech","mechanics":["Charge"]},{"id":"GVG_010b","name":"Velen's Chosen","type":"Enchantment","text":"+2/+4 and <b>Spell Damage +1</b>."},{"id":"GVG_010","name":"Velen's Chosen","type":"Spell","rarity":"Common","cost":3,"text":"Give a minion +2/+4 and <b>Spell Damage +1</b>.","flavor":"Velen wrote a \"Lovely Card\" for Tyrande with a picture of the Deeprun Tram that said \"I Choo-Choo-Choose you!\"","artist":"Alex Horley Orlandelli","collectible":true,"playerClass":"Priest"},{"id":"GVG_039","name":"Vitality Totem","type":"Minion","rarity":"Rare","cost":2,"attack":0,"health":3,"text":"At the end of your turn, restore 4 Health to your hero.","flavor":"You can usually find these at the totemist's market on Saturdays.","artist":"Guangjian Huang","collectible":true,"race":"Totem","playerClass":"Shaman"},{"id":"GVG_014","name":"Vol'jin","type":"Minion","rarity":"Legendary","cost":5,"attack":6,"health":2,"text":"<b>Battlecry:</b> Swap Health with another minion.","flavor":"Vol'jin is a shadow hunter, which is like a shadow priest except more voodoo.","artist":"Raymond Swanland","collectible":true,"elite":true,"playerClass":"Priest","mechanics":["Battlecry"]},{"id":"GVG_051","name":"Warbot","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":3,"text":"<b>Enrage:</b> +1 Attack.","flavor":"Mass production of warbots was halted when it was discovered that they were accidentally being produced at \"sample size.\"","artist":"Tyler Walpole","collectible":true,"race":"Mech","playerClass":"Warrior","mechanics":["Enrage"]},{"id":"GVG_122","name":"Wee Spellstopper","type":"Minion","rarity":"Epic","cost":4,"attack":2,"health":5,"text":"Adjacent minions can't be targeted by spells or Hero Powers.","flavor":"Bane of spellcasters and spelling bees everywhere.","artist":"Jonboy Meyers","collectible":true,"playerClass":"Mage","mechanics":["Aura"]},{"id":"GVG_060e","name":"Well Equipped","type":"Enchantment","text":"+2/+2.","playerClass":"Paladin"},{"id":"PART_007e","name":"Whirling Blades","type":"Enchantment","text":"+1 Attack."},{"id":"PART_007","name":"Whirling Blades","type":"Spell","cost":1,"text":"Give a minion +1 Attack.","artist":"Nutchapol Thitinunthakorn"},{"id":"GVG_037","name":"Whirling Zap-o-matic","type":"Minion","rarity":"Common","cost":2,"attack":3,"health":2,"text":"<b>Windfury</b>","flavor":"If you pay a little extra, you can get it in \"candy-apple red.\"","artist":"Jim Nelson","collectible":true,"race":"Mech","playerClass":"Shaman","mechanics":["Windfury"]}],"Missions":[{"id":"TU4c_006e","name":"Bananas","type":"Enchantment","text":"This minion has +1/+1. <i>(+1 Attack/+1 Health)</i>"},{"id":"TU4c_006","name":"Bananas","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Give a friendly minion +1/+1. <i>(+1 Attack/+1 Health)</i>"},{"id":"TU4c_003","name":"Barrel","type":"Minion","faction":"Neutral","rarity":"Common","cost":0,"health":2,"text":"Is something in this barrel?","inPlayText":"Breakable","mechanics":["Deathrattle"]},{"id":"TU4c_002","name":"Barrel Toss","type":"Spell","faction":"Neutral","rarity":"Common","cost":1,"text":"Deal 2 damage."},{"id":"TU4f_005","name":"Brewmaster","type":"Minion","rarity":"Common","cost":4,"attack":4,"health":4},{"id":"TU4d_002","name":"Crazed Hunter","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":1},{"id":"TU4f_007","name":"Crazy Monkey","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":2,"text":"<b>Battlecry:</b> Throw Bananas.","mechanics":["Battlecry"]},{"id":"TU4e_007","name":"Dual Warglaives","type":"Weapon","rarity":"Common","cost":6,"attack":4,"durability":2},{"id":"TU4e_005","name":"Flame Burst","type":"Spell","rarity":"Common","cost":3,"text":"Shoot 5 missiles at random enemies for $1 damage each."},{"id":"TU4e_002t","name":"Flame of Azzinoth","type":"Minion","rarity":"Common","cost":1,"attack":2,"health":1},{"id":"TU4e_002","name":"Flames of Azzinoth","type":"Hero Power","cost":2,"text":"<b>Hero Power</b>\nSummon two 2/1 minions."},{"id":"TU4a_003","name":"Gnoll","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":1},{"id":"TU4d_001","name":"Hemet Nesingwary","type":"Hero","rarity":"Common","health":20,"playerClass":"Hunter"},{"id":"TU4c_005","name":"Hidden Gnome","type":"Minion","faction":"Neutral","rarity":"Common","cost":2,"attack":1,"health":3,"text":"Was hiding in a barrel!"},{"id":"TU4a_001","name":"Hogger","type":"Hero","rarity":"Common","health":10},{"id":"TU4a_004","name":"Hogger SMASH!","type":"Spell","rarity":"Common","cost":3,"text":"Deal 4 damage."},{"id":"TU4e_001","name":"Illidan Stormrage","type":"Hero","health":30,"playerClass":"Hunter"},{"id":"TU4a_006","name":"Jaina Proudmoore","type":"Hero","rarity":"Common","health":27,"playerClass":"Mage"},{"id":"TU4c_001","name":"King Mukla","type":"Hero","rarity":"Common","health":26},{"id":"TU4f_004o","name":"Legacy of the Emperor","type":"Enchantment","text":"Has +2/+2. <i>(+2 Attack/+2 Health)</i>"},{"id":"TU4f_004","name":"Legacy of the Emperor","type":"Spell","rarity":"Common","cost":3,"text":"Give your minions +2/+2. <i>(+2 Attack/+2 Health)</i>"},{"id":"TU4f_001","name":"Lorewalker Cho","type":"Hero","health":25},{"id":"TU4a_005","name":"Massive Gnoll","type":"Minion","rarity":"Common","cost":4,"attack":5,"health":2},{"id":"TU4c_008e","name":"Might of Mukla","type":"Enchantment","text":"King Mukla has +8 Attack this turn.","mechanics":["OneTurnEffect"]},{"id":"TU4b_001","name":"Millhouse Manastorm","type":"Hero","rarity":"Common","health":20,"playerClass":"Mage"},{"id":"TU4c_007","name":"Mukla's Big Brother","type":"Minion","rarity":"Common","cost":6,"attack":10,"health":10,"text":"So strong! And only 6 Mana?!"},{"id":"TU4e_003","name":"Naga Myrmidon","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":1,"text":"<b></b>"},{"id":"TU4f_002","name":"Pandaren Scout","type":"Minion","rarity":"Common","cost":1,"attack":1,"health":1},{"id":"TU4a_002","name":"Riverpaw Gnoll","type":"Minion","rarity":"Common","cost":1,"attack":2,"health":1},{"id":"TU4f_003","name":"Shado-Pan Monk","type":"Minion","rarity":"Common","cost":2,"attack":2,"health":2},{"id":"TU4d_003","name":"Shotgun Blast","type":"Hero Power","rarity":"Common","cost":2,"text":"<b>Hero Power</b>\nDeal 1 damage.","playerClass":"Hunter"},{"id":"TU4c_004","name":"Stomp","type":"Spell","faction":"Neutral","rarity":"Common","cost":2,"text":"Deal 2 damage to all enemies."},{"id":"TU4f_006","name":"Transcendence","type":"Spell","rarity":"Common","cost":1,"text":"Until you kill Cho's minions, he can't be attacked."},{"id":"TU4f_006o","name":"Transcendence","type":"Enchantment","text":"Until you kill Cho's minions, he can't be attacked."},{"id":"TU4e_004","name":"Warglaive of Azzinoth","type":"Weapon","rarity":"Common","cost":2,"attack":2,"durability":2},{"id":"TU4c_008","name":"Will of Mukla","type":"Spell","rarity":"Common","cost":3,"text":"Restore 8 Health."}],"Promotion":[{"id":"Mekka4t","name":"Chicken","type":"Minion","cost":0,"attack":1,"health":1,"text":"<i>Hey Chicken!</i>","race":"Beast"},{"id":"PRO_001","name":"Elite Tauren Chieftain","type":"Minion","rarity":"Legendary","cost":5,"attack":5,"health":5,"text":"<b>Battlecry:</b> Give both players the power to ROCK! (with a Power Chord card)","flavor":"He's looking for a drummer.  The current candidates are: Novice Engineer, Sen'jin Shieldmasta', and Ragnaros the Firelord.","artist":"Samwise Didier","collectible":true,"elite":true,"howToGetGold":"Awarded at BlizzCon 2013.","mechanics":["Battlecry"]},{"id":"Mekka3e","name":"Emboldened!","type":"Enchantment","text":"Increased Stats."},{"id":"Mekka3","name":"Emboldener 3000","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":0,"health":4,"text":"At the end of your turn, give a random minion +1/+1.","inPlayText":"Emboldening","race":"Mech"},{"id":"EX1_112","name":"Gelbin Mekkatorque","type":"Minion","faction":"Alliance","rarity":"Legendary","cost":6,"attack":6,"health":6,"text":"<b>Battlecry:</b> Summon an AWESOME invention.","flavor":"He's the leader of the gnomes, and an incredible inventor.  He's getting better, too; He turns things into chickens WAY less than he used to.","artist":"Ludo Lullabi","collectible":true,"elite":true,"howToGetGold":"This was rewarded to players who helped test the Store during the Beta.","mechanics":["Battlecry"]},{"id":"Mekka1","name":"Homing Chicken","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":0,"health":1,"text":"At the start of your turn, destroy this minion and draw 3 cards.","inPlayText":"Pecking","race":"Mech"},{"id":"PRO_001a","name":"I Am Murloc","type":"Spell","cost":4,"text":"Summon three, four, or five 1/1 Murlocs."},{"id":"PRO_001at","name":"Murloc","type":"Minion","cost":1,"attack":1,"health":1,"race":"Murloc"},{"id":"Mekka4","name":"Poultryizer","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":0,"health":3,"text":"At the start of your turn, transform a random minion into a 1/1 Chicken.","inPlayText":"Poultryizing","race":"Mech"},{"id":"PRO_001c","name":"Power of the Horde","type":"Spell","cost":4,"text":"Summon a random Horde Warrior."},{"id":"Mekka2","name":"Repair Bot","type":"Minion","faction":"Alliance","rarity":"Common","cost":1,"attack":0,"health":3,"text":"At the end of your turn, restore 6 Health to a damaged character.","inPlayText":"Repairin'","race":"Mech"},{"id":"PRO_001b","name":"Rogues Do It...","type":"Spell","cost":4,"text":"Deal $4 damage. Draw a card."},{"id":"Mekka4e","name":"Transformed","type":"Enchantment","text":"Has been transformed into a chicken!","mechanics":["Morph"]}],"Reward":[{"id":"NEW1_016","name":"Captain's Parrot","type":"Minion","rarity":"Epic","cost":2,"attack":1,"health":1,"text":"<b>Battlecry:</b> Put a random Pirate from your deck into your hand.","flavor":"Pirates and Parrots go together like Virmen and Carrots.","artist":"Daren Bader","collectible":true,"race":"Beast","howToGet":"Unlocked when you have all the Pirates from the Expert Set.","howToGetGold":"Unlocked when you have all the Golden Pirates from the Expert Set.","mechanics":["Battlecry"]},{"id":"EX1_062","name":"Old Murk-Eye","type":"Minion","faction":"Neutral","rarity":"Legendary","cost":4,"attack":2,"health":4,"text":"<b>Charge</b>. Has +1 Attack for each other Murloc on the battlefield.","inPlayText":"Marglahg","flavor":"He's a legend among murlocs.  \"Mrghllghghllghg!\", they say.","artist":"Dan Scott","collectible":true,"elite":true,"race":"Murloc","howToGet":"Unlocked when you have all the Murlocs from the Expert Set.","howToGetGold":"Unlocked when you have all the Golden Murlocs from the Expert and Basic Sets.","mechanics":["Charge"]}],"System":[{"id":"PlaceholderCard","name":"Placeholder Card","type":"Minion","faction":"Neutral","rarity":"Epic","cost":9,"attack":6,"health":8,"text":"Battlecry: Someone remembers to publish this card.","playerClass":"Mage"}]};
 
@@ -75,48 +75,127 @@ var CardStore = {
 
 module.exports = CardStore;
 },{}],6:[function(require,module,exports){
+var keyMirror = require('keymirror');
+
+var ZONES = keyMirror({
+    DECK: null,
+    HAND: null,
+    PLAY: null,
+    GRAVEYARD: null,
+    SETASIDE: null
+});
+
 
     function Entity(id, card) {"use strict";
+        this
         this.id = id;
         this.card = card;
         this.damaged = 0;
         this.attachments = [];
+        this.zone = ZONES.SETASIDE;
     }
 
     Entity.prototype.name=function() {"use strict";
         return this.card.name;
     };
 
+    Entity.prototype.isHidden=function() {"use strict";
+        return this.card == null;
+    };
+
 
 module.exports = Entity;
-},{}],7:[function(require,module,exports){
+},{"keymirror":14}],7:[function(require,module,exports){
 var Entity = require('./Entity');
 var Player = require('./Player');
 var CardStore = require('./CardStore');
+var GameEventHandlers = require("./GameEventHandlers");
+var _ = require('lodash');
 
 
     function Game(replay) {"use strict";
+        var game = this;
         this.currentTurnIndex = 0;
         this.replay = replay;
-        this.players = replay.players.map(function(player){
+        this.entities = {};
+        this.players = {}
+        replay.players.map(function(player){
             var hero = new Entity(player.hero.id, CardStore.getCardWithId(player.hero.card_id));
             var power = new Entity(player.hero_power.id, CardStore.getCardWithId(player.hero_power.card_id));
-            return new Player(player.id, player.name, player.first_player, hero, power);
+            game.entities[hero.id] = hero;
+            game.entities[power.id] = power;
+            game.players[player.id] = new Player(player.id, player.name, player.first_player, hero, power);
         });
         this.nextTurn();
     }
 
     Game.prototype.nextTurn=function() {"use strict";
         var turn = this.replay.turns[this.currentTurnIndex];
+        var game = this;
+
+        if (!turn) {
+            return false;
+        }
+
         turn.events.forEach(function(event){
-            console.log(event);
+            var name = event[0];
+            var data = event[1];
+            var handler = GameEventHandlers[name];
+            if (handler) {
+                handler(game, data);
+            } else {
+                console.warn("unhandled event: ", name);
+            }
         });
         this.currentTurnIndex = this.currentTurnIndex + 1;
+        return turn;
+    };
+
+    Game.prototype.getEntityWithId=function(id) {"use strict";
+        return this.entities[id];
+    };
+
+    Game.prototype.getPlayerWithId=function(id) {"use strict";
+        return this.players[id];
     };
 ;
 
 module.exports = Game;
-},{"./CardStore":5,"./Entity":6,"./Player":9}],8:[function(require,module,exports){
+},{"./CardStore":5,"./Entity":6,"./GameEventHandlers":8,"./Player":10,"lodash":15}],8:[function(require,module,exports){
+var Entity = require('./Entity');
+var Player = require('./Player');
+var CardStore = require('./CardStore');
+
+var GameEventHandlers = {
+    open_card:function(game, options) {
+        var id = options.id;
+        var cardId = options.card_id;
+        var entity = new Entity(id, CardStore.getCardWithId(cardId));
+        game.entities[id] = entity;
+    },
+
+    card_revealed:function(game, options) {
+        var id = options.id;
+        var cardId = options.card_id;
+        var entity = game.getEntityWithId(id);
+        if (entity) {
+            entity.card = CardStore.getCardWithId(cardId);
+        } else {
+            entity = new Entity(id, CardStore.getCardWithId(cardId));
+        }
+        game.entities[id] = entity;
+    },
+
+    card_added_to_deck:function(game, options) {
+        var id = options.id;
+        var cardId = options.card_id;
+        var playerId = options.player_id;
+        var entity = game.getEntityWithId(id);
+    }
+};
+
+module.exports = GameEventHandlers;
+},{"./CardStore":5,"./Entity":6,"./Player":10}],9:[function(require,module,exports){
 var fs = require('fs');
 var path = require('path');
 var EventEmitter = require('events').EventEmitter;
@@ -171,7 +250,7 @@ AppDispatcher.register(function(payload) {
 });
 
 module.exports = GameStore;
-},{"../dispatcher/AppDispatcher":4,"./Game":7,"events":undefined,"fs":undefined,"object-assign":13,"path":undefined}],9:[function(require,module,exports){
+},{"../dispatcher/AppDispatcher":4,"./Game":7,"events":undefined,"fs":undefined,"object-assign":16,"path":undefined}],10:[function(require,module,exports){
 var _heroClass = {
     "HERO_01": "Warrior",
     "HERO_02": "Shaman",
@@ -191,23 +270,16 @@ var _heroClass = {
         this.firstPlayer = firstPlayer;
         this.hero = hero;
         this.power = power;
-
-        this.deck = [];
-        this.hand = [];
-        this.play = [];
-        this.deck = [];
-        this.setaside = [];
     }
 
     Player.prototype.heroClass=function() {"use strict";
         var cardId = this.hero.card.id;
-        console.log("this.hero: ", this.hero)
         return _heroClass[cardId];
     };
 
 
 module.exports = Player;
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 /**
  * Copyright (c) 2014, Facebook, Inc.
  * All rights reserved.
@@ -219,7 +291,7 @@ module.exports = Player;
 
 module.exports.Dispatcher = require('./lib/Dispatcher')
 
-},{"./lib/Dispatcher":11}],11:[function(require,module,exports){
+},{"./lib/Dispatcher":12}],12:[function(require,module,exports){
 /*
  * Copyright (c) 2014, Facebook, Inc.
  * All rights reserved.
@@ -471,7 +543,7 @@ var _prefix = 'ID_';
 
 module.exports = Dispatcher;
 
-},{"./invariant":12}],12:[function(require,module,exports){
+},{"./invariant":13}],13:[function(require,module,exports){
 /**
  * Copyright (c) 2014, Facebook, Inc.
  * All rights reserved.
@@ -526,7 +598,6849 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
+/**
+ * Copyright 2013-2014 Facebook, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
+
+"use strict";
+
+/**
+ * Constructs an enumeration with keys equal to their value.
+ *
+ * For example:
+ *
+ *   var COLORS = keyMirror({blue: null, red: null});
+ *   var myColor = COLORS.blue;
+ *   var isColorValid = !!COLORS[myColor];
+ *
+ * The last line could not be performed if the values of the generated enum were
+ * not equal to their keys.
+ *
+ *   Input:  {key1: val1, key2: val2}
+ *   Output: {key1: key1, key2: key2}
+ *
+ * @param {object} obj
+ * @return {object}
+ */
+var keyMirror = function(obj) {
+  var ret = {};
+  var key;
+  if (!(obj instanceof Object && !Array.isArray(obj))) {
+    throw new Error('keyMirror(...): Argument must be an object.');
+  }
+  for (key in obj) {
+    if (!obj.hasOwnProperty(key)) {
+      continue;
+    }
+    ret[key] = key;
+  }
+  return ret;
+};
+
+module.exports = keyMirror;
+
+},{}],15:[function(require,module,exports){
+/**
+ * @license
+ * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
+ * Build: `lodash modern -o ./dist/lodash.js`
+ * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
+ * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
+ * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ * Available under MIT license <http://lodash.com/license>
+ */
+;(function() {
+
+  /** Used as a safe reference for `undefined` in pre ES5 environments */
+  var undefined;
+
+  /** Used to pool arrays and objects used internally */
+  var arrayPool = [],
+      objectPool = [];
+
+  /** Used to generate unique IDs */
+  var idCounter = 0;
+
+  /** Used to prefix keys to avoid issues with `__proto__` and properties on `Object.prototype` */
+  var keyPrefix = +new Date + '';
+
+  /** Used as the size when optimizations are enabled for large arrays */
+  var largeArraySize = 75;
+
+  /** Used as the max size of the `arrayPool` and `objectPool` */
+  var maxPoolSize = 40;
+
+  /** Used to detect and test whitespace */
+  var whitespace = (
+    // whitespace
+    ' \t\x0B\f\xA0\ufeff' +
+
+    // line terminators
+    '\n\r\u2028\u2029' +
+
+    // unicode category "Zs" space separators
+    '\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000'
+  );
+
+  /** Used to match empty string literals in compiled template source */
+  var reEmptyStringLeading = /\b__p \+= '';/g,
+      reEmptyStringMiddle = /\b(__p \+=) '' \+/g,
+      reEmptyStringTrailing = /(__e\(.*?\)|\b__t\)) \+\n'';/g;
+
+  /**
+   * Used to match ES6 template delimiters
+   * http://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals
+   */
+  var reEsTemplate = /\$\{([^\\}]*(?:\\.[^\\}]*)*)\}/g;
+
+  /** Used to match regexp flags from their coerced string values */
+  var reFlags = /\w*$/;
+
+  /** Used to detected named functions */
+  var reFuncName = /^\s*function[ \n\r\t]+\w/;
+
+  /** Used to match "interpolate" template delimiters */
+  var reInterpolate = /<%=([\s\S]+?)%>/g;
+
+  /** Used to match leading whitespace and zeros to be removed */
+  var reLeadingSpacesAndZeros = RegExp('^[' + whitespace + ']*0+(?=.$)');
+
+  /** Used to ensure capturing order of template delimiters */
+  var reNoMatch = /($^)/;
+
+  /** Used to detect functions containing a `this` reference */
+  var reThis = /\bthis\b/;
+
+  /** Used to match unescaped characters in compiled string literals */
+  var reUnescapedString = /['\n\r\t\u2028\u2029\\]/g;
+
+  /** Used to assign default `context` object properties */
+  var contextProps = [
+    'Array', 'Boolean', 'Date', 'Function', 'Math', 'Number', 'Object',
+    'RegExp', 'String', '_', 'attachEvent', 'clearTimeout', 'isFinite', 'isNaN',
+    'parseInt', 'setTimeout'
+  ];
+
+  /** Used to make template sourceURLs easier to identify */
+  var templateCounter = 0;
+
+  /** `Object#toString` result shortcuts */
+  var argsClass = '[object Arguments]',
+      arrayClass = '[object Array]',
+      boolClass = '[object Boolean]',
+      dateClass = '[object Date]',
+      funcClass = '[object Function]',
+      numberClass = '[object Number]',
+      objectClass = '[object Object]',
+      regexpClass = '[object RegExp]',
+      stringClass = '[object String]';
+
+  /** Used to identify object classifications that `_.clone` supports */
+  var cloneableClasses = {};
+  cloneableClasses[funcClass] = false;
+  cloneableClasses[argsClass] = cloneableClasses[arrayClass] =
+  cloneableClasses[boolClass] = cloneableClasses[dateClass] =
+  cloneableClasses[numberClass] = cloneableClasses[objectClass] =
+  cloneableClasses[regexpClass] = cloneableClasses[stringClass] = true;
+
+  /** Used as an internal `_.debounce` options object */
+  var debounceOptions = {
+    'leading': false,
+    'maxWait': 0,
+    'trailing': false
+  };
+
+  /** Used as the property descriptor for `__bindData__` */
+  var descriptor = {
+    'configurable': false,
+    'enumerable': false,
+    'value': null,
+    'writable': false
+  };
+
+  /** Used to determine if values are of the language type Object */
+  var objectTypes = {
+    'boolean': false,
+    'function': true,
+    'object': true,
+    'number': false,
+    'string': false,
+    'undefined': false
+  };
+
+  /** Used to escape characters for inclusion in compiled string literals */
+  var stringEscapes = {
+    '\\': '\\',
+    "'": "'",
+    '\n': 'n',
+    '\r': 'r',
+    '\t': 't',
+    '\u2028': 'u2028',
+    '\u2029': 'u2029'
+  };
+
+  /** Used as a reference to the global object */
+  var root = (objectTypes[typeof window] && window) || this;
+
+  /** Detect free variable `exports` */
+  var freeExports = objectTypes[typeof exports] && exports && !exports.nodeType && exports;
+
+  /** Detect free variable `module` */
+  var freeModule = objectTypes[typeof module] && module && !module.nodeType && module;
+
+  /** Detect the popular CommonJS extension `module.exports` */
+  var moduleExports = freeModule && freeModule.exports === freeExports && freeExports;
+
+  /** Detect free variable `global` from Node.js or Browserified code and use it as `root` */
+  var freeGlobal = objectTypes[typeof global] && global;
+  if (freeGlobal && (freeGlobal.global === freeGlobal || freeGlobal.window === freeGlobal)) {
+    root = freeGlobal;
+  }
+
+  /*--------------------------------------------------------------------------*/
+
+  /**
+   * The base implementation of `_.indexOf` without support for binary searches
+   * or `fromIndex` constraints.
+   *
+   * @private
+   * @param {Array} array The array to search.
+   * @param {*} value The value to search for.
+   * @param {number} [fromIndex=0] The index to search from.
+   * @returns {number} Returns the index of the matched value or `-1`.
+   */
+  function baseIndexOf(array, value, fromIndex) {
+    var index = (fromIndex || 0) - 1,
+        length = array ? array.length : 0;
+
+    while (++index < length) {
+      if (array[index] === value) {
+        return index;
+      }
+    }
+    return -1;
+  }
+
+  /**
+   * An implementation of `_.contains` for cache objects that mimics the return
+   * signature of `_.indexOf` by returning `0` if the value is found, else `-1`.
+   *
+   * @private
+   * @param {Object} cache The cache object to inspect.
+   * @param {*} value The value to search for.
+   * @returns {number} Returns `0` if `value` is found, else `-1`.
+   */
+  function cacheIndexOf(cache, value) {
+    var type = typeof value;
+    cache = cache.cache;
+
+    if (type == 'boolean' || value == null) {
+      return cache[value] ? 0 : -1;
+    }
+    if (type != 'number' && type != 'string') {
+      type = 'object';
+    }
+    var key = type == 'number' ? value : keyPrefix + value;
+    cache = (cache = cache[type]) && cache[key];
+
+    return type == 'object'
+      ? (cache && baseIndexOf(cache, value) > -1 ? 0 : -1)
+      : (cache ? 0 : -1);
+  }
+
+  /**
+   * Adds a given value to the corresponding cache object.
+   *
+   * @private
+   * @param {*} value The value to add to the cache.
+   */
+  function cachePush(value) {
+    var cache = this.cache,
+        type = typeof value;
+
+    if (type == 'boolean' || value == null) {
+      cache[value] = true;
+    } else {
+      if (type != 'number' && type != 'string') {
+        type = 'object';
+      }
+      var key = type == 'number' ? value : keyPrefix + value,
+          typeCache = cache[type] || (cache[type] = {});
+
+      if (type == 'object') {
+        (typeCache[key] || (typeCache[key] = [])).push(value);
+      } else {
+        typeCache[key] = true;
+      }
+    }
+  }
+
+  /**
+   * Used by `_.max` and `_.min` as the default callback when a given
+   * collection is a string value.
+   *
+   * @private
+   * @param {string} value The character to inspect.
+   * @returns {number} Returns the code unit of given character.
+   */
+  function charAtCallback(value) {
+    return value.charCodeAt(0);
+  }
+
+  /**
+   * Used by `sortBy` to compare transformed `collection` elements, stable sorting
+   * them in ascending order.
+   *
+   * @private
+   * @param {Object} a The object to compare to `b`.
+   * @param {Object} b The object to compare to `a`.
+   * @returns {number} Returns the sort order indicator of `1` or `-1`.
+   */
+  function compareAscending(a, b) {
+    var ac = a.criteria,
+        bc = b.criteria,
+        index = -1,
+        length = ac.length;
+
+    while (++index < length) {
+      var value = ac[index],
+          other = bc[index];
+
+      if (value !== other) {
+        if (value > other || typeof value == 'undefined') {
+          return 1;
+        }
+        if (value < other || typeof other == 'undefined') {
+          return -1;
+        }
+      }
+    }
+    // Fixes an `Array#sort` bug in the JS engine embedded in Adobe applications
+    // that causes it, under certain circumstances, to return the same value for
+    // `a` and `b`. See https://github.com/jashkenas/underscore/pull/1247
+    //
+    // This also ensures a stable sort in V8 and other engines.
+    // See http://code.google.com/p/v8/issues/detail?id=90
+    return a.index - b.index;
+  }
+
+  /**
+   * Creates a cache object to optimize linear searches of large arrays.
+   *
+   * @private
+   * @param {Array} [array=[]] The array to search.
+   * @returns {null|Object} Returns the cache object or `null` if caching should not be used.
+   */
+  function createCache(array) {
+    var index = -1,
+        length = array.length,
+        first = array[0],
+        mid = array[(length / 2) | 0],
+        last = array[length - 1];
+
+    if (first && typeof first == 'object' &&
+        mid && typeof mid == 'object' && last && typeof last == 'object') {
+      return false;
+    }
+    var cache = getObject();
+    cache['false'] = cache['null'] = cache['true'] = cache['undefined'] = false;
+
+    var result = getObject();
+    result.array = array;
+    result.cache = cache;
+    result.push = cachePush;
+
+    while (++index < length) {
+      result.push(array[index]);
+    }
+    return result;
+  }
+
+  /**
+   * Used by `template` to escape characters for inclusion in compiled
+   * string literals.
+   *
+   * @private
+   * @param {string} match The matched character to escape.
+   * @returns {string} Returns the escaped character.
+   */
+  function escapeStringChar(match) {
+    return '\\' + stringEscapes[match];
+  }
+
+  /**
+   * Gets an array from the array pool or creates a new one if the pool is empty.
+   *
+   * @private
+   * @returns {Array} The array from the pool.
+   */
+  function getArray() {
+    return arrayPool.pop() || [];
+  }
+
+  /**
+   * Gets an object from the object pool or creates a new one if the pool is empty.
+   *
+   * @private
+   * @returns {Object} The object from the pool.
+   */
+  function getObject() {
+    return objectPool.pop() || {
+      'array': null,
+      'cache': null,
+      'criteria': null,
+      'false': false,
+      'index': 0,
+      'null': false,
+      'number': null,
+      'object': null,
+      'push': null,
+      'string': null,
+      'true': false,
+      'undefined': false,
+      'value': null
+    };
+  }
+
+  /**
+   * Releases the given array back to the array pool.
+   *
+   * @private
+   * @param {Array} [array] The array to release.
+   */
+  function releaseArray(array) {
+    array.length = 0;
+    if (arrayPool.length < maxPoolSize) {
+      arrayPool.push(array);
+    }
+  }
+
+  /**
+   * Releases the given object back to the object pool.
+   *
+   * @private
+   * @param {Object} [object] The object to release.
+   */
+  function releaseObject(object) {
+    var cache = object.cache;
+    if (cache) {
+      releaseObject(cache);
+    }
+    object.array = object.cache = object.criteria = object.object = object.number = object.string = object.value = null;
+    if (objectPool.length < maxPoolSize) {
+      objectPool.push(object);
+    }
+  }
+
+  /**
+   * Slices the `collection` from the `start` index up to, but not including,
+   * the `end` index.
+   *
+   * Note: This function is used instead of `Array#slice` to support node lists
+   * in IE < 9 and to ensure dense arrays are returned.
+   *
+   * @private
+   * @param {Array|Object|string} collection The collection to slice.
+   * @param {number} start The start index.
+   * @param {number} end The end index.
+   * @returns {Array} Returns the new array.
+   */
+  function slice(array, start, end) {
+    start || (start = 0);
+    if (typeof end == 'undefined') {
+      end = array ? array.length : 0;
+    }
+    var index = -1,
+        length = end - start || 0,
+        result = Array(length < 0 ? 0 : length);
+
+    while (++index < length) {
+      result[index] = array[start + index];
+    }
+    return result;
+  }
+
+  /*--------------------------------------------------------------------------*/
+
+  /**
+   * Create a new `lodash` function using the given context object.
+   *
+   * @static
+   * @memberOf _
+   * @category Utilities
+   * @param {Object} [context=root] The context object.
+   * @returns {Function} Returns the `lodash` function.
+   */
+  function runInContext(context) {
+    // Avoid issues with some ES3 environments that attempt to use values, named
+    // after built-in constructors like `Object`, for the creation of literals.
+    // ES5 clears this up by stating that literals must use built-in constructors.
+    // See http://es5.github.io/#x11.1.5.
+    context = context ? _.defaults(root.Object(), context, _.pick(root, contextProps)) : root;
+
+    /** Native constructor references */
+    var Array = context.Array,
+        Boolean = context.Boolean,
+        Date = context.Date,
+        Function = context.Function,
+        Math = context.Math,
+        Number = context.Number,
+        Object = context.Object,
+        RegExp = context.RegExp,
+        String = context.String,
+        TypeError = context.TypeError;
+
+    /**
+     * Used for `Array` method references.
+     *
+     * Normally `Array.prototype` would suffice, however, using an array literal
+     * avoids issues in Narwhal.
+     */
+    var arrayRef = [];
+
+    /** Used for native method references */
+    var objectProto = Object.prototype;
+
+    /** Used to restore the original `_` reference in `noConflict` */
+    var oldDash = context._;
+
+    /** Used to resolve the internal [[Class]] of values */
+    var toString = objectProto.toString;
+
+    /** Used to detect if a method is native */
+    var reNative = RegExp('^' +
+      String(toString)
+        .replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        .replace(/toString| for [^\]]+/g, '.*?') + '$'
+    );
+
+    /** Native method shortcuts */
+    var ceil = Math.ceil,
+        clearTimeout = context.clearTimeout,
+        floor = Math.floor,
+        fnToString = Function.prototype.toString,
+        getPrototypeOf = isNative(getPrototypeOf = Object.getPrototypeOf) && getPrototypeOf,
+        hasOwnProperty = objectProto.hasOwnProperty,
+        push = arrayRef.push,
+        setTimeout = context.setTimeout,
+        splice = arrayRef.splice,
+        unshift = arrayRef.unshift;
+
+    /** Used to set meta data on functions */
+    var defineProperty = (function() {
+      // IE 8 only accepts DOM elements
+      try {
+        var o = {},
+            func = isNative(func = Object.defineProperty) && func,
+            result = func(o, o, o) && func;
+      } catch(e) { }
+      return result;
+    }());
+
+    /* Native method shortcuts for methods with the same name as other `lodash` methods */
+    var nativeCreate = isNative(nativeCreate = Object.create) && nativeCreate,
+        nativeIsArray = isNative(nativeIsArray = Array.isArray) && nativeIsArray,
+        nativeIsFinite = context.isFinite,
+        nativeIsNaN = context.isNaN,
+        nativeKeys = isNative(nativeKeys = Object.keys) && nativeKeys,
+        nativeMax = Math.max,
+        nativeMin = Math.min,
+        nativeParseInt = context.parseInt,
+        nativeRandom = Math.random;
+
+    /** Used to lookup a built-in constructor by [[Class]] */
+    var ctorByClass = {};
+    ctorByClass[arrayClass] = Array;
+    ctorByClass[boolClass] = Boolean;
+    ctorByClass[dateClass] = Date;
+    ctorByClass[funcClass] = Function;
+    ctorByClass[objectClass] = Object;
+    ctorByClass[numberClass] = Number;
+    ctorByClass[regexpClass] = RegExp;
+    ctorByClass[stringClass] = String;
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Creates a `lodash` object which wraps the given value to enable intuitive
+     * method chaining.
+     *
+     * In addition to Lo-Dash methods, wrappers also have the following `Array` methods:
+     * `concat`, `join`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort`, `splice`,
+     * and `unshift`
+     *
+     * Chaining is supported in custom builds as long as the `value` method is
+     * implicitly or explicitly included in the build.
+     *
+     * The chainable wrapper functions are:
+     * `after`, `assign`, `bind`, `bindAll`, `bindKey`, `chain`, `compact`,
+     * `compose`, `concat`, `countBy`, `create`, `createCallback`, `curry`,
+     * `debounce`, `defaults`, `defer`, `delay`, `difference`, `filter`, `flatten`,
+     * `forEach`, `forEachRight`, `forIn`, `forInRight`, `forOwn`, `forOwnRight`,
+     * `functions`, `groupBy`, `indexBy`, `initial`, `intersection`, `invert`,
+     * `invoke`, `keys`, `map`, `max`, `memoize`, `merge`, `min`, `object`, `omit`,
+     * `once`, `pairs`, `partial`, `partialRight`, `pick`, `pluck`, `pull`, `push`,
+     * `range`, `reject`, `remove`, `rest`, `reverse`, `shuffle`, `slice`, `sort`,
+     * `sortBy`, `splice`, `tap`, `throttle`, `times`, `toArray`, `transform`,
+     * `union`, `uniq`, `unshift`, `unzip`, `values`, `where`, `without`, `wrap`,
+     * and `zip`
+     *
+     * The non-chainable wrapper functions are:
+     * `clone`, `cloneDeep`, `contains`, `escape`, `every`, `find`, `findIndex`,
+     * `findKey`, `findLast`, `findLastIndex`, `findLastKey`, `has`, `identity`,
+     * `indexOf`, `isArguments`, `isArray`, `isBoolean`, `isDate`, `isElement`,
+     * `isEmpty`, `isEqual`, `isFinite`, `isFunction`, `isNaN`, `isNull`, `isNumber`,
+     * `isObject`, `isPlainObject`, `isRegExp`, `isString`, `isUndefined`, `join`,
+     * `lastIndexOf`, `mixin`, `noConflict`, `parseInt`, `pop`, `random`, `reduce`,
+     * `reduceRight`, `result`, `shift`, `size`, `some`, `sortedIndex`, `runInContext`,
+     * `template`, `unescape`, `uniqueId`, and `value`
+     *
+     * The wrapper functions `first` and `last` return wrapped values when `n` is
+     * provided, otherwise they return unwrapped values.
+     *
+     * Explicit chaining can be enabled by using the `_.chain` method.
+     *
+     * @name _
+     * @constructor
+     * @category Chaining
+     * @param {*} value The value to wrap in a `lodash` instance.
+     * @returns {Object} Returns a `lodash` instance.
+     * @example
+     *
+     * var wrapped = _([1, 2, 3]);
+     *
+     * // returns an unwrapped value
+     * wrapped.reduce(function(sum, num) {
+     *   return sum + num;
+     * });
+     * // => 6
+     *
+     * // returns a wrapped value
+     * var squares = wrapped.map(function(num) {
+     *   return num * num;
+     * });
+     *
+     * _.isArray(squares);
+     * // => false
+     *
+     * _.isArray(squares.value());
+     * // => true
+     */
+    function lodash(value) {
+      // don't wrap if already wrapped, even if wrapped by a different `lodash` constructor
+      return (value && typeof value == 'object' && !isArray(value) && hasOwnProperty.call(value, '__wrapped__'))
+       ? value
+       : new lodashWrapper(value);
+    }
+
+    /**
+     * A fast path for creating `lodash` wrapper objects.
+     *
+     * @private
+     * @param {*} value The value to wrap in a `lodash` instance.
+     * @param {boolean} chainAll A flag to enable chaining for all methods
+     * @returns {Object} Returns a `lodash` instance.
+     */
+    function lodashWrapper(value, chainAll) {
+      this.__chain__ = !!chainAll;
+      this.__wrapped__ = value;
+    }
+    // ensure `new lodashWrapper` is an instance of `lodash`
+    lodashWrapper.prototype = lodash.prototype;
+
+    /**
+     * An object used to flag environments features.
+     *
+     * @static
+     * @memberOf _
+     * @type Object
+     */
+    var support = lodash.support = {};
+
+    /**
+     * Detect if functions can be decompiled by `Function#toString`
+     * (all but PS3 and older Opera mobile browsers & avoided in Windows 8 apps).
+     *
+     * @memberOf _.support
+     * @type boolean
+     */
+    support.funcDecomp = !isNative(context.WinRTError) && reThis.test(runInContext);
+
+    /**
+     * Detect if `Function#name` is supported (all but IE).
+     *
+     * @memberOf _.support
+     * @type boolean
+     */
+    support.funcNames = typeof Function.name == 'string';
+
+    /**
+     * By default, the template delimiters used by Lo-Dash are similar to those in
+     * embedded Ruby (ERB). Change the following template settings to use alternative
+     * delimiters.
+     *
+     * @static
+     * @memberOf _
+     * @type Object
+     */
+    lodash.templateSettings = {
+
+      /**
+       * Used to detect `data` property values to be HTML-escaped.
+       *
+       * @memberOf _.templateSettings
+       * @type RegExp
+       */
+      'escape': /<%-([\s\S]+?)%>/g,
+
+      /**
+       * Used to detect code to be evaluated.
+       *
+       * @memberOf _.templateSettings
+       * @type RegExp
+       */
+      'evaluate': /<%([\s\S]+?)%>/g,
+
+      /**
+       * Used to detect `data` property values to inject.
+       *
+       * @memberOf _.templateSettings
+       * @type RegExp
+       */
+      'interpolate': reInterpolate,
+
+      /**
+       * Used to reference the data object in the template text.
+       *
+       * @memberOf _.templateSettings
+       * @type string
+       */
+      'variable': '',
+
+      /**
+       * Used to import variables into the compiled template.
+       *
+       * @memberOf _.templateSettings
+       * @type Object
+       */
+      'imports': {
+
+        /**
+         * A reference to the `lodash` function.
+         *
+         * @memberOf _.templateSettings.imports
+         * @type Function
+         */
+        '_': lodash
+      }
+    };
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * The base implementation of `_.bind` that creates the bound function and
+     * sets its meta data.
+     *
+     * @private
+     * @param {Array} bindData The bind data array.
+     * @returns {Function} Returns the new bound function.
+     */
+    function baseBind(bindData) {
+      var func = bindData[0],
+          partialArgs = bindData[2],
+          thisArg = bindData[4];
+
+      function bound() {
+        // `Function#bind` spec
+        // http://es5.github.io/#x15.3.4.5
+        if (partialArgs) {
+          // avoid `arguments` object deoptimizations by using `slice` instead
+          // of `Array.prototype.slice.call` and not assigning `arguments` to a
+          // variable as a ternary expression
+          var args = slice(partialArgs);
+          push.apply(args, arguments);
+        }
+        // mimic the constructor's `return` behavior
+        // http://es5.github.io/#x13.2.2
+        if (this instanceof bound) {
+          // ensure `new bound` is an instance of `func`
+          var thisBinding = baseCreate(func.prototype),
+              result = func.apply(thisBinding, args || arguments);
+          return isObject(result) ? result : thisBinding;
+        }
+        return func.apply(thisArg, args || arguments);
+      }
+      setBindData(bound, bindData);
+      return bound;
+    }
+
+    /**
+     * The base implementation of `_.clone` without argument juggling or support
+     * for `thisArg` binding.
+     *
+     * @private
+     * @param {*} value The value to clone.
+     * @param {boolean} [isDeep=false] Specify a deep clone.
+     * @param {Function} [callback] The function to customize cloning values.
+     * @param {Array} [stackA=[]] Tracks traversed source objects.
+     * @param {Array} [stackB=[]] Associates clones with source counterparts.
+     * @returns {*} Returns the cloned value.
+     */
+    function baseClone(value, isDeep, callback, stackA, stackB) {
+      if (callback) {
+        var result = callback(value);
+        if (typeof result != 'undefined') {
+          return result;
+        }
+      }
+      // inspect [[Class]]
+      var isObj = isObject(value);
+      if (isObj) {
+        var className = toString.call(value);
+        if (!cloneableClasses[className]) {
+          return value;
+        }
+        var ctor = ctorByClass[className];
+        switch (className) {
+          case boolClass:
+          case dateClass:
+            return new ctor(+value);
+
+          case numberClass:
+          case stringClass:
+            return new ctor(value);
+
+          case regexpClass:
+            result = ctor(value.source, reFlags.exec(value));
+            result.lastIndex = value.lastIndex;
+            return result;
+        }
+      } else {
+        return value;
+      }
+      var isArr = isArray(value);
+      if (isDeep) {
+        // check for circular references and return corresponding clone
+        var initedStack = !stackA;
+        stackA || (stackA = getArray());
+        stackB || (stackB = getArray());
+
+        var length = stackA.length;
+        while (length--) {
+          if (stackA[length] == value) {
+            return stackB[length];
+          }
+        }
+        result = isArr ? ctor(value.length) : {};
+      }
+      else {
+        result = isArr ? slice(value) : assign({}, value);
+      }
+      // add array properties assigned by `RegExp#exec`
+      if (isArr) {
+        if (hasOwnProperty.call(value, 'index')) {
+          result.index = value.index;
+        }
+        if (hasOwnProperty.call(value, 'input')) {
+          result.input = value.input;
+        }
+      }
+      // exit for shallow clone
+      if (!isDeep) {
+        return result;
+      }
+      // add the source value to the stack of traversed objects
+      // and associate it with its clone
+      stackA.push(value);
+      stackB.push(result);
+
+      // recursively populate clone (susceptible to call stack limits)
+      (isArr ? forEach : forOwn)(value, function(objValue, key) {
+        result[key] = baseClone(objValue, isDeep, callback, stackA, stackB);
+      });
+
+      if (initedStack) {
+        releaseArray(stackA);
+        releaseArray(stackB);
+      }
+      return result;
+    }
+
+    /**
+     * The base implementation of `_.create` without support for assigning
+     * properties to the created object.
+     *
+     * @private
+     * @param {Object} prototype The object to inherit from.
+     * @returns {Object} Returns the new object.
+     */
+    function baseCreate(prototype, properties) {
+      return isObject(prototype) ? nativeCreate(prototype) : {};
+    }
+    // fallback for browsers without `Object.create`
+    if (!nativeCreate) {
+      baseCreate = (function() {
+        function Object() {}
+        return function(prototype) {
+          if (isObject(prototype)) {
+            Object.prototype = prototype;
+            var result = new Object;
+            Object.prototype = null;
+          }
+          return result || context.Object();
+        };
+      }());
+    }
+
+    /**
+     * The base implementation of `_.createCallback` without support for creating
+     * "_.pluck" or "_.where" style callbacks.
+     *
+     * @private
+     * @param {*} [func=identity] The value to convert to a callback.
+     * @param {*} [thisArg] The `this` binding of the created callback.
+     * @param {number} [argCount] The number of arguments the callback accepts.
+     * @returns {Function} Returns a callback function.
+     */
+    function baseCreateCallback(func, thisArg, argCount) {
+      if (typeof func != 'function') {
+        return identity;
+      }
+      // exit early for no `thisArg` or already bound by `Function#bind`
+      if (typeof thisArg == 'undefined' || !('prototype' in func)) {
+        return func;
+      }
+      var bindData = func.__bindData__;
+      if (typeof bindData == 'undefined') {
+        if (support.funcNames) {
+          bindData = !func.name;
+        }
+        bindData = bindData || !support.funcDecomp;
+        if (!bindData) {
+          var source = fnToString.call(func);
+          if (!support.funcNames) {
+            bindData = !reFuncName.test(source);
+          }
+          if (!bindData) {
+            // checks if `func` references the `this` keyword and stores the result
+            bindData = reThis.test(source);
+            setBindData(func, bindData);
+          }
+        }
+      }
+      // exit early if there are no `this` references or `func` is bound
+      if (bindData === false || (bindData !== true && bindData[1] & 1)) {
+        return func;
+      }
+      switch (argCount) {
+        case 1: return function(value) {
+          return func.call(thisArg, value);
+        };
+        case 2: return function(a, b) {
+          return func.call(thisArg, a, b);
+        };
+        case 3: return function(value, index, collection) {
+          return func.call(thisArg, value, index, collection);
+        };
+        case 4: return function(accumulator, value, index, collection) {
+          return func.call(thisArg, accumulator, value, index, collection);
+        };
+      }
+      return bind(func, thisArg);
+    }
+
+    /**
+     * The base implementation of `createWrapper` that creates the wrapper and
+     * sets its meta data.
+     *
+     * @private
+     * @param {Array} bindData The bind data array.
+     * @returns {Function} Returns the new function.
+     */
+    function baseCreateWrapper(bindData) {
+      var func = bindData[0],
+          bitmask = bindData[1],
+          partialArgs = bindData[2],
+          partialRightArgs = bindData[3],
+          thisArg = bindData[4],
+          arity = bindData[5];
+
+      var isBind = bitmask & 1,
+          isBindKey = bitmask & 2,
+          isCurry = bitmask & 4,
+          isCurryBound = bitmask & 8,
+          key = func;
+
+      function bound() {
+        var thisBinding = isBind ? thisArg : this;
+        if (partialArgs) {
+          var args = slice(partialArgs);
+          push.apply(args, arguments);
+        }
+        if (partialRightArgs || isCurry) {
+          args || (args = slice(arguments));
+          if (partialRightArgs) {
+            push.apply(args, partialRightArgs);
+          }
+          if (isCurry && args.length < arity) {
+            bitmask |= 16 & ~32;
+            return baseCreateWrapper([func, (isCurryBound ? bitmask : bitmask & ~3), args, null, thisArg, arity]);
+          }
+        }
+        args || (args = arguments);
+        if (isBindKey) {
+          func = thisBinding[key];
+        }
+        if (this instanceof bound) {
+          thisBinding = baseCreate(func.prototype);
+          var result = func.apply(thisBinding, args);
+          return isObject(result) ? result : thisBinding;
+        }
+        return func.apply(thisBinding, args);
+      }
+      setBindData(bound, bindData);
+      return bound;
+    }
+
+    /**
+     * The base implementation of `_.difference` that accepts a single array
+     * of values to exclude.
+     *
+     * @private
+     * @param {Array} array The array to process.
+     * @param {Array} [values] The array of values to exclude.
+     * @returns {Array} Returns a new array of filtered values.
+     */
+    function baseDifference(array, values) {
+      var index = -1,
+          indexOf = getIndexOf(),
+          length = array ? array.length : 0,
+          isLarge = length >= largeArraySize && indexOf === baseIndexOf,
+          result = [];
+
+      if (isLarge) {
+        var cache = createCache(values);
+        if (cache) {
+          indexOf = cacheIndexOf;
+          values = cache;
+        } else {
+          isLarge = false;
+        }
+      }
+      while (++index < length) {
+        var value = array[index];
+        if (indexOf(values, value) < 0) {
+          result.push(value);
+        }
+      }
+      if (isLarge) {
+        releaseObject(values);
+      }
+      return result;
+    }
+
+    /**
+     * The base implementation of `_.flatten` without support for callback
+     * shorthands or `thisArg` binding.
+     *
+     * @private
+     * @param {Array} array The array to flatten.
+     * @param {boolean} [isShallow=false] A flag to restrict flattening to a single level.
+     * @param {boolean} [isStrict=false] A flag to restrict flattening to arrays and `arguments` objects.
+     * @param {number} [fromIndex=0] The index to start from.
+     * @returns {Array} Returns a new flattened array.
+     */
+    function baseFlatten(array, isShallow, isStrict, fromIndex) {
+      var index = (fromIndex || 0) - 1,
+          length = array ? array.length : 0,
+          result = [];
+
+      while (++index < length) {
+        var value = array[index];
+
+        if (value && typeof value == 'object' && typeof value.length == 'number'
+            && (isArray(value) || isArguments(value))) {
+          // recursively flatten arrays (susceptible to call stack limits)
+          if (!isShallow) {
+            value = baseFlatten(value, isShallow, isStrict);
+          }
+          var valIndex = -1,
+              valLength = value.length,
+              resIndex = result.length;
+
+          result.length += valLength;
+          while (++valIndex < valLength) {
+            result[resIndex++] = value[valIndex];
+          }
+        } else if (!isStrict) {
+          result.push(value);
+        }
+      }
+      return result;
+    }
+
+    /**
+     * The base implementation of `_.isEqual`, without support for `thisArg` binding,
+     * that allows partial "_.where" style comparisons.
+     *
+     * @private
+     * @param {*} a The value to compare.
+     * @param {*} b The other value to compare.
+     * @param {Function} [callback] The function to customize comparing values.
+     * @param {Function} [isWhere=false] A flag to indicate performing partial comparisons.
+     * @param {Array} [stackA=[]] Tracks traversed `a` objects.
+     * @param {Array} [stackB=[]] Tracks traversed `b` objects.
+     * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+     */
+    function baseIsEqual(a, b, callback, isWhere, stackA, stackB) {
+      // used to indicate that when comparing objects, `a` has at least the properties of `b`
+      if (callback) {
+        var result = callback(a, b);
+        if (typeof result != 'undefined') {
+          return !!result;
+        }
+      }
+      // exit early for identical values
+      if (a === b) {
+        // treat `+0` vs. `-0` as not equal
+        return a !== 0 || (1 / a == 1 / b);
+      }
+      var type = typeof a,
+          otherType = typeof b;
+
+      // exit early for unlike primitive values
+      if (a === a &&
+          !(a && objectTypes[type]) &&
+          !(b && objectTypes[otherType])) {
+        return false;
+      }
+      // exit early for `null` and `undefined` avoiding ES3's Function#call behavior
+      // http://es5.github.io/#x15.3.4.4
+      if (a == null || b == null) {
+        return a === b;
+      }
+      // compare [[Class]] names
+      var className = toString.call(a),
+          otherClass = toString.call(b);
+
+      if (className == argsClass) {
+        className = objectClass;
+      }
+      if (otherClass == argsClass) {
+        otherClass = objectClass;
+      }
+      if (className != otherClass) {
+        return false;
+      }
+      switch (className) {
+        case boolClass:
+        case dateClass:
+          // coerce dates and booleans to numbers, dates to milliseconds and booleans
+          // to `1` or `0` treating invalid dates coerced to `NaN` as not equal
+          return +a == +b;
+
+        case numberClass:
+          // treat `NaN` vs. `NaN` as equal
+          return (a != +a)
+            ? b != +b
+            // but treat `+0` vs. `-0` as not equal
+            : (a == 0 ? (1 / a == 1 / b) : a == +b);
+
+        case regexpClass:
+        case stringClass:
+          // coerce regexes to strings (http://es5.github.io/#x15.10.6.4)
+          // treat string primitives and their corresponding object instances as equal
+          return a == String(b);
+      }
+      var isArr = className == arrayClass;
+      if (!isArr) {
+        // unwrap any `lodash` wrapped values
+        var aWrapped = hasOwnProperty.call(a, '__wrapped__'),
+            bWrapped = hasOwnProperty.call(b, '__wrapped__');
+
+        if (aWrapped || bWrapped) {
+          return baseIsEqual(aWrapped ? a.__wrapped__ : a, bWrapped ? b.__wrapped__ : b, callback, isWhere, stackA, stackB);
+        }
+        // exit for functions and DOM nodes
+        if (className != objectClass) {
+          return false;
+        }
+        // in older versions of Opera, `arguments` objects have `Array` constructors
+        var ctorA = a.constructor,
+            ctorB = b.constructor;
+
+        // non `Object` object instances with different constructors are not equal
+        if (ctorA != ctorB &&
+              !(isFunction(ctorA) && ctorA instanceof ctorA && isFunction(ctorB) && ctorB instanceof ctorB) &&
+              ('constructor' in a && 'constructor' in b)
+            ) {
+          return false;
+        }
+      }
+      // assume cyclic structures are equal
+      // the algorithm for detecting cyclic structures is adapted from ES 5.1
+      // section 15.12.3, abstract operation `JO` (http://es5.github.io/#x15.12.3)
+      var initedStack = !stackA;
+      stackA || (stackA = getArray());
+      stackB || (stackB = getArray());
+
+      var length = stackA.length;
+      while (length--) {
+        if (stackA[length] == a) {
+          return stackB[length] == b;
+        }
+      }
+      var size = 0;
+      result = true;
+
+      // add `a` and `b` to the stack of traversed objects
+      stackA.push(a);
+      stackB.push(b);
+
+      // recursively compare objects and arrays (susceptible to call stack limits)
+      if (isArr) {
+        // compare lengths to determine if a deep comparison is necessary
+        length = a.length;
+        size = b.length;
+        result = size == length;
+
+        if (result || isWhere) {
+          // deep compare the contents, ignoring non-numeric properties
+          while (size--) {
+            var index = length,
+                value = b[size];
+
+            if (isWhere) {
+              while (index--) {
+                if ((result = baseIsEqual(a[index], value, callback, isWhere, stackA, stackB))) {
+                  break;
+                }
+              }
+            } else if (!(result = baseIsEqual(a[size], value, callback, isWhere, stackA, stackB))) {
+              break;
+            }
+          }
+        }
+      }
+      else {
+        // deep compare objects using `forIn`, instead of `forOwn`, to avoid `Object.keys`
+        // which, in this case, is more costly
+        forIn(b, function(value, key, b) {
+          if (hasOwnProperty.call(b, key)) {
+            // count the number of properties.
+            size++;
+            // deep compare each property value.
+            return (result = hasOwnProperty.call(a, key) && baseIsEqual(a[key], value, callback, isWhere, stackA, stackB));
+          }
+        });
+
+        if (result && !isWhere) {
+          // ensure both objects have the same number of properties
+          forIn(a, function(value, key, a) {
+            if (hasOwnProperty.call(a, key)) {
+              // `size` will be `-1` if `a` has more properties than `b`
+              return (result = --size > -1);
+            }
+          });
+        }
+      }
+      stackA.pop();
+      stackB.pop();
+
+      if (initedStack) {
+        releaseArray(stackA);
+        releaseArray(stackB);
+      }
+      return result;
+    }
+
+    /**
+     * The base implementation of `_.merge` without argument juggling or support
+     * for `thisArg` binding.
+     *
+     * @private
+     * @param {Object} object The destination object.
+     * @param {Object} source The source object.
+     * @param {Function} [callback] The function to customize merging properties.
+     * @param {Array} [stackA=[]] Tracks traversed source objects.
+     * @param {Array} [stackB=[]] Associates values with source counterparts.
+     */
+    function baseMerge(object, source, callback, stackA, stackB) {
+      (isArray(source) ? forEach : forOwn)(source, function(source, key) {
+        var found,
+            isArr,
+            result = source,
+            value = object[key];
+
+        if (source && ((isArr = isArray(source)) || isPlainObject(source))) {
+          // avoid merging previously merged cyclic sources
+          var stackLength = stackA.length;
+          while (stackLength--) {
+            if ((found = stackA[stackLength] == source)) {
+              value = stackB[stackLength];
+              break;
+            }
+          }
+          if (!found) {
+            var isShallow;
+            if (callback) {
+              result = callback(value, source);
+              if ((isShallow = typeof result != 'undefined')) {
+                value = result;
+              }
+            }
+            if (!isShallow) {
+              value = isArr
+                ? (isArray(value) ? value : [])
+                : (isPlainObject(value) ? value : {});
+            }
+            // add `source` and associated `value` to the stack of traversed objects
+            stackA.push(source);
+            stackB.push(value);
+
+            // recursively merge objects and arrays (susceptible to call stack limits)
+            if (!isShallow) {
+              baseMerge(value, source, callback, stackA, stackB);
+            }
+          }
+        }
+        else {
+          if (callback) {
+            result = callback(value, source);
+            if (typeof result == 'undefined') {
+              result = source;
+            }
+          }
+          if (typeof result != 'undefined') {
+            value = result;
+          }
+        }
+        object[key] = value;
+      });
+    }
+
+    /**
+     * The base implementation of `_.random` without argument juggling or support
+     * for returning floating-point numbers.
+     *
+     * @private
+     * @param {number} min The minimum possible value.
+     * @param {number} max The maximum possible value.
+     * @returns {number} Returns a random number.
+     */
+    function baseRandom(min, max) {
+      return min + floor(nativeRandom() * (max - min + 1));
+    }
+
+    /**
+     * The base implementation of `_.uniq` without support for callback shorthands
+     * or `thisArg` binding.
+     *
+     * @private
+     * @param {Array} array The array to process.
+     * @param {boolean} [isSorted=false] A flag to indicate that `array` is sorted.
+     * @param {Function} [callback] The function called per iteration.
+     * @returns {Array} Returns a duplicate-value-free array.
+     */
+    function baseUniq(array, isSorted, callback) {
+      var index = -1,
+          indexOf = getIndexOf(),
+          length = array ? array.length : 0,
+          result = [];
+
+      var isLarge = !isSorted && length >= largeArraySize && indexOf === baseIndexOf,
+          seen = (callback || isLarge) ? getArray() : result;
+
+      if (isLarge) {
+        var cache = createCache(seen);
+        indexOf = cacheIndexOf;
+        seen = cache;
+      }
+      while (++index < length) {
+        var value = array[index],
+            computed = callback ? callback(value, index, array) : value;
+
+        if (isSorted
+              ? !index || seen[seen.length - 1] !== computed
+              : indexOf(seen, computed) < 0
+            ) {
+          if (callback || isLarge) {
+            seen.push(computed);
+          }
+          result.push(value);
+        }
+      }
+      if (isLarge) {
+        releaseArray(seen.array);
+        releaseObject(seen);
+      } else if (callback) {
+        releaseArray(seen);
+      }
+      return result;
+    }
+
+    /**
+     * Creates a function that aggregates a collection, creating an object composed
+     * of keys generated from the results of running each element of the collection
+     * through a callback. The given `setter` function sets the keys and values
+     * of the composed object.
+     *
+     * @private
+     * @param {Function} setter The setter function.
+     * @returns {Function} Returns the new aggregator function.
+     */
+    function createAggregator(setter) {
+      return function(collection, callback, thisArg) {
+        var result = {};
+        callback = lodash.createCallback(callback, thisArg, 3);
+
+        var index = -1,
+            length = collection ? collection.length : 0;
+
+        if (typeof length == 'number') {
+          while (++index < length) {
+            var value = collection[index];
+            setter(result, value, callback(value, index, collection), collection);
+          }
+        } else {
+          forOwn(collection, function(value, key, collection) {
+            setter(result, value, callback(value, key, collection), collection);
+          });
+        }
+        return result;
+      };
+    }
+
+    /**
+     * Creates a function that, when called, either curries or invokes `func`
+     * with an optional `this` binding and partially applied arguments.
+     *
+     * @private
+     * @param {Function|string} func The function or method name to reference.
+     * @param {number} bitmask The bitmask of method flags to compose.
+     *  The bitmask may be composed of the following flags:
+     *  1 - `_.bind`
+     *  2 - `_.bindKey`
+     *  4 - `_.curry`
+     *  8 - `_.curry` (bound)
+     *  16 - `_.partial`
+     *  32 - `_.partialRight`
+     * @param {Array} [partialArgs] An array of arguments to prepend to those
+     *  provided to the new function.
+     * @param {Array} [partialRightArgs] An array of arguments to append to those
+     *  provided to the new function.
+     * @param {*} [thisArg] The `this` binding of `func`.
+     * @param {number} [arity] The arity of `func`.
+     * @returns {Function} Returns the new function.
+     */
+    function createWrapper(func, bitmask, partialArgs, partialRightArgs, thisArg, arity) {
+      var isBind = bitmask & 1,
+          isBindKey = bitmask & 2,
+          isCurry = bitmask & 4,
+          isCurryBound = bitmask & 8,
+          isPartial = bitmask & 16,
+          isPartialRight = bitmask & 32;
+
+      if (!isBindKey && !isFunction(func)) {
+        throw new TypeError;
+      }
+      if (isPartial && !partialArgs.length) {
+        bitmask &= ~16;
+        isPartial = partialArgs = false;
+      }
+      if (isPartialRight && !partialRightArgs.length) {
+        bitmask &= ~32;
+        isPartialRight = partialRightArgs = false;
+      }
+      var bindData = func && func.__bindData__;
+      if (bindData && bindData !== true) {
+        // clone `bindData`
+        bindData = slice(bindData);
+        if (bindData[2]) {
+          bindData[2] = slice(bindData[2]);
+        }
+        if (bindData[3]) {
+          bindData[3] = slice(bindData[3]);
+        }
+        // set `thisBinding` is not previously bound
+        if (isBind && !(bindData[1] & 1)) {
+          bindData[4] = thisArg;
+        }
+        // set if previously bound but not currently (subsequent curried functions)
+        if (!isBind && bindData[1] & 1) {
+          bitmask |= 8;
+        }
+        // set curried arity if not yet set
+        if (isCurry && !(bindData[1] & 4)) {
+          bindData[5] = arity;
+        }
+        // append partial left arguments
+        if (isPartial) {
+          push.apply(bindData[2] || (bindData[2] = []), partialArgs);
+        }
+        // append partial right arguments
+        if (isPartialRight) {
+          unshift.apply(bindData[3] || (bindData[3] = []), partialRightArgs);
+        }
+        // merge flags
+        bindData[1] |= bitmask;
+        return createWrapper.apply(null, bindData);
+      }
+      // fast path for `_.bind`
+      var creater = (bitmask == 1 || bitmask === 17) ? baseBind : baseCreateWrapper;
+      return creater([func, bitmask, partialArgs, partialRightArgs, thisArg, arity]);
+    }
+
+    /**
+     * Used by `escape` to convert characters to HTML entities.
+     *
+     * @private
+     * @param {string} match The matched character to escape.
+     * @returns {string} Returns the escaped character.
+     */
+    function escapeHtmlChar(match) {
+      return htmlEscapes[match];
+    }
+
+    /**
+     * Gets the appropriate "indexOf" function. If the `_.indexOf` method is
+     * customized, this method returns the custom method, otherwise it returns
+     * the `baseIndexOf` function.
+     *
+     * @private
+     * @returns {Function} Returns the "indexOf" function.
+     */
+    function getIndexOf() {
+      var result = (result = lodash.indexOf) === indexOf ? baseIndexOf : result;
+      return result;
+    }
+
+    /**
+     * Checks if `value` is a native function.
+     *
+     * @private
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is a native function, else `false`.
+     */
+    function isNative(value) {
+      return typeof value == 'function' && reNative.test(value);
+    }
+
+    /**
+     * Sets `this` binding data on a given function.
+     *
+     * @private
+     * @param {Function} func The function to set data on.
+     * @param {Array} value The data array to set.
+     */
+    var setBindData = !defineProperty ? noop : function(func, value) {
+      descriptor.value = value;
+      defineProperty(func, '__bindData__', descriptor);
+    };
+
+    /**
+     * A fallback implementation of `isPlainObject` which checks if a given value
+     * is an object created by the `Object` constructor, assuming objects created
+     * by the `Object` constructor have no inherited enumerable properties and that
+     * there are no `Object.prototype` extensions.
+     *
+     * @private
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+     */
+    function shimIsPlainObject(value) {
+      var ctor,
+          result;
+
+      // avoid non Object objects, `arguments` objects, and DOM elements
+      if (!(value && toString.call(value) == objectClass) ||
+          (ctor = value.constructor, isFunction(ctor) && !(ctor instanceof ctor))) {
+        return false;
+      }
+      // In most environments an object's own properties are iterated before
+      // its inherited properties. If the last iterated property is an object's
+      // own property then there are no inherited enumerable properties.
+      forIn(value, function(value, key) {
+        result = key;
+      });
+      return typeof result == 'undefined' || hasOwnProperty.call(value, result);
+    }
+
+    /**
+     * Used by `unescape` to convert HTML entities to characters.
+     *
+     * @private
+     * @param {string} match The matched character to unescape.
+     * @returns {string} Returns the unescaped character.
+     */
+    function unescapeHtmlChar(match) {
+      return htmlUnescapes[match];
+    }
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Checks if `value` is an `arguments` object.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is an `arguments` object, else `false`.
+     * @example
+     *
+     * (function() { return _.isArguments(arguments); })(1, 2, 3);
+     * // => true
+     *
+     * _.isArguments([1, 2, 3]);
+     * // => false
+     */
+    function isArguments(value) {
+      return value && typeof value == 'object' && typeof value.length == 'number' &&
+        toString.call(value) == argsClass || false;
+    }
+
+    /**
+     * Checks if `value` is an array.
+     *
+     * @static
+     * @memberOf _
+     * @type Function
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is an array, else `false`.
+     * @example
+     *
+     * (function() { return _.isArray(arguments); })();
+     * // => false
+     *
+     * _.isArray([1, 2, 3]);
+     * // => true
+     */
+    var isArray = nativeIsArray || function(value) {
+      return value && typeof value == 'object' && typeof value.length == 'number' &&
+        toString.call(value) == arrayClass || false;
+    };
+
+    /**
+     * A fallback implementation of `Object.keys` which produces an array of the
+     * given object's own enumerable property names.
+     *
+     * @private
+     * @type Function
+     * @param {Object} object The object to inspect.
+     * @returns {Array} Returns an array of property names.
+     */
+    var shimKeys = function(object) {
+      var index, iterable = object, result = [];
+      if (!iterable) return result;
+      if (!(objectTypes[typeof object])) return result;
+        for (index in iterable) {
+          if (hasOwnProperty.call(iterable, index)) {
+            result.push(index);
+          }
+        }
+      return result
+    };
+
+    /**
+     * Creates an array composed of the own enumerable property names of an object.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to inspect.
+     * @returns {Array} Returns an array of property names.
+     * @example
+     *
+     * _.keys({ 'one': 1, 'two': 2, 'three': 3 });
+     * // => ['one', 'two', 'three'] (property order is not guaranteed across environments)
+     */
+    var keys = !nativeKeys ? shimKeys : function(object) {
+      if (!isObject(object)) {
+        return [];
+      }
+      return nativeKeys(object);
+    };
+
+    /**
+     * Used to convert characters to HTML entities:
+     *
+     * Though the `>` character is escaped for symmetry, characters like `>` and `/`
+     * don't require escaping in HTML and have no special meaning unless they're part
+     * of a tag or an unquoted attribute value.
+     * http://mathiasbynens.be/notes/ambiguous-ampersands (under "semi-related fun fact")
+     */
+    var htmlEscapes = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    };
+
+    /** Used to convert HTML entities to characters */
+    var htmlUnescapes = invert(htmlEscapes);
+
+    /** Used to match HTML entities and HTML characters */
+    var reEscapedHtml = RegExp('(' + keys(htmlUnescapes).join('|') + ')', 'g'),
+        reUnescapedHtml = RegExp('[' + keys(htmlEscapes).join('') + ']', 'g');
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Assigns own enumerable properties of source object(s) to the destination
+     * object. Subsequent sources will overwrite property assignments of previous
+     * sources. If a callback is provided it will be executed to produce the
+     * assigned values. The callback is bound to `thisArg` and invoked with two
+     * arguments; (objectValue, sourceValue).
+     *
+     * @static
+     * @memberOf _
+     * @type Function
+     * @alias extend
+     * @category Objects
+     * @param {Object} object The destination object.
+     * @param {...Object} [source] The source objects.
+     * @param {Function} [callback] The function to customize assigning values.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns the destination object.
+     * @example
+     *
+     * _.assign({ 'name': 'fred' }, { 'employer': 'slate' });
+     * // => { 'name': 'fred', 'employer': 'slate' }
+     *
+     * var defaults = _.partialRight(_.assign, function(a, b) {
+     *   return typeof a == 'undefined' ? b : a;
+     * });
+     *
+     * var object = { 'name': 'barney' };
+     * defaults(object, { 'name': 'fred', 'employer': 'slate' });
+     * // => { 'name': 'barney', 'employer': 'slate' }
+     */
+    var assign = function(object, source, guard) {
+      var index, iterable = object, result = iterable;
+      if (!iterable) return result;
+      var args = arguments,
+          argsIndex = 0,
+          argsLength = typeof guard == 'number' ? 2 : args.length;
+      if (argsLength > 3 && typeof args[argsLength - 2] == 'function') {
+        var callback = baseCreateCallback(args[--argsLength - 1], args[argsLength--], 2);
+      } else if (argsLength > 2 && typeof args[argsLength - 1] == 'function') {
+        callback = args[--argsLength];
+      }
+      while (++argsIndex < argsLength) {
+        iterable = args[argsIndex];
+        if (iterable && objectTypes[typeof iterable]) {
+        var ownIndex = -1,
+            ownProps = objectTypes[typeof iterable] && keys(iterable),
+            length = ownProps ? ownProps.length : 0;
+
+        while (++ownIndex < length) {
+          index = ownProps[ownIndex];
+          result[index] = callback ? callback(result[index], iterable[index]) : iterable[index];
+        }
+        }
+      }
+      return result
+    };
+
+    /**
+     * Creates a clone of `value`. If `isDeep` is `true` nested objects will also
+     * be cloned, otherwise they will be assigned by reference. If a callback
+     * is provided it will be executed to produce the cloned values. If the
+     * callback returns `undefined` cloning will be handled by the method instead.
+     * The callback is bound to `thisArg` and invoked with one argument; (value).
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to clone.
+     * @param {boolean} [isDeep=false] Specify a deep clone.
+     * @param {Function} [callback] The function to customize cloning values.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the cloned value.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * var shallow = _.clone(characters);
+     * shallow[0] === characters[0];
+     * // => true
+     *
+     * var deep = _.clone(characters, true);
+     * deep[0] === characters[0];
+     * // => false
+     *
+     * _.mixin({
+     *   'clone': _.partialRight(_.clone, function(value) {
+     *     return _.isElement(value) ? value.cloneNode(false) : undefined;
+     *   })
+     * });
+     *
+     * var clone = _.clone(document.body);
+     * clone.childNodes.length;
+     * // => 0
+     */
+    function clone(value, isDeep, callback, thisArg) {
+      // allows working with "Collections" methods without using their `index`
+      // and `collection` arguments for `isDeep` and `callback`
+      if (typeof isDeep != 'boolean' && isDeep != null) {
+        thisArg = callback;
+        callback = isDeep;
+        isDeep = false;
+      }
+      return baseClone(value, isDeep, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 1));
+    }
+
+    /**
+     * Creates a deep clone of `value`. If a callback is provided it will be
+     * executed to produce the cloned values. If the callback returns `undefined`
+     * cloning will be handled by the method instead. The callback is bound to
+     * `thisArg` and invoked with one argument; (value).
+     *
+     * Note: This method is loosely based on the structured clone algorithm. Functions
+     * and DOM nodes are **not** cloned. The enumerable properties of `arguments` objects and
+     * objects created by constructors other than `Object` are cloned to plain `Object` objects.
+     * See http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to deep clone.
+     * @param {Function} [callback] The function to customize cloning values.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the deep cloned value.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * var deep = _.cloneDeep(characters);
+     * deep[0] === characters[0];
+     * // => false
+     *
+     * var view = {
+     *   'label': 'docs',
+     *   'node': element
+     * };
+     *
+     * var clone = _.cloneDeep(view, function(value) {
+     *   return _.isElement(value) ? value.cloneNode(true) : undefined;
+     * });
+     *
+     * clone.node == view.node;
+     * // => false
+     */
+    function cloneDeep(value, callback, thisArg) {
+      return baseClone(value, true, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 1));
+    }
+
+    /**
+     * Creates an object that inherits from the given `prototype` object. If a
+     * `properties` object is provided its own enumerable properties are assigned
+     * to the created object.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} prototype The object to inherit from.
+     * @param {Object} [properties] The properties to assign to the object.
+     * @returns {Object} Returns the new object.
+     * @example
+     *
+     * function Shape() {
+     *   this.x = 0;
+     *   this.y = 0;
+     * }
+     *
+     * function Circle() {
+     *   Shape.call(this);
+     * }
+     *
+     * Circle.prototype = _.create(Shape.prototype, { 'constructor': Circle });
+     *
+     * var circle = new Circle;
+     * circle instanceof Circle;
+     * // => true
+     *
+     * circle instanceof Shape;
+     * // => true
+     */
+    function create(prototype, properties) {
+      var result = baseCreate(prototype);
+      return properties ? assign(result, properties) : result;
+    }
+
+    /**
+     * Assigns own enumerable properties of source object(s) to the destination
+     * object for all destination properties that resolve to `undefined`. Once a
+     * property is set, additional defaults of the same property will be ignored.
+     *
+     * @static
+     * @memberOf _
+     * @type Function
+     * @category Objects
+     * @param {Object} object The destination object.
+     * @param {...Object} [source] The source objects.
+     * @param- {Object} [guard] Allows working with `_.reduce` without using its
+     *  `key` and `object` arguments as sources.
+     * @returns {Object} Returns the destination object.
+     * @example
+     *
+     * var object = { 'name': 'barney' };
+     * _.defaults(object, { 'name': 'fred', 'employer': 'slate' });
+     * // => { 'name': 'barney', 'employer': 'slate' }
+     */
+    var defaults = function(object, source, guard) {
+      var index, iterable = object, result = iterable;
+      if (!iterable) return result;
+      var args = arguments,
+          argsIndex = 0,
+          argsLength = typeof guard == 'number' ? 2 : args.length;
+      while (++argsIndex < argsLength) {
+        iterable = args[argsIndex];
+        if (iterable && objectTypes[typeof iterable]) {
+        var ownIndex = -1,
+            ownProps = objectTypes[typeof iterable] && keys(iterable),
+            length = ownProps ? ownProps.length : 0;
+
+        while (++ownIndex < length) {
+          index = ownProps[ownIndex];
+          if (typeof result[index] == 'undefined') result[index] = iterable[index];
+        }
+        }
+      }
+      return result
+    };
+
+    /**
+     * This method is like `_.findIndex` except that it returns the key of the
+     * first element that passes the callback check, instead of the element itself.
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to search.
+     * @param {Function|Object|string} [callback=identity] The function called per
+     *  iteration. If a property name or object is provided it will be used to
+     *  create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {string|undefined} Returns the key of the found element, else `undefined`.
+     * @example
+     *
+     * var characters = {
+     *   'barney': {  'age': 36, 'blocked': false },
+     *   'fred': {    'age': 40, 'blocked': true },
+     *   'pebbles': { 'age': 1,  'blocked': false }
+     * };
+     *
+     * _.findKey(characters, function(chr) {
+     *   return chr.age < 40;
+     * });
+     * // => 'barney' (property order is not guaranteed across environments)
+     *
+     * // using "_.where" callback shorthand
+     * _.findKey(characters, { 'age': 1 });
+     * // => 'pebbles'
+     *
+     * // using "_.pluck" callback shorthand
+     * _.findKey(characters, 'blocked');
+     * // => 'fred'
+     */
+    function findKey(object, callback, thisArg) {
+      var result;
+      callback = lodash.createCallback(callback, thisArg, 3);
+      forOwn(object, function(value, key, object) {
+        if (callback(value, key, object)) {
+          result = key;
+          return false;
+        }
+      });
+      return result;
+    }
+
+    /**
+     * This method is like `_.findKey` except that it iterates over elements
+     * of a `collection` in the opposite order.
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to search.
+     * @param {Function|Object|string} [callback=identity] The function called per
+     *  iteration. If a property name or object is provided it will be used to
+     *  create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {string|undefined} Returns the key of the found element, else `undefined`.
+     * @example
+     *
+     * var characters = {
+     *   'barney': {  'age': 36, 'blocked': true },
+     *   'fred': {    'age': 40, 'blocked': false },
+     *   'pebbles': { 'age': 1,  'blocked': true }
+     * };
+     *
+     * _.findLastKey(characters, function(chr) {
+     *   return chr.age < 40;
+     * });
+     * // => returns `pebbles`, assuming `_.findKey` returns `barney`
+     *
+     * // using "_.where" callback shorthand
+     * _.findLastKey(characters, { 'age': 40 });
+     * // => 'fred'
+     *
+     * // using "_.pluck" callback shorthand
+     * _.findLastKey(characters, 'blocked');
+     * // => 'pebbles'
+     */
+    function findLastKey(object, callback, thisArg) {
+      var result;
+      callback = lodash.createCallback(callback, thisArg, 3);
+      forOwnRight(object, function(value, key, object) {
+        if (callback(value, key, object)) {
+          result = key;
+          return false;
+        }
+      });
+      return result;
+    }
+
+    /**
+     * Iterates over own and inherited enumerable properties of an object,
+     * executing the callback for each property. The callback is bound to `thisArg`
+     * and invoked with three arguments; (value, key, object). Callbacks may exit
+     * iteration early by explicitly returning `false`.
+     *
+     * @static
+     * @memberOf _
+     * @type Function
+     * @category Objects
+     * @param {Object} object The object to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns `object`.
+     * @example
+     *
+     * function Shape() {
+     *   this.x = 0;
+     *   this.y = 0;
+     * }
+     *
+     * Shape.prototype.move = function(x, y) {
+     *   this.x += x;
+     *   this.y += y;
+     * };
+     *
+     * _.forIn(new Shape, function(value, key) {
+     *   console.log(key);
+     * });
+     * // => logs 'x', 'y', and 'move' (property order is not guaranteed across environments)
+     */
+    var forIn = function(collection, callback, thisArg) {
+      var index, iterable = collection, result = iterable;
+      if (!iterable) return result;
+      if (!objectTypes[typeof iterable]) return result;
+      callback = callback && typeof thisArg == 'undefined' ? callback : baseCreateCallback(callback, thisArg, 3);
+        for (index in iterable) {
+          if (callback(iterable[index], index, collection) === false) return result;
+        }
+      return result
+    };
+
+    /**
+     * This method is like `_.forIn` except that it iterates over elements
+     * of a `collection` in the opposite order.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns `object`.
+     * @example
+     *
+     * function Shape() {
+     *   this.x = 0;
+     *   this.y = 0;
+     * }
+     *
+     * Shape.prototype.move = function(x, y) {
+     *   this.x += x;
+     *   this.y += y;
+     * };
+     *
+     * _.forInRight(new Shape, function(value, key) {
+     *   console.log(key);
+     * });
+     * // => logs 'move', 'y', and 'x' assuming `_.forIn ` logs 'x', 'y', and 'move'
+     */
+    function forInRight(object, callback, thisArg) {
+      var pairs = [];
+
+      forIn(object, function(value, key) {
+        pairs.push(key, value);
+      });
+
+      var length = pairs.length;
+      callback = baseCreateCallback(callback, thisArg, 3);
+      while (length--) {
+        if (callback(pairs[length--], pairs[length], object) === false) {
+          break;
+        }
+      }
+      return object;
+    }
+
+    /**
+     * Iterates over own enumerable properties of an object, executing the callback
+     * for each property. The callback is bound to `thisArg` and invoked with three
+     * arguments; (value, key, object). Callbacks may exit iteration early by
+     * explicitly returning `false`.
+     *
+     * @static
+     * @memberOf _
+     * @type Function
+     * @category Objects
+     * @param {Object} object The object to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns `object`.
+     * @example
+     *
+     * _.forOwn({ '0': 'zero', '1': 'one', 'length': 2 }, function(num, key) {
+     *   console.log(key);
+     * });
+     * // => logs '0', '1', and 'length' (property order is not guaranteed across environments)
+     */
+    var forOwn = function(collection, callback, thisArg) {
+      var index, iterable = collection, result = iterable;
+      if (!iterable) return result;
+      if (!objectTypes[typeof iterable]) return result;
+      callback = callback && typeof thisArg == 'undefined' ? callback : baseCreateCallback(callback, thisArg, 3);
+        var ownIndex = -1,
+            ownProps = objectTypes[typeof iterable] && keys(iterable),
+            length = ownProps ? ownProps.length : 0;
+
+        while (++ownIndex < length) {
+          index = ownProps[ownIndex];
+          if (callback(iterable[index], index, collection) === false) return result;
+        }
+      return result
+    };
+
+    /**
+     * This method is like `_.forOwn` except that it iterates over elements
+     * of a `collection` in the opposite order.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns `object`.
+     * @example
+     *
+     * _.forOwnRight({ '0': 'zero', '1': 'one', 'length': 2 }, function(num, key) {
+     *   console.log(key);
+     * });
+     * // => logs 'length', '1', and '0' assuming `_.forOwn` logs '0', '1', and 'length'
+     */
+    function forOwnRight(object, callback, thisArg) {
+      var props = keys(object),
+          length = props.length;
+
+      callback = baseCreateCallback(callback, thisArg, 3);
+      while (length--) {
+        var key = props[length];
+        if (callback(object[key], key, object) === false) {
+          break;
+        }
+      }
+      return object;
+    }
+
+    /**
+     * Creates a sorted array of property names of all enumerable properties,
+     * own and inherited, of `object` that have function values.
+     *
+     * @static
+     * @memberOf _
+     * @alias methods
+     * @category Objects
+     * @param {Object} object The object to inspect.
+     * @returns {Array} Returns an array of property names that have function values.
+     * @example
+     *
+     * _.functions(_);
+     * // => ['all', 'any', 'bind', 'bindAll', 'clone', 'compact', 'compose', ...]
+     */
+    function functions(object) {
+      var result = [];
+      forIn(object, function(value, key) {
+        if (isFunction(value)) {
+          result.push(key);
+        }
+      });
+      return result.sort();
+    }
+
+    /**
+     * Checks if the specified property name exists as a direct property of `object`,
+     * instead of an inherited property.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to inspect.
+     * @param {string} key The name of the property to check.
+     * @returns {boolean} Returns `true` if key is a direct property, else `false`.
+     * @example
+     *
+     * _.has({ 'a': 1, 'b': 2, 'c': 3 }, 'b');
+     * // => true
+     */
+    function has(object, key) {
+      return object ? hasOwnProperty.call(object, key) : false;
+    }
+
+    /**
+     * Creates an object composed of the inverted keys and values of the given object.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to invert.
+     * @returns {Object} Returns the created inverted object.
+     * @example
+     *
+     * _.invert({ 'first': 'fred', 'second': 'barney' });
+     * // => { 'fred': 'first', 'barney': 'second' }
+     */
+    function invert(object) {
+      var index = -1,
+          props = keys(object),
+          length = props.length,
+          result = {};
+
+      while (++index < length) {
+        var key = props[index];
+        result[object[key]] = key;
+      }
+      return result;
+    }
+
+    /**
+     * Checks if `value` is a boolean value.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is a boolean value, else `false`.
+     * @example
+     *
+     * _.isBoolean(null);
+     * // => false
+     */
+    function isBoolean(value) {
+      return value === true || value === false ||
+        value && typeof value == 'object' && toString.call(value) == boolClass || false;
+    }
+
+    /**
+     * Checks if `value` is a date.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is a date, else `false`.
+     * @example
+     *
+     * _.isDate(new Date);
+     * // => true
+     */
+    function isDate(value) {
+      return value && typeof value == 'object' && toString.call(value) == dateClass || false;
+    }
+
+    /**
+     * Checks if `value` is a DOM element.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is a DOM element, else `false`.
+     * @example
+     *
+     * _.isElement(document.body);
+     * // => true
+     */
+    function isElement(value) {
+      return value && value.nodeType === 1 || false;
+    }
+
+    /**
+     * Checks if `value` is empty. Arrays, strings, or `arguments` objects with a
+     * length of `0` and objects with no own enumerable properties are considered
+     * "empty".
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Array|Object|string} value The value to inspect.
+     * @returns {boolean} Returns `true` if the `value` is empty, else `false`.
+     * @example
+     *
+     * _.isEmpty([1, 2, 3]);
+     * // => false
+     *
+     * _.isEmpty({});
+     * // => true
+     *
+     * _.isEmpty('');
+     * // => true
+     */
+    function isEmpty(value) {
+      var result = true;
+      if (!value) {
+        return result;
+      }
+      var className = toString.call(value),
+          length = value.length;
+
+      if ((className == arrayClass || className == stringClass || className == argsClass ) ||
+          (className == objectClass && typeof length == 'number' && isFunction(value.splice))) {
+        return !length;
+      }
+      forOwn(value, function() {
+        return (result = false);
+      });
+      return result;
+    }
+
+    /**
+     * Performs a deep comparison between two values to determine if they are
+     * equivalent to each other. If a callback is provided it will be executed
+     * to compare values. If the callback returns `undefined` comparisons will
+     * be handled by the method instead. The callback is bound to `thisArg` and
+     * invoked with two arguments; (a, b).
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} a The value to compare.
+     * @param {*} b The other value to compare.
+     * @param {Function} [callback] The function to customize comparing values.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+     * @example
+     *
+     * var object = { 'name': 'fred' };
+     * var copy = { 'name': 'fred' };
+     *
+     * object == copy;
+     * // => false
+     *
+     * _.isEqual(object, copy);
+     * // => true
+     *
+     * var words = ['hello', 'goodbye'];
+     * var otherWords = ['hi', 'goodbye'];
+     *
+     * _.isEqual(words, otherWords, function(a, b) {
+     *   var reGreet = /^(?:hello|hi)$/i,
+     *       aGreet = _.isString(a) && reGreet.test(a),
+     *       bGreet = _.isString(b) && reGreet.test(b);
+     *
+     *   return (aGreet || bGreet) ? (aGreet == bGreet) : undefined;
+     * });
+     * // => true
+     */
+    function isEqual(a, b, callback, thisArg) {
+      return baseIsEqual(a, b, typeof callback == 'function' && baseCreateCallback(callback, thisArg, 2));
+    }
+
+    /**
+     * Checks if `value` is, or can be coerced to, a finite number.
+     *
+     * Note: This is not the same as native `isFinite` which will return true for
+     * booleans and empty strings. See http://es5.github.io/#x15.1.2.5.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is finite, else `false`.
+     * @example
+     *
+     * _.isFinite(-101);
+     * // => true
+     *
+     * _.isFinite('10');
+     * // => true
+     *
+     * _.isFinite(true);
+     * // => false
+     *
+     * _.isFinite('');
+     * // => false
+     *
+     * _.isFinite(Infinity);
+     * // => false
+     */
+    function isFinite(value) {
+      return nativeIsFinite(value) && !nativeIsNaN(parseFloat(value));
+    }
+
+    /**
+     * Checks if `value` is a function.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is a function, else `false`.
+     * @example
+     *
+     * _.isFunction(_);
+     * // => true
+     */
+    function isFunction(value) {
+      return typeof value == 'function';
+    }
+
+    /**
+     * Checks if `value` is the language type of Object.
+     * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is an object, else `false`.
+     * @example
+     *
+     * _.isObject({});
+     * // => true
+     *
+     * _.isObject([1, 2, 3]);
+     * // => true
+     *
+     * _.isObject(1);
+     * // => false
+     */
+    function isObject(value) {
+      // check if the value is the ECMAScript language type of Object
+      // http://es5.github.io/#x8
+      // and avoid a V8 bug
+      // http://code.google.com/p/v8/issues/detail?id=2291
+      return !!(value && objectTypes[typeof value]);
+    }
+
+    /**
+     * Checks if `value` is `NaN`.
+     *
+     * Note: This is not the same as native `isNaN` which will return `true` for
+     * `undefined` and other non-numeric values. See http://es5.github.io/#x15.1.2.4.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is `NaN`, else `false`.
+     * @example
+     *
+     * _.isNaN(NaN);
+     * // => true
+     *
+     * _.isNaN(new Number(NaN));
+     * // => true
+     *
+     * isNaN(undefined);
+     * // => true
+     *
+     * _.isNaN(undefined);
+     * // => false
+     */
+    function isNaN(value) {
+      // `NaN` as a primitive is the only value that is not equal to itself
+      // (perform the [[Class]] check first to avoid errors with some host objects in IE)
+      return isNumber(value) && value != +value;
+    }
+
+    /**
+     * Checks if `value` is `null`.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is `null`, else `false`.
+     * @example
+     *
+     * _.isNull(null);
+     * // => true
+     *
+     * _.isNull(undefined);
+     * // => false
+     */
+    function isNull(value) {
+      return value === null;
+    }
+
+    /**
+     * Checks if `value` is a number.
+     *
+     * Note: `NaN` is considered a number. See http://es5.github.io/#x8.5.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is a number, else `false`.
+     * @example
+     *
+     * _.isNumber(8.4 * 5);
+     * // => true
+     */
+    function isNumber(value) {
+      return typeof value == 'number' ||
+        value && typeof value == 'object' && toString.call(value) == numberClass || false;
+    }
+
+    /**
+     * Checks if `value` is an object created by the `Object` constructor.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+     * @example
+     *
+     * function Shape() {
+     *   this.x = 0;
+     *   this.y = 0;
+     * }
+     *
+     * _.isPlainObject(new Shape);
+     * // => false
+     *
+     * _.isPlainObject([1, 2, 3]);
+     * // => false
+     *
+     * _.isPlainObject({ 'x': 0, 'y': 0 });
+     * // => true
+     */
+    var isPlainObject = !getPrototypeOf ? shimIsPlainObject : function(value) {
+      if (!(value && toString.call(value) == objectClass)) {
+        return false;
+      }
+      var valueOf = value.valueOf,
+          objProto = isNative(valueOf) && (objProto = getPrototypeOf(valueOf)) && getPrototypeOf(objProto);
+
+      return objProto
+        ? (value == objProto || getPrototypeOf(value) == objProto)
+        : shimIsPlainObject(value);
+    };
+
+    /**
+     * Checks if `value` is a regular expression.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is a regular expression, else `false`.
+     * @example
+     *
+     * _.isRegExp(/fred/);
+     * // => true
+     */
+    function isRegExp(value) {
+      return value && typeof value == 'object' && toString.call(value) == regexpClass || false;
+    }
+
+    /**
+     * Checks if `value` is a string.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is a string, else `false`.
+     * @example
+     *
+     * _.isString('fred');
+     * // => true
+     */
+    function isString(value) {
+      return typeof value == 'string' ||
+        value && typeof value == 'object' && toString.call(value) == stringClass || false;
+    }
+
+    /**
+     * Checks if `value` is `undefined`.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {*} value The value to check.
+     * @returns {boolean} Returns `true` if the `value` is `undefined`, else `false`.
+     * @example
+     *
+     * _.isUndefined(void 0);
+     * // => true
+     */
+    function isUndefined(value) {
+      return typeof value == 'undefined';
+    }
+
+    /**
+     * Creates an object with the same keys as `object` and values generated by
+     * running each own enumerable property of `object` through the callback.
+     * The callback is bound to `thisArg` and invoked with three arguments;
+     * (value, key, object).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a new object with values of the results of each `callback` execution.
+     * @example
+     *
+     * _.mapValues({ 'a': 1, 'b': 2, 'c': 3} , function(num) { return num * 3; });
+     * // => { 'a': 3, 'b': 6, 'c': 9 }
+     *
+     * var characters = {
+     *   'fred': { 'name': 'fred', 'age': 40 },
+     *   'pebbles': { 'name': 'pebbles', 'age': 1 }
+     * };
+     *
+     * // using "_.pluck" callback shorthand
+     * _.mapValues(characters, 'age');
+     * // => { 'fred': 40, 'pebbles': 1 }
+     */
+    function mapValues(object, callback, thisArg) {
+      var result = {};
+      callback = lodash.createCallback(callback, thisArg, 3);
+
+      forOwn(object, function(value, key, object) {
+        result[key] = callback(value, key, object);
+      });
+      return result;
+    }
+
+    /**
+     * Recursively merges own enumerable properties of the source object(s), that
+     * don't resolve to `undefined` into the destination object. Subsequent sources
+     * will overwrite property assignments of previous sources. If a callback is
+     * provided it will be executed to produce the merged values of the destination
+     * and source properties. If the callback returns `undefined` merging will
+     * be handled by the method instead. The callback is bound to `thisArg` and
+     * invoked with two arguments; (objectValue, sourceValue).
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The destination object.
+     * @param {...Object} [source] The source objects.
+     * @param {Function} [callback] The function to customize merging properties.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns the destination object.
+     * @example
+     *
+     * var names = {
+     *   'characters': [
+     *     { 'name': 'barney' },
+     *     { 'name': 'fred' }
+     *   ]
+     * };
+     *
+     * var ages = {
+     *   'characters': [
+     *     { 'age': 36 },
+     *     { 'age': 40 }
+     *   ]
+     * };
+     *
+     * _.merge(names, ages);
+     * // => { 'characters': [{ 'name': 'barney', 'age': 36 }, { 'name': 'fred', 'age': 40 }] }
+     *
+     * var food = {
+     *   'fruits': ['apple'],
+     *   'vegetables': ['beet']
+     * };
+     *
+     * var otherFood = {
+     *   'fruits': ['banana'],
+     *   'vegetables': ['carrot']
+     * };
+     *
+     * _.merge(food, otherFood, function(a, b) {
+     *   return _.isArray(a) ? a.concat(b) : undefined;
+     * });
+     * // => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot] }
+     */
+    function merge(object) {
+      var args = arguments,
+          length = 2;
+
+      if (!isObject(object)) {
+        return object;
+      }
+      // allows working with `_.reduce` and `_.reduceRight` without using
+      // their `index` and `collection` arguments
+      if (typeof args[2] != 'number') {
+        length = args.length;
+      }
+      if (length > 3 && typeof args[length - 2] == 'function') {
+        var callback = baseCreateCallback(args[--length - 1], args[length--], 2);
+      } else if (length > 2 && typeof args[length - 1] == 'function') {
+        callback = args[--length];
+      }
+      var sources = slice(arguments, 1, length),
+          index = -1,
+          stackA = getArray(),
+          stackB = getArray();
+
+      while (++index < length) {
+        baseMerge(object, sources[index], callback, stackA, stackB);
+      }
+      releaseArray(stackA);
+      releaseArray(stackB);
+      return object;
+    }
+
+    /**
+     * Creates a shallow clone of `object` excluding the specified properties.
+     * Property names may be specified as individual arguments or as arrays of
+     * property names. If a callback is provided it will be executed for each
+     * property of `object` omitting the properties the callback returns truey
+     * for. The callback is bound to `thisArg` and invoked with three arguments;
+     * (value, key, object).
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The source object.
+     * @param {Function|...string|string[]} [callback] The properties to omit or the
+     *  function called per iteration.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns an object without the omitted properties.
+     * @example
+     *
+     * _.omit({ 'name': 'fred', 'age': 40 }, 'age');
+     * // => { 'name': 'fred' }
+     *
+     * _.omit({ 'name': 'fred', 'age': 40 }, function(value) {
+     *   return typeof value == 'number';
+     * });
+     * // => { 'name': 'fred' }
+     */
+    function omit(object, callback, thisArg) {
+      var result = {};
+      if (typeof callback != 'function') {
+        var props = [];
+        forIn(object, function(value, key) {
+          props.push(key);
+        });
+        props = baseDifference(props, baseFlatten(arguments, true, false, 1));
+
+        var index = -1,
+            length = props.length;
+
+        while (++index < length) {
+          var key = props[index];
+          result[key] = object[key];
+        }
+      } else {
+        callback = lodash.createCallback(callback, thisArg, 3);
+        forIn(object, function(value, key, object) {
+          if (!callback(value, key, object)) {
+            result[key] = value;
+          }
+        });
+      }
+      return result;
+    }
+
+    /**
+     * Creates a two dimensional array of an object's key-value pairs,
+     * i.e. `[[key1, value1], [key2, value2]]`.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to inspect.
+     * @returns {Array} Returns new array of key-value pairs.
+     * @example
+     *
+     * _.pairs({ 'barney': 36, 'fred': 40 });
+     * // => [['barney', 36], ['fred', 40]] (property order is not guaranteed across environments)
+     */
+    function pairs(object) {
+      var index = -1,
+          props = keys(object),
+          length = props.length,
+          result = Array(length);
+
+      while (++index < length) {
+        var key = props[index];
+        result[index] = [key, object[key]];
+      }
+      return result;
+    }
+
+    /**
+     * Creates a shallow clone of `object` composed of the specified properties.
+     * Property names may be specified as individual arguments or as arrays of
+     * property names. If a callback is provided it will be executed for each
+     * property of `object` picking the properties the callback returns truey
+     * for. The callback is bound to `thisArg` and invoked with three arguments;
+     * (value, key, object).
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The source object.
+     * @param {Function|...string|string[]} [callback] The function called per
+     *  iteration or property names to pick, specified as individual property
+     *  names or arrays of property names.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns an object composed of the picked properties.
+     * @example
+     *
+     * _.pick({ 'name': 'fred', '_userid': 'fred1' }, 'name');
+     * // => { 'name': 'fred' }
+     *
+     * _.pick({ 'name': 'fred', '_userid': 'fred1' }, function(value, key) {
+     *   return key.charAt(0) != '_';
+     * });
+     * // => { 'name': 'fred' }
+     */
+    function pick(object, callback, thisArg) {
+      var result = {};
+      if (typeof callback != 'function') {
+        var index = -1,
+            props = baseFlatten(arguments, true, false, 1),
+            length = isObject(object) ? props.length : 0;
+
+        while (++index < length) {
+          var key = props[index];
+          if (key in object) {
+            result[key] = object[key];
+          }
+        }
+      } else {
+        callback = lodash.createCallback(callback, thisArg, 3);
+        forIn(object, function(value, key, object) {
+          if (callback(value, key, object)) {
+            result[key] = value;
+          }
+        });
+      }
+      return result;
+    }
+
+    /**
+     * An alternative to `_.reduce` this method transforms `object` to a new
+     * `accumulator` object which is the result of running each of its own
+     * enumerable properties through a callback, with each callback execution
+     * potentially mutating the `accumulator` object. The callback is bound to
+     * `thisArg` and invoked with four arguments; (accumulator, value, key, object).
+     * Callbacks may exit iteration early by explicitly returning `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Array|Object} object The object to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [accumulator] The custom accumulator value.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the accumulated value.
+     * @example
+     *
+     * var squares = _.transform([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], function(result, num) {
+     *   num *= num;
+     *   if (num % 2) {
+     *     return result.push(num) < 3;
+     *   }
+     * });
+     * // => [1, 9, 25]
+     *
+     * var mapped = _.transform({ 'a': 1, 'b': 2, 'c': 3 }, function(result, num, key) {
+     *   result[key] = num * 3;
+     * });
+     * // => { 'a': 3, 'b': 6, 'c': 9 }
+     */
+    function transform(object, callback, accumulator, thisArg) {
+      var isArr = isArray(object);
+      if (accumulator == null) {
+        if (isArr) {
+          accumulator = [];
+        } else {
+          var ctor = object && object.constructor,
+              proto = ctor && ctor.prototype;
+
+          accumulator = baseCreate(proto);
+        }
+      }
+      if (callback) {
+        callback = lodash.createCallback(callback, thisArg, 4);
+        (isArr ? forEach : forOwn)(object, function(value, index, object) {
+          return callback(accumulator, value, index, object);
+        });
+      }
+      return accumulator;
+    }
+
+    /**
+     * Creates an array composed of the own enumerable property values of `object`.
+     *
+     * @static
+     * @memberOf _
+     * @category Objects
+     * @param {Object} object The object to inspect.
+     * @returns {Array} Returns an array of property values.
+     * @example
+     *
+     * _.values({ 'one': 1, 'two': 2, 'three': 3 });
+     * // => [1, 2, 3] (property order is not guaranteed across environments)
+     */
+    function values(object) {
+      var index = -1,
+          props = keys(object),
+          length = props.length,
+          result = Array(length);
+
+      while (++index < length) {
+        result[index] = object[props[index]];
+      }
+      return result;
+    }
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Creates an array of elements from the specified indexes, or keys, of the
+     * `collection`. Indexes may be specified as individual arguments or as arrays
+     * of indexes.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {...(number|number[]|string|string[])} [index] The indexes of `collection`
+     *   to retrieve, specified as individual indexes or arrays of indexes.
+     * @returns {Array} Returns a new array of elements corresponding to the
+     *  provided indexes.
+     * @example
+     *
+     * _.at(['a', 'b', 'c', 'd', 'e'], [0, 2, 4]);
+     * // => ['a', 'c', 'e']
+     *
+     * _.at(['fred', 'barney', 'pebbles'], 0, 2);
+     * // => ['fred', 'pebbles']
+     */
+    function at(collection) {
+      var args = arguments,
+          index = -1,
+          props = baseFlatten(args, true, false, 1),
+          length = (args[2] && args[2][args[1]] === collection) ? 1 : props.length,
+          result = Array(length);
+
+      while(++index < length) {
+        result[index] = collection[props[index]];
+      }
+      return result;
+    }
+
+    /**
+     * Checks if a given value is present in a collection using strict equality
+     * for comparisons, i.e. `===`. If `fromIndex` is negative, it is used as the
+     * offset from the end of the collection.
+     *
+     * @static
+     * @memberOf _
+     * @alias include
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {*} target The value to check for.
+     * @param {number} [fromIndex=0] The index to search from.
+     * @returns {boolean} Returns `true` if the `target` element is found, else `false`.
+     * @example
+     *
+     * _.contains([1, 2, 3], 1);
+     * // => true
+     *
+     * _.contains([1, 2, 3], 1, 2);
+     * // => false
+     *
+     * _.contains({ 'name': 'fred', 'age': 40 }, 'fred');
+     * // => true
+     *
+     * _.contains('pebbles', 'eb');
+     * // => true
+     */
+    function contains(collection, target, fromIndex) {
+      var index = -1,
+          indexOf = getIndexOf(),
+          length = collection ? collection.length : 0,
+          result = false;
+
+      fromIndex = (fromIndex < 0 ? nativeMax(0, length + fromIndex) : fromIndex) || 0;
+      if (isArray(collection)) {
+        result = indexOf(collection, target, fromIndex) > -1;
+      } else if (typeof length == 'number') {
+        result = (isString(collection) ? collection.indexOf(target, fromIndex) : indexOf(collection, target, fromIndex)) > -1;
+      } else {
+        forOwn(collection, function(value) {
+          if (++index >= fromIndex) {
+            return !(result = value === target);
+          }
+        });
+      }
+      return result;
+    }
+
+    /**
+     * Creates an object composed of keys generated from the results of running
+     * each element of `collection` through the callback. The corresponding value
+     * of each key is the number of times the key was returned by the callback.
+     * The callback is bound to `thisArg` and invoked with three arguments;
+     * (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns the composed aggregate object.
+     * @example
+     *
+     * _.countBy([4.3, 6.1, 6.4], function(num) { return Math.floor(num); });
+     * // => { '4': 1, '6': 2 }
+     *
+     * _.countBy([4.3, 6.1, 6.4], function(num) { return this.floor(num); }, Math);
+     * // => { '4': 1, '6': 2 }
+     *
+     * _.countBy(['one', 'two', 'three'], 'length');
+     * // => { '3': 2, '5': 1 }
+     */
+    var countBy = createAggregator(function(result, value, key) {
+      (hasOwnProperty.call(result, key) ? result[key]++ : result[key] = 1);
+    });
+
+    /**
+     * Checks if the given callback returns truey value for **all** elements of
+     * a collection. The callback is bound to `thisArg` and invoked with three
+     * arguments; (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @alias all
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {boolean} Returns `true` if all elements passed the callback check,
+     *  else `false`.
+     * @example
+     *
+     * _.every([true, 1, null, 'yes']);
+     * // => false
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.every(characters, 'age');
+     * // => true
+     *
+     * // using "_.where" callback shorthand
+     * _.every(characters, { 'age': 36 });
+     * // => false
+     */
+    function every(collection, callback, thisArg) {
+      var result = true;
+      callback = lodash.createCallback(callback, thisArg, 3);
+
+      var index = -1,
+          length = collection ? collection.length : 0;
+
+      if (typeof length == 'number') {
+        while (++index < length) {
+          if (!(result = !!callback(collection[index], index, collection))) {
+            break;
+          }
+        }
+      } else {
+        forOwn(collection, function(value, index, collection) {
+          return (result = !!callback(value, index, collection));
+        });
+      }
+      return result;
+    }
+
+    /**
+     * Iterates over elements of a collection, returning an array of all elements
+     * the callback returns truey for. The callback is bound to `thisArg` and
+     * invoked with three arguments; (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @alias select
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a new array of elements that passed the callback check.
+     * @example
+     *
+     * var evens = _.filter([1, 2, 3, 4, 5, 6], function(num) { return num % 2 == 0; });
+     * // => [2, 4, 6]
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36, 'blocked': false },
+     *   { 'name': 'fred',   'age': 40, 'blocked': true }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.filter(characters, 'blocked');
+     * // => [{ 'name': 'fred', 'age': 40, 'blocked': true }]
+     *
+     * // using "_.where" callback shorthand
+     * _.filter(characters, { 'age': 36 });
+     * // => [{ 'name': 'barney', 'age': 36, 'blocked': false }]
+     */
+    function filter(collection, callback, thisArg) {
+      var result = [];
+      callback = lodash.createCallback(callback, thisArg, 3);
+
+      var index = -1,
+          length = collection ? collection.length : 0;
+
+      if (typeof length == 'number') {
+        while (++index < length) {
+          var value = collection[index];
+          if (callback(value, index, collection)) {
+            result.push(value);
+          }
+        }
+      } else {
+        forOwn(collection, function(value, index, collection) {
+          if (callback(value, index, collection)) {
+            result.push(value);
+          }
+        });
+      }
+      return result;
+    }
+
+    /**
+     * Iterates over elements of a collection, returning the first element that
+     * the callback returns truey for. The callback is bound to `thisArg` and
+     * invoked with three arguments; (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @alias detect, findWhere
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the found element, else `undefined`.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'age': 36, 'blocked': false },
+     *   { 'name': 'fred',    'age': 40, 'blocked': true },
+     *   { 'name': 'pebbles', 'age': 1,  'blocked': false }
+     * ];
+     *
+     * _.find(characters, function(chr) {
+     *   return chr.age < 40;
+     * });
+     * // => { 'name': 'barney', 'age': 36, 'blocked': false }
+     *
+     * // using "_.where" callback shorthand
+     * _.find(characters, { 'age': 1 });
+     * // =>  { 'name': 'pebbles', 'age': 1, 'blocked': false }
+     *
+     * // using "_.pluck" callback shorthand
+     * _.find(characters, 'blocked');
+     * // => { 'name': 'fred', 'age': 40, 'blocked': true }
+     */
+    function find(collection, callback, thisArg) {
+      callback = lodash.createCallback(callback, thisArg, 3);
+
+      var index = -1,
+          length = collection ? collection.length : 0;
+
+      if (typeof length == 'number') {
+        while (++index < length) {
+          var value = collection[index];
+          if (callback(value, index, collection)) {
+            return value;
+          }
+        }
+      } else {
+        var result;
+        forOwn(collection, function(value, index, collection) {
+          if (callback(value, index, collection)) {
+            result = value;
+            return false;
+          }
+        });
+        return result;
+      }
+    }
+
+    /**
+     * This method is like `_.find` except that it iterates over elements
+     * of a `collection` from right to left.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the found element, else `undefined`.
+     * @example
+     *
+     * _.findLast([1, 2, 3, 4], function(num) {
+     *   return num % 2 == 1;
+     * });
+     * // => 3
+     */
+    function findLast(collection, callback, thisArg) {
+      var result;
+      callback = lodash.createCallback(callback, thisArg, 3);
+      forEachRight(collection, function(value, index, collection) {
+        if (callback(value, index, collection)) {
+          result = value;
+          return false;
+        }
+      });
+      return result;
+    }
+
+    /**
+     * Iterates over elements of a collection, executing the callback for each
+     * element. The callback is bound to `thisArg` and invoked with three arguments;
+     * (value, index|key, collection). Callbacks may exit iteration early by
+     * explicitly returning `false`.
+     *
+     * Note: As with other "Collections" methods, objects with a `length` property
+     * are iterated like arrays. To avoid this behavior `_.forIn` or `_.forOwn`
+     * may be used for object iteration.
+     *
+     * @static
+     * @memberOf _
+     * @alias each
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array|Object|string} Returns `collection`.
+     * @example
+     *
+     * _([1, 2, 3]).forEach(function(num) { console.log(num); }).join(',');
+     * // => logs each number and returns '1,2,3'
+     *
+     * _.forEach({ 'one': 1, 'two': 2, 'three': 3 }, function(num) { console.log(num); });
+     * // => logs each number and returns the object (property order is not guaranteed across environments)
+     */
+    function forEach(collection, callback, thisArg) {
+      var index = -1,
+          length = collection ? collection.length : 0;
+
+      callback = callback && typeof thisArg == 'undefined' ? callback : baseCreateCallback(callback, thisArg, 3);
+      if (typeof length == 'number') {
+        while (++index < length) {
+          if (callback(collection[index], index, collection) === false) {
+            break;
+          }
+        }
+      } else {
+        forOwn(collection, callback);
+      }
+      return collection;
+    }
+
+    /**
+     * This method is like `_.forEach` except that it iterates over elements
+     * of a `collection` from right to left.
+     *
+     * @static
+     * @memberOf _
+     * @alias eachRight
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array|Object|string} Returns `collection`.
+     * @example
+     *
+     * _([1, 2, 3]).forEachRight(function(num) { console.log(num); }).join(',');
+     * // => logs each number from right to left and returns '3,2,1'
+     */
+    function forEachRight(collection, callback, thisArg) {
+      var length = collection ? collection.length : 0;
+      callback = callback && typeof thisArg == 'undefined' ? callback : baseCreateCallback(callback, thisArg, 3);
+      if (typeof length == 'number') {
+        while (length--) {
+          if (callback(collection[length], length, collection) === false) {
+            break;
+          }
+        }
+      } else {
+        var props = keys(collection);
+        length = props.length;
+        forOwn(collection, function(value, key, collection) {
+          key = props ? props[--length] : --length;
+          return callback(collection[key], key, collection);
+        });
+      }
+      return collection;
+    }
+
+    /**
+     * Creates an object composed of keys generated from the results of running
+     * each element of a collection through the callback. The corresponding value
+     * of each key is an array of the elements responsible for generating the key.
+     * The callback is bound to `thisArg` and invoked with three arguments;
+     * (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns the composed aggregate object.
+     * @example
+     *
+     * _.groupBy([4.2, 6.1, 6.4], function(num) { return Math.floor(num); });
+     * // => { '4': [4.2], '6': [6.1, 6.4] }
+     *
+     * _.groupBy([4.2, 6.1, 6.4], function(num) { return this.floor(num); }, Math);
+     * // => { '4': [4.2], '6': [6.1, 6.4] }
+     *
+     * // using "_.pluck" callback shorthand
+     * _.groupBy(['one', 'two', 'three'], 'length');
+     * // => { '3': ['one', 'two'], '5': ['three'] }
+     */
+    var groupBy = createAggregator(function(result, value, key) {
+      (hasOwnProperty.call(result, key) ? result[key] : result[key] = []).push(value);
+    });
+
+    /**
+     * Creates an object composed of keys generated from the results of running
+     * each element of the collection through the given callback. The corresponding
+     * value of each key is the last element responsible for generating the key.
+     * The callback is bound to `thisArg` and invoked with three arguments;
+     * (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Object} Returns the composed aggregate object.
+     * @example
+     *
+     * var keys = [
+     *   { 'dir': 'left', 'code': 97 },
+     *   { 'dir': 'right', 'code': 100 }
+     * ];
+     *
+     * _.indexBy(keys, 'dir');
+     * // => { 'left': { 'dir': 'left', 'code': 97 }, 'right': { 'dir': 'right', 'code': 100 } }
+     *
+     * _.indexBy(keys, function(key) { return String.fromCharCode(key.code); });
+     * // => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
+     *
+     * _.indexBy(characters, function(key) { this.fromCharCode(key.code); }, String);
+     * // => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }
+     */
+    var indexBy = createAggregator(function(result, value, key) {
+      result[key] = value;
+    });
+
+    /**
+     * Invokes the method named by `methodName` on each element in the `collection`
+     * returning an array of the results of each invoked method. Additional arguments
+     * will be provided to each invoked method. If `methodName` is a function it
+     * will be invoked for, and `this` bound to, each element in the `collection`.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|string} methodName The name of the method to invoke or
+     *  the function invoked per iteration.
+     * @param {...*} [arg] Arguments to invoke the method with.
+     * @returns {Array} Returns a new array of the results of each invoked method.
+     * @example
+     *
+     * _.invoke([[5, 1, 7], [3, 2, 1]], 'sort');
+     * // => [[1, 5, 7], [1, 2, 3]]
+     *
+     * _.invoke([123, 456], String.prototype.split, '');
+     * // => [['1', '2', '3'], ['4', '5', '6']]
+     */
+    function invoke(collection, methodName) {
+      var args = slice(arguments, 2),
+          index = -1,
+          isFunc = typeof methodName == 'function',
+          length = collection ? collection.length : 0,
+          result = Array(typeof length == 'number' ? length : 0);
+
+      forEach(collection, function(value) {
+        result[++index] = (isFunc ? methodName : value[methodName]).apply(value, args);
+      });
+      return result;
+    }
+
+    /**
+     * Creates an array of values by running each element in the collection
+     * through the callback. The callback is bound to `thisArg` and invoked with
+     * three arguments; (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @alias collect
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a new array of the results of each `callback` execution.
+     * @example
+     *
+     * _.map([1, 2, 3], function(num) { return num * 3; });
+     * // => [3, 6, 9]
+     *
+     * _.map({ 'one': 1, 'two': 2, 'three': 3 }, function(num) { return num * 3; });
+     * // => [3, 6, 9] (property order is not guaranteed across environments)
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.map(characters, 'name');
+     * // => ['barney', 'fred']
+     */
+    function map(collection, callback, thisArg) {
+      var index = -1,
+          length = collection ? collection.length : 0;
+
+      callback = lodash.createCallback(callback, thisArg, 3);
+      if (typeof length == 'number') {
+        var result = Array(length);
+        while (++index < length) {
+          result[index] = callback(collection[index], index, collection);
+        }
+      } else {
+        result = [];
+        forOwn(collection, function(value, key, collection) {
+          result[++index] = callback(value, key, collection);
+        });
+      }
+      return result;
+    }
+
+    /**
+     * Retrieves the maximum value of a collection. If the collection is empty or
+     * falsey `-Infinity` is returned. If a callback is provided it will be executed
+     * for each value in the collection to generate the criterion by which the value
+     * is ranked. The callback is bound to `thisArg` and invoked with three
+     * arguments; (value, index, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the maximum value.
+     * @example
+     *
+     * _.max([4, 2, 8, 6]);
+     * // => 8
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * _.max(characters, function(chr) { return chr.age; });
+     * // => { 'name': 'fred', 'age': 40 };
+     *
+     * // using "_.pluck" callback shorthand
+     * _.max(characters, 'age');
+     * // => { 'name': 'fred', 'age': 40 };
+     */
+    function max(collection, callback, thisArg) {
+      var computed = -Infinity,
+          result = computed;
+
+      // allows working with functions like `_.map` without using
+      // their `index` argument as a callback
+      if (typeof callback != 'function' && thisArg && thisArg[callback] === collection) {
+        callback = null;
+      }
+      if (callback == null && isArray(collection)) {
+        var index = -1,
+            length = collection.length;
+
+        while (++index < length) {
+          var value = collection[index];
+          if (value > result) {
+            result = value;
+          }
+        }
+      } else {
+        callback = (callback == null && isString(collection))
+          ? charAtCallback
+          : lodash.createCallback(callback, thisArg, 3);
+
+        forEach(collection, function(value, index, collection) {
+          var current = callback(value, index, collection);
+          if (current > computed) {
+            computed = current;
+            result = value;
+          }
+        });
+      }
+      return result;
+    }
+
+    /**
+     * Retrieves the minimum value of a collection. If the collection is empty or
+     * falsey `Infinity` is returned. If a callback is provided it will be executed
+     * for each value in the collection to generate the criterion by which the value
+     * is ranked. The callback is bound to `thisArg` and invoked with three
+     * arguments; (value, index, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the minimum value.
+     * @example
+     *
+     * _.min([4, 2, 8, 6]);
+     * // => 2
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * _.min(characters, function(chr) { return chr.age; });
+     * // => { 'name': 'barney', 'age': 36 };
+     *
+     * // using "_.pluck" callback shorthand
+     * _.min(characters, 'age');
+     * // => { 'name': 'barney', 'age': 36 };
+     */
+    function min(collection, callback, thisArg) {
+      var computed = Infinity,
+          result = computed;
+
+      // allows working with functions like `_.map` without using
+      // their `index` argument as a callback
+      if (typeof callback != 'function' && thisArg && thisArg[callback] === collection) {
+        callback = null;
+      }
+      if (callback == null && isArray(collection)) {
+        var index = -1,
+            length = collection.length;
+
+        while (++index < length) {
+          var value = collection[index];
+          if (value < result) {
+            result = value;
+          }
+        }
+      } else {
+        callback = (callback == null && isString(collection))
+          ? charAtCallback
+          : lodash.createCallback(callback, thisArg, 3);
+
+        forEach(collection, function(value, index, collection) {
+          var current = callback(value, index, collection);
+          if (current < computed) {
+            computed = current;
+            result = value;
+          }
+        });
+      }
+      return result;
+    }
+
+    /**
+     * Retrieves the value of a specified property from all elements in the collection.
+     *
+     * @static
+     * @memberOf _
+     * @type Function
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {string} property The name of the property to pluck.
+     * @returns {Array} Returns a new array of property values.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * _.pluck(characters, 'name');
+     * // => ['barney', 'fred']
+     */
+    var pluck = map;
+
+    /**
+     * Reduces a collection to a value which is the accumulated result of running
+     * each element in the collection through the callback, where each successive
+     * callback execution consumes the return value of the previous execution. If
+     * `accumulator` is not provided the first element of the collection will be
+     * used as the initial `accumulator` value. The callback is bound to `thisArg`
+     * and invoked with four arguments; (accumulator, value, index|key, collection).
+     *
+     * @static
+     * @memberOf _
+     * @alias foldl, inject
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [accumulator] Initial value of the accumulator.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the accumulated value.
+     * @example
+     *
+     * var sum = _.reduce([1, 2, 3], function(sum, num) {
+     *   return sum + num;
+     * });
+     * // => 6
+     *
+     * var mapped = _.reduce({ 'a': 1, 'b': 2, 'c': 3 }, function(result, num, key) {
+     *   result[key] = num * 3;
+     *   return result;
+     * }, {});
+     * // => { 'a': 3, 'b': 6, 'c': 9 }
+     */
+    function reduce(collection, callback, accumulator, thisArg) {
+      if (!collection) return accumulator;
+      var noaccum = arguments.length < 3;
+      callback = lodash.createCallback(callback, thisArg, 4);
+
+      var index = -1,
+          length = collection.length;
+
+      if (typeof length == 'number') {
+        if (noaccum) {
+          accumulator = collection[++index];
+        }
+        while (++index < length) {
+          accumulator = callback(accumulator, collection[index], index, collection);
+        }
+      } else {
+        forOwn(collection, function(value, index, collection) {
+          accumulator = noaccum
+            ? (noaccum = false, value)
+            : callback(accumulator, value, index, collection)
+        });
+      }
+      return accumulator;
+    }
+
+    /**
+     * This method is like `_.reduce` except that it iterates over elements
+     * of a `collection` from right to left.
+     *
+     * @static
+     * @memberOf _
+     * @alias foldr
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function} [callback=identity] The function called per iteration.
+     * @param {*} [accumulator] Initial value of the accumulator.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the accumulated value.
+     * @example
+     *
+     * var list = [[0, 1], [2, 3], [4, 5]];
+     * var flat = _.reduceRight(list, function(a, b) { return a.concat(b); }, []);
+     * // => [4, 5, 2, 3, 0, 1]
+     */
+    function reduceRight(collection, callback, accumulator, thisArg) {
+      var noaccum = arguments.length < 3;
+      callback = lodash.createCallback(callback, thisArg, 4);
+      forEachRight(collection, function(value, index, collection) {
+        accumulator = noaccum
+          ? (noaccum = false, value)
+          : callback(accumulator, value, index, collection);
+      });
+      return accumulator;
+    }
+
+    /**
+     * The opposite of `_.filter` this method returns the elements of a
+     * collection that the callback does **not** return truey for.
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a new array of elements that failed the callback check.
+     * @example
+     *
+     * var odds = _.reject([1, 2, 3, 4, 5, 6], function(num) { return num % 2 == 0; });
+     * // => [1, 3, 5]
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36, 'blocked': false },
+     *   { 'name': 'fred',   'age': 40, 'blocked': true }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.reject(characters, 'blocked');
+     * // => [{ 'name': 'barney', 'age': 36, 'blocked': false }]
+     *
+     * // using "_.where" callback shorthand
+     * _.reject(characters, { 'age': 36 });
+     * // => [{ 'name': 'fred', 'age': 40, 'blocked': true }]
+     */
+    function reject(collection, callback, thisArg) {
+      callback = lodash.createCallback(callback, thisArg, 3);
+      return filter(collection, function(value, index, collection) {
+        return !callback(value, index, collection);
+      });
+    }
+
+    /**
+     * Retrieves a random element or `n` random elements from a collection.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to sample.
+     * @param {number} [n] The number of elements to sample.
+     * @param- {Object} [guard] Allows working with functions like `_.map`
+     *  without using their `index` arguments as `n`.
+     * @returns {Array} Returns the random sample(s) of `collection`.
+     * @example
+     *
+     * _.sample([1, 2, 3, 4]);
+     * // => 2
+     *
+     * _.sample([1, 2, 3, 4], 2);
+     * // => [3, 1]
+     */
+    function sample(collection, n, guard) {
+      if (collection && typeof collection.length != 'number') {
+        collection = values(collection);
+      }
+      if (n == null || guard) {
+        return collection ? collection[baseRandom(0, collection.length - 1)] : undefined;
+      }
+      var result = shuffle(collection);
+      result.length = nativeMin(nativeMax(0, n), result.length);
+      return result;
+    }
+
+    /**
+     * Creates an array of shuffled values, using a version of the Fisher-Yates
+     * shuffle. See http://en.wikipedia.org/wiki/Fisher-Yates_shuffle.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to shuffle.
+     * @returns {Array} Returns a new shuffled collection.
+     * @example
+     *
+     * _.shuffle([1, 2, 3, 4, 5, 6]);
+     * // => [4, 1, 6, 3, 5, 2]
+     */
+    function shuffle(collection) {
+      var index = -1,
+          length = collection ? collection.length : 0,
+          result = Array(typeof length == 'number' ? length : 0);
+
+      forEach(collection, function(value) {
+        var rand = baseRandom(0, ++index);
+        result[index] = result[rand];
+        result[rand] = value;
+      });
+      return result;
+    }
+
+    /**
+     * Gets the size of the `collection` by returning `collection.length` for arrays
+     * and array-like objects or the number of own enumerable properties for objects.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to inspect.
+     * @returns {number} Returns `collection.length` or number of own enumerable properties.
+     * @example
+     *
+     * _.size([1, 2]);
+     * // => 2
+     *
+     * _.size({ 'one': 1, 'two': 2, 'three': 3 });
+     * // => 3
+     *
+     * _.size('pebbles');
+     * // => 7
+     */
+    function size(collection) {
+      var length = collection ? collection.length : 0;
+      return typeof length == 'number' ? length : keys(collection).length;
+    }
+
+    /**
+     * Checks if the callback returns a truey value for **any** element of a
+     * collection. The function returns as soon as it finds a passing value and
+     * does not iterate over the entire collection. The callback is bound to
+     * `thisArg` and invoked with three arguments; (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @alias any
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {boolean} Returns `true` if any element passed the callback check,
+     *  else `false`.
+     * @example
+     *
+     * _.some([null, 0, 'yes', false], Boolean);
+     * // => true
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36, 'blocked': false },
+     *   { 'name': 'fred',   'age': 40, 'blocked': true }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.some(characters, 'blocked');
+     * // => true
+     *
+     * // using "_.where" callback shorthand
+     * _.some(characters, { 'age': 1 });
+     * // => false
+     */
+    function some(collection, callback, thisArg) {
+      var result;
+      callback = lodash.createCallback(callback, thisArg, 3);
+
+      var index = -1,
+          length = collection ? collection.length : 0;
+
+      if (typeof length == 'number') {
+        while (++index < length) {
+          if ((result = callback(collection[index], index, collection))) {
+            break;
+          }
+        }
+      } else {
+        forOwn(collection, function(value, index, collection) {
+          return !(result = callback(value, index, collection));
+        });
+      }
+      return !!result;
+    }
+
+    /**
+     * Creates an array of elements, sorted in ascending order by the results of
+     * running each element in a collection through the callback. This method
+     * performs a stable sort, that is, it will preserve the original sort order
+     * of equal elements. The callback is bound to `thisArg` and invoked with
+     * three arguments; (value, index|key, collection).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an array of property names is provided for `callback` the collection
+     * will be sorted by each property value.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Array|Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a new array of sorted elements.
+     * @example
+     *
+     * _.sortBy([1, 2, 3], function(num) { return Math.sin(num); });
+     * // => [3, 1, 2]
+     *
+     * _.sortBy([1, 2, 3], function(num) { return this.sin(num); }, Math);
+     * // => [3, 1, 2]
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'age': 36 },
+     *   { 'name': 'fred',    'age': 40 },
+     *   { 'name': 'barney',  'age': 26 },
+     *   { 'name': 'fred',    'age': 30 }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.map(_.sortBy(characters, 'age'), _.values);
+     * // => [['barney', 26], ['fred', 30], ['barney', 36], ['fred', 40]]
+     *
+     * // sorting by multiple properties
+     * _.map(_.sortBy(characters, ['name', 'age']), _.values);
+     * // = > [['barney', 26], ['barney', 36], ['fred', 30], ['fred', 40]]
+     */
+    function sortBy(collection, callback, thisArg) {
+      var index = -1,
+          isArr = isArray(callback),
+          length = collection ? collection.length : 0,
+          result = Array(typeof length == 'number' ? length : 0);
+
+      if (!isArr) {
+        callback = lodash.createCallback(callback, thisArg, 3);
+      }
+      forEach(collection, function(value, key, collection) {
+        var object = result[++index] = getObject();
+        if (isArr) {
+          object.criteria = map(callback, function(key) { return value[key]; });
+        } else {
+          (object.criteria = getArray())[0] = callback(value, key, collection);
+        }
+        object.index = index;
+        object.value = value;
+      });
+
+      length = result.length;
+      result.sort(compareAscending);
+      while (length--) {
+        var object = result[length];
+        result[length] = object.value;
+        if (!isArr) {
+          releaseArray(object.criteria);
+        }
+        releaseObject(object);
+      }
+      return result;
+    }
+
+    /**
+     * Converts the `collection` to an array.
+     *
+     * @static
+     * @memberOf _
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to convert.
+     * @returns {Array} Returns the new converted array.
+     * @example
+     *
+     * (function() { return _.toArray(arguments).slice(1); })(1, 2, 3, 4);
+     * // => [2, 3, 4]
+     */
+    function toArray(collection) {
+      if (collection && typeof collection.length == 'number') {
+        return slice(collection);
+      }
+      return values(collection);
+    }
+
+    /**
+     * Performs a deep comparison of each element in a `collection` to the given
+     * `properties` object, returning an array of all elements that have equivalent
+     * property values.
+     *
+     * @static
+     * @memberOf _
+     * @type Function
+     * @category Collections
+     * @param {Array|Object|string} collection The collection to iterate over.
+     * @param {Object} props The object of property values to filter by.
+     * @returns {Array} Returns a new array of elements that have the given properties.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36, 'pets': ['hoppy'] },
+     *   { 'name': 'fred',   'age': 40, 'pets': ['baby puss', 'dino'] }
+     * ];
+     *
+     * _.where(characters, { 'age': 36 });
+     * // => [{ 'name': 'barney', 'age': 36, 'pets': ['hoppy'] }]
+     *
+     * _.where(characters, { 'pets': ['dino'] });
+     * // => [{ 'name': 'fred', 'age': 40, 'pets': ['baby puss', 'dino'] }]
+     */
+    var where = filter;
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Creates an array with all falsey values removed. The values `false`, `null`,
+     * `0`, `""`, `undefined`, and `NaN` are all falsey.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to compact.
+     * @returns {Array} Returns a new array of filtered values.
+     * @example
+     *
+     * _.compact([0, 1, false, 2, '', 3]);
+     * // => [1, 2, 3]
+     */
+    function compact(array) {
+      var index = -1,
+          length = array ? array.length : 0,
+          result = [];
+
+      while (++index < length) {
+        var value = array[index];
+        if (value) {
+          result.push(value);
+        }
+      }
+      return result;
+    }
+
+    /**
+     * Creates an array excluding all values of the provided arrays using strict
+     * equality for comparisons, i.e. `===`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to process.
+     * @param {...Array} [values] The arrays of values to exclude.
+     * @returns {Array} Returns a new array of filtered values.
+     * @example
+     *
+     * _.difference([1, 2, 3, 4, 5], [5, 2, 10]);
+     * // => [1, 3, 4]
+     */
+    function difference(array) {
+      return baseDifference(array, baseFlatten(arguments, true, true, 1));
+    }
+
+    /**
+     * This method is like `_.find` except that it returns the index of the first
+     * element that passes the callback check, instead of the element itself.
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to search.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {number} Returns the index of the found element, else `-1`.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'age': 36, 'blocked': false },
+     *   { 'name': 'fred',    'age': 40, 'blocked': true },
+     *   { 'name': 'pebbles', 'age': 1,  'blocked': false }
+     * ];
+     *
+     * _.findIndex(characters, function(chr) {
+     *   return chr.age < 20;
+     * });
+     * // => 2
+     *
+     * // using "_.where" callback shorthand
+     * _.findIndex(characters, { 'age': 36 });
+     * // => 0
+     *
+     * // using "_.pluck" callback shorthand
+     * _.findIndex(characters, 'blocked');
+     * // => 1
+     */
+    function findIndex(array, callback, thisArg) {
+      var index = -1,
+          length = array ? array.length : 0;
+
+      callback = lodash.createCallback(callback, thisArg, 3);
+      while (++index < length) {
+        if (callback(array[index], index, array)) {
+          return index;
+        }
+      }
+      return -1;
+    }
+
+    /**
+     * This method is like `_.findIndex` except that it iterates over elements
+     * of a `collection` from right to left.
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to search.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {number} Returns the index of the found element, else `-1`.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'age': 36, 'blocked': true },
+     *   { 'name': 'fred',    'age': 40, 'blocked': false },
+     *   { 'name': 'pebbles', 'age': 1,  'blocked': true }
+     * ];
+     *
+     * _.findLastIndex(characters, function(chr) {
+     *   return chr.age > 30;
+     * });
+     * // => 1
+     *
+     * // using "_.where" callback shorthand
+     * _.findLastIndex(characters, { 'age': 36 });
+     * // => 0
+     *
+     * // using "_.pluck" callback shorthand
+     * _.findLastIndex(characters, 'blocked');
+     * // => 2
+     */
+    function findLastIndex(array, callback, thisArg) {
+      var length = array ? array.length : 0;
+      callback = lodash.createCallback(callback, thisArg, 3);
+      while (length--) {
+        if (callback(array[length], length, array)) {
+          return length;
+        }
+      }
+      return -1;
+    }
+
+    /**
+     * Gets the first element or first `n` elements of an array. If a callback
+     * is provided elements at the beginning of the array are returned as long
+     * as the callback returns truey. The callback is bound to `thisArg` and
+     * invoked with three arguments; (value, index, array).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @alias head, take
+     * @category Arrays
+     * @param {Array} array The array to query.
+     * @param {Function|Object|number|string} [callback] The function called
+     *  per element or the number of elements to return. If a property name or
+     *  object is provided it will be used to create a "_.pluck" or "_.where"
+     *  style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the first element(s) of `array`.
+     * @example
+     *
+     * _.first([1, 2, 3]);
+     * // => 1
+     *
+     * _.first([1, 2, 3], 2);
+     * // => [1, 2]
+     *
+     * _.first([1, 2, 3], function(num) {
+     *   return num < 3;
+     * });
+     * // => [1, 2]
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'blocked': true,  'employer': 'slate' },
+     *   { 'name': 'fred',    'blocked': false, 'employer': 'slate' },
+     *   { 'name': 'pebbles', 'blocked': true,  'employer': 'na' }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.first(characters, 'blocked');
+     * // => [{ 'name': 'barney', 'blocked': true, 'employer': 'slate' }]
+     *
+     * // using "_.where" callback shorthand
+     * _.pluck(_.first(characters, { 'employer': 'slate' }), 'name');
+     * // => ['barney', 'fred']
+     */
+    function first(array, callback, thisArg) {
+      var n = 0,
+          length = array ? array.length : 0;
+
+      if (typeof callback != 'number' && callback != null) {
+        var index = -1;
+        callback = lodash.createCallback(callback, thisArg, 3);
+        while (++index < length && callback(array[index], index, array)) {
+          n++;
+        }
+      } else {
+        n = callback;
+        if (n == null || thisArg) {
+          return array ? array[0] : undefined;
+        }
+      }
+      return slice(array, 0, nativeMin(nativeMax(0, n), length));
+    }
+
+    /**
+     * Flattens a nested array (the nesting can be to any depth). If `isShallow`
+     * is truey, the array will only be flattened a single level. If a callback
+     * is provided each element of the array is passed through the callback before
+     * flattening. The callback is bound to `thisArg` and invoked with three
+     * arguments; (value, index, array).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to flatten.
+     * @param {boolean} [isShallow=false] A flag to restrict flattening to a single level.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a new flattened array.
+     * @example
+     *
+     * _.flatten([1, [2], [3, [[4]]]]);
+     * // => [1, 2, 3, 4];
+     *
+     * _.flatten([1, [2], [3, [[4]]]], true);
+     * // => [1, 2, 3, [[4]]];
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 30, 'pets': ['hoppy'] },
+     *   { 'name': 'fred',   'age': 40, 'pets': ['baby puss', 'dino'] }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.flatten(characters, 'pets');
+     * // => ['hoppy', 'baby puss', 'dino']
+     */
+    function flatten(array, isShallow, callback, thisArg) {
+      // juggle arguments
+      if (typeof isShallow != 'boolean' && isShallow != null) {
+        thisArg = callback;
+        callback = (typeof isShallow != 'function' && thisArg && thisArg[isShallow] === array) ? null : isShallow;
+        isShallow = false;
+      }
+      if (callback != null) {
+        array = map(array, callback, thisArg);
+      }
+      return baseFlatten(array, isShallow);
+    }
+
+    /**
+     * Gets the index at which the first occurrence of `value` is found using
+     * strict equality for comparisons, i.e. `===`. If the array is already sorted
+     * providing `true` for `fromIndex` will run a faster binary search.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to search.
+     * @param {*} value The value to search for.
+     * @param {boolean|number} [fromIndex=0] The index to search from or `true`
+     *  to perform a binary search on a sorted array.
+     * @returns {number} Returns the index of the matched value or `-1`.
+     * @example
+     *
+     * _.indexOf([1, 2, 3, 1, 2, 3], 2);
+     * // => 1
+     *
+     * _.indexOf([1, 2, 3, 1, 2, 3], 2, 3);
+     * // => 4
+     *
+     * _.indexOf([1, 1, 2, 2, 3, 3], 2, true);
+     * // => 2
+     */
+    function indexOf(array, value, fromIndex) {
+      if (typeof fromIndex == 'number') {
+        var length = array ? array.length : 0;
+        fromIndex = (fromIndex < 0 ? nativeMax(0, length + fromIndex) : fromIndex || 0);
+      } else if (fromIndex) {
+        var index = sortedIndex(array, value);
+        return array[index] === value ? index : -1;
+      }
+      return baseIndexOf(array, value, fromIndex);
+    }
+
+    /**
+     * Gets all but the last element or last `n` elements of an array. If a
+     * callback is provided elements at the end of the array are excluded from
+     * the result as long as the callback returns truey. The callback is bound
+     * to `thisArg` and invoked with three arguments; (value, index, array).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to query.
+     * @param {Function|Object|number|string} [callback=1] The function called
+     *  per element or the number of elements to exclude. If a property name or
+     *  object is provided it will be used to create a "_.pluck" or "_.where"
+     *  style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a slice of `array`.
+     * @example
+     *
+     * _.initial([1, 2, 3]);
+     * // => [1, 2]
+     *
+     * _.initial([1, 2, 3], 2);
+     * // => [1]
+     *
+     * _.initial([1, 2, 3], function(num) {
+     *   return num > 1;
+     * });
+     * // => [1]
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'blocked': false, 'employer': 'slate' },
+     *   { 'name': 'fred',    'blocked': true,  'employer': 'slate' },
+     *   { 'name': 'pebbles', 'blocked': true,  'employer': 'na' }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.initial(characters, 'blocked');
+     * // => [{ 'name': 'barney',  'blocked': false, 'employer': 'slate' }]
+     *
+     * // using "_.where" callback shorthand
+     * _.pluck(_.initial(characters, { 'employer': 'na' }), 'name');
+     * // => ['barney', 'fred']
+     */
+    function initial(array, callback, thisArg) {
+      var n = 0,
+          length = array ? array.length : 0;
+
+      if (typeof callback != 'number' && callback != null) {
+        var index = length;
+        callback = lodash.createCallback(callback, thisArg, 3);
+        while (index-- && callback(array[index], index, array)) {
+          n++;
+        }
+      } else {
+        n = (callback == null || thisArg) ? 1 : callback || n;
+      }
+      return slice(array, 0, nativeMin(nativeMax(0, length - n), length));
+    }
+
+    /**
+     * Creates an array of unique values present in all provided arrays using
+     * strict equality for comparisons, i.e. `===`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {...Array} [array] The arrays to inspect.
+     * @returns {Array} Returns an array of shared values.
+     * @example
+     *
+     * _.intersection([1, 2, 3], [5, 2, 1, 4], [2, 1]);
+     * // => [1, 2]
+     */
+    function intersection() {
+      var args = [],
+          argsIndex = -1,
+          argsLength = arguments.length,
+          caches = getArray(),
+          indexOf = getIndexOf(),
+          trustIndexOf = indexOf === baseIndexOf,
+          seen = getArray();
+
+      while (++argsIndex < argsLength) {
+        var value = arguments[argsIndex];
+        if (isArray(value) || isArguments(value)) {
+          args.push(value);
+          caches.push(trustIndexOf && value.length >= largeArraySize &&
+            createCache(argsIndex ? args[argsIndex] : seen));
+        }
+      }
+      var array = args[0],
+          index = -1,
+          length = array ? array.length : 0,
+          result = [];
+
+      outer:
+      while (++index < length) {
+        var cache = caches[0];
+        value = array[index];
+
+        if ((cache ? cacheIndexOf(cache, value) : indexOf(seen, value)) < 0) {
+          argsIndex = argsLength;
+          (cache || seen).push(value);
+          while (--argsIndex) {
+            cache = caches[argsIndex];
+            if ((cache ? cacheIndexOf(cache, value) : indexOf(args[argsIndex], value)) < 0) {
+              continue outer;
+            }
+          }
+          result.push(value);
+        }
+      }
+      while (argsLength--) {
+        cache = caches[argsLength];
+        if (cache) {
+          releaseObject(cache);
+        }
+      }
+      releaseArray(caches);
+      releaseArray(seen);
+      return result;
+    }
+
+    /**
+     * Gets the last element or last `n` elements of an array. If a callback is
+     * provided elements at the end of the array are returned as long as the
+     * callback returns truey. The callback is bound to `thisArg` and invoked
+     * with three arguments; (value, index, array).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to query.
+     * @param {Function|Object|number|string} [callback] The function called
+     *  per element or the number of elements to return. If a property name or
+     *  object is provided it will be used to create a "_.pluck" or "_.where"
+     *  style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {*} Returns the last element(s) of `array`.
+     * @example
+     *
+     * _.last([1, 2, 3]);
+     * // => 3
+     *
+     * _.last([1, 2, 3], 2);
+     * // => [2, 3]
+     *
+     * _.last([1, 2, 3], function(num) {
+     *   return num > 1;
+     * });
+     * // => [2, 3]
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'blocked': false, 'employer': 'slate' },
+     *   { 'name': 'fred',    'blocked': true,  'employer': 'slate' },
+     *   { 'name': 'pebbles', 'blocked': true,  'employer': 'na' }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.pluck(_.last(characters, 'blocked'), 'name');
+     * // => ['fred', 'pebbles']
+     *
+     * // using "_.where" callback shorthand
+     * _.last(characters, { 'employer': 'na' });
+     * // => [{ 'name': 'pebbles', 'blocked': true, 'employer': 'na' }]
+     */
+    function last(array, callback, thisArg) {
+      var n = 0,
+          length = array ? array.length : 0;
+
+      if (typeof callback != 'number' && callback != null) {
+        var index = length;
+        callback = lodash.createCallback(callback, thisArg, 3);
+        while (index-- && callback(array[index], index, array)) {
+          n++;
+        }
+      } else {
+        n = callback;
+        if (n == null || thisArg) {
+          return array ? array[length - 1] : undefined;
+        }
+      }
+      return slice(array, nativeMax(0, length - n));
+    }
+
+    /**
+     * Gets the index at which the last occurrence of `value` is found using strict
+     * equality for comparisons, i.e. `===`. If `fromIndex` is negative, it is used
+     * as the offset from the end of the collection.
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to search.
+     * @param {*} value The value to search for.
+     * @param {number} [fromIndex=array.length-1] The index to search from.
+     * @returns {number} Returns the index of the matched value or `-1`.
+     * @example
+     *
+     * _.lastIndexOf([1, 2, 3, 1, 2, 3], 2);
+     * // => 4
+     *
+     * _.lastIndexOf([1, 2, 3, 1, 2, 3], 2, 3);
+     * // => 1
+     */
+    function lastIndexOf(array, value, fromIndex) {
+      var index = array ? array.length : 0;
+      if (typeof fromIndex == 'number') {
+        index = (fromIndex < 0 ? nativeMax(0, index + fromIndex) : nativeMin(fromIndex, index - 1)) + 1;
+      }
+      while (index--) {
+        if (array[index] === value) {
+          return index;
+        }
+      }
+      return -1;
+    }
+
+    /**
+     * Removes all provided values from the given array using strict equality for
+     * comparisons, i.e. `===`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to modify.
+     * @param {...*} [value] The values to remove.
+     * @returns {Array} Returns `array`.
+     * @example
+     *
+     * var array = [1, 2, 3, 1, 2, 3];
+     * _.pull(array, 2, 3);
+     * console.log(array);
+     * // => [1, 1]
+     */
+    function pull(array) {
+      var args = arguments,
+          argsIndex = 0,
+          argsLength = args.length,
+          length = array ? array.length : 0;
+
+      while (++argsIndex < argsLength) {
+        var index = -1,
+            value = args[argsIndex];
+        while (++index < length) {
+          if (array[index] === value) {
+            splice.call(array, index--, 1);
+            length--;
+          }
+        }
+      }
+      return array;
+    }
+
+    /**
+     * Creates an array of numbers (positive and/or negative) progressing from
+     * `start` up to but not including `end`. If `start` is less than `stop` a
+     * zero-length range is created unless a negative `step` is specified.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {number} [start=0] The start of the range.
+     * @param {number} end The end of the range.
+     * @param {number} [step=1] The value to increment or decrement by.
+     * @returns {Array} Returns a new range array.
+     * @example
+     *
+     * _.range(4);
+     * // => [0, 1, 2, 3]
+     *
+     * _.range(1, 5);
+     * // => [1, 2, 3, 4]
+     *
+     * _.range(0, 20, 5);
+     * // => [0, 5, 10, 15]
+     *
+     * _.range(0, -4, -1);
+     * // => [0, -1, -2, -3]
+     *
+     * _.range(1, 4, 0);
+     * // => [1, 1, 1]
+     *
+     * _.range(0);
+     * // => []
+     */
+    function range(start, end, step) {
+      start = +start || 0;
+      step = typeof step == 'number' ? step : (+step || 1);
+
+      if (end == null) {
+        end = start;
+        start = 0;
+      }
+      // use `Array(length)` so engines like Chakra and V8 avoid slower modes
+      // http://youtu.be/XAqIpGU8ZZk#t=17m25s
+      var index = -1,
+          length = nativeMax(0, ceil((end - start) / (step || 1))),
+          result = Array(length);
+
+      while (++index < length) {
+        result[index] = start;
+        start += step;
+      }
+      return result;
+    }
+
+    /**
+     * Removes all elements from an array that the callback returns truey for
+     * and returns an array of removed elements. The callback is bound to `thisArg`
+     * and invoked with three arguments; (value, index, array).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to modify.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a new array of removed elements.
+     * @example
+     *
+     * var array = [1, 2, 3, 4, 5, 6];
+     * var evens = _.remove(array, function(num) { return num % 2 == 0; });
+     *
+     * console.log(array);
+     * // => [1, 3, 5]
+     *
+     * console.log(evens);
+     * // => [2, 4, 6]
+     */
+    function remove(array, callback, thisArg) {
+      var index = -1,
+          length = array ? array.length : 0,
+          result = [];
+
+      callback = lodash.createCallback(callback, thisArg, 3);
+      while (++index < length) {
+        var value = array[index];
+        if (callback(value, index, array)) {
+          result.push(value);
+          splice.call(array, index--, 1);
+          length--;
+        }
+      }
+      return result;
+    }
+
+    /**
+     * The opposite of `_.initial` this method gets all but the first element or
+     * first `n` elements of an array. If a callback function is provided elements
+     * at the beginning of the array are excluded from the result as long as the
+     * callback returns truey. The callback is bound to `thisArg` and invoked
+     * with three arguments; (value, index, array).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @alias drop, tail
+     * @category Arrays
+     * @param {Array} array The array to query.
+     * @param {Function|Object|number|string} [callback=1] The function called
+     *  per element or the number of elements to exclude. If a property name or
+     *  object is provided it will be used to create a "_.pluck" or "_.where"
+     *  style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a slice of `array`.
+     * @example
+     *
+     * _.rest([1, 2, 3]);
+     * // => [2, 3]
+     *
+     * _.rest([1, 2, 3], 2);
+     * // => [3]
+     *
+     * _.rest([1, 2, 3], function(num) {
+     *   return num < 3;
+     * });
+     * // => [3]
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'blocked': true,  'employer': 'slate' },
+     *   { 'name': 'fred',    'blocked': false,  'employer': 'slate' },
+     *   { 'name': 'pebbles', 'blocked': true, 'employer': 'na' }
+     * ];
+     *
+     * // using "_.pluck" callback shorthand
+     * _.pluck(_.rest(characters, 'blocked'), 'name');
+     * // => ['fred', 'pebbles']
+     *
+     * // using "_.where" callback shorthand
+     * _.rest(characters, { 'employer': 'slate' });
+     * // => [{ 'name': 'pebbles', 'blocked': true, 'employer': 'na' }]
+     */
+    function rest(array, callback, thisArg) {
+      if (typeof callback != 'number' && callback != null) {
+        var n = 0,
+            index = -1,
+            length = array ? array.length : 0;
+
+        callback = lodash.createCallback(callback, thisArg, 3);
+        while (++index < length && callback(array[index], index, array)) {
+          n++;
+        }
+      } else {
+        n = (callback == null || thisArg) ? 1 : nativeMax(0, callback);
+      }
+      return slice(array, n);
+    }
+
+    /**
+     * Uses a binary search to determine the smallest index at which a value
+     * should be inserted into a given sorted array in order to maintain the sort
+     * order of the array. If a callback is provided it will be executed for
+     * `value` and each element of `array` to compute their sort ranking. The
+     * callback is bound to `thisArg` and invoked with one argument; (value).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to inspect.
+     * @param {*} value The value to evaluate.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {number} Returns the index at which `value` should be inserted
+     *  into `array`.
+     * @example
+     *
+     * _.sortedIndex([20, 30, 50], 40);
+     * // => 2
+     *
+     * // using "_.pluck" callback shorthand
+     * _.sortedIndex([{ 'x': 20 }, { 'x': 30 }, { 'x': 50 }], { 'x': 40 }, 'x');
+     * // => 2
+     *
+     * var dict = {
+     *   'wordToNumber': { 'twenty': 20, 'thirty': 30, 'fourty': 40, 'fifty': 50 }
+     * };
+     *
+     * _.sortedIndex(['twenty', 'thirty', 'fifty'], 'fourty', function(word) {
+     *   return dict.wordToNumber[word];
+     * });
+     * // => 2
+     *
+     * _.sortedIndex(['twenty', 'thirty', 'fifty'], 'fourty', function(word) {
+     *   return this.wordToNumber[word];
+     * }, dict);
+     * // => 2
+     */
+    function sortedIndex(array, value, callback, thisArg) {
+      var low = 0,
+          high = array ? array.length : low;
+
+      // explicitly reference `identity` for better inlining in Firefox
+      callback = callback ? lodash.createCallback(callback, thisArg, 1) : identity;
+      value = callback(value);
+
+      while (low < high) {
+        var mid = (low + high) >>> 1;
+        (callback(array[mid]) < value)
+          ? low = mid + 1
+          : high = mid;
+      }
+      return low;
+    }
+
+    /**
+     * Creates an array of unique values, in order, of the provided arrays using
+     * strict equality for comparisons, i.e. `===`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {...Array} [array] The arrays to inspect.
+     * @returns {Array} Returns an array of combined values.
+     * @example
+     *
+     * _.union([1, 2, 3], [5, 2, 1, 4], [2, 1]);
+     * // => [1, 2, 3, 5, 4]
+     */
+    function union() {
+      return baseUniq(baseFlatten(arguments, true, true));
+    }
+
+    /**
+     * Creates a duplicate-value-free version of an array using strict equality
+     * for comparisons, i.e. `===`. If the array is sorted, providing
+     * `true` for `isSorted` will use a faster algorithm. If a callback is provided
+     * each element of `array` is passed through the callback before uniqueness
+     * is computed. The callback is bound to `thisArg` and invoked with three
+     * arguments; (value, index, array).
+     *
+     * If a property name is provided for `callback` the created "_.pluck" style
+     * callback will return the property value of the given element.
+     *
+     * If an object is provided for `callback` the created "_.where" style callback
+     * will return `true` for elements that have the properties of the given object,
+     * else `false`.
+     *
+     * @static
+     * @memberOf _
+     * @alias unique
+     * @category Arrays
+     * @param {Array} array The array to process.
+     * @param {boolean} [isSorted=false] A flag to indicate that `array` is sorted.
+     * @param {Function|Object|string} [callback=identity] The function called
+     *  per iteration. If a property name or object is provided it will be used
+     *  to create a "_.pluck" or "_.where" style callback, respectively.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns a duplicate-value-free array.
+     * @example
+     *
+     * _.uniq([1, 2, 1, 3, 1]);
+     * // => [1, 2, 3]
+     *
+     * _.uniq([1, 1, 2, 2, 3], true);
+     * // => [1, 2, 3]
+     *
+     * _.uniq(['A', 'b', 'C', 'a', 'B', 'c'], function(letter) { return letter.toLowerCase(); });
+     * // => ['A', 'b', 'C']
+     *
+     * _.uniq([1, 2.5, 3, 1.5, 2, 3.5], function(num) { return this.floor(num); }, Math);
+     * // => [1, 2.5, 3]
+     *
+     * // using "_.pluck" callback shorthand
+     * _.uniq([{ 'x': 1 }, { 'x': 2 }, { 'x': 1 }], 'x');
+     * // => [{ 'x': 1 }, { 'x': 2 }]
+     */
+    function uniq(array, isSorted, callback, thisArg) {
+      // juggle arguments
+      if (typeof isSorted != 'boolean' && isSorted != null) {
+        thisArg = callback;
+        callback = (typeof isSorted != 'function' && thisArg && thisArg[isSorted] === array) ? null : isSorted;
+        isSorted = false;
+      }
+      if (callback != null) {
+        callback = lodash.createCallback(callback, thisArg, 3);
+      }
+      return baseUniq(array, isSorted, callback);
+    }
+
+    /**
+     * Creates an array excluding all provided values using strict equality for
+     * comparisons, i.e. `===`.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {Array} array The array to filter.
+     * @param {...*} [value] The values to exclude.
+     * @returns {Array} Returns a new array of filtered values.
+     * @example
+     *
+     * _.without([1, 2, 1, 0, 3, 1, 4], 0, 1);
+     * // => [2, 3, 4]
+     */
+    function without(array) {
+      return baseDifference(array, slice(arguments, 1));
+    }
+
+    /**
+     * Creates an array that is the symmetric difference of the provided arrays.
+     * See http://en.wikipedia.org/wiki/Symmetric_difference.
+     *
+     * @static
+     * @memberOf _
+     * @category Arrays
+     * @param {...Array} [array] The arrays to inspect.
+     * @returns {Array} Returns an array of values.
+     * @example
+     *
+     * _.xor([1, 2, 3], [5, 2, 1, 4]);
+     * // => [3, 5, 4]
+     *
+     * _.xor([1, 2, 5], [2, 3, 5], [3, 4, 5]);
+     * // => [1, 4, 5]
+     */
+    function xor() {
+      var index = -1,
+          length = arguments.length;
+
+      while (++index < length) {
+        var array = arguments[index];
+        if (isArray(array) || isArguments(array)) {
+          var result = result
+            ? baseUniq(baseDifference(result, array).concat(baseDifference(array, result)))
+            : array;
+        }
+      }
+      return result || [];
+    }
+
+    /**
+     * Creates an array of grouped elements, the first of which contains the first
+     * elements of the given arrays, the second of which contains the second
+     * elements of the given arrays, and so on.
+     *
+     * @static
+     * @memberOf _
+     * @alias unzip
+     * @category Arrays
+     * @param {...Array} [array] Arrays to process.
+     * @returns {Array} Returns a new array of grouped elements.
+     * @example
+     *
+     * _.zip(['fred', 'barney'], [30, 40], [true, false]);
+     * // => [['fred', 30, true], ['barney', 40, false]]
+     */
+    function zip() {
+      var array = arguments.length > 1 ? arguments : arguments[0],
+          index = -1,
+          length = array ? max(pluck(array, 'length')) : 0,
+          result = Array(length < 0 ? 0 : length);
+
+      while (++index < length) {
+        result[index] = pluck(array, index);
+      }
+      return result;
+    }
+
+    /**
+     * Creates an object composed from arrays of `keys` and `values`. Provide
+     * either a single two dimensional array, i.e. `[[key1, value1], [key2, value2]]`
+     * or two arrays, one of `keys` and one of corresponding `values`.
+     *
+     * @static
+     * @memberOf _
+     * @alias object
+     * @category Arrays
+     * @param {Array} keys The array of keys.
+     * @param {Array} [values=[]] The array of values.
+     * @returns {Object} Returns an object composed of the given keys and
+     *  corresponding values.
+     * @example
+     *
+     * _.zipObject(['fred', 'barney'], [30, 40]);
+     * // => { 'fred': 30, 'barney': 40 }
+     */
+    function zipObject(keys, values) {
+      var index = -1,
+          length = keys ? keys.length : 0,
+          result = {};
+
+      if (!values && length && !isArray(keys[0])) {
+        values = [];
+      }
+      while (++index < length) {
+        var key = keys[index];
+        if (values) {
+          result[key] = values[index];
+        } else if (key) {
+          result[key[0]] = key[1];
+        }
+      }
+      return result;
+    }
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Creates a function that executes `func`, with  the `this` binding and
+     * arguments of the created function, only after being called `n` times.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {number} n The number of times the function must be called before
+     *  `func` is executed.
+     * @param {Function} func The function to restrict.
+     * @returns {Function} Returns the new restricted function.
+     * @example
+     *
+     * var saves = ['profile', 'settings'];
+     *
+     * var done = _.after(saves.length, function() {
+     *   console.log('Done saving!');
+     * });
+     *
+     * _.forEach(saves, function(type) {
+     *   asyncSave({ 'type': type, 'complete': done });
+     * });
+     * // => logs 'Done saving!', after all saves have completed
+     */
+    function after(n, func) {
+      if (!isFunction(func)) {
+        throw new TypeError;
+      }
+      return function() {
+        if (--n < 1) {
+          return func.apply(this, arguments);
+        }
+      };
+    }
+
+    /**
+     * Creates a function that, when called, invokes `func` with the `this`
+     * binding of `thisArg` and prepends any additional `bind` arguments to those
+     * provided to the bound function.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to bind.
+     * @param {*} [thisArg] The `this` binding of `func`.
+     * @param {...*} [arg] Arguments to be partially applied.
+     * @returns {Function} Returns the new bound function.
+     * @example
+     *
+     * var func = function(greeting) {
+     *   return greeting + ' ' + this.name;
+     * };
+     *
+     * func = _.bind(func, { 'name': 'fred' }, 'hi');
+     * func();
+     * // => 'hi fred'
+     */
+    function bind(func, thisArg) {
+      return arguments.length > 2
+        ? createWrapper(func, 17, slice(arguments, 2), null, thisArg)
+        : createWrapper(func, 1, null, null, thisArg);
+    }
+
+    /**
+     * Binds methods of an object to the object itself, overwriting the existing
+     * method. Method names may be specified as individual arguments or as arrays
+     * of method names. If no method names are provided all the function properties
+     * of `object` will be bound.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Object} object The object to bind and assign the bound methods to.
+     * @param {...string} [methodName] The object method names to
+     *  bind, specified as individual method names or arrays of method names.
+     * @returns {Object} Returns `object`.
+     * @example
+     *
+     * var view = {
+     *   'label': 'docs',
+     *   'onClick': function() { console.log('clicked ' + this.label); }
+     * };
+     *
+     * _.bindAll(view);
+     * jQuery('#docs').on('click', view.onClick);
+     * // => logs 'clicked docs', when the button is clicked
+     */
+    function bindAll(object) {
+      var funcs = arguments.length > 1 ? baseFlatten(arguments, true, false, 1) : functions(object),
+          index = -1,
+          length = funcs.length;
+
+      while (++index < length) {
+        var key = funcs[index];
+        object[key] = createWrapper(object[key], 1, null, null, object);
+      }
+      return object;
+    }
+
+    /**
+     * Creates a function that, when called, invokes the method at `object[key]`
+     * and prepends any additional `bindKey` arguments to those provided to the bound
+     * function. This method differs from `_.bind` by allowing bound functions to
+     * reference methods that will be redefined or don't yet exist.
+     * See http://michaux.ca/articles/lazy-function-definition-pattern.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Object} object The object the method belongs to.
+     * @param {string} key The key of the method.
+     * @param {...*} [arg] Arguments to be partially applied.
+     * @returns {Function} Returns the new bound function.
+     * @example
+     *
+     * var object = {
+     *   'name': 'fred',
+     *   'greet': function(greeting) {
+     *     return greeting + ' ' + this.name;
+     *   }
+     * };
+     *
+     * var func = _.bindKey(object, 'greet', 'hi');
+     * func();
+     * // => 'hi fred'
+     *
+     * object.greet = function(greeting) {
+     *   return greeting + 'ya ' + this.name + '!';
+     * };
+     *
+     * func();
+     * // => 'hiya fred!'
+     */
+    function bindKey(object, key) {
+      return arguments.length > 2
+        ? createWrapper(key, 19, slice(arguments, 2), null, object)
+        : createWrapper(key, 3, null, null, object);
+    }
+
+    /**
+     * Creates a function that is the composition of the provided functions,
+     * where each function consumes the return value of the function that follows.
+     * For example, composing the functions `f()`, `g()`, and `h()` produces `f(g(h()))`.
+     * Each function is executed with the `this` binding of the composed function.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {...Function} [func] Functions to compose.
+     * @returns {Function} Returns the new composed function.
+     * @example
+     *
+     * var realNameMap = {
+     *   'pebbles': 'penelope'
+     * };
+     *
+     * var format = function(name) {
+     *   name = realNameMap[name.toLowerCase()] || name;
+     *   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+     * };
+     *
+     * var greet = function(formatted) {
+     *   return 'Hiya ' + formatted + '!';
+     * };
+     *
+     * var welcome = _.compose(greet, format);
+     * welcome('pebbles');
+     * // => 'Hiya Penelope!'
+     */
+    function compose() {
+      var funcs = arguments,
+          length = funcs.length;
+
+      while (length--) {
+        if (!isFunction(funcs[length])) {
+          throw new TypeError;
+        }
+      }
+      return function() {
+        var args = arguments,
+            length = funcs.length;
+
+        while (length--) {
+          args = [funcs[length].apply(this, args)];
+        }
+        return args[0];
+      };
+    }
+
+    /**
+     * Creates a function which accepts one or more arguments of `func` that when
+     * invoked either executes `func` returning its result, if all `func` arguments
+     * have been provided, or returns a function that accepts one or more of the
+     * remaining `func` arguments, and so on. The arity of `func` can be specified
+     * if `func.length` is not sufficient.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to curry.
+     * @param {number} [arity=func.length] The arity of `func`.
+     * @returns {Function} Returns the new curried function.
+     * @example
+     *
+     * var curried = _.curry(function(a, b, c) {
+     *   console.log(a + b + c);
+     * });
+     *
+     * curried(1)(2)(3);
+     * // => 6
+     *
+     * curried(1, 2)(3);
+     * // => 6
+     *
+     * curried(1, 2, 3);
+     * // => 6
+     */
+    function curry(func, arity) {
+      arity = typeof arity == 'number' ? arity : (+arity || func.length);
+      return createWrapper(func, 4, null, null, null, arity);
+    }
+
+    /**
+     * Creates a function that will delay the execution of `func` until after
+     * `wait` milliseconds have elapsed since the last time it was invoked.
+     * Provide an options object to indicate that `func` should be invoked on
+     * the leading and/or trailing edge of the `wait` timeout. Subsequent calls
+     * to the debounced function will return the result of the last `func` call.
+     *
+     * Note: If `leading` and `trailing` options are `true` `func` will be called
+     * on the trailing edge of the timeout only if the the debounced function is
+     * invoked more than once during the `wait` timeout.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to debounce.
+     * @param {number} wait The number of milliseconds to delay.
+     * @param {Object} [options] The options object.
+     * @param {boolean} [options.leading=false] Specify execution on the leading edge of the timeout.
+     * @param {number} [options.maxWait] The maximum time `func` is allowed to be delayed before it's called.
+     * @param {boolean} [options.trailing=true] Specify execution on the trailing edge of the timeout.
+     * @returns {Function} Returns the new debounced function.
+     * @example
+     *
+     * // avoid costly calculations while the window size is in flux
+     * var lazyLayout = _.debounce(calculateLayout, 150);
+     * jQuery(window).on('resize', lazyLayout);
+     *
+     * // execute `sendMail` when the click event is fired, debouncing subsequent calls
+     * jQuery('#postbox').on('click', _.debounce(sendMail, 300, {
+     *   'leading': true,
+     *   'trailing': false
+     * });
+     *
+     * // ensure `batchLog` is executed once after 1 second of debounced calls
+     * var source = new EventSource('/stream');
+     * source.addEventListener('message', _.debounce(batchLog, 250, {
+     *   'maxWait': 1000
+     * }, false);
+     */
+    function debounce(func, wait, options) {
+      var args,
+          maxTimeoutId,
+          result,
+          stamp,
+          thisArg,
+          timeoutId,
+          trailingCall,
+          lastCalled = 0,
+          maxWait = false,
+          trailing = true;
+
+      if (!isFunction(func)) {
+        throw new TypeError;
+      }
+      wait = nativeMax(0, wait) || 0;
+      if (options === true) {
+        var leading = true;
+        trailing = false;
+      } else if (isObject(options)) {
+        leading = options.leading;
+        maxWait = 'maxWait' in options && (nativeMax(wait, options.maxWait) || 0);
+        trailing = 'trailing' in options ? options.trailing : trailing;
+      }
+      var delayed = function() {
+        var remaining = wait - (now() - stamp);
+        if (remaining <= 0) {
+          if (maxTimeoutId) {
+            clearTimeout(maxTimeoutId);
+          }
+          var isCalled = trailingCall;
+          maxTimeoutId = timeoutId = trailingCall = undefined;
+          if (isCalled) {
+            lastCalled = now();
+            result = func.apply(thisArg, args);
+            if (!timeoutId && !maxTimeoutId) {
+              args = thisArg = null;
+            }
+          }
+        } else {
+          timeoutId = setTimeout(delayed, remaining);
+        }
+      };
+
+      var maxDelayed = function() {
+        if (timeoutId) {
+          clearTimeout(timeoutId);
+        }
+        maxTimeoutId = timeoutId = trailingCall = undefined;
+        if (trailing || (maxWait !== wait)) {
+          lastCalled = now();
+          result = func.apply(thisArg, args);
+          if (!timeoutId && !maxTimeoutId) {
+            args = thisArg = null;
+          }
+        }
+      };
+
+      return function() {
+        args = arguments;
+        stamp = now();
+        thisArg = this;
+        trailingCall = trailing && (timeoutId || !leading);
+
+        if (maxWait === false) {
+          var leadingCall = leading && !timeoutId;
+        } else {
+          if (!maxTimeoutId && !leading) {
+            lastCalled = stamp;
+          }
+          var remaining = maxWait - (stamp - lastCalled),
+              isCalled = remaining <= 0;
+
+          if (isCalled) {
+            if (maxTimeoutId) {
+              maxTimeoutId = clearTimeout(maxTimeoutId);
+            }
+            lastCalled = stamp;
+            result = func.apply(thisArg, args);
+          }
+          else if (!maxTimeoutId) {
+            maxTimeoutId = setTimeout(maxDelayed, remaining);
+          }
+        }
+        if (isCalled && timeoutId) {
+          timeoutId = clearTimeout(timeoutId);
+        }
+        else if (!timeoutId && wait !== maxWait) {
+          timeoutId = setTimeout(delayed, wait);
+        }
+        if (leadingCall) {
+          isCalled = true;
+          result = func.apply(thisArg, args);
+        }
+        if (isCalled && !timeoutId && !maxTimeoutId) {
+          args = thisArg = null;
+        }
+        return result;
+      };
+    }
+
+    /**
+     * Defers executing the `func` function until the current call stack has cleared.
+     * Additional arguments will be provided to `func` when it is invoked.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to defer.
+     * @param {...*} [arg] Arguments to invoke the function with.
+     * @returns {number} Returns the timer id.
+     * @example
+     *
+     * _.defer(function(text) { console.log(text); }, 'deferred');
+     * // logs 'deferred' after one or more milliseconds
+     */
+    function defer(func) {
+      if (!isFunction(func)) {
+        throw new TypeError;
+      }
+      var args = slice(arguments, 1);
+      return setTimeout(function() { func.apply(undefined, args); }, 1);
+    }
+
+    /**
+     * Executes the `func` function after `wait` milliseconds. Additional arguments
+     * will be provided to `func` when it is invoked.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to delay.
+     * @param {number} wait The number of milliseconds to delay execution.
+     * @param {...*} [arg] Arguments to invoke the function with.
+     * @returns {number} Returns the timer id.
+     * @example
+     *
+     * _.delay(function(text) { console.log(text); }, 1000, 'later');
+     * // => logs 'later' after one second
+     */
+    function delay(func, wait) {
+      if (!isFunction(func)) {
+        throw new TypeError;
+      }
+      var args = slice(arguments, 2);
+      return setTimeout(function() { func.apply(undefined, args); }, wait);
+    }
+
+    /**
+     * Creates a function that memoizes the result of `func`. If `resolver` is
+     * provided it will be used to determine the cache key for storing the result
+     * based on the arguments provided to the memoized function. By default, the
+     * first argument provided to the memoized function is used as the cache key.
+     * The `func` is executed with the `this` binding of the memoized function.
+     * The result cache is exposed as the `cache` property on the memoized function.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to have its output memoized.
+     * @param {Function} [resolver] A function used to resolve the cache key.
+     * @returns {Function} Returns the new memoizing function.
+     * @example
+     *
+     * var fibonacci = _.memoize(function(n) {
+     *   return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+     * });
+     *
+     * fibonacci(9)
+     * // => 34
+     *
+     * var data = {
+     *   'fred': { 'name': 'fred', 'age': 40 },
+     *   'pebbles': { 'name': 'pebbles', 'age': 1 }
+     * };
+     *
+     * // modifying the result cache
+     * var get = _.memoize(function(name) { return data[name]; }, _.identity);
+     * get('pebbles');
+     * // => { 'name': 'pebbles', 'age': 1 }
+     *
+     * get.cache.pebbles.name = 'penelope';
+     * get('pebbles');
+     * // => { 'name': 'penelope', 'age': 1 }
+     */
+    function memoize(func, resolver) {
+      if (!isFunction(func)) {
+        throw new TypeError;
+      }
+      var memoized = function() {
+        var cache = memoized.cache,
+            key = resolver ? resolver.apply(this, arguments) : keyPrefix + arguments[0];
+
+        return hasOwnProperty.call(cache, key)
+          ? cache[key]
+          : (cache[key] = func.apply(this, arguments));
+      }
+      memoized.cache = {};
+      return memoized;
+    }
+
+    /**
+     * Creates a function that is restricted to execute `func` once. Repeat calls to
+     * the function will return the value of the first call. The `func` is executed
+     * with the `this` binding of the created function.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to restrict.
+     * @returns {Function} Returns the new restricted function.
+     * @example
+     *
+     * var initialize = _.once(createApplication);
+     * initialize();
+     * initialize();
+     * // `initialize` executes `createApplication` once
+     */
+    function once(func) {
+      var ran,
+          result;
+
+      if (!isFunction(func)) {
+        throw new TypeError;
+      }
+      return function() {
+        if (ran) {
+          return result;
+        }
+        ran = true;
+        result = func.apply(this, arguments);
+
+        // clear the `func` variable so the function may be garbage collected
+        func = null;
+        return result;
+      };
+    }
+
+    /**
+     * Creates a function that, when called, invokes `func` with any additional
+     * `partial` arguments prepended to those provided to the new function. This
+     * method is similar to `_.bind` except it does **not** alter the `this` binding.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to partially apply arguments to.
+     * @param {...*} [arg] Arguments to be partially applied.
+     * @returns {Function} Returns the new partially applied function.
+     * @example
+     *
+     * var greet = function(greeting, name) { return greeting + ' ' + name; };
+     * var hi = _.partial(greet, 'hi');
+     * hi('fred');
+     * // => 'hi fred'
+     */
+    function partial(func) {
+      return createWrapper(func, 16, slice(arguments, 1));
+    }
+
+    /**
+     * This method is like `_.partial` except that `partial` arguments are
+     * appended to those provided to the new function.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to partially apply arguments to.
+     * @param {...*} [arg] Arguments to be partially applied.
+     * @returns {Function} Returns the new partially applied function.
+     * @example
+     *
+     * var defaultsDeep = _.partialRight(_.merge, _.defaults);
+     *
+     * var options = {
+     *   'variable': 'data',
+     *   'imports': { 'jq': $ }
+     * };
+     *
+     * defaultsDeep(options, _.templateSettings);
+     *
+     * options.variable
+     * // => 'data'
+     *
+     * options.imports
+     * // => { '_': _, 'jq': $ }
+     */
+    function partialRight(func) {
+      return createWrapper(func, 32, null, slice(arguments, 1));
+    }
+
+    /**
+     * Creates a function that, when executed, will only call the `func` function
+     * at most once per every `wait` milliseconds. Provide an options object to
+     * indicate that `func` should be invoked on the leading and/or trailing edge
+     * of the `wait` timeout. Subsequent calls to the throttled function will
+     * return the result of the last `func` call.
+     *
+     * Note: If `leading` and `trailing` options are `true` `func` will be called
+     * on the trailing edge of the timeout only if the the throttled function is
+     * invoked more than once during the `wait` timeout.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {Function} func The function to throttle.
+     * @param {number} wait The number of milliseconds to throttle executions to.
+     * @param {Object} [options] The options object.
+     * @param {boolean} [options.leading=true] Specify execution on the leading edge of the timeout.
+     * @param {boolean} [options.trailing=true] Specify execution on the trailing edge of the timeout.
+     * @returns {Function} Returns the new throttled function.
+     * @example
+     *
+     * // avoid excessively updating the position while scrolling
+     * var throttled = _.throttle(updatePosition, 100);
+     * jQuery(window).on('scroll', throttled);
+     *
+     * // execute `renewToken` when the click event is fired, but not more than once every 5 minutes
+     * jQuery('.interactive').on('click', _.throttle(renewToken, 300000, {
+     *   'trailing': false
+     * }));
+     */
+    function throttle(func, wait, options) {
+      var leading = true,
+          trailing = true;
+
+      if (!isFunction(func)) {
+        throw new TypeError;
+      }
+      if (options === false) {
+        leading = false;
+      } else if (isObject(options)) {
+        leading = 'leading' in options ? options.leading : leading;
+        trailing = 'trailing' in options ? options.trailing : trailing;
+      }
+      debounceOptions.leading = leading;
+      debounceOptions.maxWait = wait;
+      debounceOptions.trailing = trailing;
+
+      return debounce(func, wait, debounceOptions);
+    }
+
+    /**
+     * Creates a function that provides `value` to the wrapper function as its
+     * first argument. Additional arguments provided to the function are appended
+     * to those provided to the wrapper function. The wrapper is executed with
+     * the `this` binding of the created function.
+     *
+     * @static
+     * @memberOf _
+     * @category Functions
+     * @param {*} value The value to wrap.
+     * @param {Function} wrapper The wrapper function.
+     * @returns {Function} Returns the new function.
+     * @example
+     *
+     * var p = _.wrap(_.escape, function(func, text) {
+     *   return '<p>' + func(text) + '</p>';
+     * });
+     *
+     * p('Fred, Wilma, & Pebbles');
+     * // => '<p>Fred, Wilma, &amp; Pebbles</p>'
+     */
+    function wrap(value, wrapper) {
+      return createWrapper(wrapper, 16, [value]);
+    }
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Creates a function that returns `value`.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {*} value The value to return from the new function.
+     * @returns {Function} Returns the new function.
+     * @example
+     *
+     * var object = { 'name': 'fred' };
+     * var getter = _.constant(object);
+     * getter() === object;
+     * // => true
+     */
+    function constant(value) {
+      return function() {
+        return value;
+      };
+    }
+
+    /**
+     * Produces a callback bound to an optional `thisArg`. If `func` is a property
+     * name the created callback will return the property value for a given element.
+     * If `func` is an object the created callback will return `true` for elements
+     * that contain the equivalent object properties, otherwise it will return `false`.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {*} [func=identity] The value to convert to a callback.
+     * @param {*} [thisArg] The `this` binding of the created callback.
+     * @param {number} [argCount] The number of arguments the callback accepts.
+     * @returns {Function} Returns a callback function.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * // wrap to create custom callback shorthands
+     * _.createCallback = _.wrap(_.createCallback, function(func, callback, thisArg) {
+     *   var match = /^(.+?)__([gl]t)(.+)$/.exec(callback);
+     *   return !match ? func(callback, thisArg) : function(object) {
+     *     return match[2] == 'gt' ? object[match[1]] > match[3] : object[match[1]] < match[3];
+     *   };
+     * });
+     *
+     * _.filter(characters, 'age__gt38');
+     * // => [{ 'name': 'fred', 'age': 40 }]
+     */
+    function createCallback(func, thisArg, argCount) {
+      var type = typeof func;
+      if (func == null || type == 'function') {
+        return baseCreateCallback(func, thisArg, argCount);
+      }
+      // handle "_.pluck" style callback shorthands
+      if (type != 'object') {
+        return property(func);
+      }
+      var props = keys(func),
+          key = props[0],
+          a = func[key];
+
+      // handle "_.where" style callback shorthands
+      if (props.length == 1 && a === a && !isObject(a)) {
+        // fast path the common case of providing an object with a single
+        // property containing a primitive value
+        return function(object) {
+          var b = object[key];
+          return a === b && (a !== 0 || (1 / a == 1 / b));
+        };
+      }
+      return function(object) {
+        var length = props.length,
+            result = false;
+
+        while (length--) {
+          if (!(result = baseIsEqual(object[props[length]], func[props[length]], null, true))) {
+            break;
+          }
+        }
+        return result;
+      };
+    }
+
+    /**
+     * Converts the characters `&`, `<`, `>`, `"`, and `'` in `string` to their
+     * corresponding HTML entities.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {string} string The string to escape.
+     * @returns {string} Returns the escaped string.
+     * @example
+     *
+     * _.escape('Fred, Wilma, & Pebbles');
+     * // => 'Fred, Wilma, &amp; Pebbles'
+     */
+    function escape(string) {
+      return string == null ? '' : String(string).replace(reUnescapedHtml, escapeHtmlChar);
+    }
+
+    /**
+     * This method returns the first argument provided to it.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {*} value Any value.
+     * @returns {*} Returns `value`.
+     * @example
+     *
+     * var object = { 'name': 'fred' };
+     * _.identity(object) === object;
+     * // => true
+     */
+    function identity(value) {
+      return value;
+    }
+
+    /**
+     * Adds function properties of a source object to the destination object.
+     * If `object` is a function methods will be added to its prototype as well.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {Function|Object} [object=lodash] object The destination object.
+     * @param {Object} source The object of functions to add.
+     * @param {Object} [options] The options object.
+     * @param {boolean} [options.chain=true] Specify whether the functions added are chainable.
+     * @example
+     *
+     * function capitalize(string) {
+     *   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+     * }
+     *
+     * _.mixin({ 'capitalize': capitalize });
+     * _.capitalize('fred');
+     * // => 'Fred'
+     *
+     * _('fred').capitalize().value();
+     * // => 'Fred'
+     *
+     * _.mixin({ 'capitalize': capitalize }, { 'chain': false });
+     * _('fred').capitalize();
+     * // => 'Fred'
+     */
+    function mixin(object, source, options) {
+      var chain = true,
+          methodNames = source && functions(source);
+
+      if (!source || (!options && !methodNames.length)) {
+        if (options == null) {
+          options = source;
+        }
+        ctor = lodashWrapper;
+        source = object;
+        object = lodash;
+        methodNames = functions(source);
+      }
+      if (options === false) {
+        chain = false;
+      } else if (isObject(options) && 'chain' in options) {
+        chain = options.chain;
+      }
+      var ctor = object,
+          isFunc = isFunction(ctor);
+
+      forEach(methodNames, function(methodName) {
+        var func = object[methodName] = source[methodName];
+        if (isFunc) {
+          ctor.prototype[methodName] = function() {
+            var chainAll = this.__chain__,
+                value = this.__wrapped__,
+                args = [value];
+
+            push.apply(args, arguments);
+            var result = func.apply(object, args);
+            if (chain || chainAll) {
+              if (value === result && isObject(result)) {
+                return this;
+              }
+              result = new ctor(result);
+              result.__chain__ = chainAll;
+            }
+            return result;
+          };
+        }
+      });
+    }
+
+    /**
+     * Reverts the '_' variable to its previous value and returns a reference to
+     * the `lodash` function.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @returns {Function} Returns the `lodash` function.
+     * @example
+     *
+     * var lodash = _.noConflict();
+     */
+    function noConflict() {
+      context._ = oldDash;
+      return this;
+    }
+
+    /**
+     * A no-operation function.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @example
+     *
+     * var object = { 'name': 'fred' };
+     * _.noop(object) === undefined;
+     * // => true
+     */
+    function noop() {
+      // no operation performed
+    }
+
+    /**
+     * Gets the number of milliseconds that have elapsed since the Unix epoch
+     * (1 January 1970 00:00:00 UTC).
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @example
+     *
+     * var stamp = _.now();
+     * _.defer(function() { console.log(_.now() - stamp); });
+     * // => logs the number of milliseconds it took for the deferred function to be called
+     */
+    var now = isNative(now = Date.now) && now || function() {
+      return new Date().getTime();
+    };
+
+    /**
+     * Converts the given value into an integer of the specified radix.
+     * If `radix` is `undefined` or `0` a `radix` of `10` is used unless the
+     * `value` is a hexadecimal, in which case a `radix` of `16` is used.
+     *
+     * Note: This method avoids differences in native ES3 and ES5 `parseInt`
+     * implementations. See http://es5.github.io/#E.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {string} value The value to parse.
+     * @param {number} [radix] The radix used to interpret the value to parse.
+     * @returns {number} Returns the new integer value.
+     * @example
+     *
+     * _.parseInt('08');
+     * // => 8
+     */
+    var parseInt = nativeParseInt(whitespace + '08') == 8 ? nativeParseInt : function(value, radix) {
+      // Firefox < 21 and Opera < 15 follow the ES3 specified implementation of `parseInt`
+      return nativeParseInt(isString(value) ? value.replace(reLeadingSpacesAndZeros, '') : value, radix || 0);
+    };
+
+    /**
+     * Creates a "_.pluck" style function, which returns the `key` value of a
+     * given object.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {string} key The name of the property to retrieve.
+     * @returns {Function} Returns the new function.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'fred',   'age': 40 },
+     *   { 'name': 'barney', 'age': 36 }
+     * ];
+     *
+     * var getName = _.property('name');
+     *
+     * _.map(characters, getName);
+     * // => ['barney', 'fred']
+     *
+     * _.sortBy(characters, getName);
+     * // => [{ 'name': 'barney', 'age': 36 }, { 'name': 'fred',   'age': 40 }]
+     */
+    function property(key) {
+      return function(object) {
+        return object[key];
+      };
+    }
+
+    /**
+     * Produces a random number between `min` and `max` (inclusive). If only one
+     * argument is provided a number between `0` and the given number will be
+     * returned. If `floating` is truey or either `min` or `max` are floats a
+     * floating-point number will be returned instead of an integer.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {number} [min=0] The minimum possible value.
+     * @param {number} [max=1] The maximum possible value.
+     * @param {boolean} [floating=false] Specify returning a floating-point number.
+     * @returns {number} Returns a random number.
+     * @example
+     *
+     * _.random(0, 5);
+     * // => an integer between 0 and 5
+     *
+     * _.random(5);
+     * // => also an integer between 0 and 5
+     *
+     * _.random(5, true);
+     * // => a floating-point number between 0 and 5
+     *
+     * _.random(1.2, 5.2);
+     * // => a floating-point number between 1.2 and 5.2
+     */
+    function random(min, max, floating) {
+      var noMin = min == null,
+          noMax = max == null;
+
+      if (floating == null) {
+        if (typeof min == 'boolean' && noMax) {
+          floating = min;
+          min = 1;
+        }
+        else if (!noMax && typeof max == 'boolean') {
+          floating = max;
+          noMax = true;
+        }
+      }
+      if (noMin && noMax) {
+        max = 1;
+      }
+      min = +min || 0;
+      if (noMax) {
+        max = min;
+        min = 0;
+      } else {
+        max = +max || 0;
+      }
+      if (floating || min % 1 || max % 1) {
+        var rand = nativeRandom();
+        return nativeMin(min + (rand * (max - min + parseFloat('1e-' + ((rand +'').length - 1)))), max);
+      }
+      return baseRandom(min, max);
+    }
+
+    /**
+     * Resolves the value of property `key` on `object`. If `key` is a function
+     * it will be invoked with the `this` binding of `object` and its result returned,
+     * else the property value is returned. If `object` is falsey then `undefined`
+     * is returned.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {Object} object The object to inspect.
+     * @param {string} key The name of the property to resolve.
+     * @returns {*} Returns the resolved value.
+     * @example
+     *
+     * var object = {
+     *   'cheese': 'crumpets',
+     *   'stuff': function() {
+     *     return 'nonsense';
+     *   }
+     * };
+     *
+     * _.result(object, 'cheese');
+     * // => 'crumpets'
+     *
+     * _.result(object, 'stuff');
+     * // => 'nonsense'
+     */
+    function result(object, key) {
+      if (object) {
+        var value = object[key];
+        return isFunction(value) ? object[key]() : value;
+      }
+    }
+
+    /**
+     * A micro-templating method that handles arbitrary delimiters, preserves
+     * whitespace, and correctly escapes quotes within interpolated code.
+     *
+     * Note: In the development build, `_.template` utilizes sourceURLs for easier
+     * debugging. See http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl
+     *
+     * For more information on precompiling templates see:
+     * http://lodash.com/custom-builds
+     *
+     * For more information on Chrome extension sandboxes see:
+     * http://developer.chrome.com/stable/extensions/sandboxingEval.html
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {string} text The template text.
+     * @param {Object} data The data object used to populate the text.
+     * @param {Object} [options] The options object.
+     * @param {RegExp} [options.escape] The "escape" delimiter.
+     * @param {RegExp} [options.evaluate] The "evaluate" delimiter.
+     * @param {Object} [options.imports] An object to import into the template as local variables.
+     * @param {RegExp} [options.interpolate] The "interpolate" delimiter.
+     * @param {string} [sourceURL] The sourceURL of the template's compiled source.
+     * @param {string} [variable] The data object variable name.
+     * @returns {Function|string} Returns a compiled function when no `data` object
+     *  is given, else it returns the interpolated text.
+     * @example
+     *
+     * // using the "interpolate" delimiter to create a compiled template
+     * var compiled = _.template('hello <%= name %>');
+     * compiled({ 'name': 'fred' });
+     * // => 'hello fred'
+     *
+     * // using the "escape" delimiter to escape HTML in data property values
+     * _.template('<b><%- value %></b>', { 'value': '<script>' });
+     * // => '<b>&lt;script&gt;</b>'
+     *
+     * // using the "evaluate" delimiter to generate HTML
+     * var list = '<% _.forEach(people, function(name) { %><li><%- name %></li><% }); %>';
+     * _.template(list, { 'people': ['fred', 'barney'] });
+     * // => '<li>fred</li><li>barney</li>'
+     *
+     * // using the ES6 delimiter as an alternative to the default "interpolate" delimiter
+     * _.template('hello ${ name }', { 'name': 'pebbles' });
+     * // => 'hello pebbles'
+     *
+     * // using the internal `print` function in "evaluate" delimiters
+     * _.template('<% print("hello " + name); %>!', { 'name': 'barney' });
+     * // => 'hello barney!'
+     *
+     * // using a custom template delimiters
+     * _.templateSettings = {
+     *   'interpolate': /{{([\s\S]+?)}}/g
+     * };
+     *
+     * _.template('hello {{ name }}!', { 'name': 'mustache' });
+     * // => 'hello mustache!'
+     *
+     * // using the `imports` option to import jQuery
+     * var list = '<% jq.each(people, function(name) { %><li><%- name %></li><% }); %>';
+     * _.template(list, { 'people': ['fred', 'barney'] }, { 'imports': { 'jq': jQuery } });
+     * // => '<li>fred</li><li>barney</li>'
+     *
+     * // using the `sourceURL` option to specify a custom sourceURL for the template
+     * var compiled = _.template('hello <%= name %>', null, { 'sourceURL': '/basic/greeting.jst' });
+     * compiled(data);
+     * // => find the source of "greeting.jst" under the Sources tab or Resources panel of the web inspector
+     *
+     * // using the `variable` option to ensure a with-statement isn't used in the compiled template
+     * var compiled = _.template('hi <%= data.name %>!', null, { 'variable': 'data' });
+     * compiled.source;
+     * // => function(data) {
+     *   var __t, __p = '', __e = _.escape;
+     *   __p += 'hi ' + ((__t = ( data.name )) == null ? '' : __t) + '!';
+     *   return __p;
+     * }
+     *
+     * // using the `source` property to inline compiled templates for meaningful
+     * // line numbers in error messages and a stack trace
+     * fs.writeFileSync(path.join(cwd, 'jst.js'), '\
+     *   var JST = {\
+     *     "main": ' + _.template(mainText).source + '\
+     *   };\
+     * ');
+     */
+    function template(text, data, options) {
+      // based on John Resig's `tmpl` implementation
+      // http://ejohn.org/blog/javascript-micro-templating/
+      // and Laura Doktorova's doT.js
+      // https://github.com/olado/doT
+      var settings = lodash.templateSettings;
+      text = String(text || '');
+
+      // avoid missing dependencies when `iteratorTemplate` is not defined
+      options = defaults({}, options, settings);
+
+      var imports = defaults({}, options.imports, settings.imports),
+          importsKeys = keys(imports),
+          importsValues = values(imports);
+
+      var isEvaluating,
+          index = 0,
+          interpolate = options.interpolate || reNoMatch,
+          source = "__p += '";
+
+      // compile the regexp to match each delimiter
+      var reDelimiters = RegExp(
+        (options.escape || reNoMatch).source + '|' +
+        interpolate.source + '|' +
+        (interpolate === reInterpolate ? reEsTemplate : reNoMatch).source + '|' +
+        (options.evaluate || reNoMatch).source + '|$'
+      , 'g');
+
+      text.replace(reDelimiters, function(match, escapeValue, interpolateValue, esTemplateValue, evaluateValue, offset) {
+        interpolateValue || (interpolateValue = esTemplateValue);
+
+        // escape characters that cannot be included in string literals
+        source += text.slice(index, offset).replace(reUnescapedString, escapeStringChar);
+
+        // replace delimiters with snippets
+        if (escapeValue) {
+          source += "' +\n__e(" + escapeValue + ") +\n'";
+        }
+        if (evaluateValue) {
+          isEvaluating = true;
+          source += "';\n" + evaluateValue + ";\n__p += '";
+        }
+        if (interpolateValue) {
+          source += "' +\n((__t = (" + interpolateValue + ")) == null ? '' : __t) +\n'";
+        }
+        index = offset + match.length;
+
+        // the JS engine embedded in Adobe products requires returning the `match`
+        // string in order to produce the correct `offset` value
+        return match;
+      });
+
+      source += "';\n";
+
+      // if `variable` is not specified, wrap a with-statement around the generated
+      // code to add the data object to the top of the scope chain
+      var variable = options.variable,
+          hasVariable = variable;
+
+      if (!hasVariable) {
+        variable = 'obj';
+        source = 'with (' + variable + ') {\n' + source + '\n}\n';
+      }
+      // cleanup code by stripping empty strings
+      source = (isEvaluating ? source.replace(reEmptyStringLeading, '') : source)
+        .replace(reEmptyStringMiddle, '$1')
+        .replace(reEmptyStringTrailing, '$1;');
+
+      // frame code as the function body
+      source = 'function(' + variable + ') {\n' +
+        (hasVariable ? '' : variable + ' || (' + variable + ' = {});\n') +
+        "var __t, __p = '', __e = _.escape" +
+        (isEvaluating
+          ? ', __j = Array.prototype.join;\n' +
+            "function print() { __p += __j.call(arguments, '') }\n"
+          : ';\n'
+        ) +
+        source +
+        'return __p\n}';
+
+      // Use a sourceURL for easier debugging.
+      // http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl
+      var sourceURL = '\n/*\n//# sourceURL=' + (options.sourceURL || '/lodash/template/source[' + (templateCounter++) + ']') + '\n*/';
+
+      try {
+        var result = Function(importsKeys, 'return ' + source + sourceURL).apply(undefined, importsValues);
+      } catch(e) {
+        e.source = source;
+        throw e;
+      }
+      if (data) {
+        return result(data);
+      }
+      // provide the compiled function's source by its `toString` method, in
+      // supported environments, or the `source` property as a convenience for
+      // inlining compiled templates during the build process
+      result.source = source;
+      return result;
+    }
+
+    /**
+     * Executes the callback `n` times, returning an array of the results
+     * of each callback execution. The callback is bound to `thisArg` and invoked
+     * with one argument; (index).
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {number} n The number of times to execute the callback.
+     * @param {Function} callback The function called per iteration.
+     * @param {*} [thisArg] The `this` binding of `callback`.
+     * @returns {Array} Returns an array of the results of each `callback` execution.
+     * @example
+     *
+     * var diceRolls = _.times(3, _.partial(_.random, 1, 6));
+     * // => [3, 6, 4]
+     *
+     * _.times(3, function(n) { mage.castSpell(n); });
+     * // => calls `mage.castSpell(n)` three times, passing `n` of `0`, `1`, and `2` respectively
+     *
+     * _.times(3, function(n) { this.cast(n); }, mage);
+     * // => also calls `mage.castSpell(n)` three times
+     */
+    function times(n, callback, thisArg) {
+      n = (n = +n) > -1 ? n : 0;
+      var index = -1,
+          result = Array(n);
+
+      callback = baseCreateCallback(callback, thisArg, 1);
+      while (++index < n) {
+        result[index] = callback(index);
+      }
+      return result;
+    }
+
+    /**
+     * The inverse of `_.escape` this method converts the HTML entities
+     * `&amp;`, `&lt;`, `&gt;`, `&quot;`, and `&#39;` in `string` to their
+     * corresponding characters.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {string} string The string to unescape.
+     * @returns {string} Returns the unescaped string.
+     * @example
+     *
+     * _.unescape('Fred, Barney &amp; Pebbles');
+     * // => 'Fred, Barney & Pebbles'
+     */
+    function unescape(string) {
+      return string == null ? '' : String(string).replace(reEscapedHtml, unescapeHtmlChar);
+    }
+
+    /**
+     * Generates a unique ID. If `prefix` is provided the ID will be appended to it.
+     *
+     * @static
+     * @memberOf _
+     * @category Utilities
+     * @param {string} [prefix] The value to prefix the ID with.
+     * @returns {string} Returns the unique ID.
+     * @example
+     *
+     * _.uniqueId('contact_');
+     * // => 'contact_104'
+     *
+     * _.uniqueId();
+     * // => '105'
+     */
+    function uniqueId(prefix) {
+      var id = ++idCounter;
+      return String(prefix == null ? '' : prefix) + id;
+    }
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Creates a `lodash` object that wraps the given value with explicit
+     * method chaining enabled.
+     *
+     * @static
+     * @memberOf _
+     * @category Chaining
+     * @param {*} value The value to wrap.
+     * @returns {Object} Returns the wrapper object.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney',  'age': 36 },
+     *   { 'name': 'fred',    'age': 40 },
+     *   { 'name': 'pebbles', 'age': 1 }
+     * ];
+     *
+     * var youngest = _.chain(characters)
+     *     .sortBy('age')
+     *     .map(function(chr) { return chr.name + ' is ' + chr.age; })
+     *     .first()
+     *     .value();
+     * // => 'pebbles is 1'
+     */
+    function chain(value) {
+      value = new lodashWrapper(value);
+      value.__chain__ = true;
+      return value;
+    }
+
+    /**
+     * Invokes `interceptor` with the `value` as the first argument and then
+     * returns `value`. The purpose of this method is to "tap into" a method
+     * chain in order to perform operations on intermediate results within
+     * the chain.
+     *
+     * @static
+     * @memberOf _
+     * @category Chaining
+     * @param {*} value The value to provide to `interceptor`.
+     * @param {Function} interceptor The function to invoke.
+     * @returns {*} Returns `value`.
+     * @example
+     *
+     * _([1, 2, 3, 4])
+     *  .tap(function(array) { array.pop(); })
+     *  .reverse()
+     *  .value();
+     * // => [3, 2, 1]
+     */
+    function tap(value, interceptor) {
+      interceptor(value);
+      return value;
+    }
+
+    /**
+     * Enables explicit method chaining on the wrapper object.
+     *
+     * @name chain
+     * @memberOf _
+     * @category Chaining
+     * @returns {*} Returns the wrapper object.
+     * @example
+     *
+     * var characters = [
+     *   { 'name': 'barney', 'age': 36 },
+     *   { 'name': 'fred',   'age': 40 }
+     * ];
+     *
+     * // without explicit chaining
+     * _(characters).first();
+     * // => { 'name': 'barney', 'age': 36 }
+     *
+     * // with explicit chaining
+     * _(characters).chain()
+     *   .first()
+     *   .pick('age')
+     *   .value();
+     * // => { 'age': 36 }
+     */
+    function wrapperChain() {
+      this.__chain__ = true;
+      return this;
+    }
+
+    /**
+     * Produces the `toString` result of the wrapped value.
+     *
+     * @name toString
+     * @memberOf _
+     * @category Chaining
+     * @returns {string} Returns the string result.
+     * @example
+     *
+     * _([1, 2, 3]).toString();
+     * // => '1,2,3'
+     */
+    function wrapperToString() {
+      return String(this.__wrapped__);
+    }
+
+    /**
+     * Extracts the wrapped value.
+     *
+     * @name valueOf
+     * @memberOf _
+     * @alias value
+     * @category Chaining
+     * @returns {*} Returns the wrapped value.
+     * @example
+     *
+     * _([1, 2, 3]).valueOf();
+     * // => [1, 2, 3]
+     */
+    function wrapperValueOf() {
+      return this.__wrapped__;
+    }
+
+    /*--------------------------------------------------------------------------*/
+
+    // add functions that return wrapped values when chaining
+    lodash.after = after;
+    lodash.assign = assign;
+    lodash.at = at;
+    lodash.bind = bind;
+    lodash.bindAll = bindAll;
+    lodash.bindKey = bindKey;
+    lodash.chain = chain;
+    lodash.compact = compact;
+    lodash.compose = compose;
+    lodash.constant = constant;
+    lodash.countBy = countBy;
+    lodash.create = create;
+    lodash.createCallback = createCallback;
+    lodash.curry = curry;
+    lodash.debounce = debounce;
+    lodash.defaults = defaults;
+    lodash.defer = defer;
+    lodash.delay = delay;
+    lodash.difference = difference;
+    lodash.filter = filter;
+    lodash.flatten = flatten;
+    lodash.forEach = forEach;
+    lodash.forEachRight = forEachRight;
+    lodash.forIn = forIn;
+    lodash.forInRight = forInRight;
+    lodash.forOwn = forOwn;
+    lodash.forOwnRight = forOwnRight;
+    lodash.functions = functions;
+    lodash.groupBy = groupBy;
+    lodash.indexBy = indexBy;
+    lodash.initial = initial;
+    lodash.intersection = intersection;
+    lodash.invert = invert;
+    lodash.invoke = invoke;
+    lodash.keys = keys;
+    lodash.map = map;
+    lodash.mapValues = mapValues;
+    lodash.max = max;
+    lodash.memoize = memoize;
+    lodash.merge = merge;
+    lodash.min = min;
+    lodash.omit = omit;
+    lodash.once = once;
+    lodash.pairs = pairs;
+    lodash.partial = partial;
+    lodash.partialRight = partialRight;
+    lodash.pick = pick;
+    lodash.pluck = pluck;
+    lodash.property = property;
+    lodash.pull = pull;
+    lodash.range = range;
+    lodash.reject = reject;
+    lodash.remove = remove;
+    lodash.rest = rest;
+    lodash.shuffle = shuffle;
+    lodash.sortBy = sortBy;
+    lodash.tap = tap;
+    lodash.throttle = throttle;
+    lodash.times = times;
+    lodash.toArray = toArray;
+    lodash.transform = transform;
+    lodash.union = union;
+    lodash.uniq = uniq;
+    lodash.values = values;
+    lodash.where = where;
+    lodash.without = without;
+    lodash.wrap = wrap;
+    lodash.xor = xor;
+    lodash.zip = zip;
+    lodash.zipObject = zipObject;
+
+    // add aliases
+    lodash.collect = map;
+    lodash.drop = rest;
+    lodash.each = forEach;
+    lodash.eachRight = forEachRight;
+    lodash.extend = assign;
+    lodash.methods = functions;
+    lodash.object = zipObject;
+    lodash.select = filter;
+    lodash.tail = rest;
+    lodash.unique = uniq;
+    lodash.unzip = zip;
+
+    // add functions to `lodash.prototype`
+    mixin(lodash);
+
+    /*--------------------------------------------------------------------------*/
+
+    // add functions that return unwrapped values when chaining
+    lodash.clone = clone;
+    lodash.cloneDeep = cloneDeep;
+    lodash.contains = contains;
+    lodash.escape = escape;
+    lodash.every = every;
+    lodash.find = find;
+    lodash.findIndex = findIndex;
+    lodash.findKey = findKey;
+    lodash.findLast = findLast;
+    lodash.findLastIndex = findLastIndex;
+    lodash.findLastKey = findLastKey;
+    lodash.has = has;
+    lodash.identity = identity;
+    lodash.indexOf = indexOf;
+    lodash.isArguments = isArguments;
+    lodash.isArray = isArray;
+    lodash.isBoolean = isBoolean;
+    lodash.isDate = isDate;
+    lodash.isElement = isElement;
+    lodash.isEmpty = isEmpty;
+    lodash.isEqual = isEqual;
+    lodash.isFinite = isFinite;
+    lodash.isFunction = isFunction;
+    lodash.isNaN = isNaN;
+    lodash.isNull = isNull;
+    lodash.isNumber = isNumber;
+    lodash.isObject = isObject;
+    lodash.isPlainObject = isPlainObject;
+    lodash.isRegExp = isRegExp;
+    lodash.isString = isString;
+    lodash.isUndefined = isUndefined;
+    lodash.lastIndexOf = lastIndexOf;
+    lodash.mixin = mixin;
+    lodash.noConflict = noConflict;
+    lodash.noop = noop;
+    lodash.now = now;
+    lodash.parseInt = parseInt;
+    lodash.random = random;
+    lodash.reduce = reduce;
+    lodash.reduceRight = reduceRight;
+    lodash.result = result;
+    lodash.runInContext = runInContext;
+    lodash.size = size;
+    lodash.some = some;
+    lodash.sortedIndex = sortedIndex;
+    lodash.template = template;
+    lodash.unescape = unescape;
+    lodash.uniqueId = uniqueId;
+
+    // add aliases
+    lodash.all = every;
+    lodash.any = some;
+    lodash.detect = find;
+    lodash.findWhere = find;
+    lodash.foldl = reduce;
+    lodash.foldr = reduceRight;
+    lodash.include = contains;
+    lodash.inject = reduce;
+
+    mixin(function() {
+      var source = {}
+      forOwn(lodash, function(func, methodName) {
+        if (!lodash.prototype[methodName]) {
+          source[methodName] = func;
+        }
+      });
+      return source;
+    }(), false);
+
+    /*--------------------------------------------------------------------------*/
+
+    // add functions capable of returning wrapped and unwrapped values when chaining
+    lodash.first = first;
+    lodash.last = last;
+    lodash.sample = sample;
+
+    // add aliases
+    lodash.take = first;
+    lodash.head = first;
+
+    forOwn(lodash, function(func, methodName) {
+      var callbackable = methodName !== 'sample';
+      if (!lodash.prototype[methodName]) {
+        lodash.prototype[methodName]= function(n, guard) {
+          var chainAll = this.__chain__,
+              result = func(this.__wrapped__, n, guard);
+
+          return !chainAll && (n == null || (guard && !(callbackable && typeof n == 'function')))
+            ? result
+            : new lodashWrapper(result, chainAll);
+        };
+      }
+    });
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * The semantic version number.
+     *
+     * @static
+     * @memberOf _
+     * @type string
+     */
+    lodash.VERSION = '2.4.1';
+
+    // add "Chaining" functions to the wrapper
+    lodash.prototype.chain = wrapperChain;
+    lodash.prototype.toString = wrapperToString;
+    lodash.prototype.value = wrapperValueOf;
+    lodash.prototype.valueOf = wrapperValueOf;
+
+    // add `Array` functions that return unwrapped values
+    forEach(['join', 'pop', 'shift'], function(methodName) {
+      var func = arrayRef[methodName];
+      lodash.prototype[methodName] = function() {
+        var chainAll = this.__chain__,
+            result = func.apply(this.__wrapped__, arguments);
+
+        return chainAll
+          ? new lodashWrapper(result, chainAll)
+          : result;
+      };
+    });
+
+    // add `Array` functions that return the existing wrapped value
+    forEach(['push', 'reverse', 'sort', 'unshift'], function(methodName) {
+      var func = arrayRef[methodName];
+      lodash.prototype[methodName] = function() {
+        func.apply(this.__wrapped__, arguments);
+        return this;
+      };
+    });
+
+    // add `Array` functions that return new wrapped values
+    forEach(['concat', 'slice', 'splice'], function(methodName) {
+      var func = arrayRef[methodName];
+      lodash.prototype[methodName] = function() {
+        return new lodashWrapper(func.apply(this.__wrapped__, arguments), this.__chain__);
+      };
+    });
+
+    return lodash;
+  }
+
+  /*--------------------------------------------------------------------------*/
+
+  // expose Lo-Dash
+  var _ = runInContext();
+
+  // some AMD build optimizers like r.js check for condition patterns like the following:
+  if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+    // Expose Lo-Dash to the global object even when an AMD loader is present in
+    // case Lo-Dash is loaded with a RequireJS shim config.
+    // See http://requirejs.org/docs/api.html#config-shim
+    root._ = _;
+
+    // define as an anonymous module so, through path mapping, it can be
+    // referenced as the "underscore" module
+    define(function() {
+      return _;
+    });
+  }
+  // check for `exports` after `define` in case a build optimizer adds an `exports` object
+  else if (freeExports && freeModule) {
+    // in Node.js or RingoJS
+    if (moduleExports) {
+      (freeModule.exports = _)._ = _;
+    }
+    // in Narwhal or Rhino -require
+    else {
+      freeExports._ = _;
+    }
+  }
+  else {
+    // in a browser or Rhino
+    root._ = _;
+  }
+}.call(this));
+
+},{}],16:[function(require,module,exports){
 'use strict';
 
 function ToObject(val) {
@@ -554,7 +7468,7 @@ module.exports = Object.assign || function (target, source) {
 	return to;
 };
 
-},{}],14:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -581,7 +7495,7 @@ var AutoFocusMixin = {
 
 module.exports = AutoFocusMixin;
 
-},{"./focusNode":124}],15:[function(require,module,exports){
+},{"./focusNode":127}],18:[function(require,module,exports){
 /**
  * Copyright 2013 Facebook, Inc.
  * All rights reserved.
@@ -803,7 +7717,7 @@ var BeforeInputEventPlugin = {
 
 module.exports = BeforeInputEventPlugin;
 
-},{"./EventConstants":28,"./EventPropagators":33,"./ExecutionEnvironment":34,"./SyntheticInputEvent":102,"./keyOf":146}],16:[function(require,module,exports){
+},{"./EventConstants":31,"./EventPropagators":36,"./ExecutionEnvironment":37,"./SyntheticInputEvent":105,"./keyOf":149}],19:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -919,7 +7833,7 @@ var CSSProperty = {
 
 module.exports = CSSProperty;
 
-},{}],17:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1052,7 +7966,7 @@ var CSSPropertyOperations = {
 
 module.exports = CSSPropertyOperations;
 
-},{"./CSSProperty":16,"./ExecutionEnvironment":34,"./camelizeStyleName":113,"./dangerousStyleValue":118,"./hyphenateStyleName":137,"./memoizeStringOnly":148,"./warning":158}],18:[function(require,module,exports){
+},{"./CSSProperty":19,"./ExecutionEnvironment":37,"./camelizeStyleName":116,"./dangerousStyleValue":121,"./hyphenateStyleName":140,"./memoizeStringOnly":151,"./warning":161}],21:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1150,7 +8064,7 @@ PooledClass.addPoolingTo(CallbackQueue);
 
 module.exports = CallbackQueue;
 
-},{"./Object.assign":39,"./PooledClass":40,"./invariant":139}],19:[function(require,module,exports){
+},{"./Object.assign":42,"./PooledClass":43,"./invariant":142}],22:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1532,7 +8446,7 @@ var ChangeEventPlugin = {
 
 module.exports = ChangeEventPlugin;
 
-},{"./EventConstants":28,"./EventPluginHub":30,"./EventPropagators":33,"./ExecutionEnvironment":34,"./ReactUpdates":92,"./SyntheticEvent":100,"./isEventSupported":140,"./isTextInputElement":142,"./keyOf":146}],20:[function(require,module,exports){
+},{"./EventConstants":31,"./EventPluginHub":33,"./EventPropagators":36,"./ExecutionEnvironment":37,"./ReactUpdates":95,"./SyntheticEvent":103,"./isEventSupported":143,"./isTextInputElement":145,"./keyOf":149}],23:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1557,7 +8471,7 @@ var ClientReactRootIndex = {
 
 module.exports = ClientReactRootIndex;
 
-},{}],21:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1816,7 +8730,7 @@ var CompositionEventPlugin = {
 
 module.exports = CompositionEventPlugin;
 
-},{"./EventConstants":28,"./EventPropagators":33,"./ExecutionEnvironment":34,"./ReactInputSelection":72,"./SyntheticCompositionEvent":98,"./getTextContentAccessor":134,"./keyOf":146}],22:[function(require,module,exports){
+},{"./EventConstants":31,"./EventPropagators":36,"./ExecutionEnvironment":37,"./ReactInputSelection":75,"./SyntheticCompositionEvent":101,"./getTextContentAccessor":137,"./keyOf":149}],25:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -1989,7 +8903,7 @@ var DOMChildrenOperations = {
 
 module.exports = DOMChildrenOperations;
 
-},{"./Danger":25,"./ReactMultiChildUpdateTypes":78,"./getTextContentAccessor":134,"./invariant":139}],23:[function(require,module,exports){
+},{"./Danger":28,"./ReactMultiChildUpdateTypes":81,"./getTextContentAccessor":137,"./invariant":142}],26:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -2286,7 +9200,7 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 
-},{"./invariant":139}],24:[function(require,module,exports){
+},{"./invariant":142}],27:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -2481,7 +9395,7 @@ var DOMPropertyOperations = {
 
 module.exports = DOMPropertyOperations;
 
-},{"./DOMProperty":23,"./escapeTextForBrowser":122,"./memoizeStringOnly":148,"./warning":158}],25:[function(require,module,exports){
+},{"./DOMProperty":26,"./escapeTextForBrowser":125,"./memoizeStringOnly":151,"./warning":161}],28:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -2665,7 +9579,7 @@ var Danger = {
 
 module.exports = Danger;
 
-},{"./ExecutionEnvironment":34,"./createNodesFromMarkup":117,"./emptyFunction":120,"./getMarkupWrap":131,"./invariant":139}],26:[function(require,module,exports){
+},{"./ExecutionEnvironment":37,"./createNodesFromMarkup":120,"./emptyFunction":123,"./getMarkupWrap":134,"./invariant":142}],29:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -2705,7 +9619,7 @@ var DefaultEventPluginOrder = [
 
 module.exports = DefaultEventPluginOrder;
 
-},{"./keyOf":146}],27:[function(require,module,exports){
+},{"./keyOf":149}],30:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -2845,7 +9759,7 @@ var EnterLeaveEventPlugin = {
 
 module.exports = EnterLeaveEventPlugin;
 
-},{"./EventConstants":28,"./EventPropagators":33,"./ReactMount":76,"./SyntheticMouseEvent":104,"./keyOf":146}],28:[function(require,module,exports){
+},{"./EventConstants":31,"./EventPropagators":36,"./ReactMount":79,"./SyntheticMouseEvent":107,"./keyOf":149}],31:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -2917,7 +9831,7 @@ var EventConstants = {
 
 module.exports = EventConstants;
 
-},{"./keyMirror":145}],29:[function(require,module,exports){
+},{"./keyMirror":148}],32:[function(require,module,exports){
 /**
  * Copyright 2013-2014 Facebook, Inc.
  *
@@ -3005,7 +9919,7 @@ var EventListener = {
 
 module.exports = EventListener;
 
-},{"./emptyFunction":120}],30:[function(require,module,exports){
+},{"./emptyFunction":123}],33:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -3279,7 +10193,7 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 
-},{"./EventPluginRegistry":31,"./EventPluginUtils":32,"./accumulateInto":110,"./forEachAccumulated":125,"./invariant":139}],31:[function(require,module,exports){
+},{"./EventPluginRegistry":34,"./EventPluginUtils":35,"./accumulateInto":113,"./forEachAccumulated":128,"./invariant":142}],34:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -3557,7 +10471,7 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 
-},{"./invariant":139}],32:[function(require,module,exports){
+},{"./invariant":142}],35:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -3776,7 +10690,7 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 
-},{"./EventConstants":28,"./invariant":139}],33:[function(require,module,exports){
+},{"./EventConstants":31,"./invariant":142}],36:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -3916,7 +10830,7 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 
-},{"./EventConstants":28,"./EventPluginHub":30,"./accumulateInto":110,"./forEachAccumulated":125}],34:[function(require,module,exports){
+},{"./EventConstants":31,"./EventPluginHub":33,"./accumulateInto":113,"./forEachAccumulated":128}],37:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -3961,7 +10875,7 @@ var ExecutionEnvironment = {
 
 module.exports = ExecutionEnvironment;
 
-},{}],35:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4147,7 +11061,7 @@ var HTMLDOMPropertyConfig = {
 
 module.exports = HTMLDOMPropertyConfig;
 
-},{"./DOMProperty":23,"./ExecutionEnvironment":34}],36:[function(require,module,exports){
+},{"./DOMProperty":26,"./ExecutionEnvironment":37}],39:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4301,7 +11215,7 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 
-},{"./ReactPropTypes":85,"./invariant":139}],37:[function(require,module,exports){
+},{"./ReactPropTypes":88,"./invariant":142}],40:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -4349,7 +11263,7 @@ var LocalEventTrapMixin = {
 
 module.exports = LocalEventTrapMixin;
 
-},{"./ReactBrowserEventEmitter":43,"./accumulateInto":110,"./forEachAccumulated":125,"./invariant":139}],38:[function(require,module,exports){
+},{"./ReactBrowserEventEmitter":46,"./accumulateInto":113,"./forEachAccumulated":128,"./invariant":142}],41:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4407,7 +11321,7 @@ var MobileSafariClickEventPlugin = {
 
 module.exports = MobileSafariClickEventPlugin;
 
-},{"./EventConstants":28,"./emptyFunction":120}],39:[function(require,module,exports){
+},{"./EventConstants":31,"./emptyFunction":123}],42:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -4454,7 +11368,7 @@ function assign(target, sources) {
 
 module.exports = assign;
 
-},{}],40:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4568,7 +11482,7 @@ var PooledClass = {
 
 module.exports = PooledClass;
 
-},{"./invariant":139}],41:[function(require,module,exports){
+},{"./invariant":142}],44:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4754,7 +11668,7 @@ React.version = '0.12.1';
 
 module.exports = React;
 
-},{"./DOMPropertyOperations":24,"./EventPluginUtils":32,"./ExecutionEnvironment":34,"./Object.assign":39,"./ReactChildren":44,"./ReactComponent":45,"./ReactCompositeComponent":47,"./ReactContext":48,"./ReactCurrentOwner":49,"./ReactDOM":50,"./ReactDOMComponent":52,"./ReactDefaultInjection":62,"./ReactElement":65,"./ReactElementValidator":66,"./ReactInstanceHandles":73,"./ReactLegacyElement":74,"./ReactMount":76,"./ReactMultiChild":77,"./ReactPerf":81,"./ReactPropTypes":85,"./ReactServerRendering":89,"./ReactTextComponent":91,"./deprecated":119,"./onlyChild":150}],42:[function(require,module,exports){
+},{"./DOMPropertyOperations":27,"./EventPluginUtils":35,"./ExecutionEnvironment":37,"./Object.assign":42,"./ReactChildren":47,"./ReactComponent":48,"./ReactCompositeComponent":50,"./ReactContext":51,"./ReactCurrentOwner":52,"./ReactDOM":53,"./ReactDOMComponent":55,"./ReactDefaultInjection":65,"./ReactElement":68,"./ReactElementValidator":69,"./ReactInstanceHandles":76,"./ReactLegacyElement":77,"./ReactMount":79,"./ReactMultiChild":80,"./ReactPerf":84,"./ReactPropTypes":88,"./ReactServerRendering":92,"./ReactTextComponent":94,"./deprecated":122,"./onlyChild":153}],45:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -4795,7 +11709,7 @@ var ReactBrowserComponentMixin = {
 
 module.exports = ReactBrowserComponentMixin;
 
-},{"./ReactEmptyComponent":67,"./ReactMount":76,"./invariant":139}],43:[function(require,module,exports){
+},{"./ReactEmptyComponent":70,"./ReactMount":79,"./invariant":142}],46:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -5150,7 +12064,7 @@ var ReactBrowserEventEmitter = assign({}, ReactEventEmitterMixin, {
 
 module.exports = ReactBrowserEventEmitter;
 
-},{"./EventConstants":28,"./EventPluginHub":30,"./EventPluginRegistry":31,"./Object.assign":39,"./ReactEventEmitterMixin":69,"./ViewportMetrics":109,"./isEventSupported":140}],44:[function(require,module,exports){
+},{"./EventConstants":31,"./EventPluginHub":33,"./EventPluginRegistry":34,"./Object.assign":42,"./ReactEventEmitterMixin":72,"./ViewportMetrics":112,"./isEventSupported":143}],47:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -5298,7 +12212,7 @@ var ReactChildren = {
 
 module.exports = ReactChildren;
 
-},{"./PooledClass":40,"./traverseAllChildren":157,"./warning":158}],45:[function(require,module,exports){
+},{"./PooledClass":43,"./traverseAllChildren":160,"./warning":161}],48:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -5739,7 +12653,7 @@ var ReactComponent = {
 
 module.exports = ReactComponent;
 
-},{"./Object.assign":39,"./ReactElement":65,"./ReactOwner":80,"./ReactUpdates":92,"./invariant":139,"./keyMirror":145}],46:[function(require,module,exports){
+},{"./Object.assign":42,"./ReactElement":68,"./ReactOwner":83,"./ReactUpdates":95,"./invariant":142,"./keyMirror":148}],49:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -5859,7 +12773,7 @@ var ReactComponentBrowserEnvironment = {
 
 module.exports = ReactComponentBrowserEnvironment;
 
-},{"./ReactDOMIDOperations":54,"./ReactMarkupChecksum":75,"./ReactMount":76,"./ReactPerf":81,"./ReactReconcileTransaction":87,"./getReactRootElementInContainer":133,"./invariant":139,"./setInnerHTML":153}],47:[function(require,module,exports){
+},{"./ReactDOMIDOperations":57,"./ReactMarkupChecksum":78,"./ReactMount":79,"./ReactPerf":84,"./ReactReconcileTransaction":90,"./getReactRootElementInContainer":136,"./invariant":142,"./setInnerHTML":156}],50:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -7297,7 +14211,7 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 
-},{"./Object.assign":39,"./ReactComponent":45,"./ReactContext":48,"./ReactCurrentOwner":49,"./ReactElement":65,"./ReactElementValidator":66,"./ReactEmptyComponent":67,"./ReactErrorUtils":68,"./ReactLegacyElement":74,"./ReactOwner":80,"./ReactPerf":81,"./ReactPropTransferer":82,"./ReactPropTypeLocationNames":83,"./ReactPropTypeLocations":84,"./ReactUpdates":92,"./instantiateReactComponent":138,"./invariant":139,"./keyMirror":145,"./keyOf":146,"./mapObject":147,"./monitorCodeUse":149,"./shouldUpdateReactComponent":155,"./warning":158}],48:[function(require,module,exports){
+},{"./Object.assign":42,"./ReactComponent":48,"./ReactContext":51,"./ReactCurrentOwner":52,"./ReactElement":68,"./ReactElementValidator":69,"./ReactEmptyComponent":70,"./ReactErrorUtils":71,"./ReactLegacyElement":77,"./ReactOwner":83,"./ReactPerf":84,"./ReactPropTransferer":85,"./ReactPropTypeLocationNames":86,"./ReactPropTypeLocations":87,"./ReactUpdates":95,"./instantiateReactComponent":141,"./invariant":142,"./keyMirror":148,"./keyOf":149,"./mapObject":150,"./monitorCodeUse":152,"./shouldUpdateReactComponent":158,"./warning":161}],51:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -7359,7 +14273,7 @@ var ReactContext = {
 
 module.exports = ReactContext;
 
-},{"./Object.assign":39}],49:[function(require,module,exports){
+},{"./Object.assign":42}],52:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -7393,7 +14307,7 @@ var ReactCurrentOwner = {
 
 module.exports = ReactCurrentOwner;
 
-},{}],50:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -7574,7 +14488,7 @@ var ReactDOM = mapObject({
 
 module.exports = ReactDOM;
 
-},{"./ReactElement":65,"./ReactElementValidator":66,"./ReactLegacyElement":74,"./mapObject":147}],51:[function(require,module,exports){
+},{"./ReactElement":68,"./ReactElementValidator":69,"./ReactLegacyElement":77,"./mapObject":150}],54:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -7639,7 +14553,7 @@ var ReactDOMButton = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMButton;
 
-},{"./AutoFocusMixin":14,"./ReactBrowserComponentMixin":42,"./ReactCompositeComponent":47,"./ReactDOM":50,"./ReactElement":65,"./keyMirror":145}],52:[function(require,module,exports){
+},{"./AutoFocusMixin":17,"./ReactBrowserComponentMixin":45,"./ReactCompositeComponent":50,"./ReactDOM":53,"./ReactElement":68,"./keyMirror":148}],55:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8124,7 +15038,7 @@ assign(
 
 module.exports = ReactDOMComponent;
 
-},{"./CSSPropertyOperations":17,"./DOMProperty":23,"./DOMPropertyOperations":24,"./Object.assign":39,"./ReactBrowserComponentMixin":42,"./ReactBrowserEventEmitter":43,"./ReactComponent":45,"./ReactMount":76,"./ReactMultiChild":77,"./ReactPerf":81,"./escapeTextForBrowser":122,"./invariant":139,"./isEventSupported":140,"./keyOf":146,"./monitorCodeUse":149}],53:[function(require,module,exports){
+},{"./CSSPropertyOperations":20,"./DOMProperty":26,"./DOMPropertyOperations":27,"./Object.assign":42,"./ReactBrowserComponentMixin":45,"./ReactBrowserEventEmitter":46,"./ReactComponent":48,"./ReactMount":79,"./ReactMultiChild":80,"./ReactPerf":84,"./escapeTextForBrowser":125,"./invariant":142,"./isEventSupported":143,"./keyOf":149,"./monitorCodeUse":152}],56:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8174,7 +15088,7 @@ var ReactDOMForm = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMForm;
 
-},{"./EventConstants":28,"./LocalEventTrapMixin":37,"./ReactBrowserComponentMixin":42,"./ReactCompositeComponent":47,"./ReactDOM":50,"./ReactElement":65}],54:[function(require,module,exports){
+},{"./EventConstants":31,"./LocalEventTrapMixin":40,"./ReactBrowserComponentMixin":45,"./ReactCompositeComponent":50,"./ReactDOM":53,"./ReactElement":68}],57:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8358,7 +15272,7 @@ var ReactDOMIDOperations = {
 
 module.exports = ReactDOMIDOperations;
 
-},{"./CSSPropertyOperations":17,"./DOMChildrenOperations":22,"./DOMPropertyOperations":24,"./ReactMount":76,"./ReactPerf":81,"./invariant":139,"./setInnerHTML":153}],55:[function(require,module,exports){
+},{"./CSSPropertyOperations":20,"./DOMChildrenOperations":25,"./DOMPropertyOperations":27,"./ReactMount":79,"./ReactPerf":84,"./invariant":142,"./setInnerHTML":156}],58:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8406,7 +15320,7 @@ var ReactDOMImg = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMImg;
 
-},{"./EventConstants":28,"./LocalEventTrapMixin":37,"./ReactBrowserComponentMixin":42,"./ReactCompositeComponent":47,"./ReactDOM":50,"./ReactElement":65}],56:[function(require,module,exports){
+},{"./EventConstants":31,"./LocalEventTrapMixin":40,"./ReactBrowserComponentMixin":45,"./ReactCompositeComponent":50,"./ReactDOM":53,"./ReactElement":68}],59:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8582,7 +15496,7 @@ var ReactDOMInput = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMInput;
 
-},{"./AutoFocusMixin":14,"./DOMPropertyOperations":24,"./LinkedValueUtils":36,"./Object.assign":39,"./ReactBrowserComponentMixin":42,"./ReactCompositeComponent":47,"./ReactDOM":50,"./ReactElement":65,"./ReactMount":76,"./ReactUpdates":92,"./invariant":139}],57:[function(require,module,exports){
+},{"./AutoFocusMixin":17,"./DOMPropertyOperations":27,"./LinkedValueUtils":39,"./Object.assign":42,"./ReactBrowserComponentMixin":45,"./ReactCompositeComponent":50,"./ReactDOM":53,"./ReactElement":68,"./ReactMount":79,"./ReactUpdates":95,"./invariant":142}],60:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8633,7 +15547,7 @@ var ReactDOMOption = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMOption;
 
-},{"./ReactBrowserComponentMixin":42,"./ReactCompositeComponent":47,"./ReactDOM":50,"./ReactElement":65,"./warning":158}],58:[function(require,module,exports){
+},{"./ReactBrowserComponentMixin":45,"./ReactCompositeComponent":50,"./ReactDOM":53,"./ReactElement":68,"./warning":161}],61:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -8817,7 +15731,7 @@ var ReactDOMSelect = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMSelect;
 
-},{"./AutoFocusMixin":14,"./LinkedValueUtils":36,"./Object.assign":39,"./ReactBrowserComponentMixin":42,"./ReactCompositeComponent":47,"./ReactDOM":50,"./ReactElement":65,"./ReactUpdates":92}],59:[function(require,module,exports){
+},{"./AutoFocusMixin":17,"./LinkedValueUtils":39,"./Object.assign":42,"./ReactBrowserComponentMixin":45,"./ReactCompositeComponent":50,"./ReactDOM":53,"./ReactElement":68,"./ReactUpdates":95}],62:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9026,7 +15940,7 @@ var ReactDOMSelection = {
 
 module.exports = ReactDOMSelection;
 
-},{"./ExecutionEnvironment":34,"./getNodeForCharacterOffset":132,"./getTextContentAccessor":134}],60:[function(require,module,exports){
+},{"./ExecutionEnvironment":37,"./getNodeForCharacterOffset":135,"./getTextContentAccessor":137}],63:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9165,7 +16079,7 @@ var ReactDOMTextarea = ReactCompositeComponent.createClass({
 
 module.exports = ReactDOMTextarea;
 
-},{"./AutoFocusMixin":14,"./DOMPropertyOperations":24,"./LinkedValueUtils":36,"./Object.assign":39,"./ReactBrowserComponentMixin":42,"./ReactCompositeComponent":47,"./ReactDOM":50,"./ReactElement":65,"./ReactUpdates":92,"./invariant":139,"./warning":158}],61:[function(require,module,exports){
+},{"./AutoFocusMixin":17,"./DOMPropertyOperations":27,"./LinkedValueUtils":39,"./Object.assign":42,"./ReactBrowserComponentMixin":45,"./ReactCompositeComponent":50,"./ReactDOM":53,"./ReactElement":68,"./ReactUpdates":95,"./invariant":142,"./warning":161}],64:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9238,7 +16152,7 @@ var ReactDefaultBatchingStrategy = {
 
 module.exports = ReactDefaultBatchingStrategy;
 
-},{"./Object.assign":39,"./ReactUpdates":92,"./Transaction":108,"./emptyFunction":120}],62:[function(require,module,exports){
+},{"./Object.assign":42,"./ReactUpdates":95,"./Transaction":111,"./emptyFunction":123}],65:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9365,7 +16279,7 @@ module.exports = {
   inject: inject
 };
 
-},{"./BeforeInputEventPlugin":15,"./ChangeEventPlugin":19,"./ClientReactRootIndex":20,"./CompositionEventPlugin":21,"./DefaultEventPluginOrder":26,"./EnterLeaveEventPlugin":27,"./ExecutionEnvironment":34,"./HTMLDOMPropertyConfig":35,"./MobileSafariClickEventPlugin":38,"./ReactBrowserComponentMixin":42,"./ReactComponentBrowserEnvironment":46,"./ReactDOMButton":51,"./ReactDOMComponent":52,"./ReactDOMForm":53,"./ReactDOMImg":55,"./ReactDOMInput":56,"./ReactDOMOption":57,"./ReactDOMSelect":58,"./ReactDOMTextarea":60,"./ReactDefaultBatchingStrategy":61,"./ReactDefaultPerf":63,"./ReactEventListener":70,"./ReactInjection":71,"./ReactInstanceHandles":73,"./ReactMount":76,"./SVGDOMPropertyConfig":93,"./SelectEventPlugin":94,"./ServerReactRootIndex":95,"./SimpleEventPlugin":96,"./createFullPageComponent":116}],63:[function(require,module,exports){
+},{"./BeforeInputEventPlugin":18,"./ChangeEventPlugin":22,"./ClientReactRootIndex":23,"./CompositionEventPlugin":24,"./DefaultEventPluginOrder":29,"./EnterLeaveEventPlugin":30,"./ExecutionEnvironment":37,"./HTMLDOMPropertyConfig":38,"./MobileSafariClickEventPlugin":41,"./ReactBrowserComponentMixin":45,"./ReactComponentBrowserEnvironment":49,"./ReactDOMButton":54,"./ReactDOMComponent":55,"./ReactDOMForm":56,"./ReactDOMImg":58,"./ReactDOMInput":59,"./ReactDOMOption":60,"./ReactDOMSelect":61,"./ReactDOMTextarea":63,"./ReactDefaultBatchingStrategy":64,"./ReactDefaultPerf":66,"./ReactEventListener":73,"./ReactInjection":74,"./ReactInstanceHandles":76,"./ReactMount":79,"./SVGDOMPropertyConfig":96,"./SelectEventPlugin":97,"./ServerReactRootIndex":98,"./SimpleEventPlugin":99,"./createFullPageComponent":119}],66:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9625,7 +16539,7 @@ var ReactDefaultPerf = {
 
 module.exports = ReactDefaultPerf;
 
-},{"./DOMProperty":23,"./ReactDefaultPerfAnalysis":64,"./ReactMount":76,"./ReactPerf":81,"./performanceNow":152}],64:[function(require,module,exports){
+},{"./DOMProperty":26,"./ReactDefaultPerfAnalysis":67,"./ReactMount":79,"./ReactPerf":84,"./performanceNow":155}],67:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -9831,7 +16745,7 @@ var ReactDefaultPerfAnalysis = {
 
 module.exports = ReactDefaultPerfAnalysis;
 
-},{"./Object.assign":39}],65:[function(require,module,exports){
+},{"./Object.assign":42}],68:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -10075,7 +16989,7 @@ ReactElement.isValidElement = function(object) {
 
 module.exports = ReactElement;
 
-},{"./ReactContext":48,"./ReactCurrentOwner":49,"./warning":158}],66:[function(require,module,exports){
+},{"./ReactContext":51,"./ReactCurrentOwner":52,"./warning":161}],69:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -10343,7 +17257,7 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 
-},{"./ReactCurrentOwner":49,"./ReactElement":65,"./ReactPropTypeLocations":84,"./monitorCodeUse":149}],67:[function(require,module,exports){
+},{"./ReactCurrentOwner":52,"./ReactElement":68,"./ReactPropTypeLocations":87,"./monitorCodeUse":152}],70:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -10418,7 +17332,7 @@ var ReactEmptyComponent = {
 
 module.exports = ReactEmptyComponent;
 
-},{"./ReactElement":65,"./invariant":139}],68:[function(require,module,exports){
+},{"./ReactElement":68,"./invariant":142}],71:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10450,7 +17364,7 @@ var ReactErrorUtils = {
 
 module.exports = ReactErrorUtils;
 
-},{}],69:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10500,7 +17414,7 @@ var ReactEventEmitterMixin = {
 
 module.exports = ReactEventEmitterMixin;
 
-},{"./EventPluginHub":30}],70:[function(require,module,exports){
+},{"./EventPluginHub":33}],73:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10684,7 +17598,7 @@ var ReactEventListener = {
 
 module.exports = ReactEventListener;
 
-},{"./EventListener":29,"./ExecutionEnvironment":34,"./Object.assign":39,"./PooledClass":40,"./ReactInstanceHandles":73,"./ReactMount":76,"./ReactUpdates":92,"./getEventTarget":130,"./getUnboundedScrollPosition":135}],71:[function(require,module,exports){
+},{"./EventListener":32,"./ExecutionEnvironment":37,"./Object.assign":42,"./PooledClass":43,"./ReactInstanceHandles":76,"./ReactMount":79,"./ReactUpdates":95,"./getEventTarget":133,"./getUnboundedScrollPosition":138}],74:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10724,7 +17638,7 @@ var ReactInjection = {
 
 module.exports = ReactInjection;
 
-},{"./DOMProperty":23,"./EventPluginHub":30,"./ReactBrowserEventEmitter":43,"./ReactComponent":45,"./ReactCompositeComponent":47,"./ReactEmptyComponent":67,"./ReactNativeComponent":79,"./ReactPerf":81,"./ReactRootIndex":88,"./ReactUpdates":92}],72:[function(require,module,exports){
+},{"./DOMProperty":26,"./EventPluginHub":33,"./ReactBrowserEventEmitter":46,"./ReactComponent":48,"./ReactCompositeComponent":50,"./ReactEmptyComponent":70,"./ReactNativeComponent":82,"./ReactPerf":84,"./ReactRootIndex":91,"./ReactUpdates":95}],75:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -10860,7 +17774,7 @@ var ReactInputSelection = {
 
 module.exports = ReactInputSelection;
 
-},{"./ReactDOMSelection":59,"./containsNode":114,"./focusNode":124,"./getActiveElement":126}],73:[function(require,module,exports){
+},{"./ReactDOMSelection":62,"./containsNode":117,"./focusNode":127,"./getActiveElement":129}],76:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -11193,7 +18107,7 @@ var ReactInstanceHandles = {
 
 module.exports = ReactInstanceHandles;
 
-},{"./ReactRootIndex":88,"./invariant":139}],74:[function(require,module,exports){
+},{"./ReactRootIndex":91,"./invariant":142}],77:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -11438,7 +18352,7 @@ ReactLegacyElementFactory._isLegacyCallWarningEnabled = true;
 
 module.exports = ReactLegacyElementFactory;
 
-},{"./ReactCurrentOwner":49,"./invariant":139,"./monitorCodeUse":149,"./warning":158}],75:[function(require,module,exports){
+},{"./ReactCurrentOwner":52,"./invariant":142,"./monitorCodeUse":152,"./warning":161}],78:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -11486,7 +18400,7 @@ var ReactMarkupChecksum = {
 
 module.exports = ReactMarkupChecksum;
 
-},{"./adler32":111}],76:[function(require,module,exports){
+},{"./adler32":114}],79:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -12182,7 +19096,7 @@ ReactMount.renderComponent = deprecated(
 
 module.exports = ReactMount;
 
-},{"./DOMProperty":23,"./ReactBrowserEventEmitter":43,"./ReactCurrentOwner":49,"./ReactElement":65,"./ReactInstanceHandles":73,"./ReactLegacyElement":74,"./ReactPerf":81,"./containsNode":114,"./deprecated":119,"./getReactRootElementInContainer":133,"./instantiateReactComponent":138,"./invariant":139,"./shouldUpdateReactComponent":155,"./warning":158}],77:[function(require,module,exports){
+},{"./DOMProperty":26,"./ReactBrowserEventEmitter":46,"./ReactCurrentOwner":52,"./ReactElement":68,"./ReactInstanceHandles":76,"./ReactLegacyElement":77,"./ReactPerf":84,"./containsNode":117,"./deprecated":122,"./getReactRootElementInContainer":136,"./instantiateReactComponent":141,"./invariant":142,"./shouldUpdateReactComponent":158,"./warning":161}],80:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -12610,7 +19524,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 
-},{"./ReactComponent":45,"./ReactMultiChildUpdateTypes":78,"./flattenChildren":123,"./instantiateReactComponent":138,"./shouldUpdateReactComponent":155}],78:[function(require,module,exports){
+},{"./ReactComponent":48,"./ReactMultiChildUpdateTypes":81,"./flattenChildren":126,"./instantiateReactComponent":141,"./shouldUpdateReactComponent":158}],81:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -12643,7 +19557,7 @@ var ReactMultiChildUpdateTypes = keyMirror({
 
 module.exports = ReactMultiChildUpdateTypes;
 
-},{"./keyMirror":145}],79:[function(require,module,exports){
+},{"./keyMirror":148}],82:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -12714,7 +19628,7 @@ var ReactNativeComponent = {
 
 module.exports = ReactNativeComponent;
 
-},{"./Object.assign":39,"./invariant":139}],80:[function(require,module,exports){
+},{"./Object.assign":42,"./invariant":142}],83:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -12868,7 +19782,7 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 
-},{"./emptyObject":121,"./invariant":139}],81:[function(require,module,exports){
+},{"./emptyObject":124,"./invariant":142}],84:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -12950,7 +19864,7 @@ function _noMeasure(objName, fnName, func) {
 
 module.exports = ReactPerf;
 
-},{}],82:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13115,7 +20029,7 @@ var ReactPropTransferer = {
 
 module.exports = ReactPropTransferer;
 
-},{"./Object.assign":39,"./emptyFunction":120,"./invariant":139,"./joinClasses":144,"./warning":158}],83:[function(require,module,exports){
+},{"./Object.assign":42,"./emptyFunction":123,"./invariant":142,"./joinClasses":147,"./warning":161}],86:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13141,7 +20055,7 @@ if ("production" !== process.env.NODE_ENV) {
 
 module.exports = ReactPropTypeLocationNames;
 
-},{}],84:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13165,7 +20079,7 @@ var ReactPropTypeLocations = keyMirror({
 
 module.exports = ReactPropTypeLocations;
 
-},{"./keyMirror":145}],85:[function(require,module,exports){
+},{"./keyMirror":148}],88:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13519,7 +20433,7 @@ function getPreciseType(propValue) {
 
 module.exports = ReactPropTypes;
 
-},{"./ReactElement":65,"./ReactPropTypeLocationNames":83,"./deprecated":119,"./emptyFunction":120}],86:[function(require,module,exports){
+},{"./ReactElement":68,"./ReactPropTypeLocationNames":86,"./deprecated":122,"./emptyFunction":123}],89:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13575,7 +20489,7 @@ PooledClass.addPoolingTo(ReactPutListenerQueue);
 
 module.exports = ReactPutListenerQueue;
 
-},{"./Object.assign":39,"./PooledClass":40,"./ReactBrowserEventEmitter":43}],87:[function(require,module,exports){
+},{"./Object.assign":42,"./PooledClass":43,"./ReactBrowserEventEmitter":46}],90:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13751,7 +20665,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 
-},{"./CallbackQueue":18,"./Object.assign":39,"./PooledClass":40,"./ReactBrowserEventEmitter":43,"./ReactInputSelection":72,"./ReactPutListenerQueue":86,"./Transaction":108}],88:[function(require,module,exports){
+},{"./CallbackQueue":21,"./Object.assign":42,"./PooledClass":43,"./ReactBrowserEventEmitter":46,"./ReactInputSelection":75,"./ReactPutListenerQueue":89,"./Transaction":111}],91:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13782,7 +20696,7 @@ var ReactRootIndex = {
 
 module.exports = ReactRootIndex;
 
-},{}],89:[function(require,module,exports){
+},{}],92:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -13860,7 +20774,7 @@ module.exports = {
   renderToStaticMarkup: renderToStaticMarkup
 };
 
-},{"./ReactElement":65,"./ReactInstanceHandles":73,"./ReactMarkupChecksum":75,"./ReactServerRenderingTransaction":90,"./instantiateReactComponent":138,"./invariant":139}],90:[function(require,module,exports){
+},{"./ReactElement":68,"./ReactInstanceHandles":76,"./ReactMarkupChecksum":78,"./ReactServerRenderingTransaction":93,"./instantiateReactComponent":141,"./invariant":142}],93:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -13973,7 +20887,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 
-},{"./CallbackQueue":18,"./Object.assign":39,"./PooledClass":40,"./ReactPutListenerQueue":86,"./Transaction":108,"./emptyFunction":120}],91:[function(require,module,exports){
+},{"./CallbackQueue":21,"./Object.assign":42,"./PooledClass":43,"./ReactPutListenerQueue":89,"./Transaction":111,"./emptyFunction":123}],94:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14079,7 +20993,7 @@ ReactTextComponentFactory.type = ReactTextComponent;
 
 module.exports = ReactTextComponentFactory;
 
-},{"./DOMPropertyOperations":24,"./Object.assign":39,"./ReactComponent":45,"./ReactElement":65,"./escapeTextForBrowser":122}],92:[function(require,module,exports){
+},{"./DOMPropertyOperations":27,"./Object.assign":42,"./ReactComponent":48,"./ReactElement":68,"./escapeTextForBrowser":125}],95:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14367,7 +21281,7 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 
-},{"./CallbackQueue":18,"./Object.assign":39,"./PooledClass":40,"./ReactCurrentOwner":49,"./ReactPerf":81,"./Transaction":108,"./invariant":139,"./warning":158}],93:[function(require,module,exports){
+},{"./CallbackQueue":21,"./Object.assign":42,"./PooledClass":43,"./ReactCurrentOwner":52,"./ReactPerf":84,"./Transaction":111,"./invariant":142,"./warning":161}],96:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14459,7 +21373,7 @@ var SVGDOMPropertyConfig = {
 
 module.exports = SVGDOMPropertyConfig;
 
-},{"./DOMProperty":23}],94:[function(require,module,exports){
+},{"./DOMProperty":26}],97:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14654,7 +21568,7 @@ var SelectEventPlugin = {
 
 module.exports = SelectEventPlugin;
 
-},{"./EventConstants":28,"./EventPropagators":33,"./ReactInputSelection":72,"./SyntheticEvent":100,"./getActiveElement":126,"./isTextInputElement":142,"./keyOf":146,"./shallowEqual":154}],95:[function(require,module,exports){
+},{"./EventConstants":31,"./EventPropagators":36,"./ReactInputSelection":75,"./SyntheticEvent":103,"./getActiveElement":129,"./isTextInputElement":145,"./keyOf":149,"./shallowEqual":157}],98:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -14685,7 +21599,7 @@ var ServerReactRootIndex = {
 
 module.exports = ServerReactRootIndex;
 
-},{}],96:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15111,7 +22025,7 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 
-},{"./EventConstants":28,"./EventPluginUtils":32,"./EventPropagators":33,"./SyntheticClipboardEvent":97,"./SyntheticDragEvent":99,"./SyntheticEvent":100,"./SyntheticFocusEvent":101,"./SyntheticKeyboardEvent":103,"./SyntheticMouseEvent":104,"./SyntheticTouchEvent":105,"./SyntheticUIEvent":106,"./SyntheticWheelEvent":107,"./getEventCharCode":127,"./invariant":139,"./keyOf":146,"./warning":158}],97:[function(require,module,exports){
+},{"./EventConstants":31,"./EventPluginUtils":35,"./EventPropagators":36,"./SyntheticClipboardEvent":100,"./SyntheticDragEvent":102,"./SyntheticEvent":103,"./SyntheticFocusEvent":104,"./SyntheticKeyboardEvent":106,"./SyntheticMouseEvent":107,"./SyntheticTouchEvent":108,"./SyntheticUIEvent":109,"./SyntheticWheelEvent":110,"./getEventCharCode":130,"./invariant":142,"./keyOf":149,"./warning":161}],100:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15157,7 +22071,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 
-},{"./SyntheticEvent":100}],98:[function(require,module,exports){
+},{"./SyntheticEvent":103}],101:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15203,7 +22117,7 @@ SyntheticEvent.augmentClass(
 module.exports = SyntheticCompositionEvent;
 
 
-},{"./SyntheticEvent":100}],99:[function(require,module,exports){
+},{"./SyntheticEvent":103}],102:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15242,7 +22156,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
 
-},{"./SyntheticMouseEvent":104}],100:[function(require,module,exports){
+},{"./SyntheticMouseEvent":107}],103:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15400,7 +22314,7 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.threeArgumentPooler);
 
 module.exports = SyntheticEvent;
 
-},{"./Object.assign":39,"./PooledClass":40,"./emptyFunction":120,"./getEventTarget":130}],101:[function(require,module,exports){
+},{"./Object.assign":42,"./PooledClass":43,"./emptyFunction":123,"./getEventTarget":133}],104:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15439,7 +22353,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
 
-},{"./SyntheticUIEvent":106}],102:[function(require,module,exports){
+},{"./SyntheticUIEvent":109}],105:[function(require,module,exports){
 /**
  * Copyright 2013 Facebook, Inc.
  * All rights reserved.
@@ -15486,7 +22400,7 @@ SyntheticEvent.augmentClass(
 module.exports = SyntheticInputEvent;
 
 
-},{"./SyntheticEvent":100}],103:[function(require,module,exports){
+},{"./SyntheticEvent":103}],106:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15573,7 +22487,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
 
-},{"./SyntheticUIEvent":106,"./getEventCharCode":127,"./getEventKey":128,"./getEventModifierState":129}],104:[function(require,module,exports){
+},{"./SyntheticUIEvent":109,"./getEventCharCode":130,"./getEventKey":131,"./getEventModifierState":132}],107:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15656,7 +22570,7 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
 
-},{"./SyntheticUIEvent":106,"./ViewportMetrics":109,"./getEventModifierState":129}],105:[function(require,module,exports){
+},{"./SyntheticUIEvent":109,"./ViewportMetrics":112,"./getEventModifierState":132}],108:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15704,7 +22618,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
 
-},{"./SyntheticUIEvent":106,"./getEventModifierState":129}],106:[function(require,module,exports){
+},{"./SyntheticUIEvent":109,"./getEventModifierState":132}],109:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15766,7 +22680,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
 
-},{"./SyntheticEvent":100,"./getEventTarget":130}],107:[function(require,module,exports){
+},{"./SyntheticEvent":103,"./getEventTarget":133}],110:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -15827,7 +22741,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
 
-},{"./SyntheticMouseEvent":104}],108:[function(require,module,exports){
+},{"./SyntheticMouseEvent":107}],111:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16066,7 +22980,7 @@ var Transaction = {
 
 module.exports = Transaction;
 
-},{"./invariant":139}],109:[function(require,module,exports){
+},{"./invariant":142}],112:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16098,7 +23012,7 @@ var ViewportMetrics = {
 
 module.exports = ViewportMetrics;
 
-},{"./getUnboundedScrollPosition":135}],110:[function(require,module,exports){
+},{"./getUnboundedScrollPosition":138}],113:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -16162,7 +23076,7 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 
-},{"./invariant":139}],111:[function(require,module,exports){
+},{"./invariant":142}],114:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16196,7 +23110,7 @@ function adler32(data) {
 
 module.exports = adler32;
 
-},{}],112:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16228,7 +23142,7 @@ function camelize(string) {
 
 module.exports = camelize;
 
-},{}],113:[function(require,module,exports){
+},{}],116:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -16270,7 +23184,7 @@ function camelizeStyleName(string) {
 
 module.exports = camelizeStyleName;
 
-},{"./camelize":112}],114:[function(require,module,exports){
+},{"./camelize":115}],117:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16314,7 +23228,7 @@ function containsNode(outerNode, innerNode) {
 
 module.exports = containsNode;
 
-},{"./isTextNode":143}],115:[function(require,module,exports){
+},{"./isTextNode":146}],118:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16400,7 +23314,7 @@ function createArrayFrom(obj) {
 
 module.exports = createArrayFrom;
 
-},{"./toArray":156}],116:[function(require,module,exports){
+},{"./toArray":159}],119:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16459,7 +23373,7 @@ function createFullPageComponent(tag) {
 
 module.exports = createFullPageComponent;
 
-},{"./ReactCompositeComponent":47,"./ReactElement":65,"./invariant":139}],117:[function(require,module,exports){
+},{"./ReactCompositeComponent":50,"./ReactElement":68,"./invariant":142}],120:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16547,7 +23461,7 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 
-},{"./ExecutionEnvironment":34,"./createArrayFrom":115,"./getMarkupWrap":131,"./invariant":139}],118:[function(require,module,exports){
+},{"./ExecutionEnvironment":37,"./createArrayFrom":118,"./getMarkupWrap":134,"./invariant":142}],121:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16605,7 +23519,7 @@ function dangerousStyleValue(name, value) {
 
 module.exports = dangerousStyleValue;
 
-},{"./CSSProperty":16}],119:[function(require,module,exports){
+},{"./CSSProperty":19}],122:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16654,7 +23568,7 @@ function deprecated(namespace, oldName, newName, ctx, fn) {
 
 module.exports = deprecated;
 
-},{"./Object.assign":39,"./warning":158}],120:[function(require,module,exports){
+},{"./Object.assign":42,"./warning":161}],123:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16688,7 +23602,7 @@ emptyFunction.thatReturnsArgument = function(arg) { return arg; };
 
 module.exports = emptyFunction;
 
-},{}],121:[function(require,module,exports){
+},{}],124:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16710,7 +23624,7 @@ if ("production" !== process.env.NODE_ENV) {
 
 module.exports = emptyObject;
 
-},{}],122:[function(require,module,exports){
+},{}],125:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16751,7 +23665,7 @@ function escapeTextForBrowser(text) {
 
 module.exports = escapeTextForBrowser;
 
-},{}],123:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16818,7 +23732,7 @@ function flattenChildren(children) {
 
 module.exports = flattenChildren;
 
-},{"./ReactTextComponent":91,"./traverseAllChildren":157,"./warning":158}],124:[function(require,module,exports){
+},{"./ReactTextComponent":94,"./traverseAllChildren":160,"./warning":161}],127:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -16847,7 +23761,7 @@ function focusNode(node) {
 
 module.exports = focusNode;
 
-},{}],125:[function(require,module,exports){
+},{}],128:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16878,7 +23792,7 @@ var forEachAccumulated = function(arr, cb, scope) {
 
 module.exports = forEachAccumulated;
 
-},{}],126:[function(require,module,exports){
+},{}],129:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16907,7 +23821,7 @@ function getActiveElement() /*?DOMElement*/ {
 
 module.exports = getActiveElement;
 
-},{}],127:[function(require,module,exports){
+},{}],130:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -16959,7 +23873,7 @@ function getEventCharCode(nativeEvent) {
 
 module.exports = getEventCharCode;
 
-},{}],128:[function(require,module,exports){
+},{}],131:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17064,7 +23978,7 @@ function getEventKey(nativeEvent) {
 
 module.exports = getEventKey;
 
-},{"./getEventCharCode":127}],129:[function(require,module,exports){
+},{"./getEventCharCode":130}],132:[function(require,module,exports){
 /**
  * Copyright 2013 Facebook, Inc.
  * All rights reserved.
@@ -17111,7 +24025,7 @@ function getEventModifierState(nativeEvent) {
 
 module.exports = getEventModifierState;
 
-},{}],130:[function(require,module,exports){
+},{}],133:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17142,7 +24056,7 @@ function getEventTarget(nativeEvent) {
 
 module.exports = getEventTarget;
 
-},{}],131:[function(require,module,exports){
+},{}],134:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17257,7 +24171,7 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 
-},{"./ExecutionEnvironment":34,"./invariant":139}],132:[function(require,module,exports){
+},{"./ExecutionEnvironment":37,"./invariant":142}],135:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17332,7 +24246,7 @@ function getNodeForCharacterOffset(root, offset) {
 
 module.exports = getNodeForCharacterOffset;
 
-},{}],133:[function(require,module,exports){
+},{}],136:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17367,7 +24281,7 @@ function getReactRootElementInContainer(container) {
 
 module.exports = getReactRootElementInContainer;
 
-},{}],134:[function(require,module,exports){
+},{}],137:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17404,7 +24318,7 @@ function getTextContentAccessor() {
 
 module.exports = getTextContentAccessor;
 
-},{"./ExecutionEnvironment":34}],135:[function(require,module,exports){
+},{"./ExecutionEnvironment":37}],138:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17444,7 +24358,7 @@ function getUnboundedScrollPosition(scrollable) {
 
 module.exports = getUnboundedScrollPosition;
 
-},{}],136:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17477,7 +24391,7 @@ function hyphenate(string) {
 
 module.exports = hyphenate;
 
-},{}],137:[function(require,module,exports){
+},{}],140:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17518,7 +24432,7 @@ function hyphenateStyleName(string) {
 
 module.exports = hyphenateStyleName;
 
-},{"./hyphenate":136}],138:[function(require,module,exports){
+},{"./hyphenate":139}],141:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17630,7 +24544,7 @@ function instantiateReactComponent(element, parentCompositeType) {
 
 module.exports = instantiateReactComponent;
 
-},{"./ReactElement":65,"./ReactEmptyComponent":67,"./ReactLegacyElement":74,"./ReactNativeComponent":79,"./warning":158}],139:[function(require,module,exports){
+},{"./ReactElement":68,"./ReactEmptyComponent":70,"./ReactLegacyElement":77,"./ReactNativeComponent":82,"./warning":161}],142:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17685,7 +24599,7 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 
-},{}],140:[function(require,module,exports){
+},{}],143:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17750,7 +24664,7 @@ function isEventSupported(eventNameSuffix, capture) {
 
 module.exports = isEventSupported;
 
-},{"./ExecutionEnvironment":34}],141:[function(require,module,exports){
+},{"./ExecutionEnvironment":37}],144:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17778,7 +24692,7 @@ function isNode(object) {
 
 module.exports = isNode;
 
-},{}],142:[function(require,module,exports){
+},{}],145:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17822,7 +24736,7 @@ function isTextInputElement(elem) {
 
 module.exports = isTextInputElement;
 
-},{}],143:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17847,7 +24761,7 @@ function isTextNode(object) {
 
 module.exports = isTextNode;
 
-},{"./isNode":141}],144:[function(require,module,exports){
+},{"./isNode":144}],147:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17888,7 +24802,7 @@ function joinClasses(className/*, ... */) {
 
 module.exports = joinClasses;
 
-},{}],145:[function(require,module,exports){
+},{}],148:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17941,7 +24855,7 @@ var keyMirror = function(obj) {
 
 module.exports = keyMirror;
 
-},{"./invariant":139}],146:[function(require,module,exports){
+},{"./invariant":142}],149:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -17977,7 +24891,7 @@ var keyOf = function(oneKeyObj) {
 
 module.exports = keyOf;
 
-},{}],147:[function(require,module,exports){
+},{}],150:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18030,7 +24944,7 @@ function mapObject(object, callback, context) {
 
 module.exports = mapObject;
 
-},{}],148:[function(require,module,exports){
+},{}],151:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18064,7 +24978,7 @@ function memoizeStringOnly(callback) {
 
 module.exports = memoizeStringOnly;
 
-},{}],149:[function(require,module,exports){
+},{}],152:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -18096,7 +25010,7 @@ function monitorCodeUse(eventName, data) {
 
 module.exports = monitorCodeUse;
 
-},{"./invariant":139}],150:[function(require,module,exports){
+},{"./invariant":142}],153:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18134,7 +25048,7 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 
-},{"./ReactElement":65,"./invariant":139}],151:[function(require,module,exports){
+},{"./ReactElement":68,"./invariant":142}],154:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18162,7 +25076,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = performance || {};
 
-},{"./ExecutionEnvironment":34}],152:[function(require,module,exports){
+},{"./ExecutionEnvironment":37}],155:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18190,7 +25104,7 @@ var performanceNow = performance.now.bind(performance);
 
 module.exports = performanceNow;
 
-},{"./performance":151}],153:[function(require,module,exports){
+},{"./performance":154}],156:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18268,7 +25182,7 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setInnerHTML;
 
-},{"./ExecutionEnvironment":34}],154:[function(require,module,exports){
+},{"./ExecutionEnvironment":37}],157:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18312,7 +25226,7 @@ function shallowEqual(objA, objB) {
 
 module.exports = shallowEqual;
 
-},{}],155:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18350,7 +25264,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 
 module.exports = shouldUpdateReactComponent;
 
-},{}],156:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -18420,7 +25334,7 @@ function toArray(obj) {
 
 module.exports = toArray;
 
-},{"./invariant":139}],157:[function(require,module,exports){
+},{"./invariant":142}],160:[function(require,module,exports){
 /**
  * Copyright 2013-2014, Facebook, Inc.
  * All rights reserved.
@@ -18601,7 +25515,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 
-},{"./ReactElement":65,"./ReactInstanceHandles":73,"./invariant":139}],158:[function(require,module,exports){
+},{"./ReactElement":68,"./ReactInstanceHandles":76,"./invariant":142}],161:[function(require,module,exports){
 /**
  * Copyright 2014, Facebook, Inc.
  * All rights reserved.
@@ -18644,7 +25558,7 @@ if ("production" !== process.env.NODE_ENV) {
 
 module.exports = warning;
 
-},{"./emptyFunction":120}],159:[function(require,module,exports){
+},{"./emptyFunction":123}],162:[function(require,module,exports){
 module.exports = require('./lib/React');
 
-},{"./lib/React":41}]},{},[1]);
+},{"./lib/React":44}]},{},[1]);
