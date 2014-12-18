@@ -1748,7 +1748,7 @@ module.exports = Entity;
 var Entity = require('./Entity');
 var Player = require('./Player');
 var CardStore = require('./CardStore');
-var GameEventHandlers = require("./GameEventHandlers");
+var GameEventProcessor = require("./GameEventProcessor");
 var CARD_TYPES = require('../constants/GameConstants').CARD_TYPES;
 var ZONES = require('../constants/GameConstants').ZONES;
 
@@ -1759,7 +1759,7 @@ var _ = require('lodash');
         this.currentTurnIndex = 0;
         this.replay = replay;
         this.entities = {};
-        this.eventListeners = [GameEventHandlers]
+        this.eventListeners = [GameEventProcessor]
 
         // load players
         if (replay.players) {
@@ -1837,13 +1837,13 @@ var _ = require('lodash');
 ;
 
 module.exports = Game;
-},{"../constants/GameConstants":4,"./CardStore":7,"./Entity":8,"./GameEventHandlers":10,"./Player":12,"lodash":17}],10:[function(require,module,exports){
+},{"../constants/GameConstants":4,"./CardStore":7,"./Entity":8,"./GameEventProcessor":10,"./Player":12,"lodash":17}],10:[function(require,module,exports){
 var Entity = require('./Entity');
 var Player = require('./Player');
 var CardStore = require('./CardStore');
 
-// Game event handlers that update model data
-var GameEventHandlers = {
+// Process game event and update Game model based on it
+var GameEventProcessor = {
     next_turn:function(game, turn) {
         game.currentTurnIndex = turn.number;
     },
@@ -2004,7 +2004,7 @@ var GameEventHandlers = {
     }
 };
 
-module.exports = GameEventHandlers;
+module.exports = GameEventProcessor;
 },{"./CardStore":7,"./Entity":8,"./Player":12}],11:[function(require,module,exports){
 var fs = require('fs');
 var path = require('path');
