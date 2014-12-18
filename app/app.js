@@ -1805,7 +1805,7 @@ var _ = require('lodash');
 
     // Get Player of current turn
     Game.prototype.getCurrentPlayer=function() {"use strict";
-        if (this.currentTurnIndex) {
+        if (this.currentTurnIndex == 0) {
             return null;
         }
 
@@ -1856,6 +1856,14 @@ var CardStore = require('./CardStore');
 var GameEventProcessor = {
     next_turn:function(game, turn) {
         game.currentTurnIndex = turn.number;
+        var player = game.getCurrentPlayer();
+
+        // sometime, player name is missing
+        // so we update the player name with given name
+        if (turn.player) {
+            player.name = turn.player;
+            console.log(turn.player, "'s Turn")
+        }
     },
 
     open_card:function(game, options) {
