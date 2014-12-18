@@ -1803,6 +1803,16 @@ var _ = require('lodash');
         return this.playersMap[id];
     };
 
+    // Get Player of current turn
+    Game.prototype.getCurrentPlayer=function() {"use strict";
+        if (this.currentTurnIndex) {
+            return null;
+        }
+
+        var isFirstPlayerTurn = (this.currentTurnIndex % 2) == 1;
+        return _.find(this.players, function(player)  {return player.firstPlayer == isFirstPlayerTurn;});
+    };
+
     Game.prototype.getHandWithPlayerId=function(playerId) {"use strict";
         return this.entities.map(function(entity){
             return entity.player.id == playerId && entity.zone == ZONES.HAND;
