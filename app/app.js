@@ -1771,8 +1771,7 @@ var _ = require('lodash');
             var game = this;
             game.eventListeners.forEach(function(listener){
                 game.replay.turns.forEach(function(turn){
-                    console.log("process turn #", turn.number)
-                    game.currentTurnIndex = turn.number;
+                    listener.next_turn(game, turn);
 
                     turn.events.map(function(event){
                         var name = event[0];
@@ -1845,7 +1844,8 @@ var CardStore = require('./CardStore');
 
 // Game event handlers that update model data
 var GameEventHandlers = {
-    next_turn:function(game, events) {
+    next_turn:function(game, turn) {
+        game.currentTurnIndex = turn.number;
     },
 
     open_card:function(game, options) {
